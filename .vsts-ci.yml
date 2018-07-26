@@ -1,0 +1,43 @@
+steps:
+
+- task: DotNetCoreInstaller@0
+  inputs:
+    version: 2.1.301
+  displayName: Install .NET Core
+
+# This script runs both via bash (macOS/Linux) and cmd (Windows).
+# Keep it both valid bash and batch or break it out conditionally.
+- script: |
+    echo System Environment
+    set
+    echo .NET Core Info
+    dotnet --info
+  displayName: Dump Environment
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: restore
+  displayName: Restore
+
+- task: DotNetCoreCLI@2
+  inputs:
+    arguments: '--no-restore'
+  displayName: Build
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: test
+    projects: '**\*.Tests.csproj'
+  continueOnError: true
+  displayName: Run Tests
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: pack
+    nobuild: true
+  displayName: Pack
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    ArtifactName: Artifacts
+  displayName: Publish Artifacts

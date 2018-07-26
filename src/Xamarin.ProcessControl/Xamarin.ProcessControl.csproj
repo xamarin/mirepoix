@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>
+      A small collection of utility APIs including command line argument
+      splitting and quoting, file system globbing, cross platform process
+      execution, and console output redirection handling.
+    </Description>
+  </PropertyGroup>
+</Project>

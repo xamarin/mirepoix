@@ -1,0 +1,50 @@
+<Project>
+  <PropertyGroup>
+    <GitThisAssemblyMetadata>false</GitThisAssemblyMetadata>
+    <GitVersionFile>$(MSBuildThisFileDirectory)..\VERSION</GitVersionFile>
+    <GitSkipCache>true</GitSkipCache>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GenerateNuspecDependsOn>SetVersions;$(GenerateNuspecDependsOn)</GenerateNuspecDependsOn>
+    <GetPackageVersionDependsOn>SetVersions;$(GetPackageVersionDependsOn)</GetPackageVersionDependsOn>
+  </PropertyGroup>
+
+  <Target
+    Name="SetVersions"
+    BeforeTargets="GetAssemblyVersion;GetPackageVersion;Pack"
+    DependsOnTargets="GitVersion"
+    Returns="$(Version)">
+    <PropertyGroup>
+      <GitBranch Condition="'$(SYSTEM_PULLREQUEST_TARGETBRANCH)' != ''">$(SYSTEM_PULLREQUEST_TARGETBRANCH)</GitBranch>
+      <GitBranch Condition="'$(SYSTEM_PULLREQUEST_TARGETBRANCH)' == '' and '$(BUILD_SOURCEBRANCHNAME)' != ''">$(BUILD_SOURCEBRANCHNAME)</GitBranch>
+      <GitBranch Condition="'$(APPVEYOR_REPO_BRANCH)' != ''">$(APPVEYOR_REPO_BRANCH)</GitBranch>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <VersionMetadata Include="$(GitCommits)"/>
+
+      <VersionMetadata
+        Condition="$(InVSTS) and '$(BUILD_REASON)' == 'PullRequest'"
+        Include="pr.$(BUILD_SOURCEBRANCH.Substring(10).TrimEnd('/merge'))"/>
+
+      <VersionMetadata Include="sha.$(GitCommit)"/>
+
+      <VersionMetadata
+        Condition="$(InVSTS)"
+        Include="vsts.$(BUILD_BUILDID)"/>
+    </ItemGroup>
+
+    <PropertyGroup>
+      <VersionMetadataLabel>@(VersionMetadata -> '%(Identity)', '-')</VersionMetadataLabel>
+      <VersionMetadataPlusLabel Condition="'$(VersionMetadataLabel)' != ''">+$(VersionMetadataLabel)</VersionMetadataPlusLabel>
+      <PackageVersion>$(GitSemVerMajor).$(GitSemVerMinor).$(GitBaseVersionPatch)$(GitSemVerDashLabel)</PackageVersion>
+      <Version>$(PackageVersion)$(VersionMetadataPlusLabel)</Version>
+    </PropertyGroup>
+
+    <Message
+      Condition="$(InVSTS)"
+      Importance="high"
+      Text="##vso[build.updatebuildnumber]$(Version)"/>
+  </Target>
+</Project>

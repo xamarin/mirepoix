@@ -1,0 +1,9 @@
+<Project>
+  <PropertyGroup>
+    <InVSTS>false</InVSTS>
+    <InVSTS Condition="'$(TF_BUILD)' == 'True'">true</InVSTS>
+
+    <InCI>false</InCI>
+    <InCI Condition="$(InVSTS)">true</InCI>
+  </PropertyGroup>
+</Project>

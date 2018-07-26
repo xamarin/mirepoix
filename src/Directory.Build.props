@@ -1,0 +1,21 @@
+<Project>
+  <Import Project="CI.props"/>
+
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Authors>Microsoft</Authors>
+    <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
+    <RepositoryUrl>https://github.com/xamarin/mirepoix</RepositoryUrl>
+
+    <PackageOutputPath>$([MSBuild]::NormalizePath($(MSBuildThisFileDirectory)..\_artifacts\))</PackageOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GitInfo" Version="2.0.11">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>
