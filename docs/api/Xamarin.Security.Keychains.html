@@ -78,11 +78,19 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Xamarin.Security.Keychains.AppleKeychain.html">AppleKeychain</a></h4>
-      <section></section>
+      <section><p>An <a class="xref" href="Xamarin.Security.Keychains.IKeychain.html">IKeychain</a> implementation backed by the
+<a href="https://developer.apple.com/documentation/security/keychain_services">macOS Keychain Services</a>
+API for secure storage of secrets, scoped to the current user's login keychain.</p>
+</section>
       <h4><a class="xref" href="Xamarin.Security.Keychains.DPAPIKeychain.html">DPAPIKeychain</a></h4>
-      <section></section>
+      <section><p>An <a class="xref" href="Xamarin.Security.Keychains.IKeychain.html">IKeychain</a> implementation backed by the
+<a href="https://msdn.microsoft.com/en-us/library/ms995355.aspx">Windows Data Protection</a>
+API for secure storage of secrets, scoped to the current user.</p>
+</section>
       <h4><a class="xref" href="Xamarin.Security.Keychains.OSKeychain.html">OSKeychain</a></h4>
-      <section></section>
+      <section><p>An <a class="xref" href="Xamarin.Security.Keychains.IKeychain.html">IKeychain</a> implementation backed by <a class="xref" href="Xamarin.Security.Keychains.AppleKeychain.html">AppleKeychain</a> on
+macOS or <a class="xref" href="Xamarin.Security.Keychains.DPAPIKeychain.html">DPAPIKeychain</a> on other platforms.</p>
+</section>
     <h3 id="interfaces">Interfaces
   </h3>
       <h4><a class="xref" href="Xamarin.Security.Keychains.IKeychain.html">IKeychain</a></h4>

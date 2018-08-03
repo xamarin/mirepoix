@@ -11,6 +11,10 @@ using System.Runtime.InteropServices;
 
 namespace Xamarin.Security.Keychains
 {
+    /// <summary>
+    /// An <see cref="IKeychain"/> implementation backed by <see cref="AppleKeychain"/> on
+    /// macOS or <see cref="DPAPIKeychain"/> on other platforms.
+    /// </summary>
     [EditorBrowsable (EditorBrowsableState.Advanced)]
     public sealed class OSKeychain : IKeychain
     {

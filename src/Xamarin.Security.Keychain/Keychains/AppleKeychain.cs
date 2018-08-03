@@ -20,6 +20,11 @@ namespace Xamarin.Security.Keychains
             => HResult = (int)osStatus;
     }
 
+    /// <summary>
+    /// An <see cref="IKeychain"/> implementation backed by the
+    /// [macOS Keychain Services](https://developer.apple.com/documentation/security/keychain_services)
+    /// API for secure storage of secrets, scoped to the current user's login keychain.
+    /// </summary>
     [EditorBrowsable (EditorBrowsableState.Advanced)]
     public sealed class AppleKeychain : IKeychain
     {

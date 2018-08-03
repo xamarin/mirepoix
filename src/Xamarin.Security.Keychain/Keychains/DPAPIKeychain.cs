@@ -12,6 +12,11 @@ using System.Security.Cryptography;
 
 namespace Xamarin.Security.Keychains
 {
+    /// <summary>
+    /// An <see cref="IKeychain"/> implementation backed by the
+    /// [Windows Data Protection](https://msdn.microsoft.com/en-us/library/ms995355.aspx)
+    /// API for secure storage of secrets, scoped to the current user.
+    /// </summary>
     [EditorBrowsable (EditorBrowsableState.Advanced)]
     public sealed class DPAPIKeychain : IKeychain
     {

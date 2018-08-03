@@ -309,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Security.Keychains.AppleKeychain.html",
-          "hash": "x1CTuiKxSu5zo098OOCJCg=="
+          "hash": "Kz20aDaV9AiQa/fKam0Abg=="
         }
       },
       "is_incremental": false,
@@ -321,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Security.Keychains.DPAPIKeychain.html",
-          "hash": "ZQ1mnQ84oD5IHK3UWxRWyA=="
+          "hash": "E5XeMVivYtGV5gGvXV0bLw=="
         }
       },
       "is_incremental": false,
@@ -345,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Security.Keychains.OSKeychain.html",
-          "hash": "jOdh8W3v8rXXRvdDbty2+g=="
+          "hash": "fDnFzKnjfPzvSKu16STYjQ=="
         }
       },
       "is_incremental": false,
@@ -357,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Security.Keychains.html",
-          "hash": "lbbYUx8RGFHzKvHEVB/olQ=="
+          "hash": "8Qj61WHBYZpqJSozwY93Zg=="
         }
       },
       "is_incremental": false,
@@ -564,7 +564,7 @@
           "hash": "7jGjLidqJmqwsYmEVpnwwg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -588,7 +588,7 @@
           "hash": "ElyFr8fHBHyvNMNUsh//Rw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -607,8 +607,7 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
+        "can_incremental": true,
         "incrementalPhase": "build"
       },
       "processors": {
@@ -617,20 +616,20 @@
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
           "incrementalPhase": "build"
         }
       }
     },
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
         "incrementalPhase": "postProcessing"
       },
       "processors": {}
