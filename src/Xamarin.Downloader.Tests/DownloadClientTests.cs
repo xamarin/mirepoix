@@ -69,7 +69,7 @@ namespace Xamarin.Downloader.Tests
                 "com.xamarin.mirepoix.tests",
                 Guid.NewGuid ().ToString ()));
 
-        [Fact]
+        [UnixFact (Skip = "HttpListener does not work reliably in test on Windows likely due to firewall")]
         public async Task DownloadBytesAsync ()
         {
             var server = new TestDownloadServer ();

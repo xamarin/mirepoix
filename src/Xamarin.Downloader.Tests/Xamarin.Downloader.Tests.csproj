@@ -13,5 +13,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Xamarin.Downloader\Xamarin.Downloader.csproj" />
+    <ProjectReference Include="..\Xamarin.XunitHelpers\Xamarin.XunitHelpers.csproj" />
   </ItemGroup>
 </Project>
