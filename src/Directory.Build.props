@@ -12,7 +12,7 @@
     <Authors>Microsoft</Authors>
     <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
     <RepositoryUrl>https://github.com/xamarin/mirepoix</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/xamarin/mirepoix</PackageProjectUrl>
+    <PackageProjectUrl>https://xamarin.github.io/mirepoix</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/xamarin/mirepoix/blob/master/LICENSE</PackageLicenseUrl>
     <PackageOutputPath>$([MSBuild]::NormalizePath($(MSBuildThisFileDirectory)..\_artifacts\))</PackageOutputPath>
     <IncludeSymbols>true</IncludeSymbols>
