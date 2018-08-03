@@ -2,11 +2,8 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Description>
-      A simple API for storing simple key/value secrets securely on macOS using
-      the login keychain or via DPAPI on Windows.
+      Various low-level native interop helpers including some support
+      for CoreFoundation on macOS.
     </Description>
   </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="System.Security.Cryptography.ProtectedData" Version="4.5.0" />
-  </ItemGroup>
 </Project>
