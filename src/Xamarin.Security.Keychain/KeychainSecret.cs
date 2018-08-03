@@ -34,7 +34,7 @@ namespace Xamarin.Security
             byte [] value)
         {
             name.Assert (nameof (name));
-            Assert.IsNotNull (value, nameof (value));
+            ArgumentAssert.IsNotNull (value, nameof (value));
 
             return new KeychainSecret (
                 name,
@@ -46,7 +46,7 @@ namespace Xamarin.Security
             string value)
         {
             name.Assert (nameof (name));
-            Assert.IsNotNull (value, nameof (value));
+            ArgumentAssert.IsNotNull (value, nameof (value));
 
             return new KeychainSecret (
                 name,
@@ -64,7 +64,7 @@ namespace Xamarin.Security
 
         public KeychainSecret WithValue (byte [] value)
         {
-            Assert.IsNotNull (value, nameof (value));
+            ArgumentAssert.IsNotNull (value, nameof (value));
 
             return new KeychainSecret (
                 Name,
@@ -73,7 +73,7 @@ namespace Xamarin.Security
 
         public KeychainSecret WithValue (string value)
         {
-            Assert.IsNotNull (value, nameof (value));
+            ArgumentAssert.IsNotNull (value, nameof (value));
 
             return new KeychainSecret (
                 Name,

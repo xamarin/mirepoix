@@ -9,7 +9,7 @@ using System;
 
 namespace Xamarin.Security
 {
-    static class Assert
+    static class ArgumentAssert
     {
         public static void IsNotNullOrEmpty (string argument, string parameterName)
         {

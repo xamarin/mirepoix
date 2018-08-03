@@ -20,8 +20,8 @@ namespace Xamarin.Security
             string service,
             string account)
         {
-            Security.Assert.IsNotNullOrEmpty (service, nameof (service));
-            Security.Assert.IsNotNullOrEmpty (account, nameof (account));
+            ArgumentAssert.IsNotNullOrEmpty (service, nameof (service));
+            ArgumentAssert.IsNotNullOrEmpty (account, nameof (account));
 
             Service = service;
             Account = account;
