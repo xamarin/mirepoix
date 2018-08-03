@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class CoreFoundation
+    <title>Class DPAPIKeychain
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class CoreFoundation
+    <meta name="title" content="Class DPAPIKeychain
    ">
     <meta name="generator" content="docfx 2.37.1.0">
     
@@ -68,17 +68,21 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Xamarin.NativeHelpers.CoreFoundation">
+            <article class="content wrap" id="_content" data-uid="Xamarin.Security.Keychains.DPAPIKeychain">
   
   
-  <h1 id="Xamarin_NativeHelpers_CoreFoundation" data-uid="Xamarin.NativeHelpers.CoreFoundation" class="text-break">Class CoreFoundation
+  <h1 id="Xamarin_Security_Keychains_DPAPIKeychain" data-uid="Xamarin.Security.Keychains.DPAPIKeychain" class="text-break">Class DPAPIKeychain
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">CoreFoundation</span></div>
+    <div class="level1"><span class="xref">DPAPIKeychain</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Xamarin.Security.Keychains.IKeychain.html">IKeychain</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -104,23 +108,28 @@
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Xamarin.NativeHelpers.html">Xamarin.NativeHelpers</a></h6>
-  <h6><strong>Assembly</strong>: Xamarin.NativeHelpers.dll</h6>
-  <h5 id="Xamarin_NativeHelpers_CoreFoundation_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Xamarin.Security.Keychains.html">Xamarin.Security.Keychains</a></h6>
+  <h6><strong>Assembly</strong>: Xamarin.Security.Keychain.dll</h6>
+  <h5 id="Xamarin_Security_Keychains_DPAPIKeychain_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class CoreFoundation</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class DPAPIKeychain : IKeychain</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
-  
-  
-  <a id="Xamarin_NativeHelpers_CoreFoundation_CFRelease_" data-uid="Xamarin.NativeHelpers.CoreFoundation.CFRelease*"></a>
-  <h4 id="Xamarin_NativeHelpers_CoreFoundation_CFRelease_System_IntPtr_" data-uid="Xamarin.NativeHelpers.CoreFoundation.CFRelease(System.IntPtr)">CFRelease(IntPtr)</h4>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Security_Keychains_DPAPIKeychain_StoreSecret_Xamarin_Security_KeychainSecret_System_Boolean_.md&amp;value=---%0Auid%3A%20Xamarin.Security.Keychains.DPAPIKeychain.StoreSecret(Xamarin.Security.KeychainSecret%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Security.Keychain/Keychains/DPAPIKeychain.cs/#L43">View Source</a>
+  </span>
+  <a id="Xamarin_Security_Keychains_DPAPIKeychain_StoreSecret_" data-uid="Xamarin.Security.Keychains.DPAPIKeychain.StoreSecret*"></a>
+  <h4 id="Xamarin_Security_Keychains_DPAPIKeychain_StoreSecret_Xamarin_Security_KeychainSecret_System_Boolean_" data-uid="Xamarin.Security.Keychains.DPAPIKeychain.StoreSecret(Xamarin.Security.KeychainSecret,System.Boolean)">StoreSecret(KeychainSecret, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void CFRelease(IntPtr obj)</code></pre>
+    <pre><code class="lang-csharp hljs">public void StoreSecret(KeychainSecret secret, bool updateExisting = true)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -133,68 +142,31 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.IntPtr</span></td>
-        <td><span class="parametername">obj</span></td>
+        <td><a class="xref" href="Xamarin.Security.KeychainSecret.html">KeychainSecret</a></td>
+        <td><span class="parametername">secret</span></td>
         <td></td>
       </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Xamarin_NativeHelpers_CoreFoundation_CFRetain_" data-uid="Xamarin.NativeHelpers.CoreFoundation.CFRetain*"></a>
-  <h4 id="Xamarin_NativeHelpers_CoreFoundation_CFRetain_System_IntPtr_" data-uid="Xamarin.NativeHelpers.CoreFoundation.CFRetain(System.IntPtr)">CFRetain(IntPtr)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IntPtr CFRetain(IntPtr obj)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
       <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.IntPtr</span></td>
-        <td><span class="parametername">obj</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.IntPtr</span></td>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">updateExisting</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_NativeHelpers_CoreFoundation_CFStringCreate_System_String_.md&amp;value=---%0Auid%3A%20Xamarin.NativeHelpers.CoreFoundation.CFStringCreate(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Security_Keychains_DPAPIKeychain_TryGetSecret_Xamarin_Security_KeychainSecretName_Xamarin_Security_KeychainSecret__.md&amp;value=---%0Auid%3A%20Xamarin.Security.Keychains.DPAPIKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName%2CXamarin.Security.KeychainSecret%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.NativeHelpers/CoreFoundation.cs/#L48">View Source</a>
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Security.Keychain/Keychains/DPAPIKeychain.cs/#L25">View Source</a>
   </span>
-  <a id="Xamarin_NativeHelpers_CoreFoundation_CFStringCreate_" data-uid="Xamarin.NativeHelpers.CoreFoundation.CFStringCreate*"></a>
-  <h4 id="Xamarin_NativeHelpers_CoreFoundation_CFStringCreate_System_String_" data-uid="Xamarin.NativeHelpers.CoreFoundation.CFStringCreate(System.String)">CFStringCreate(String)</h4>
+  <a id="Xamarin_Security_Keychains_DPAPIKeychain_TryGetSecret_" data-uid="Xamarin.Security.Keychains.DPAPIKeychain.TryGetSecret*"></a>
+  <h4 id="Xamarin_Security_Keychains_DPAPIKeychain_TryGetSecret_Xamarin_Security_KeychainSecretName_Xamarin_Security_KeychainSecret__" data-uid="Xamarin.Security.Keychains.DPAPIKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName,Xamarin.Security.KeychainSecret@)">TryGetSecret(KeychainSecretName, out KeychainSecret)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IntPtr CFStringCreate(string str)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool TryGetSecret(KeychainSecretName name, out KeychainSecret secret)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,8 +179,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">str</span></td>
+        <td><a class="xref" href="Xamarin.Security.KeychainSecretName.html">KeychainSecretName</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Xamarin.Security.KeychainSecret.html">KeychainSecret</a></td>
+        <td><span class="parametername">secret</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -223,58 +200,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.IntPtr</span></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_NativeHelpers_CoreFoundation_CFStringGetString_System_IntPtr_.md&amp;value=---%0Auid%3A%20Xamarin.NativeHelpers.CoreFoundation.CFStringGetString(System.IntPtr)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.NativeHelpers/CoreFoundation.cs/#L62">View Source</a>
-  </span>
-  <a id="Xamarin_NativeHelpers_CoreFoundation_CFStringGetString_" data-uid="Xamarin.NativeHelpers.CoreFoundation.CFStringGetString*"></a>
-  <h4 id="Xamarin_NativeHelpers_CoreFoundation_CFStringGetString_System_IntPtr_" data-uid="Xamarin.NativeHelpers.CoreFoundation.CFStringGetString(System.IntPtr)">CFStringGetString(IntPtr)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string CFStringGetString(IntPtr cfStringPtr)</code></pre>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Xamarin.Security.Keychains.IKeychain.html">IKeychain</a>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.IntPtr</span></td>
-        <td><span class="parametername">cfStringPtr</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
 </article>
           </div>
           
@@ -283,10 +217,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_NativeHelpers_CoreFoundation.md&amp;value=---%0Auid%3A%20Xamarin.NativeHelpers.CoreFoundation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Security_Keychains_DPAPIKeychain.md&amp;value=---%0Auid%3A%20Xamarin.Security.Keychains.DPAPIKeychain%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.NativeHelpers/CoreFoundation.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Security.Keychain/Keychains/DPAPIKeychain.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

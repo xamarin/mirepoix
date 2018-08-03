@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 
 namespace Xamarin.Security.Keychains
 {
-    [EditorBrowsable (EditorBrowsableState.Never)]
+    [EditorBrowsable (EditorBrowsableState.Advanced)]
     public sealed class OSKeychain : IKeychain
     {
         readonly IKeychain keychain;

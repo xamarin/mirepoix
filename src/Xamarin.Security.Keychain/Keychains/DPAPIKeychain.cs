@@ -12,7 +12,7 @@ using System.Security.Cryptography;
 
 namespace Xamarin.Security.Keychains
 {
-    [EditorBrowsable (EditorBrowsableState.Never)]
+    [EditorBrowsable (EditorBrowsableState.Advanced)]
     public sealed class DPAPIKeychain : IKeychain
     {
         static string GetSecretPath (KeychainSecretName secretName)

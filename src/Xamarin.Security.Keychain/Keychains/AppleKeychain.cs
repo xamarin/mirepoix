@@ -20,7 +20,7 @@ namespace Xamarin.Security.Keychains
             => HResult = (int)osStatus;
     }
 
-    [EditorBrowsable (EditorBrowsableState.Never)]
+    [EditorBrowsable (EditorBrowsableState.Advanced)]
     public sealed class AppleKeychain : IKeychain
     {
         public bool TryGetSecret (KeychainSecretName name, out KeychainSecret secret)

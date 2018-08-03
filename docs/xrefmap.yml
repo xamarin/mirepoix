@@ -1350,6 +1350,76 @@ references:
   commentId: N:Xamarin.Security.Keychains
   fullName: Xamarin.Security.Keychains
   nameWithType: Xamarin.Security.Keychains
+- uid: Xamarin.Security.Keychains.AppleKeychain
+  name: AppleKeychain
+  href: api/Xamarin.Security.Keychains.AppleKeychain.html
+  commentId: T:Xamarin.Security.Keychains.AppleKeychain
+  fullName: Xamarin.Security.Keychains.AppleKeychain
+  nameWithType: AppleKeychain
+- uid: Xamarin.Security.Keychains.AppleKeychain.StoreSecret(Xamarin.Security.KeychainSecret,System.Boolean)
+  name: StoreSecret(KeychainSecret, Boolean)
+  href: api/Xamarin.Security.Keychains.AppleKeychain.html#Xamarin_Security_Keychains_AppleKeychain_StoreSecret_Xamarin_Security_KeychainSecret_System_Boolean_
+  commentId: M:Xamarin.Security.Keychains.AppleKeychain.StoreSecret(Xamarin.Security.KeychainSecret,System.Boolean)
+  fullName: Xamarin.Security.Keychains.AppleKeychain.StoreSecret(Xamarin.Security.KeychainSecret, System.Boolean)
+  nameWithType: AppleKeychain.StoreSecret(KeychainSecret, Boolean)
+- uid: Xamarin.Security.Keychains.AppleKeychain.StoreSecret*
+  name: StoreSecret
+  href: api/Xamarin.Security.Keychains.AppleKeychain.html#Xamarin_Security_Keychains_AppleKeychain_StoreSecret_
+  commentId: Overload:Xamarin.Security.Keychains.AppleKeychain.StoreSecret
+  isSpec: "True"
+  fullName: Xamarin.Security.Keychains.AppleKeychain.StoreSecret
+  nameWithType: AppleKeychain.StoreSecret
+- uid: Xamarin.Security.Keychains.AppleKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName,Xamarin.Security.KeychainSecret@)
+  name: TryGetSecret(KeychainSecretName, out KeychainSecret)
+  href: api/Xamarin.Security.Keychains.AppleKeychain.html#Xamarin_Security_Keychains_AppleKeychain_TryGetSecret_Xamarin_Security_KeychainSecretName_Xamarin_Security_KeychainSecret__
+  commentId: M:Xamarin.Security.Keychains.AppleKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName,Xamarin.Security.KeychainSecret@)
+  name.vb: TryGetSecret(KeychainSecretName, ByRef KeychainSecret)
+  fullName: Xamarin.Security.Keychains.AppleKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName, out Xamarin.Security.KeychainSecret)
+  fullName.vb: Xamarin.Security.Keychains.AppleKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName, ByRef Xamarin.Security.KeychainSecret)
+  nameWithType: AppleKeychain.TryGetSecret(KeychainSecretName, out KeychainSecret)
+  nameWithType.vb: AppleKeychain.TryGetSecret(KeychainSecretName, ByRef KeychainSecret)
+- uid: Xamarin.Security.Keychains.AppleKeychain.TryGetSecret*
+  name: TryGetSecret
+  href: api/Xamarin.Security.Keychains.AppleKeychain.html#Xamarin_Security_Keychains_AppleKeychain_TryGetSecret_
+  commentId: Overload:Xamarin.Security.Keychains.AppleKeychain.TryGetSecret
+  isSpec: "True"
+  fullName: Xamarin.Security.Keychains.AppleKeychain.TryGetSecret
+  nameWithType: AppleKeychain.TryGetSecret
+- uid: Xamarin.Security.Keychains.DPAPIKeychain
+  name: DPAPIKeychain
+  href: api/Xamarin.Security.Keychains.DPAPIKeychain.html
+  commentId: T:Xamarin.Security.Keychains.DPAPIKeychain
+  fullName: Xamarin.Security.Keychains.DPAPIKeychain
+  nameWithType: DPAPIKeychain
+- uid: Xamarin.Security.Keychains.DPAPIKeychain.StoreSecret(Xamarin.Security.KeychainSecret,System.Boolean)
+  name: StoreSecret(KeychainSecret, Boolean)
+  href: api/Xamarin.Security.Keychains.DPAPIKeychain.html#Xamarin_Security_Keychains_DPAPIKeychain_StoreSecret_Xamarin_Security_KeychainSecret_System_Boolean_
+  commentId: M:Xamarin.Security.Keychains.DPAPIKeychain.StoreSecret(Xamarin.Security.KeychainSecret,System.Boolean)
+  fullName: Xamarin.Security.Keychains.DPAPIKeychain.StoreSecret(Xamarin.Security.KeychainSecret, System.Boolean)
+  nameWithType: DPAPIKeychain.StoreSecret(KeychainSecret, Boolean)
+- uid: Xamarin.Security.Keychains.DPAPIKeychain.StoreSecret*
+  name: StoreSecret
+  href: api/Xamarin.Security.Keychains.DPAPIKeychain.html#Xamarin_Security_Keychains_DPAPIKeychain_StoreSecret_
+  commentId: Overload:Xamarin.Security.Keychains.DPAPIKeychain.StoreSecret
+  isSpec: "True"
+  fullName: Xamarin.Security.Keychains.DPAPIKeychain.StoreSecret
+  nameWithType: DPAPIKeychain.StoreSecret
+- uid: Xamarin.Security.Keychains.DPAPIKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName,Xamarin.Security.KeychainSecret@)
+  name: TryGetSecret(KeychainSecretName, out KeychainSecret)
+  href: api/Xamarin.Security.Keychains.DPAPIKeychain.html#Xamarin_Security_Keychains_DPAPIKeychain_TryGetSecret_Xamarin_Security_KeychainSecretName_Xamarin_Security_KeychainSecret__
+  commentId: M:Xamarin.Security.Keychains.DPAPIKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName,Xamarin.Security.KeychainSecret@)
+  name.vb: TryGetSecret(KeychainSecretName, ByRef KeychainSecret)
+  fullName: Xamarin.Security.Keychains.DPAPIKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName, out Xamarin.Security.KeychainSecret)
+  fullName.vb: Xamarin.Security.Keychains.DPAPIKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName, ByRef Xamarin.Security.KeychainSecret)
+  nameWithType: DPAPIKeychain.TryGetSecret(KeychainSecretName, out KeychainSecret)
+  nameWithType.vb: DPAPIKeychain.TryGetSecret(KeychainSecretName, ByRef KeychainSecret)
+- uid: Xamarin.Security.Keychains.DPAPIKeychain.TryGetSecret*
+  name: TryGetSecret
+  href: api/Xamarin.Security.Keychains.DPAPIKeychain.html#Xamarin_Security_Keychains_DPAPIKeychain_TryGetSecret_
+  commentId: Overload:Xamarin.Security.Keychains.DPAPIKeychain.TryGetSecret
+  isSpec: "True"
+  fullName: Xamarin.Security.Keychains.DPAPIKeychain.TryGetSecret
+  nameWithType: DPAPIKeychain.TryGetSecret
 - uid: Xamarin.Security.Keychains.IKeychain
   name: IKeychain
   href: api/Xamarin.Security.Keychains.IKeychain.html
@@ -1385,6 +1455,54 @@ references:
   isSpec: "True"
   fullName: Xamarin.Security.Keychains.IKeychain.TryGetSecret
   nameWithType: IKeychain.TryGetSecret
+- uid: Xamarin.Security.Keychains.OSKeychain
+  name: OSKeychain
+  href: api/Xamarin.Security.Keychains.OSKeychain.html
+  commentId: T:Xamarin.Security.Keychains.OSKeychain
+  fullName: Xamarin.Security.Keychains.OSKeychain
+  nameWithType: OSKeychain
+- uid: Xamarin.Security.Keychains.OSKeychain.#ctor
+  name: OSKeychain()
+  href: api/Xamarin.Security.Keychains.OSKeychain.html#Xamarin_Security_Keychains_OSKeychain__ctor
+  commentId: M:Xamarin.Security.Keychains.OSKeychain.#ctor
+  fullName: Xamarin.Security.Keychains.OSKeychain.OSKeychain()
+  nameWithType: OSKeychain.OSKeychain()
+- uid: Xamarin.Security.Keychains.OSKeychain.#ctor*
+  name: OSKeychain
+  href: api/Xamarin.Security.Keychains.OSKeychain.html#Xamarin_Security_Keychains_OSKeychain__ctor_
+  commentId: Overload:Xamarin.Security.Keychains.OSKeychain.#ctor
+  isSpec: "True"
+  fullName: Xamarin.Security.Keychains.OSKeychain.OSKeychain
+  nameWithType: OSKeychain.OSKeychain
+- uid: Xamarin.Security.Keychains.OSKeychain.StoreSecret(Xamarin.Security.KeychainSecret,System.Boolean)
+  name: StoreSecret(KeychainSecret, Boolean)
+  href: api/Xamarin.Security.Keychains.OSKeychain.html#Xamarin_Security_Keychains_OSKeychain_StoreSecret_Xamarin_Security_KeychainSecret_System_Boolean_
+  commentId: M:Xamarin.Security.Keychains.OSKeychain.StoreSecret(Xamarin.Security.KeychainSecret,System.Boolean)
+  fullName: Xamarin.Security.Keychains.OSKeychain.StoreSecret(Xamarin.Security.KeychainSecret, System.Boolean)
+  nameWithType: OSKeychain.StoreSecret(KeychainSecret, Boolean)
+- uid: Xamarin.Security.Keychains.OSKeychain.StoreSecret*
+  name: StoreSecret
+  href: api/Xamarin.Security.Keychains.OSKeychain.html#Xamarin_Security_Keychains_OSKeychain_StoreSecret_
+  commentId: Overload:Xamarin.Security.Keychains.OSKeychain.StoreSecret
+  isSpec: "True"
+  fullName: Xamarin.Security.Keychains.OSKeychain.StoreSecret
+  nameWithType: OSKeychain.StoreSecret
+- uid: Xamarin.Security.Keychains.OSKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName,Xamarin.Security.KeychainSecret@)
+  name: TryGetSecret(KeychainSecretName, out KeychainSecret)
+  href: api/Xamarin.Security.Keychains.OSKeychain.html#Xamarin_Security_Keychains_OSKeychain_TryGetSecret_Xamarin_Security_KeychainSecretName_Xamarin_Security_KeychainSecret__
+  commentId: M:Xamarin.Security.Keychains.OSKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName,Xamarin.Security.KeychainSecret@)
+  name.vb: TryGetSecret(KeychainSecretName, ByRef KeychainSecret)
+  fullName: Xamarin.Security.Keychains.OSKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName, out Xamarin.Security.KeychainSecret)
+  fullName.vb: Xamarin.Security.Keychains.OSKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName, ByRef Xamarin.Security.KeychainSecret)
+  nameWithType: OSKeychain.TryGetSecret(KeychainSecretName, out KeychainSecret)
+  nameWithType.vb: OSKeychain.TryGetSecret(KeychainSecretName, ByRef KeychainSecret)
+- uid: Xamarin.Security.Keychains.OSKeychain.TryGetSecret*
+  name: TryGetSecret
+  href: api/Xamarin.Security.Keychains.OSKeychain.html#Xamarin_Security_Keychains_OSKeychain_TryGetSecret_
+  commentId: Overload:Xamarin.Security.Keychains.OSKeychain.TryGetSecret
+  isSpec: "True"
+  fullName: Xamarin.Security.Keychains.OSKeychain.TryGetSecret
+  nameWithType: OSKeychain.TryGetSecret
 - uid: Xamarin.Security.KeychainSecret
   name: KeychainSecret
   href: api/Xamarin.Security.KeychainSecret.html
