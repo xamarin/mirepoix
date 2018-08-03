@@ -15,7 +15,7 @@ namespace Xamarin.NativeHelpers
 {
     public class CoreFoundationTests
     {
-        [Theory]
+        [MacTheory]
         [ClassData (typeof (GB18030TestDataWithNullAndEmpty))]
         public void ToCFString (string stringDescription, string stringValue)
         {
