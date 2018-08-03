@@ -2,6 +2,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <IsPackable>false</IsPackable>
+    <NoWarn>xUnit1026</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,5 +14,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Xamarin.Security.Keychain\Xamarin.Security.Keychain.csproj" />
+    <ProjectReference Include="..\Xamarin.XunitHelpers\Xamarin.XunitHelpers.csproj" />
   </ItemGroup>
 </Project>

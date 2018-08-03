@@ -36,8 +36,7 @@ namespace Xamarin.Security.Tests
         const string serviceName = "com.xamarin.mirepoix.tests";
 
         [Theory]
-        [InlineData ("simple-string", "hello")]
-        [InlineData ("🥑🌮🍔🐈", "🥑🌮🍔🐈")]
+        [ClassData (typeof (GB18030TestData))]
         public void RoundtripString (string key, string value)
         {
             KeychainSecretName name = (serviceName, key);
