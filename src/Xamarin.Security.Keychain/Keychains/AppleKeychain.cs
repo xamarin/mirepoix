@@ -69,7 +69,14 @@ namespace Xamarin.Security.Keychains
                     secretValue.Length, secretValue.Buffer,
                     ref itemRef);
 
-                if (result == SecStatus.DuplicateItem && updateExisting) {
+                if (result == SecStatus.DuplicateItem) {
+                    if (!updateExisting)
+                        throw new KeychainItemAlreadyExistsException (
+                            $"'{secret.Name}' already exists",
+                            new AppleSecurityException (
+                                nameof (SecKeychainAddGenericPassword),
+                                result));
+
                     result = SecKeychainFindGenericPassword (
                         IntPtr.Zero,
                         serviceName.Length, serviceName.Buffer,

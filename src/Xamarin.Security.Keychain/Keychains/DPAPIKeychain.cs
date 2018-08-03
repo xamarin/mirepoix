@@ -43,7 +43,12 @@ namespace Xamarin.Security.Keychains
         public void StoreSecret (KeychainSecret secret, bool updateExisting = true)
         {
             var secretPath = GetSecretPath (secret.Name);
+            if (!updateExisting && File.Exists (secretPath))
+                throw new KeychainItemAlreadyExistsException (
+                    $"'{secret.Name}' already exists");
+
             Directory.CreateDirectory (Path.GetDirectoryName (secretPath));
+
             File.WriteAllBytes (secretPath, ProtectedData.Protect (
                 (byte [])secret.Value,
                 null,

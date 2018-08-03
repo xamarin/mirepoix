@@ -17,9 +17,9 @@ namespace Xamarin.Security
         }
     }
 
-    public sealed class KeychainItemNotFoundException : KeychainException
+    public sealed class KeychainItemAlreadyExistsException : KeychainException
     {
-        internal KeychainItemNotFoundException (string message, Exception innerException = null)
+        internal KeychainItemAlreadyExistsException (string message, Exception innerException = null)
             : base (message, innerException)
         {
         }

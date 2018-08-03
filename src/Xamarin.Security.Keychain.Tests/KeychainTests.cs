@@ -16,7 +16,8 @@ namespace Xamarin.Security.Tests
     // NOTE: CollectionDefinition/Collection needed to ensure xunit does
     // not run the keychain tests in parallel since OSKeychain will create
     // either DPAPIKeychain or AppleKeychain, which in turn can race due
-    // to accessing the same OS resources at the same time.
+    // to accessing the same OS resources at the same time if we explicitly
+    // want to test, for example, KeychainTests<AppleKeychain>.
 
     [CollectionDefinition (nameof (KeychainImplementations))]
     public sealed class KeychainImplementations
@@ -78,7 +79,7 @@ namespace Xamarin.Security.Tests
         {
             KeychainSecretName name = (serviceName, "dont-update-me");
             keychain.StoreSecret (KeychainSecret.Create (name, "initial value"));
-            Assert.ThrowsAny<Exception> (() => keychain.StoreSecret (
+            Assert.Throws<KeychainItemAlreadyExistsException> (() => keychain.StoreSecret (
                 KeychainSecret.Create (name, "new value"),
                 updateExisting: false));
         }
