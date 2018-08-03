@@ -25,11 +25,11 @@ namespace Xamarin.Security.Tests
     }
 
     [Collection (nameof (KeychainImplementations))]
-    public sealed class OSKeychainTests : KeychainTests<OSKeychain>
+    public sealed class OSKeychainTests : IKeychainTests<OSKeychain>
     {
     }
 
-    public abstract class KeychainTests<TKeychain> where TKeychain : IKeychain, new ()
+    public abstract class IKeychainTests<TKeychain> where TKeychain : IKeychain, new ()
     {
         readonly TKeychain keychain = new TKeychain ();
 
@@ -82,6 +82,32 @@ namespace Xamarin.Security.Tests
             Assert.Throws<KeychainItemAlreadyExistsException> (() => keychain.StoreSecret (
                 KeychainSecret.Create (name, "new value"),
                 updateExisting: false));
+        }
+    }
+
+    [Collection (nameof (KeychainImplementations))]
+    public class KeychainTests
+    {
+        const string serviceName = "com.xamarin.mirepoix.tests";
+
+        [Fact]
+        public void RoundtripString ()
+        {
+            const string key = "helper-api-roundtrip-string";
+            var value = Guid.NewGuid ().ToString ();
+            Keychain.StoreSecret (serviceName, key, value);
+            Assert.True (Keychain.TryGetSecret (serviceName, key, out var secret));
+            Assert.Equal (value, secret);
+        }
+
+        [Fact]
+        public void RoundtripBytes ()
+        {
+            const string key = "helper-api-roundtrip-bytes";
+            var value = Guid.NewGuid ().ToByteArray ();
+            Keychain.StoreSecret (serviceName, key, value);
+            Assert.True (Keychain.TryGetSecretBytes (serviceName, key, out var secret));
+            Assert.Equal (value, secret);
         }
     }
 }
