@@ -14,11 +14,11 @@ namespace Xamarin.NativeHelpers
     {
         const string CoreFoundationLibrary = "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation";
 
-		[DllImport (CoreFoundationLibrary)]
-		public static extern void CFRelease (IntPtr obj);
+        [DllImport (CoreFoundationLibrary)]
+        public static extern void CFRelease (IntPtr obj);
 
-		[DllImport (CoreFoundationLibrary)]
-		public static extern IntPtr CFRetain (IntPtr obj);
+        [DllImport (CoreFoundationLibrary)]
+        public static extern IntPtr CFRetain (IntPtr obj);
 
         [StructLayout (LayoutKind.Sequential)]
         public struct CFRange
@@ -39,11 +39,11 @@ namespace Xamarin.NativeHelpers
             }
         }
 
-		[DllImport (CoreFoundationLibrary, CharSet = CharSet.Unicode)]
-		static extern IntPtr CFStringCreateWithCharacters (IntPtr allocator, string str, IntPtr count);
+        [DllImport (CoreFoundationLibrary, CharSet = CharSet.Unicode)]
+        static extern IntPtr CFStringCreateWithCharacters (IntPtr allocator, string str, IntPtr count);
 
-		[DllImport (CoreFoundationLibrary)]
-		static extern IntPtr CFStringGetLength (IntPtr handle);
+        [DllImport (CoreFoundationLibrary)]
+        static extern IntPtr CFStringGetLength (IntPtr handle);
 
         public static IntPtr CFStringCreate (string str)
             => str == null
@@ -61,15 +61,15 @@ namespace Xamarin.NativeHelpers
 
         public static unsafe string CFStringGetString (IntPtr cfStringPtr)
         {
-			if (cfStringPtr == IntPtr.Zero)
-				return null;
+            if (cfStringPtr == IntPtr.Zero)
+                return null;
 
-			var nlength = CFStringGetLength (cfStringPtr);
+            var nlength = CFStringGetLength (cfStringPtr);
             var length = (int)nlength;
             if (nlength == IntPtr.Zero)
                 return string.Empty;
 
-			var charPtr = CFStringGetCharactersPtr (cfStringPtr);
+            var charPtr = CFStringGetCharactersPtr (cfStringPtr);
             if (charPtr != IntPtr.Zero)
                 return new string ((char *)charPtr, 0, length);
 
