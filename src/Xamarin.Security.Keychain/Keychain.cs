@@ -29,29 +29,13 @@ namespace Xamarin.Security
             string serviceName,
             string accountName,
             out string secret)
-        {
-            if (keychain.TryGetSecret (((serviceName, accountName)), out var fullSecret)) {
-                secret = fullSecret.GetUtf8StringValue ();
-                return true;
-            }
-
-            secret = null;
-            return false;
-        }
+            => keychain.TryGetSecret (serviceName, accountName, out secret);
 
         public static bool TryGetSecretBytes (
             string serviceName,
             string accountName,
             out byte [] secret)
-        {
-            if (keychain.TryGetSecret (((serviceName, accountName)), out var fullSecret)) {
-                secret = (byte [])fullSecret.Value;
-                return true;
-            }
-
-            secret = null;
-            return false;
-        }
+            => keychain.TryGetSecretBytes (serviceName, accountName, out secret);
 
         public static void StoreSecret (KeychainSecret secret, bool updateExisting = true)
             => keychain.StoreSecret (secret, updateExisting);
@@ -61,21 +45,13 @@ namespace Xamarin.Security
             string accountName,
             string secret,
             bool updateExisting = true)
-            => keychain.StoreSecret (
-                KeychainSecret.Create (
-                    (serviceName, accountName),
-                    secret),
-                updateExisting);
+            => keychain.StoreSecret (serviceName, accountName, secret, updateExisting);
 
         public static void StoreSecret (
             string serviceName,
             string accountName,
             byte [] secret,
             bool updateExisting = true)
-            => keychain.StoreSecret (
-                KeychainSecret.Create (
-                    (serviceName, accountName),
-                    secret),
-                updateExisting);
+            => keychain.StoreSecret (serviceName, accountName, secret, updateExisting);
     }
 }
