@@ -401,6 +401,147 @@ references:
   isSpec: "True"
   fullName: Xamarin.Downloader.DownloadStatus.TimeElapsed
   nameWithType: DownloadStatus.TimeElapsed
+- uid: Xamarin.MSBuild.Tooling
+  name: Xamarin.MSBuild.Tooling
+  href: api/Xamarin.MSBuild.Tooling.html
+  commentId: N:Xamarin.MSBuild.Tooling
+  fullName: Xamarin.MSBuild.Tooling
+  nameWithType: Xamarin.MSBuild.Tooling
+- uid: Xamarin.MSBuild.Tooling.DependencyGraph
+  name: DependencyGraph
+  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html
+  commentId: T:Xamarin.MSBuild.Tooling.DependencyGraph
+  fullName: Xamarin.MSBuild.Tooling.DependencyGraph
+  nameWithType: DependencyGraph
+- uid: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}},Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory)
+  name: Create(IEnumerable<String>, IEnumerable<KeyValuePair<String, String>>, DependencyGraph.ProjectCollectionFactory)
+  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_Create_System_Collections_Generic_IEnumerable_System_String__System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___Xamarin_MSBuild_Tooling_DependencyGraph_ProjectCollectionFactory_
+  commentId: M:Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}},Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory)
+  name.vb: Create(IEnumerable(Of String), IEnumerable(Of KeyValuePair(Of String, String)), DependencyGraph.ProjectCollectionFactory)
+  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable<System.String>, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, System.String>>, Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory)
+  fullName.vb: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable(Of System.String), System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, System.String)), Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory)
+  nameWithType: DependencyGraph.Create(IEnumerable<String>, IEnumerable<KeyValuePair<String, String>>, DependencyGraph.ProjectCollectionFactory)
+  nameWithType.vb: DependencyGraph.Create(IEnumerable(Of String), IEnumerable(Of KeyValuePair(Of String, String)), DependencyGraph.ProjectCollectionFactory)
+- uid: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.ValueTuple{System.String,System.String}})
+  name: Create(IEnumerable<String>, IEnumerable<>)
+  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_Create_System_Collections_Generic_IEnumerable_System_String__System_Collections_Generic_IEnumerable_System_ValueTuple_System_String_System_String___
+  commentId: M:Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.ValueTuple{System.String,System.String}})
+  name.vb: Create(IEnumerable(Of String), IEnumerable(Of ))
+  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable<System.String>, System.Collections.Generic.IEnumerable<System.>)
+  fullName.vb: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable(Of System.String), System.Collections.Generic.IEnumerable(Of System.))
+  nameWithType: DependencyGraph.Create(IEnumerable<String>, IEnumerable<>)
+  nameWithType.vb: DependencyGraph.Create(IEnumerable(Of String), IEnumerable(Of ))
+- uid: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable{System.String},System.ValueTuple{System.String,System.String}[])
+  name: Create(IEnumerable<String>, [])
+  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_Create_System_Collections_Generic_IEnumerable_System_String__System_ValueTuple_System_String_System_String____
+  commentId: M:Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable{System.String},System.ValueTuple{System.String,System.String}[])
+  name.vb: Create(IEnumerable(Of String), ())
+  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable<System.String>, System.[])
+  fullName.vb: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable(Of System.String), System.())
+  nameWithType: DependencyGraph.Create(IEnumerable<String>, [])
+  nameWithType.vb: DependencyGraph.Create(IEnumerable(Of String), ())
+- uid: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String,System.Collections.Generic.IEnumerable{System.ValueTuple{System.String,System.String}})
+  name: Create(String, IEnumerable<>)
+  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_Create_System_String_System_Collections_Generic_IEnumerable_System_ValueTuple_System_String_System_String___
+  commentId: M:Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String,System.Collections.Generic.IEnumerable{System.ValueTuple{System.String,System.String}})
+  name.vb: Create(String, IEnumerable(Of ))
+  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String, System.Collections.Generic.IEnumerable<System.>)
+  fullName.vb: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String, System.Collections.Generic.IEnumerable(Of System.))
+  nameWithType: DependencyGraph.Create(String, IEnumerable<>)
+  nameWithType.vb: DependencyGraph.Create(String, IEnumerable(Of ))
+- uid: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String,System.ValueTuple{System.String,System.String}[])
+  name: Create(String, [])
+  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_Create_System_String_System_ValueTuple_System_String_System_String____
+  commentId: M:Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String,System.ValueTuple{System.String,System.String}[])
+  name.vb: Create(String, ())
+  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String, System.[])
+  fullName.vb: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String, System.())
+  nameWithType: DependencyGraph.Create(String, [])
+  nameWithType.vb: DependencyGraph.Create(String, ())
+- uid: Xamarin.MSBuild.Tooling.DependencyGraph.Create*
+  name: Create
+  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_Create_
+  commentId: Overload:Xamarin.MSBuild.Tooling.DependencyGraph.Create
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.Create
+  nameWithType: DependencyGraph.Create
+- uid: Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraph(System.Threading.CancellationToken)
+  name: LoadGraph(CancellationToken)
+  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_LoadGraph_System_Threading_CancellationToken_
+  commentId: M:Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraph(System.Threading.CancellationToken)
+  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraph(System.Threading.CancellationToken)
+  nameWithType: DependencyGraph.LoadGraph(CancellationToken)
+- uid: Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraph*
+  name: LoadGraph
+  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_LoadGraph_
+  commentId: Overload:Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraph
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraph
+  nameWithType: DependencyGraph.LoadGraph
+- uid: Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraphAsync(System.Threading.CancellationToken)
+  name: LoadGraphAsync(CancellationToken)
+  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_LoadGraphAsync_System_Threading_CancellationToken_
+  commentId: M:Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraphAsync(System.Threading.CancellationToken)
+  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraphAsync(System.Threading.CancellationToken)
+  nameWithType: DependencyGraph.LoadGraphAsync(CancellationToken)
+- uid: Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraphAsync*
+  name: LoadGraphAsync
+  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_LoadGraphAsync_
+  commentId: Overload:Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraphAsync
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraphAsync
+  nameWithType: DependencyGraph.LoadGraphAsync
+- uid: Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollection
+  name: ProjectCollection
+  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_ProjectCollection
+  commentId: P:Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollection
+  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollection
+  nameWithType: DependencyGraph.ProjectCollection
+- uid: Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollection*
+  name: ProjectCollection
+  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_ProjectCollection_
+  commentId: Overload:Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollection
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollection
+  nameWithType: DependencyGraph.ProjectCollection
+- uid: Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory
+  name: DependencyGraph.ProjectCollectionFactory
+  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory.html
+  commentId: T:Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory
+  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory
+  nameWithType: DependencyGraph.ProjectCollectionFactory
+- uid: Xamarin.MSBuild.Tooling.DependencyGraph.TopologicallySortedProjects
+  name: TopologicallySortedProjects
+  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_TopologicallySortedProjects
+  commentId: P:Xamarin.MSBuild.Tooling.DependencyGraph.TopologicallySortedProjects
+  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.TopologicallySortedProjects
+  nameWithType: DependencyGraph.TopologicallySortedProjects
+- uid: Xamarin.MSBuild.Tooling.DependencyGraph.TopologicallySortedProjects*
+  name: TopologicallySortedProjects
+  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_TopologicallySortedProjects_
+  commentId: Overload:Xamarin.MSBuild.Tooling.DependencyGraph.TopologicallySortedProjects
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.TopologicallySortedProjects
+  nameWithType: DependencyGraph.TopologicallySortedProjects
+- uid: Xamarin.MSBuild.Tooling.MSBuildLocator
+  name: MSBuildLocator
+  href: api/Xamarin.MSBuild.Tooling.MSBuildLocator.html
+  commentId: T:Xamarin.MSBuild.Tooling.MSBuildLocator
+  fullName: Xamarin.MSBuild.Tooling.MSBuildLocator
+  nameWithType: MSBuildLocator
+- uid: Xamarin.MSBuild.Tooling.MSBuildLocator.RegisterMSBuildPath(System.String)
+  name: RegisterMSBuildPath(String)
+  href: api/Xamarin.MSBuild.Tooling.MSBuildLocator.html#Xamarin_MSBuild_Tooling_MSBuildLocator_RegisterMSBuildPath_System_String_
+  commentId: M:Xamarin.MSBuild.Tooling.MSBuildLocator.RegisterMSBuildPath(System.String)
+  fullName: Xamarin.MSBuild.Tooling.MSBuildLocator.RegisterMSBuildPath(System.String)
+  nameWithType: MSBuildLocator.RegisterMSBuildPath(String)
+- uid: Xamarin.MSBuild.Tooling.MSBuildLocator.RegisterMSBuildPath*
+  name: RegisterMSBuildPath
+  href: api/Xamarin.MSBuild.Tooling.MSBuildLocator.html#Xamarin_MSBuild_Tooling_MSBuildLocator_RegisterMSBuildPath_
+  commentId: Overload:Xamarin.MSBuild.Tooling.MSBuildLocator.RegisterMSBuildPath
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Tooling.MSBuildLocator.RegisterMSBuildPath
+  nameWithType: MSBuildLocator.RegisterMSBuildPath
 - uid: Xamarin.NativeHelpers
   name: Xamarin.NativeHelpers
   href: api/Xamarin.NativeHelpers.html
@@ -1455,6 +1596,66 @@ references:
   isSpec: "True"
   fullName: Xamarin.Security.Keychains.IKeychain.TryGetSecret
   nameWithType: IKeychain.TryGetSecret
+- uid: Xamarin.Security.Keychains.IKeychainExtensions
+  name: IKeychainExtensions
+  href: api/Xamarin.Security.Keychains.IKeychainExtensions.html
+  commentId: T:Xamarin.Security.Keychains.IKeychainExtensions
+  fullName: Xamarin.Security.Keychains.IKeychainExtensions
+  nameWithType: IKeychainExtensions
+- uid: Xamarin.Security.Keychains.IKeychainExtensions.StoreSecret(Xamarin.Security.Keychains.IKeychain,System.String,System.String,System.Byte[],System.Boolean)
+  name: StoreSecret(IKeychain, String, String, Byte[], Boolean)
+  href: api/Xamarin.Security.Keychains.IKeychainExtensions.html#Xamarin_Security_Keychains_IKeychainExtensions_StoreSecret_Xamarin_Security_Keychains_IKeychain_System_String_System_String_System_Byte___System_Boolean_
+  commentId: M:Xamarin.Security.Keychains.IKeychainExtensions.StoreSecret(Xamarin.Security.Keychains.IKeychain,System.String,System.String,System.Byte[],System.Boolean)
+  name.vb: StoreSecret(IKeychain, String, String, Byte(), Boolean)
+  fullName: Xamarin.Security.Keychains.IKeychainExtensions.StoreSecret(Xamarin.Security.Keychains.IKeychain, System.String, System.String, System.Byte[], System.Boolean)
+  fullName.vb: Xamarin.Security.Keychains.IKeychainExtensions.StoreSecret(Xamarin.Security.Keychains.IKeychain, System.String, System.String, System.Byte(), System.Boolean)
+  nameWithType: IKeychainExtensions.StoreSecret(IKeychain, String, String, Byte[], Boolean)
+  nameWithType.vb: IKeychainExtensions.StoreSecret(IKeychain, String, String, Byte(), Boolean)
+- uid: Xamarin.Security.Keychains.IKeychainExtensions.StoreSecret(Xamarin.Security.Keychains.IKeychain,System.String,System.String,System.String,System.Boolean)
+  name: StoreSecret(IKeychain, String, String, String, Boolean)
+  href: api/Xamarin.Security.Keychains.IKeychainExtensions.html#Xamarin_Security_Keychains_IKeychainExtensions_StoreSecret_Xamarin_Security_Keychains_IKeychain_System_String_System_String_System_String_System_Boolean_
+  commentId: M:Xamarin.Security.Keychains.IKeychainExtensions.StoreSecret(Xamarin.Security.Keychains.IKeychain,System.String,System.String,System.String,System.Boolean)
+  fullName: Xamarin.Security.Keychains.IKeychainExtensions.StoreSecret(Xamarin.Security.Keychains.IKeychain, System.String, System.String, System.String, System.Boolean)
+  nameWithType: IKeychainExtensions.StoreSecret(IKeychain, String, String, String, Boolean)
+- uid: Xamarin.Security.Keychains.IKeychainExtensions.StoreSecret*
+  name: StoreSecret
+  href: api/Xamarin.Security.Keychains.IKeychainExtensions.html#Xamarin_Security_Keychains_IKeychainExtensions_StoreSecret_
+  commentId: Overload:Xamarin.Security.Keychains.IKeychainExtensions.StoreSecret
+  isSpec: "True"
+  fullName: Xamarin.Security.Keychains.IKeychainExtensions.StoreSecret
+  nameWithType: IKeychainExtensions.StoreSecret
+- uid: Xamarin.Security.Keychains.IKeychainExtensions.TryGetSecret(Xamarin.Security.Keychains.IKeychain,System.String,System.String,System.String@)
+  name: TryGetSecret(IKeychain, String, String, out String)
+  href: api/Xamarin.Security.Keychains.IKeychainExtensions.html#Xamarin_Security_Keychains_IKeychainExtensions_TryGetSecret_Xamarin_Security_Keychains_IKeychain_System_String_System_String_System_String__
+  commentId: M:Xamarin.Security.Keychains.IKeychainExtensions.TryGetSecret(Xamarin.Security.Keychains.IKeychain,System.String,System.String,System.String@)
+  name.vb: TryGetSecret(IKeychain, String, String, ByRef String)
+  fullName: Xamarin.Security.Keychains.IKeychainExtensions.TryGetSecret(Xamarin.Security.Keychains.IKeychain, System.String, System.String, out System.String)
+  fullName.vb: Xamarin.Security.Keychains.IKeychainExtensions.TryGetSecret(Xamarin.Security.Keychains.IKeychain, System.String, System.String, ByRef System.String)
+  nameWithType: IKeychainExtensions.TryGetSecret(IKeychain, String, String, out String)
+  nameWithType.vb: IKeychainExtensions.TryGetSecret(IKeychain, String, String, ByRef String)
+- uid: Xamarin.Security.Keychains.IKeychainExtensions.TryGetSecret*
+  name: TryGetSecret
+  href: api/Xamarin.Security.Keychains.IKeychainExtensions.html#Xamarin_Security_Keychains_IKeychainExtensions_TryGetSecret_
+  commentId: Overload:Xamarin.Security.Keychains.IKeychainExtensions.TryGetSecret
+  isSpec: "True"
+  fullName: Xamarin.Security.Keychains.IKeychainExtensions.TryGetSecret
+  nameWithType: IKeychainExtensions.TryGetSecret
+- uid: Xamarin.Security.Keychains.IKeychainExtensions.TryGetSecretBytes(Xamarin.Security.Keychains.IKeychain,System.String,System.String,System.Byte[]@)
+  name: TryGetSecretBytes(IKeychain, String, String, out Byte[])
+  href: api/Xamarin.Security.Keychains.IKeychainExtensions.html#Xamarin_Security_Keychains_IKeychainExtensions_TryGetSecretBytes_Xamarin_Security_Keychains_IKeychain_System_String_System_String_System_Byte____
+  commentId: M:Xamarin.Security.Keychains.IKeychainExtensions.TryGetSecretBytes(Xamarin.Security.Keychains.IKeychain,System.String,System.String,System.Byte[]@)
+  name.vb: TryGetSecretBytes(IKeychain, String, String, ByRef Byte())
+  fullName: Xamarin.Security.Keychains.IKeychainExtensions.TryGetSecretBytes(Xamarin.Security.Keychains.IKeychain, System.String, System.String, out System.Byte[])
+  fullName.vb: Xamarin.Security.Keychains.IKeychainExtensions.TryGetSecretBytes(Xamarin.Security.Keychains.IKeychain, System.String, System.String, ByRef System.Byte())
+  nameWithType: IKeychainExtensions.TryGetSecretBytes(IKeychain, String, String, out Byte[])
+  nameWithType.vb: IKeychainExtensions.TryGetSecretBytes(IKeychain, String, String, ByRef Byte())
+- uid: Xamarin.Security.Keychains.IKeychainExtensions.TryGetSecretBytes*
+  name: TryGetSecretBytes
+  href: api/Xamarin.Security.Keychains.IKeychainExtensions.html#Xamarin_Security_Keychains_IKeychainExtensions_TryGetSecretBytes_
+  commentId: Overload:Xamarin.Security.Keychains.IKeychainExtensions.TryGetSecretBytes
+  isSpec: "True"
+  fullName: Xamarin.Security.Keychains.IKeychainExtensions.TryGetSecretBytes
+  nameWithType: IKeychainExtensions.TryGetSecretBytes
 - uid: Xamarin.Security.Keychains.OSKeychain
   name: OSKeychain
   href: api/Xamarin.Security.Keychains.OSKeychain.html
@@ -1834,6 +2035,25 @@ references:
   fullName: Xunit.GB18030TestDataWithNullAndEmpty.System.Collections.IEnumerable.GetEnumerator
   nameWithType: GB18030TestDataWithNullAndEmpty.IEnumerable.GetEnumerator
   nameWithType.vb: GB18030TestDataWithNullAndEmpty.System.Collections.IEnumerable.GetEnumerator
+- uid: Xunit.GitHelpers
+  name: GitHelpers
+  href: api/Xunit.GitHelpers.html
+  commentId: T:Xunit.GitHelpers
+  fullName: Xunit.GitHelpers
+  nameWithType: GitHelpers
+- uid: Xunit.GitHelpers.GetPathToRepoRoot(System.Reflection.Assembly)
+  name: GetPathToRepoRoot(Assembly)
+  href: api/Xunit.GitHelpers.html#Xunit_GitHelpers_GetPathToRepoRoot_System_Reflection_Assembly_
+  commentId: M:Xunit.GitHelpers.GetPathToRepoRoot(System.Reflection.Assembly)
+  fullName: Xunit.GitHelpers.GetPathToRepoRoot(System.Reflection.Assembly)
+  nameWithType: GitHelpers.GetPathToRepoRoot(Assembly)
+- uid: Xunit.GitHelpers.GetPathToRepoRoot*
+  name: GetPathToRepoRoot
+  href: api/Xunit.GitHelpers.html#Xunit_GitHelpers_GetPathToRepoRoot_
+  commentId: Overload:Xunit.GitHelpers.GetPathToRepoRoot
+  isSpec: "True"
+  fullName: Xunit.GitHelpers.GetPathToRepoRoot
+  nameWithType: GitHelpers.GetPathToRepoRoot
 - uid: Xunit.LinuxFactAttribute
   name: LinuxFactAttribute
   href: api/Xunit.LinuxFactAttribute.html
