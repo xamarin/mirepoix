@@ -29,7 +29,7 @@ namespace Xamarin.MSBuild.Tooling.Tests
 
     public class DependencyGraphTests
     {
-        [Fact]
+        [Fact (Skip = "Does not run under .NET Core xunit")]
         public async Task ProcessMirepoixSolution ()
         {
             var solutionPath = Path.Combine (
