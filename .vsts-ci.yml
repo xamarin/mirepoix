@@ -29,7 +29,14 @@ steps:
     command: test
     projects: '**\*.Tests.csproj'
   continueOnError: true
-  displayName: Run Tests
+  displayName: Run xUnit Tests
+
+- task: MSBuild@1
+  inputs:
+    solution: src\Xamarin.MSBuild.Tooling\Xamarin.MSBuild.Tooling.csproj
+    configuration: '$(msbuild.configuration)'
+    msbuildArguments: '/restore /t:Test'
+  displayName: Run Manual MSBuild.Tooling Tests
 
 - task: DotNetCoreCLI@2
   inputs:
