@@ -34,7 +34,6 @@ steps:
 - task: MSBuild@1
   inputs:
     solution: src\Xamarin.MSBuild.Tooling\Xamarin.MSBuild.Tooling.csproj
-    configuration: '$(msbuild.configuration)'
     msbuildArguments: '/restore /t:Test'
   displayName: Run Manual MSBuild.Tooling Tests
 
