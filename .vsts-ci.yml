@@ -35,6 +35,7 @@ steps:
   inputs:
     solution: src\Xamarin.MSBuild.Tooling\Xamarin.MSBuild.Tooling.csproj
     msbuildArguments: '/restore /t:Test'
+  continueOnError: true
   displayName: Run Manual MSBuild.Tooling Tests
 
 - task: DotNetCoreCLI@2
