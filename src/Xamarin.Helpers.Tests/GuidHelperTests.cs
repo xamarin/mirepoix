@@ -2,6 +2,7 @@
 // Licensed under the MIT License.
 
 using System;
+using System.Threading.Tasks;
 
 using Xunit;
 
@@ -51,6 +52,36 @@ namespace Xamarin.Helpers
             Assert.Equal (
                 new Guid (expectedGB18030TestDataHashes [hashIndex]),
                 GuidV5 (new Guid ("0495e02e-a13d-44f7-b7d6-f3385434cde9"), value));
+        }
+
+        [Fact]
+        public void ThreadLocal ()
+        {
+            var ns = Guid.NewGuid ();
+
+            void CreateGuid (Guid expected, string name, Func<Guid, string, Guid> func)
+            {
+                for (int i = 0; i < 100000; i++)
+                    Assert.Equal (expected, func (ns, name));
+            }
+
+            var actions = new Action [64];
+            for (int i = 0; i < actions.Length; i++) {
+                Func<Guid, string, Guid> func;
+                var name = $"thread{i}v";
+
+                if (i % 2 == 0) {
+                    func = GuidV3;
+                    name += "3";
+                } else {
+                    func = GuidV5;
+                    name += "5";
+                }
+
+                actions [i] = () => CreateGuid (func (ns, name), name, func);
+            }
+
+            Parallel.Invoke (actions);
         }
     }
 }

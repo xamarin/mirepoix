@@ -4,6 +4,7 @@
 using System;
 using System.Text;
 using System.Security.Cryptography;
+using System.Threading;
 
 namespace Xamarin
 {
@@ -47,6 +48,9 @@ namespace Xamarin
                 0x80, 0xb4, 0x00, 0xc0, 0x4f, 0xd4, 0x30, 0xc8);
         }
 
+        static readonly ThreadLocal<HashAlgorithm> sha1 = new ThreadLocal<HashAlgorithm> (SHA1.Create);
+        static readonly ThreadLocal<HashAlgorithm> md5 = new ThreadLocal<HashAlgorithm> (MD5.Create);
+
         /// <summary>
         /// Creates a version [5 GUID/UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier#Versions_3_and_5_(namespace_name-based))
         /// by combining a given <paramref name="namespaceGuid"/> and arbitrary <paramref name="name"/>, hashed together using SHA-1.
@@ -57,8 +61,7 @@ namespace Xamarin
             if (name == null)
                 throw new ArgumentNullException (nameof (name));
 
-            using (var sha1 = SHA1.Create ())
-                return CreateHashedGuid (sha1, 0x50, namespaceGuid, name);
+            return CreateHashedGuid (sha1.Value, 0x50, namespaceGuid, name);
         }
 
         /// <summary>
@@ -71,11 +74,10 @@ namespace Xamarin
             if (name == null)
                 throw new ArgumentNullException (nameof (name));
 
-            using (var md5 = MD5.Create ())
-                return CreateHashedGuid (md5, 0x30, namespaceGuid, name);
+            return CreateHashedGuid (md5.Value, 0x30, namespaceGuid, name);
         }
 
-        static Guid CreateHashedGuid (
+        static unsafe Guid CreateHashedGuid (
             HashAlgorithm hashAlgorithm,
             byte version,
             Guid namespaceGuid,
@@ -88,8 +90,8 @@ namespace Xamarin
             hashAlgorithm.TransformBlock (namespaceBytes, 0, namespaceBytes.Length, null, 0);
             hashAlgorithm.TransformFinalBlock (nameBytes, 0, nameBytes.Length);
 
-            var guid = new byte [16];
-            Array.Copy (hashAlgorithm.Hash, 0, guid, 0, 16);
+            var guid = hashAlgorithm.Hash;
+            Array.Resize (ref guid, 16);
 
             guid [6] = (byte)((guid [6] & 0x0F) | version);
             guid [8] = (byte)((guid [8] & 0x3F) | 0x80);
