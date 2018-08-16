@@ -29,3 +29,10 @@ steps:
     projects: '**/*.Tests.csproj'
   continueOnError: true
   displayName: Run xUnit Tests
+
+- task: MSBuild@1
+  inputs:
+    solution: src/Xamarin.MSBuild.Tooling.Tests/Xamarin.MSBuild.Tooling.NetFXTests.csproj
+    msbuildArguments: '/restore /t:Test'
+  continueOnError: true
+  displayName: Run Manual MSBuild.Tooling Tests

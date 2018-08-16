@@ -22,8 +22,7 @@ namespace Xamarin.MSBuild.Tooling.Tests
     {
         public static async Task Main ()
         {
-            if (Environment.OSVersion.Platform == PlatformID.Unix)
-                MSBuildLocator.RegisterMSBuildPath ();
+            MSBuildLocator.RegisterMSBuildPath ();
 
             await new DependencyGraphTests ().ProcessMirepoixSolution ();
         }

@@ -120,6 +120,16 @@ namespace Xamarin.MSBuild.Tooling
                     msbuildExePath = LocateMonoMSBuild ();
                 else if (isNetCore && netCoreSdkPath != null)
                     msbuildExePath = Path.Combine (netCoreSdkPath, "MSBuild.dll");
+                else {
+                    var vsInstallDir = Environment.GetEnvironmentVariable ("VSINSTALLDIR");
+                    if (vsInstallDir != null && Directory.Exists (vsInstallDir))
+                        msbuildExePath = Path.Combine (
+                            vsInstallDir,
+                            "MSBuild",
+                            referencedMSBuildMajorDirectoryVersion,
+                            "Bin",
+                            "MSBuild.exe");
+                }
 
                 if (msbuildExePath != null)
                     Environment.SetEnvironmentVariable ("MSBUILD_EXE_PATH", msbuildExePath);
