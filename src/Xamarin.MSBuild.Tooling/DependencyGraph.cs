@@ -179,6 +179,10 @@ namespace Xamarin.MSBuild.Tooling
                         project.DirectoryPath,
                         projectReference.EvaluatedInclude);
 
+                    if (!File.Exists (referencePath))
+                        throw new FileNotFoundException (
+                            $"Project '{path}' has a <ProjectReference> that does not exist: '{referencePath}'");
+
                     LoadProject (referencePath);
                 }
 
