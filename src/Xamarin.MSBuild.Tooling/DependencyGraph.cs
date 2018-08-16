@@ -15,7 +15,7 @@ using Microsoft.Build.Evaluation;
 using Microsoft.Build.Framework;
 using Microsoft.Build.Utilities;
 
-using static Xamarin.IO.PathHelpers;
+using static Xamarin.PathHelpers;
 
 namespace Xamarin.MSBuild.Tooling
 {
