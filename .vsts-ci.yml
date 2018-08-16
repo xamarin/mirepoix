@@ -2,9 +2,9 @@ phases:
 - template: .vsts-ci-steps.yml
   parameters:
     name: macOS
-    queue: Hosted macOS
+    queue: Hosted Mac Internal
 
 - template: .vsts-ci-steps.yml
   parameters:
     name: Windows
-    queue: Hosted VS 2017
+    queue: Hosted VS2017
