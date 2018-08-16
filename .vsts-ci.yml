@@ -12,7 +12,7 @@ phases:
     displayName: Run Manual MSBuild.Tooling Tests
 
 - phase: Linux
-  queue: Hosted Linux
+  queue: Hosted Linux Preview
   steps:
   - template: .vsts-ci-steps.yml
 
