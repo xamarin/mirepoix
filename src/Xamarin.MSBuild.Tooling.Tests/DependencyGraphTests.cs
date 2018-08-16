@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 using Xunit;
 
+using static Xamarin.PathHelpers;
+
 namespace Xamarin.MSBuild.Tooling.Tests
 {
     // MSBuild is crashing with a StackOverflowException on .NET Core
@@ -33,7 +35,7 @@ namespace Xamarin.MSBuild.Tooling.Tests
         public async Task ProcessMirepoixSolution ()
         {
             var solutionPath = Path.Combine (
-                GitHelpers.GetPathToRepoRoot (),
+                Git.FindRepositoryRootPathFromAssembly (),
                 "mirepoix.sln");
 
             var dependencyGraph = await DependencyGraph
@@ -54,7 +56,9 @@ namespace Xamarin.MSBuild.Tooling.Tests
                 p => Assert.Equal ("Xamarin.Security.Keychain.Tests", p),
                 p => Assert.Equal ("Xamarin.NativeHelpers", p),
                 p => Assert.Equal ("Xamarin.NativeHelpers.Tests", p),
-                p => Assert.Equal ("Xamarin.MSBuild.Tooling", p));
+                p => Assert.Equal ("Xamarin.MSBuild.Tooling", p),
+                p => Assert.Equal ("Xamarin.Helpers", p),
+                p => Assert.Equal ("Xamarin.Helpers.Tests", p));
 
             Assert.Collection (
                 dependencyGraph
@@ -69,7 +73,9 @@ namespace Xamarin.MSBuild.Tooling.Tests
                 p => Assert.Equal ("Xamarin.Security.Keychain.Tests", p),
                 p => Assert.Equal ("Xamarin.NativeHelpers", p),
                 p => Assert.Equal ("Xamarin.NativeHelpers.Tests", p),
-                p => Assert.Equal ("Xamarin.MSBuild.Tooling", p));
+                p => Assert.Equal ("Xamarin.Helpers", p),
+                p => Assert.Equal ("Xamarin.MSBuild.Tooling", p),
+                p => Assert.Equal ("Xamarin.Helpers.Tests", p));
         }
     }
 }
