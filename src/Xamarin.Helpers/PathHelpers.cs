@@ -3,6 +3,7 @@
 
 using System;
 using System.IO;
+using System.Reflection;
 using System.Runtime.InteropServices;
 
 namespace Xamarin.IO
@@ -10,7 +11,7 @@ namespace Xamarin.IO
     /// <summary>
     /// Various utilities that should be provided via System.IO.Path.
     /// </summary>
-    static class PathHelpers
+    public static class PathHelpers
     {
         [DllImport ("libc")]
         static extern string realpath (string path, IntPtr resolvedName);
@@ -79,5 +80,41 @@ namespace Xamarin.IO
             => path
                 ?.Replace ('\\', Path.DirectorySeparatorChar)
                 ?.Replace ('/', Path.DirectorySeparatorChar);
+
+        /// <summary>
+        /// Helper functions for directory structures within a Git repository.
+        /// </summary>
+        public static class Git
+        {
+            /// <summary>
+            /// Finds the root directory of a git repository from an assembly.
+            /// If no assembly is provided, the calling assembly is implied.
+            /// </summary>
+            /// <remarks>
+            /// Throws <see cref="DirectoryNotFoundException"/> if the root repository directory cannot be found.
+            /// </remarks>
+            public static string FindRepositoryRootPathFromAssembly (Assembly assemblyInRepository = null)
+                => FindRepositoryRootPath ((assemblyInRepository ?? Assembly.GetCallingAssembly ()).Location);
+
+            /// <summary>
+            /// Finds the root directory of a git repository from a child path within.
+            /// </summary>
+            /// <remarks>
+            /// Throws <see cref="DirectoryNotFoundException"/> if the root repository directory cannot be found.
+            /// </remarks>
+            public static string FindRepositoryRootPath (string childPathInRepository)
+            {
+                var path = childPathInRepository;
+
+                while (File.Exists (path) || Directory.Exists (path)) {
+                    if (Directory.Exists (Path.Combine (path, ".git")))
+                        return ResolveFullPath (path);
+
+                    path = Path.GetDirectoryName (path);
+                }
+
+                throw new DirectoryNotFoundException ($"{childPathInRepository} is not in a git repository");
+            }
+        }
     }
 }
