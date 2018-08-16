@@ -44,7 +44,7 @@ namespace Xamarin.IO
             if (string.IsNullOrEmpty (path))
                 return null;
 
-            var fullPath = Path.GetFullPath (path);
+            var fullPath = Path.GetFullPath (NormalizePath (path));
 
             if (haveRealpath) {
                 try {
@@ -61,8 +61,6 @@ namespace Xamarin.IO
 
             if (fullPath.Length == 0)
                 return null;
-
-            fullPath = NormalizePath (fullPath);
 
             if (fullPath [fullPath.Length - 1] == Path.DirectorySeparatorChar)
                 return fullPath.TrimEnd (Path.DirectorySeparatorChar);
