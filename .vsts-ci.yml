@@ -1,10 +1,21 @@
 phases:
-- template: .vsts-ci-steps.yml
-  parameters:
-    name: macOS
-    queue: Hosted macOS Preview
+- phase: macOS
+  queue: Hosted macOS Preview
+  steps:
+  - template: .vsts-ci-steps.yml
 
-- template: .vsts-ci-steps.yml
-  parameters:
-    name: Windows
-    queue: Hosted VS2017
+- phase: Windows
+  queue: Hosted VS2017
+  steps:
+  - template: .vsts-ci-steps.yml
+
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: pack
+      nobuild: true
+    displayName: Pack
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      ArtifactName: Artifacts
+    displayName: Publish Artifacts
