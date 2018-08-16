@@ -87,7 +87,7 @@ class is immutable.</p>
   <h6><strong>Assembly</strong>: Xamarin.MSBuild.Tooling.dll</h6>
   <h5 id="Xamarin_MSBuild_Tooling_DependencyGraph_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DependencyGraph</code></pre>
+    <pre><code class="lang-csharp hljs">public class DependencyGraph : object</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -100,8 +100,8 @@ class is immutable.</p>
   </span>
   <a id="Xamarin_MSBuild_Tooling_DependencyGraph_ProjectCollection_" data-uid="Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollection*"></a>
   <h4 id="Xamarin_MSBuild_Tooling_DependencyGraph_ProjectCollection" data-uid="Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollection">ProjectCollection</h4>
-  <div class="markdown level1 summary"><p>The MSBuild collection of loaded projects. Until either <a class="xref" href="Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_LoadGraph_System_Threading_CancellationToken_">LoadGraph(CancellationToken)</a>
-or <a class="xref" href="Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_LoadGraphAsync_System_Threading_CancellationToken_">LoadGraphAsync(CancellationToken)</a> is called the collection will be empty, but
+  <div class="markdown level1 summary"><p>The MSBuild collection of loaded projects. Until either <a class="xref" href="Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_LoadGraph_CancellationToken_">LoadGraph(CancellationToken)</a>
+or <a class="xref" href="Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_LoadGraphAsync_CancellationToken_">LoadGraphAsync(CancellationToken)</a> is called the collection will be empty, but
 will populated with global properties.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -119,7 +119,7 @@ will populated with global properties.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.Build.Evaluation.ProjectCollection</span></td>
+        <td><span class="xref">ProjectCollection</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -150,7 +150,7 @@ will populated with global properties.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<span class="xref">Microsoft.Build.Evaluation.Project</span>&gt;</td>
+        <td><span class="xref">IReadOnlyList</span>&lt;<span class="xref">Project</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -159,13 +159,13 @@ will populated with global properties.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_MSBuild_Tooling_DependencyGraph_Create_System_Collections_Generic_IEnumerable_System_String__System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___Xamarin_MSBuild_Tooling_DependencyGraph_ProjectCollectionFactory_.md&amp;value=---%0Auid%3A%20Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable%7BSystem.String%7D%2CSystem.Collections.Generic.IEnumerable%7BSystem.Collections.Generic.KeyValuePair%7BSystem.String%2CSystem.String%7D%7D%2CXamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_MSBuild_Tooling_DependencyGraph_Create_IEnumerable_System_String__IEnumerable_KeyValuePair_System_String_System_String___Xamarin_MSBuild_Tooling_DependencyGraph_ProjectCollectionFactory_.md&amp;value=---%0Auid%3A%20Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable%7BSystem.String%7D%2CIEnumerable%7BKeyValuePair%7BSystem.String%2CSystem.String%7D%7D%2CXamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.MSBuild.Tooling/DependencyGraph.cs/#L129">View Source</a>
   </span>
   <a id="Xamarin_MSBuild_Tooling_DependencyGraph_Create_" data-uid="Xamarin.MSBuild.Tooling.DependencyGraph.Create*"></a>
-  <h4 id="Xamarin_MSBuild_Tooling_DependencyGraph_Create_System_Collections_Generic_IEnumerable_System_String__System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___Xamarin_MSBuild_Tooling_DependencyGraph_ProjectCollectionFactory_" data-uid="Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}},Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory)">Create(IEnumerable&lt;String&gt;, IEnumerable&lt;KeyValuePair&lt;String, String&gt;&gt;, DependencyGraph.ProjectCollectionFactory)</h4>
+  <h4 id="Xamarin_MSBuild_Tooling_DependencyGraph_Create_IEnumerable_System_String__IEnumerable_KeyValuePair_System_String_System_String___Xamarin_MSBuild_Tooling_DependencyGraph_ProjectCollectionFactory_" data-uid="Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable{System.String},IEnumerable{KeyValuePair{System.String,System.String}},Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory)">Create(IEnumerable&lt;String&gt;, IEnumerable&lt;KeyValuePair&lt;String, String&gt;&gt;, DependencyGraph.ProjectCollectionFactory)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -183,13 +183,13 @@ will populated with global properties.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">solutionOrProjectPaths</span></td>
         <td><p>The set of solution or projects paths to process.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">KeyValuePair</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td><span class="parametername">globalProperties</span></td>
         <td><p>Any global properties that should influence evaluation. May be null.</p>
 </td>
@@ -221,13 +221,13 @@ are needed (such as for locating custom tool chains or to provide custom logging
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_MSBuild_Tooling_DependencyGraph_Create_System_Collections_Generic_IEnumerable_System_String__System_Collections_Generic_IEnumerable_System_ValueTuple_System_String_System_String___.md&amp;value=---%0Auid%3A%20Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable%7BSystem.String%7D%2CSystem.Collections.Generic.IEnumerable%7BSystem.ValueTuple%7BSystem.String%2CSystem.String%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_MSBuild_Tooling_DependencyGraph_Create_IEnumerable_System_String__IEnumerable_System_ValueTuple_System_String_System_String___.md&amp;value=---%0Auid%3A%20Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable%7BSystem.String%7D%2CIEnumerable%7BSystem.ValueTuple%7BSystem.String%2CSystem.String%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.MSBuild.Tooling/DependencyGraph.cs/#L93">View Source</a>
   </span>
   <a id="Xamarin_MSBuild_Tooling_DependencyGraph_Create_" data-uid="Xamarin.MSBuild.Tooling.DependencyGraph.Create*"></a>
-  <h4 id="Xamarin_MSBuild_Tooling_DependencyGraph_Create_System_Collections_Generic_IEnumerable_System_String__System_Collections_Generic_IEnumerable_System_ValueTuple_System_String_System_String___" data-uid="Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.ValueTuple{System.String,System.String}})">Create(IEnumerable&lt;String&gt;, IEnumerable&lt;&gt;)</h4>
+  <h4 id="Xamarin_MSBuild_Tooling_DependencyGraph_Create_IEnumerable_System_String__IEnumerable_System_ValueTuple_System_String_System_String___" data-uid="Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable{System.String},IEnumerable{System.ValueTuple{System.String,System.String}})">Create(IEnumerable&lt;String&gt;, IEnumerable&lt;&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -245,13 +245,13 @@ are needed (such as for locating custom tool chains or to provide custom logging
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">solutionOrProjectPaths</span></td>
         <td><p>The set of solution or projects paths to process.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.</span>&gt;</td>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.</span>&gt;</td>
         <td><span class="parametername">globalProperties</span></td>
         <td><p>Any global properties that should influence evaluation.</p>
 </td>
@@ -275,13 +275,13 @@ are needed (such as for locating custom tool chains or to provide custom logging
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_MSBuild_Tooling_DependencyGraph_Create_System_Collections_Generic_IEnumerable_System_String__System_ValueTuple_System_String_System_String____.md&amp;value=---%0Auid%3A%20Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable%7BSystem.String%7D%2CSystem.ValueTuple%7BSystem.String%2CSystem.String%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_MSBuild_Tooling_DependencyGraph_Create_IEnumerable_System_String__System_ValueTuple_System_String_System_String____.md&amp;value=---%0Auid%3A%20Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable%7BSystem.String%7D%2CSystem.ValueTuple%7BSystem.String%2CSystem.String%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.MSBuild.Tooling/DependencyGraph.cs/#L84">View Source</a>
   </span>
   <a id="Xamarin_MSBuild_Tooling_DependencyGraph_Create_" data-uid="Xamarin.MSBuild.Tooling.DependencyGraph.Create*"></a>
-  <h4 id="Xamarin_MSBuild_Tooling_DependencyGraph_Create_System_Collections_Generic_IEnumerable_System_String__System_ValueTuple_System_String_System_String____" data-uid="Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable{System.String},System.ValueTuple{System.String,System.String}[])">Create(IEnumerable&lt;String&gt;, [])</h4>
+  <h4 id="Xamarin_MSBuild_Tooling_DependencyGraph_Create_IEnumerable_System_String__System_ValueTuple_System_String_System_String____" data-uid="Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable{System.String},System.ValueTuple{System.String,System.String}[])">Create(IEnumerable&lt;String&gt;, [])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -299,7 +299,7 @@ are needed (such as for locating custom tool chains or to provide custom logging
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">solutionOrProjectPaths</span></td>
         <td><p>The set of solution or projects paths to process.</p>
 </td>
@@ -329,13 +329,13 @@ are needed (such as for locating custom tool chains or to provide custom logging
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_MSBuild_Tooling_DependencyGraph_Create_System_String_System_Collections_Generic_IEnumerable_System_ValueTuple_System_String_System_String___.md&amp;value=---%0Auid%3A%20Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String%2CSystem.Collections.Generic.IEnumerable%7BSystem.ValueTuple%7BSystem.String%2CSystem.String%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_MSBuild_Tooling_DependencyGraph_Create_System_String_IEnumerable_System_ValueTuple_System_String_System_String___.md&amp;value=---%0Auid%3A%20Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String%2CIEnumerable%7BSystem.ValueTuple%7BSystem.String%2CSystem.String%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.MSBuild.Tooling/DependencyGraph.cs/#L113">View Source</a>
   </span>
   <a id="Xamarin_MSBuild_Tooling_DependencyGraph_Create_" data-uid="Xamarin.MSBuild.Tooling.DependencyGraph.Create*"></a>
-  <h4 id="Xamarin_MSBuild_Tooling_DependencyGraph_Create_System_String_System_Collections_Generic_IEnumerable_System_ValueTuple_System_String_System_String___" data-uid="Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String,System.Collections.Generic.IEnumerable{System.ValueTuple{System.String,System.String}})">Create(String, IEnumerable&lt;&gt;)</h4>
+  <h4 id="Xamarin_MSBuild_Tooling_DependencyGraph_Create_System_String_IEnumerable_System_ValueTuple_System_String_System_String___" data-uid="Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String,IEnumerable{System.ValueTuple{System.String,System.String}})">Create(String, IEnumerable&lt;&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -359,7 +359,7 @@ are needed (such as for locating custom tool chains or to provide custom logging
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.</span>&gt;</td>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.</span>&gt;</td>
         <td><span class="parametername">globalProperties</span></td>
         <td><p>Any global properties that should influence evaluation.</p>
 </td>
@@ -437,18 +437,20 @@ are needed (such as for locating custom tool chains or to provide custom logging
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_MSBuild_Tooling_DependencyGraph_LoadGraph_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraph(System.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_MSBuild_Tooling_DependencyGraph_LoadGraph_CancellationToken_.md&amp;value=---%0Auid%3A%20Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraph(CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.MSBuild.Tooling/DependencyGraph.cs/#L158">View Source</a>
   </span>
   <a id="Xamarin_MSBuild_Tooling_DependencyGraph_LoadGraph_" data-uid="Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraph*"></a>
-  <h4 id="Xamarin_MSBuild_Tooling_DependencyGraph_LoadGraph_System_Threading_CancellationToken_" data-uid="Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraph(System.Threading.CancellationToken)">LoadGraph(CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="Xamarin_MSBuild_Tooling_DependencyGraph_LoadGraph_CancellationToken_" data-uid="Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraph(CancellationToken)">LoadGraph(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Loads and fully resolves all projects in the full graph. This method
+may take some time (block) for large projects.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DependencyGraph LoadGraph(CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public DependencyGraph LoadGraph(CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -461,7 +463,7 @@ are needed (such as for locating custom tool chains or to provide custom logging
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -484,18 +486,21 @@ are needed (such as for locating custom tool chains or to provide custom logging
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_MSBuild_Tooling_DependencyGraph_LoadGraphAsync_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraphAsync(System.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_MSBuild_Tooling_DependencyGraph_LoadGraphAsync_CancellationToken_.md&amp;value=---%0Auid%3A%20Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraphAsync(CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.MSBuild.Tooling/DependencyGraph.cs/#L151">View Source</a>
   </span>
   <a id="Xamarin_MSBuild_Tooling_DependencyGraph_LoadGraphAsync_" data-uid="Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraphAsync*"></a>
-  <h4 id="Xamarin_MSBuild_Tooling_DependencyGraph_LoadGraphAsync_System_Threading_CancellationToken_" data-uid="Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraphAsync(System.Threading.CancellationToken)">LoadGraphAsync(CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="Xamarin_MSBuild_Tooling_DependencyGraph_LoadGraphAsync_CancellationToken_" data-uid="Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraphAsync(CancellationToken)">LoadGraphAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Loads and fully resolves all projects in the full graph. This method
+may take some time for large projects and will be performed on the
+thread pool.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;DependencyGraph&gt; LoadGraphAsync(CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;DependencyGraph&gt; LoadGraphAsync(CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -508,7 +513,7 @@ are needed (such as for locating custom tool chains or to provide custom logging
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -524,7 +529,7 @@ are needed (such as for locating custom tool chains or to provide custom logging
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Xamarin.MSBuild.Tooling.DependencyGraph.html">DependencyGraph</a>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Xamarin.MSBuild.Tooling.DependencyGraph.html">DependencyGraph</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

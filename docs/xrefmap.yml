@@ -1,6 +1,12 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: Xamarin
+  name: Xamarin
+  href: api/Xamarin.html
+  commentId: N:Xamarin
+  fullName: Xamarin
+  nameWithType: Xamarin
 - uid: Xamarin.Downloader
   name: Xamarin.Downloader
   href: api/Xamarin.Downloader.html
@@ -401,6 +407,96 @@ references:
   isSpec: "True"
   fullName: Xamarin.Downloader.DownloadStatus.TimeElapsed
   nameWithType: DownloadStatus.TimeElapsed
+- uid: Xamarin.GuidHelpers
+  name: GuidHelpers
+  href: api/Xamarin.GuidHelpers.html
+  commentId: T:Xamarin.GuidHelpers
+  fullName: Xamarin.GuidHelpers
+  nameWithType: GuidHelpers
+- uid: Xamarin.GuidHelpers.GuidNamespace
+  name: GuidHelpers.GuidNamespace
+  href: api/Xamarin.GuidHelpers.GuidNamespace.html
+  commentId: T:Xamarin.GuidHelpers.GuidNamespace
+  fullName: Xamarin.GuidHelpers.GuidNamespace
+  nameWithType: GuidHelpers.GuidNamespace
+- uid: Xamarin.GuidHelpers.GuidNamespace.DNS
+  name: DNS
+  href: api/Xamarin.GuidHelpers.GuidNamespace.html#Xamarin_GuidHelpers_GuidNamespace_DNS
+  commentId: P:Xamarin.GuidHelpers.GuidNamespace.DNS
+  fullName: Xamarin.GuidHelpers.GuidNamespace.DNS
+  nameWithType: GuidHelpers.GuidNamespace.DNS
+- uid: Xamarin.GuidHelpers.GuidNamespace.DNS*
+  name: DNS
+  href: api/Xamarin.GuidHelpers.GuidNamespace.html#Xamarin_GuidHelpers_GuidNamespace_DNS_
+  commentId: Overload:Xamarin.GuidHelpers.GuidNamespace.DNS
+  isSpec: "True"
+  fullName: Xamarin.GuidHelpers.GuidNamespace.DNS
+  nameWithType: GuidHelpers.GuidNamespace.DNS
+- uid: Xamarin.GuidHelpers.GuidNamespace.OID
+  name: OID
+  href: api/Xamarin.GuidHelpers.GuidNamespace.html#Xamarin_GuidHelpers_GuidNamespace_OID
+  commentId: P:Xamarin.GuidHelpers.GuidNamespace.OID
+  fullName: Xamarin.GuidHelpers.GuidNamespace.OID
+  nameWithType: GuidHelpers.GuidNamespace.OID
+- uid: Xamarin.GuidHelpers.GuidNamespace.OID*
+  name: OID
+  href: api/Xamarin.GuidHelpers.GuidNamespace.html#Xamarin_GuidHelpers_GuidNamespace_OID_
+  commentId: Overload:Xamarin.GuidHelpers.GuidNamespace.OID
+  isSpec: "True"
+  fullName: Xamarin.GuidHelpers.GuidNamespace.OID
+  nameWithType: GuidHelpers.GuidNamespace.OID
+- uid: Xamarin.GuidHelpers.GuidNamespace.URL
+  name: URL
+  href: api/Xamarin.GuidHelpers.GuidNamespace.html#Xamarin_GuidHelpers_GuidNamespace_URL
+  commentId: P:Xamarin.GuidHelpers.GuidNamespace.URL
+  fullName: Xamarin.GuidHelpers.GuidNamespace.URL
+  nameWithType: GuidHelpers.GuidNamespace.URL
+- uid: Xamarin.GuidHelpers.GuidNamespace.URL*
+  name: URL
+  href: api/Xamarin.GuidHelpers.GuidNamespace.html#Xamarin_GuidHelpers_GuidNamespace_URL_
+  commentId: Overload:Xamarin.GuidHelpers.GuidNamespace.URL
+  isSpec: "True"
+  fullName: Xamarin.GuidHelpers.GuidNamespace.URL
+  nameWithType: GuidHelpers.GuidNamespace.URL
+- uid: Xamarin.GuidHelpers.GuidNamespace.X500
+  name: X500
+  href: api/Xamarin.GuidHelpers.GuidNamespace.html#Xamarin_GuidHelpers_GuidNamespace_X500
+  commentId: P:Xamarin.GuidHelpers.GuidNamespace.X500
+  fullName: Xamarin.GuidHelpers.GuidNamespace.X500
+  nameWithType: GuidHelpers.GuidNamespace.X500
+- uid: Xamarin.GuidHelpers.GuidNamespace.X500*
+  name: X500
+  href: api/Xamarin.GuidHelpers.GuidNamespace.html#Xamarin_GuidHelpers_GuidNamespace_X500_
+  commentId: Overload:Xamarin.GuidHelpers.GuidNamespace.X500
+  isSpec: "True"
+  fullName: Xamarin.GuidHelpers.GuidNamespace.X500
+  nameWithType: GuidHelpers.GuidNamespace.X500
+- uid: Xamarin.GuidHelpers.GuidV3(System.Guid,System.String)
+  name: GuidV3(Guid, String)
+  href: api/Xamarin.GuidHelpers.html#Xamarin_GuidHelpers_GuidV3_System_Guid_System_String_
+  commentId: M:Xamarin.GuidHelpers.GuidV3(System.Guid,System.String)
+  fullName: Xamarin.GuidHelpers.GuidV3(System.Guid, System.String)
+  nameWithType: GuidHelpers.GuidV3(Guid, String)
+- uid: Xamarin.GuidHelpers.GuidV3*
+  name: GuidV3
+  href: api/Xamarin.GuidHelpers.html#Xamarin_GuidHelpers_GuidV3_
+  commentId: Overload:Xamarin.GuidHelpers.GuidV3
+  isSpec: "True"
+  fullName: Xamarin.GuidHelpers.GuidV3
+  nameWithType: GuidHelpers.GuidV3
+- uid: Xamarin.GuidHelpers.GuidV5(System.Guid,System.String)
+  name: GuidV5(Guid, String)
+  href: api/Xamarin.GuidHelpers.html#Xamarin_GuidHelpers_GuidV5_System_Guid_System_String_
+  commentId: M:Xamarin.GuidHelpers.GuidV5(System.Guid,System.String)
+  fullName: Xamarin.GuidHelpers.GuidV5(System.Guid, System.String)
+  nameWithType: GuidHelpers.GuidV5(Guid, String)
+- uid: Xamarin.GuidHelpers.GuidV5*
+  name: GuidV5
+  href: api/Xamarin.GuidHelpers.html#Xamarin_GuidHelpers_GuidV5_
+  commentId: Overload:Xamarin.GuidHelpers.GuidV5
+  isSpec: "True"
+  fullName: Xamarin.GuidHelpers.GuidV5
+  nameWithType: GuidHelpers.GuidV5
 - uid: Xamarin.MSBuild.Tooling
   name: Xamarin.MSBuild.Tooling
   href: api/Xamarin.MSBuild.Tooling.html
@@ -413,40 +509,40 @@ references:
   commentId: T:Xamarin.MSBuild.Tooling.DependencyGraph
   fullName: Xamarin.MSBuild.Tooling.DependencyGraph
   nameWithType: DependencyGraph
-- uid: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}},Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory)
+- uid: Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable{System.String},IEnumerable{KeyValuePair{System.String,System.String}},Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory)
   name: Create(IEnumerable<String>, IEnumerable<KeyValuePair<String, String>>, DependencyGraph.ProjectCollectionFactory)
-  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_Create_System_Collections_Generic_IEnumerable_System_String__System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___Xamarin_MSBuild_Tooling_DependencyGraph_ProjectCollectionFactory_
-  commentId: M:Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}},Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory)
+  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_Create_IEnumerable_System_String__IEnumerable_KeyValuePair_System_String_System_String___Xamarin_MSBuild_Tooling_DependencyGraph_ProjectCollectionFactory_
+  commentId: M:Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable{System.String},IEnumerable{KeyValuePair{System.String,System.String}},Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory)
   name.vb: Create(IEnumerable(Of String), IEnumerable(Of KeyValuePair(Of String, String)), DependencyGraph.ProjectCollectionFactory)
-  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable<System.String>, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, System.String>>, Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory)
-  fullName.vb: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable(Of System.String), System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, System.String)), Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory)
+  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable<System.String>, IEnumerable<KeyValuePair<System.String, System.String>>, Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory)
+  fullName.vb: Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable(Of System.String), IEnumerable(Of KeyValuePair(Of System.String, System.String)), Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory)
   nameWithType: DependencyGraph.Create(IEnumerable<String>, IEnumerable<KeyValuePair<String, String>>, DependencyGraph.ProjectCollectionFactory)
   nameWithType.vb: DependencyGraph.Create(IEnumerable(Of String), IEnumerable(Of KeyValuePair(Of String, String)), DependencyGraph.ProjectCollectionFactory)
-- uid: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.ValueTuple{System.String,System.String}})
+- uid: Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable{System.String},IEnumerable{System.ValueTuple{System.String,System.String}})
   name: Create(IEnumerable<String>, IEnumerable<>)
-  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_Create_System_Collections_Generic_IEnumerable_System_String__System_Collections_Generic_IEnumerable_System_ValueTuple_System_String_System_String___
-  commentId: M:Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.ValueTuple{System.String,System.String}})
+  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_Create_IEnumerable_System_String__IEnumerable_System_ValueTuple_System_String_System_String___
+  commentId: M:Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable{System.String},IEnumerable{System.ValueTuple{System.String,System.String}})
   name.vb: Create(IEnumerable(Of String), IEnumerable(Of ))
-  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable<System.String>, System.Collections.Generic.IEnumerable<System.>)
-  fullName.vb: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable(Of System.String), System.Collections.Generic.IEnumerable(Of System.))
+  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable<System.String>, IEnumerable<System.>)
+  fullName.vb: Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable(Of System.String), IEnumerable(Of System.))
   nameWithType: DependencyGraph.Create(IEnumerable<String>, IEnumerable<>)
   nameWithType.vb: DependencyGraph.Create(IEnumerable(Of String), IEnumerable(Of ))
-- uid: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable{System.String},System.ValueTuple{System.String,System.String}[])
+- uid: Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable{System.String},System.ValueTuple{System.String,System.String}[])
   name: Create(IEnumerable<String>, [])
-  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_Create_System_Collections_Generic_IEnumerable_System_String__System_ValueTuple_System_String_System_String____
-  commentId: M:Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable{System.String},System.ValueTuple{System.String,System.String}[])
+  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_Create_IEnumerable_System_String__System_ValueTuple_System_String_System_String____
+  commentId: M:Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable{System.String},System.ValueTuple{System.String,System.String}[])
   name.vb: Create(IEnumerable(Of String), ())
-  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable<System.String>, System.[])
-  fullName.vb: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.Collections.Generic.IEnumerable(Of System.String), System.())
+  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable<System.String>, System.[])
+  fullName.vb: Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable(Of System.String), System.())
   nameWithType: DependencyGraph.Create(IEnumerable<String>, [])
   nameWithType.vb: DependencyGraph.Create(IEnumerable(Of String), ())
-- uid: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String,System.Collections.Generic.IEnumerable{System.ValueTuple{System.String,System.String}})
+- uid: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String,IEnumerable{System.ValueTuple{System.String,System.String}})
   name: Create(String, IEnumerable<>)
-  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_Create_System_String_System_Collections_Generic_IEnumerable_System_ValueTuple_System_String_System_String___
-  commentId: M:Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String,System.Collections.Generic.IEnumerable{System.ValueTuple{System.String,System.String}})
+  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_Create_System_String_IEnumerable_System_ValueTuple_System_String_System_String___
+  commentId: M:Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String,IEnumerable{System.ValueTuple{System.String,System.String}})
   name.vb: Create(String, IEnumerable(Of ))
-  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String, System.Collections.Generic.IEnumerable<System.>)
-  fullName.vb: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String, System.Collections.Generic.IEnumerable(Of System.))
+  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String, IEnumerable<System.>)
+  fullName.vb: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String, IEnumerable(Of System.))
   nameWithType: DependencyGraph.Create(String, IEnumerable<>)
   nameWithType.vb: DependencyGraph.Create(String, IEnumerable(Of ))
 - uid: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String,System.ValueTuple{System.String,System.String}[])
@@ -465,11 +561,11 @@ references:
   isSpec: "True"
   fullName: Xamarin.MSBuild.Tooling.DependencyGraph.Create
   nameWithType: DependencyGraph.Create
-- uid: Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraph(System.Threading.CancellationToken)
+- uid: Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraph(CancellationToken)
   name: LoadGraph(CancellationToken)
-  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_LoadGraph_System_Threading_CancellationToken_
-  commentId: M:Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraph(System.Threading.CancellationToken)
-  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraph(System.Threading.CancellationToken)
+  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_LoadGraph_CancellationToken_
+  commentId: M:Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraph(CancellationToken)
+  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraph(CancellationToken)
   nameWithType: DependencyGraph.LoadGraph(CancellationToken)
 - uid: Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraph*
   name: LoadGraph
@@ -478,11 +574,11 @@ references:
   isSpec: "True"
   fullName: Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraph
   nameWithType: DependencyGraph.LoadGraph
-- uid: Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraphAsync(System.Threading.CancellationToken)
+- uid: Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraphAsync(CancellationToken)
   name: LoadGraphAsync(CancellationToken)
-  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_LoadGraphAsync_System_Threading_CancellationToken_
-  commentId: M:Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraphAsync(System.Threading.CancellationToken)
-  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraphAsync(System.Threading.CancellationToken)
+  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_LoadGraphAsync_CancellationToken_
+  commentId: M:Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraphAsync(CancellationToken)
+  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraphAsync(CancellationToken)
   nameWithType: DependencyGraph.LoadGraphAsync(CancellationToken)
 - uid: Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraphAsync*
   name: LoadGraphAsync
@@ -641,6 +737,89 @@ references:
   isSpec: "True"
   fullName: Xamarin.NativeHelpers.CoreFoundation.CFStringGetString
   nameWithType: CoreFoundation.CFStringGetString
+- uid: Xamarin.PathHelpers
+  name: PathHelpers
+  href: api/Xamarin.PathHelpers.html
+  commentId: T:Xamarin.PathHelpers
+  fullName: Xamarin.PathHelpers
+  nameWithType: PathHelpers
+- uid: Xamarin.PathHelpers.FindProgramPath(System.String,System.Collections.Generic.IEnumerable{System.String})
+  name: FindProgramPath(String, IEnumerable<String>)
+  href: api/Xamarin.PathHelpers.html#Xamarin_PathHelpers_FindProgramPath_System_String_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:Xamarin.PathHelpers.FindProgramPath(System.String,System.Collections.Generic.IEnumerable{System.String})
+  name.vb: FindProgramPath(String, IEnumerable(Of String))
+  fullName: Xamarin.PathHelpers.FindProgramPath(System.String, System.Collections.Generic.IEnumerable<System.String>)
+  fullName.vb: Xamarin.PathHelpers.FindProgramPath(System.String, System.Collections.Generic.IEnumerable(Of System.String))
+  nameWithType: PathHelpers.FindProgramPath(String, IEnumerable<String>)
+  nameWithType.vb: PathHelpers.FindProgramPath(String, IEnumerable(Of String))
+- uid: Xamarin.PathHelpers.FindProgramPath*
+  name: FindProgramPath
+  href: api/Xamarin.PathHelpers.html#Xamarin_PathHelpers_FindProgramPath_
+  commentId: Overload:Xamarin.PathHelpers.FindProgramPath
+  isSpec: "True"
+  fullName: Xamarin.PathHelpers.FindProgramPath
+  nameWithType: PathHelpers.FindProgramPath
+- uid: Xamarin.PathHelpers.Git
+  name: PathHelpers.Git
+  href: api/Xamarin.PathHelpers.Git.html
+  commentId: T:Xamarin.PathHelpers.Git
+  fullName: Xamarin.PathHelpers.Git
+  nameWithType: PathHelpers.Git
+- uid: Xamarin.PathHelpers.Git.FindRepositoryRootPath(System.String)
+  name: FindRepositoryRootPath(String)
+  href: api/Xamarin.PathHelpers.Git.html#Xamarin_PathHelpers_Git_FindRepositoryRootPath_System_String_
+  commentId: M:Xamarin.PathHelpers.Git.FindRepositoryRootPath(System.String)
+  fullName: Xamarin.PathHelpers.Git.FindRepositoryRootPath(System.String)
+  nameWithType: PathHelpers.Git.FindRepositoryRootPath(String)
+- uid: Xamarin.PathHelpers.Git.FindRepositoryRootPath*
+  name: FindRepositoryRootPath
+  href: api/Xamarin.PathHelpers.Git.html#Xamarin_PathHelpers_Git_FindRepositoryRootPath_
+  commentId: Overload:Xamarin.PathHelpers.Git.FindRepositoryRootPath
+  isSpec: "True"
+  fullName: Xamarin.PathHelpers.Git.FindRepositoryRootPath
+  nameWithType: PathHelpers.Git.FindRepositoryRootPath
+- uid: Xamarin.PathHelpers.Git.FindRepositoryRootPathFromAssembly(System.Reflection.Assembly)
+  name: FindRepositoryRootPathFromAssembly(Assembly)
+  href: api/Xamarin.PathHelpers.Git.html#Xamarin_PathHelpers_Git_FindRepositoryRootPathFromAssembly_System_Reflection_Assembly_
+  commentId: M:Xamarin.PathHelpers.Git.FindRepositoryRootPathFromAssembly(System.Reflection.Assembly)
+  fullName: Xamarin.PathHelpers.Git.FindRepositoryRootPathFromAssembly(System.Reflection.Assembly)
+  nameWithType: PathHelpers.Git.FindRepositoryRootPathFromAssembly(Assembly)
+- uid: Xamarin.PathHelpers.Git.FindRepositoryRootPathFromAssembly*
+  name: FindRepositoryRootPathFromAssembly
+  href: api/Xamarin.PathHelpers.Git.html#Xamarin_PathHelpers_Git_FindRepositoryRootPathFromAssembly_
+  commentId: Overload:Xamarin.PathHelpers.Git.FindRepositoryRootPathFromAssembly
+  isSpec: "True"
+  fullName: Xamarin.PathHelpers.Git.FindRepositoryRootPathFromAssembly
+  nameWithType: PathHelpers.Git.FindRepositoryRootPathFromAssembly
+- uid: Xamarin.PathHelpers.NormalizePath(System.String)
+  name: NormalizePath(String)
+  href: api/Xamarin.PathHelpers.html#Xamarin_PathHelpers_NormalizePath_System_String_
+  commentId: M:Xamarin.PathHelpers.NormalizePath(System.String)
+  fullName: Xamarin.PathHelpers.NormalizePath(System.String)
+  nameWithType: PathHelpers.NormalizePath(String)
+- uid: Xamarin.PathHelpers.NormalizePath*
+  name: NormalizePath
+  href: api/Xamarin.PathHelpers.html#Xamarin_PathHelpers_NormalizePath_
+  commentId: Overload:Xamarin.PathHelpers.NormalizePath
+  isSpec: "True"
+  fullName: Xamarin.PathHelpers.NormalizePath
+  nameWithType: PathHelpers.NormalizePath
+- uid: Xamarin.PathHelpers.ResolveFullPath(System.String[])
+  name: ResolveFullPath(String[])
+  href: api/Xamarin.PathHelpers.html#Xamarin_PathHelpers_ResolveFullPath_System_String___
+  commentId: M:Xamarin.PathHelpers.ResolveFullPath(System.String[])
+  name.vb: ResolveFullPath(String())
+  fullName: Xamarin.PathHelpers.ResolveFullPath(System.String[])
+  fullName.vb: Xamarin.PathHelpers.ResolveFullPath(System.String())
+  nameWithType: PathHelpers.ResolveFullPath(String[])
+  nameWithType.vb: PathHelpers.ResolveFullPath(String())
+- uid: Xamarin.PathHelpers.ResolveFullPath*
+  name: ResolveFullPath
+  href: api/Xamarin.PathHelpers.html#Xamarin_PathHelpers_ResolveFullPath_
+  commentId: Overload:Xamarin.PathHelpers.ResolveFullPath
+  isSpec: "True"
+  fullName: Xamarin.PathHelpers.ResolveFullPath
+  nameWithType: PathHelpers.ResolveFullPath
 - uid: Xamarin.ProcessControl
   name: Xamarin.ProcessControl
   href: api/Xamarin.ProcessControl.html
@@ -1982,6 +2161,19 @@ references:
   isSpec: "True"
   fullName: Xunit.GB18030TestData.GetEnumerator
   nameWithType: GB18030TestData.GetEnumerator
+- uid: Xunit.GB18030TestData.GetIndexOfStringDescription(System.String)
+  name: GetIndexOfStringDescription(String)
+  href: api/Xunit.GB18030TestData.html#Xunit_GB18030TestData_GetIndexOfStringDescription_System_String_
+  commentId: M:Xunit.GB18030TestData.GetIndexOfStringDescription(System.String)
+  fullName: Xunit.GB18030TestData.GetIndexOfStringDescription(System.String)
+  nameWithType: GB18030TestData.GetIndexOfStringDescription(String)
+- uid: Xunit.GB18030TestData.GetIndexOfStringDescription*
+  name: GetIndexOfStringDescription
+  href: api/Xunit.GB18030TestData.html#Xunit_GB18030TestData_GetIndexOfStringDescription_
+  commentId: Overload:Xunit.GB18030TestData.GetIndexOfStringDescription
+  isSpec: "True"
+  fullName: Xunit.GB18030TestData.GetIndexOfStringDescription
+  nameWithType: GB18030TestData.GetIndexOfStringDescription
 - uid: Xunit.GB18030TestData.System#Collections#IEnumerable#GetEnumerator
   name: IEnumerable.GetEnumerator()
   href: api/Xunit.GB18030TestData.html#Xunit_GB18030TestData_System_Collections_IEnumerable_GetEnumerator
@@ -2035,25 +2227,6 @@ references:
   fullName: Xunit.GB18030TestDataWithNullAndEmpty.System.Collections.IEnumerable.GetEnumerator
   nameWithType: GB18030TestDataWithNullAndEmpty.IEnumerable.GetEnumerator
   nameWithType.vb: GB18030TestDataWithNullAndEmpty.System.Collections.IEnumerable.GetEnumerator
-- uid: Xunit.GitHelpers
-  name: GitHelpers
-  href: api/Xunit.GitHelpers.html
-  commentId: T:Xunit.GitHelpers
-  fullName: Xunit.GitHelpers
-  nameWithType: GitHelpers
-- uid: Xunit.GitHelpers.GetPathToRepoRoot(System.Reflection.Assembly)
-  name: GetPathToRepoRoot(Assembly)
-  href: api/Xunit.GitHelpers.html#Xunit_GitHelpers_GetPathToRepoRoot_System_Reflection_Assembly_
-  commentId: M:Xunit.GitHelpers.GetPathToRepoRoot(System.Reflection.Assembly)
-  fullName: Xunit.GitHelpers.GetPathToRepoRoot(System.Reflection.Assembly)
-  nameWithType: GitHelpers.GetPathToRepoRoot(Assembly)
-- uid: Xunit.GitHelpers.GetPathToRepoRoot*
-  name: GetPathToRepoRoot
-  href: api/Xunit.GitHelpers.html#Xunit_GitHelpers_GetPathToRepoRoot_
-  commentId: Overload:Xunit.GitHelpers.GetPathToRepoRoot
-  isSpec: "True"
-  fullName: Xunit.GitHelpers.GetPathToRepoRoot
-  nameWithType: GitHelpers.GetPathToRepoRoot
 - uid: Xunit.LinuxFactAttribute
   name: LinuxFactAttribute
   href: api/Xunit.LinuxFactAttribute.html

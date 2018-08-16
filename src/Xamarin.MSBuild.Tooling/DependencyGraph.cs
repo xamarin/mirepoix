@@ -147,14 +147,14 @@ namespace Xamarin.MSBuild.Tooling
         /// Loads and fully resolves all projects in the full graph. This method
         /// may take some time for large projects and will be performed on the
         /// thread pool.
-        /// <summary>
+        /// </summary>
         public Task<DependencyGraph> LoadGraphAsync (CancellationToken cancellationToken = default)
             => Task.Run (() => LoadGraph (cancellationToken), cancellationToken);
 
         /// <summary>
         /// Loads and fully resolves all projects in the full graph. This method
         /// may take some time (block) for large projects.
-        /// <summary>
+        /// </summary>
         public DependencyGraph LoadGraph (CancellationToken cancellationToken = default)
         {
             var projects = projectCollectionFactory (CreateDictionary (ProjectCollection.GlobalProperties));
