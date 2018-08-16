@@ -15,7 +15,7 @@
     BeforeTargets="GetAssemblyVersion;GetPackageVersion;Pack"
     DependsOnTargets="GitVersion"
     Returns="$(Version)"
-    Condition="'$(ExcludeRestorePackageImports)' != 'true'">
+    Condition="'$(GitInfoImported)' == 'true' And '$(ExcludeRestorePackageImports)' != 'true'">
     <PropertyGroup>
       <GitBranch Condition="'$(SYSTEM_PULLREQUEST_TARGETBRANCH)' != ''">$(SYSTEM_PULLREQUEST_TARGETBRANCH)</GitBranch>
       <GitBranch Condition="'$(SYSTEM_PULLREQUEST_TARGETBRANCH)' == '' and '$(BUILD_SOURCEBRANCHNAME)' != ''">$(BUILD_SOURCEBRANCHNAME)</GitBranch>
