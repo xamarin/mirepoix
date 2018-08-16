@@ -46,6 +46,9 @@ namespace Xunit
             new [] { "Emoji", "🥑🌮🍔🐈" }
         };
 
+        public static int GetIndexOfStringDescription (string stringDescription)
+            => testStrings.FindIndex (item => (string)item [0] == stringDescription);
+
         public IEnumerator<object []> GetEnumerator ()
             => testStrings.GetEnumerator ();
 
