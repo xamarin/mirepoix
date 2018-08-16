@@ -8,6 +8,9 @@
     <ProjectReference Include="..\Xamarin.MSBuild.Tooling\Xamarin.MSBuild.Tooling.csproj" />
     <ProjectReference Include="..\Xamarin.XunitHelpers\Xamarin.XunitHelpers.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="xunit" Version="2.3.1" />
+  </ItemGroup>
   <Target Name="Test" DependsOnTargets="Build">
     <Exec Command="$(OutputPath)$(AssemblyName).exe"/>
   </Target>
