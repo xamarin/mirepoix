@@ -2,7 +2,6 @@
 // Licensed under the MIT License.
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -11,7 +10,8 @@ using System.Globalization;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Runtime.Versioning;
-using System.Text.RegularExpressions;
+
+using Microsoft.Win32;
 
 namespace Xamarin.MSBuild.Tooling
 {
@@ -199,28 +199,32 @@ namespace Xamarin.MSBuild.Tooling
             return msbuildRoot;
         }
 
-        static readonly Regex vsCommonToolsEnvRegex = new Regex (@"VS\d+COMNTOOLS");
-
         static string LocateVSMSBuild ()
         {
+            if (!RuntimeInformation.IsOSPlatform (OSPlatform.Windows))
+                return null;
+
             var vsInstallDir = Environment.GetEnvironmentVariable ("VSINSTALLDIR");
             if (vsInstallDir == null) {
-                var commonTools = new List<(string envVersion, string path)> ();
-                foreach (DictionaryEntry env in Environment.GetEnvironmentVariables ()) {
-                    if (vsCommonToolsEnvRegex.IsMatch ((string)env.Key))
-                        commonTools.Add (((string)env.Key, (string)env.Value));
+                using (var sxsKey = Registry.LocalMachine.OpenSubKey (@"SOFTWARE\WOW6432Node\Microsoft\VisualStudio\SxS\VS7")) {
+                    if (sxsKey != null) {
+                        var latestSxSVersion = sxsKey
+                            .GetValueNames ()
+                            .Select (name => {
+                                Version.TryParse (name, out var version);
+                                return version;
+                            })
+                            .Where (version => version != null)
+                            .OrderByDescending (version => version)
+                            .FirstOrDefault ();
+                        if (latestSxSVersion != null)
+                            vsInstallDir = (string)sxsKey.GetValue (latestSxSVersion.ToString ());
+                    }
                 }
-
-                var newestCommonTools = commonTools
-                    .OrderByDescending (tools => tools.envVersion)
-                    .Select (tools => tools.path)
-                    .FirstOrDefault ();
-
-                if (newestCommonTools == null)
-                    return null;
-
-                vsInstallDir = Path.Combine (newestCommonTools, "..", "..");
             }
+
+            if (vsInstallDir == null)
+                return null;
 
             return PathHelpers.ResolveFullPath (
                 vsInstallDir,
