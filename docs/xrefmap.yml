@@ -1711,35 +1711,105 @@ references:
   commentId: T:Xamarin.Security.Keychains.DPAPIKeychain
   fullName: Xamarin.Security.Keychains.DPAPIKeychain
   nameWithType: DPAPIKeychain
-- uid: Xamarin.Security.Keychains.DPAPIKeychain.StoreSecret(Xamarin.Security.KeychainSecret,System.Boolean)
+- uid: Xamarin.Security.Keychains.DPAPIKeychain.Protect(System.Byte[])
+  name: Protect(Byte[])
+  href: api/Xamarin.Security.Keychains.DPAPIKeychain.html#Xamarin_Security_Keychains_DPAPIKeychain_Protect_System_Byte___
+  commentId: M:Xamarin.Security.Keychains.DPAPIKeychain.Protect(System.Byte[])
+  name.vb: Protect(Byte())
+  fullName: Xamarin.Security.Keychains.DPAPIKeychain.Protect(System.Byte[])
+  fullName.vb: Xamarin.Security.Keychains.DPAPIKeychain.Protect(System.Byte())
+  nameWithType: DPAPIKeychain.Protect(Byte[])
+  nameWithType.vb: DPAPIKeychain.Protect(Byte())
+- uid: Xamarin.Security.Keychains.DPAPIKeychain.Protect*
+  name: Protect
+  href: api/Xamarin.Security.Keychains.DPAPIKeychain.html#Xamarin_Security_Keychains_DPAPIKeychain_Protect_
+  commentId: Overload:Xamarin.Security.Keychains.DPAPIKeychain.Protect
+  isSpec: "True"
+  fullName: Xamarin.Security.Keychains.DPAPIKeychain.Protect
+  nameWithType: DPAPIKeychain.Protect
+- uid: Xamarin.Security.Keychains.DPAPIKeychain.Unprotect(System.Byte[])
+  name: Unprotect(Byte[])
+  href: api/Xamarin.Security.Keychains.DPAPIKeychain.html#Xamarin_Security_Keychains_DPAPIKeychain_Unprotect_System_Byte___
+  commentId: M:Xamarin.Security.Keychains.DPAPIKeychain.Unprotect(System.Byte[])
+  name.vb: Unprotect(Byte())
+  fullName: Xamarin.Security.Keychains.DPAPIKeychain.Unprotect(System.Byte[])
+  fullName.vb: Xamarin.Security.Keychains.DPAPIKeychain.Unprotect(System.Byte())
+  nameWithType: DPAPIKeychain.Unprotect(Byte[])
+  nameWithType.vb: DPAPIKeychain.Unprotect(Byte())
+- uid: Xamarin.Security.Keychains.DPAPIKeychain.Unprotect*
+  name: Unprotect
+  href: api/Xamarin.Security.Keychains.DPAPIKeychain.html#Xamarin_Security_Keychains_DPAPIKeychain_Unprotect_
+  commentId: Overload:Xamarin.Security.Keychains.DPAPIKeychain.Unprotect
+  isSpec: "True"
+  fullName: Xamarin.Security.Keychains.DPAPIKeychain.Unprotect
+  nameWithType: DPAPIKeychain.Unprotect
+- uid: Xamarin.Security.Keychains.FileSystemKeychain
+  name: FileSystemKeychain
+  href: api/Xamarin.Security.Keychains.FileSystemKeychain.html
+  commentId: T:Xamarin.Security.Keychains.FileSystemKeychain
+  fullName: Xamarin.Security.Keychains.FileSystemKeychain
+  nameWithType: FileSystemKeychain
+- uid: Xamarin.Security.Keychains.FileSystemKeychain.Protect(System.Byte[])
+  name: Protect(Byte[])
+  href: api/Xamarin.Security.Keychains.FileSystemKeychain.html#Xamarin_Security_Keychains_FileSystemKeychain_Protect_System_Byte___
+  commentId: M:Xamarin.Security.Keychains.FileSystemKeychain.Protect(System.Byte[])
+  name.vb: Protect(Byte())
+  fullName: Xamarin.Security.Keychains.FileSystemKeychain.Protect(System.Byte[])
+  fullName.vb: Xamarin.Security.Keychains.FileSystemKeychain.Protect(System.Byte())
+  nameWithType: FileSystemKeychain.Protect(Byte[])
+  nameWithType.vb: FileSystemKeychain.Protect(Byte())
+- uid: Xamarin.Security.Keychains.FileSystemKeychain.Protect*
+  name: Protect
+  href: api/Xamarin.Security.Keychains.FileSystemKeychain.html#Xamarin_Security_Keychains_FileSystemKeychain_Protect_
+  commentId: Overload:Xamarin.Security.Keychains.FileSystemKeychain.Protect
+  isSpec: "True"
+  fullName: Xamarin.Security.Keychains.FileSystemKeychain.Protect
+  nameWithType: FileSystemKeychain.Protect
+- uid: Xamarin.Security.Keychains.FileSystemKeychain.StoreSecret(Xamarin.Security.KeychainSecret,System.Boolean)
   name: StoreSecret(KeychainSecret, Boolean)
-  href: api/Xamarin.Security.Keychains.DPAPIKeychain.html#Xamarin_Security_Keychains_DPAPIKeychain_StoreSecret_Xamarin_Security_KeychainSecret_System_Boolean_
-  commentId: M:Xamarin.Security.Keychains.DPAPIKeychain.StoreSecret(Xamarin.Security.KeychainSecret,System.Boolean)
-  fullName: Xamarin.Security.Keychains.DPAPIKeychain.StoreSecret(Xamarin.Security.KeychainSecret, System.Boolean)
-  nameWithType: DPAPIKeychain.StoreSecret(KeychainSecret, Boolean)
-- uid: Xamarin.Security.Keychains.DPAPIKeychain.StoreSecret*
+  href: api/Xamarin.Security.Keychains.FileSystemKeychain.html#Xamarin_Security_Keychains_FileSystemKeychain_StoreSecret_Xamarin_Security_KeychainSecret_System_Boolean_
+  commentId: M:Xamarin.Security.Keychains.FileSystemKeychain.StoreSecret(Xamarin.Security.KeychainSecret,System.Boolean)
+  fullName: Xamarin.Security.Keychains.FileSystemKeychain.StoreSecret(Xamarin.Security.KeychainSecret, System.Boolean)
+  nameWithType: FileSystemKeychain.StoreSecret(KeychainSecret, Boolean)
+- uid: Xamarin.Security.Keychains.FileSystemKeychain.StoreSecret*
   name: StoreSecret
-  href: api/Xamarin.Security.Keychains.DPAPIKeychain.html#Xamarin_Security_Keychains_DPAPIKeychain_StoreSecret_
-  commentId: Overload:Xamarin.Security.Keychains.DPAPIKeychain.StoreSecret
+  href: api/Xamarin.Security.Keychains.FileSystemKeychain.html#Xamarin_Security_Keychains_FileSystemKeychain_StoreSecret_
+  commentId: Overload:Xamarin.Security.Keychains.FileSystemKeychain.StoreSecret
   isSpec: "True"
-  fullName: Xamarin.Security.Keychains.DPAPIKeychain.StoreSecret
-  nameWithType: DPAPIKeychain.StoreSecret
-- uid: Xamarin.Security.Keychains.DPAPIKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName,Xamarin.Security.KeychainSecret@)
+  fullName: Xamarin.Security.Keychains.FileSystemKeychain.StoreSecret
+  nameWithType: FileSystemKeychain.StoreSecret
+- uid: Xamarin.Security.Keychains.FileSystemKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName,Xamarin.Security.KeychainSecret@)
   name: TryGetSecret(KeychainSecretName, out KeychainSecret)
-  href: api/Xamarin.Security.Keychains.DPAPIKeychain.html#Xamarin_Security_Keychains_DPAPIKeychain_TryGetSecret_Xamarin_Security_KeychainSecretName_Xamarin_Security_KeychainSecret__
-  commentId: M:Xamarin.Security.Keychains.DPAPIKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName,Xamarin.Security.KeychainSecret@)
+  href: api/Xamarin.Security.Keychains.FileSystemKeychain.html#Xamarin_Security_Keychains_FileSystemKeychain_TryGetSecret_Xamarin_Security_KeychainSecretName_Xamarin_Security_KeychainSecret__
+  commentId: M:Xamarin.Security.Keychains.FileSystemKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName,Xamarin.Security.KeychainSecret@)
   name.vb: TryGetSecret(KeychainSecretName, ByRef KeychainSecret)
-  fullName: Xamarin.Security.Keychains.DPAPIKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName, out Xamarin.Security.KeychainSecret)
-  fullName.vb: Xamarin.Security.Keychains.DPAPIKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName, ByRef Xamarin.Security.KeychainSecret)
-  nameWithType: DPAPIKeychain.TryGetSecret(KeychainSecretName, out KeychainSecret)
-  nameWithType.vb: DPAPIKeychain.TryGetSecret(KeychainSecretName, ByRef KeychainSecret)
-- uid: Xamarin.Security.Keychains.DPAPIKeychain.TryGetSecret*
+  fullName: Xamarin.Security.Keychains.FileSystemKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName, out Xamarin.Security.KeychainSecret)
+  fullName.vb: Xamarin.Security.Keychains.FileSystemKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName, ByRef Xamarin.Security.KeychainSecret)
+  nameWithType: FileSystemKeychain.TryGetSecret(KeychainSecretName, out KeychainSecret)
+  nameWithType.vb: FileSystemKeychain.TryGetSecret(KeychainSecretName, ByRef KeychainSecret)
+- uid: Xamarin.Security.Keychains.FileSystemKeychain.TryGetSecret*
   name: TryGetSecret
-  href: api/Xamarin.Security.Keychains.DPAPIKeychain.html#Xamarin_Security_Keychains_DPAPIKeychain_TryGetSecret_
-  commentId: Overload:Xamarin.Security.Keychains.DPAPIKeychain.TryGetSecret
+  href: api/Xamarin.Security.Keychains.FileSystemKeychain.html#Xamarin_Security_Keychains_FileSystemKeychain_TryGetSecret_
+  commentId: Overload:Xamarin.Security.Keychains.FileSystemKeychain.TryGetSecret
   isSpec: "True"
-  fullName: Xamarin.Security.Keychains.DPAPIKeychain.TryGetSecret
-  nameWithType: DPAPIKeychain.TryGetSecret
+  fullName: Xamarin.Security.Keychains.FileSystemKeychain.TryGetSecret
+  nameWithType: FileSystemKeychain.TryGetSecret
+- uid: Xamarin.Security.Keychains.FileSystemKeychain.Unprotect(System.Byte[])
+  name: Unprotect(Byte[])
+  href: api/Xamarin.Security.Keychains.FileSystemKeychain.html#Xamarin_Security_Keychains_FileSystemKeychain_Unprotect_System_Byte___
+  commentId: M:Xamarin.Security.Keychains.FileSystemKeychain.Unprotect(System.Byte[])
+  name.vb: Unprotect(Byte())
+  fullName: Xamarin.Security.Keychains.FileSystemKeychain.Unprotect(System.Byte[])
+  fullName.vb: Xamarin.Security.Keychains.FileSystemKeychain.Unprotect(System.Byte())
+  nameWithType: FileSystemKeychain.Unprotect(Byte[])
+  nameWithType.vb: FileSystemKeychain.Unprotect(Byte())
+- uid: Xamarin.Security.Keychains.FileSystemKeychain.Unprotect*
+  name: Unprotect
+  href: api/Xamarin.Security.Keychains.FileSystemKeychain.html#Xamarin_Security_Keychains_FileSystemKeychain_Unprotect_
+  commentId: Overload:Xamarin.Security.Keychains.FileSystemKeychain.Unprotect
+  isSpec: "True"
+  fullName: Xamarin.Security.Keychains.FileSystemKeychain.Unprotect
+  nameWithType: FileSystemKeychain.Unprotect
 - uid: Xamarin.Security.Keychains.IKeychain
   name: IKeychain
   href: api/Xamarin.Security.Keychains.IKeychain.html
@@ -1835,6 +1905,44 @@ references:
   isSpec: "True"
   fullName: Xamarin.Security.Keychains.IKeychainExtensions.TryGetSecretBytes
   nameWithType: IKeychainExtensions.TryGetSecretBytes
+- uid: Xamarin.Security.Keychains.ManagedProtectionKeychain
+  name: ManagedProtectionKeychain
+  href: api/Xamarin.Security.Keychains.ManagedProtectionKeychain.html
+  commentId: T:Xamarin.Security.Keychains.ManagedProtectionKeychain
+  fullName: Xamarin.Security.Keychains.ManagedProtectionKeychain
+  nameWithType: ManagedProtectionKeychain
+- uid: Xamarin.Security.Keychains.ManagedProtectionKeychain.Protect(System.Byte[])
+  name: Protect(Byte[])
+  href: api/Xamarin.Security.Keychains.ManagedProtectionKeychain.html#Xamarin_Security_Keychains_ManagedProtectionKeychain_Protect_System_Byte___
+  commentId: M:Xamarin.Security.Keychains.ManagedProtectionKeychain.Protect(System.Byte[])
+  name.vb: Protect(Byte())
+  fullName: Xamarin.Security.Keychains.ManagedProtectionKeychain.Protect(System.Byte[])
+  fullName.vb: Xamarin.Security.Keychains.ManagedProtectionKeychain.Protect(System.Byte())
+  nameWithType: ManagedProtectionKeychain.Protect(Byte[])
+  nameWithType.vb: ManagedProtectionKeychain.Protect(Byte())
+- uid: Xamarin.Security.Keychains.ManagedProtectionKeychain.Protect*
+  name: Protect
+  href: api/Xamarin.Security.Keychains.ManagedProtectionKeychain.html#Xamarin_Security_Keychains_ManagedProtectionKeychain_Protect_
+  commentId: Overload:Xamarin.Security.Keychains.ManagedProtectionKeychain.Protect
+  isSpec: "True"
+  fullName: Xamarin.Security.Keychains.ManagedProtectionKeychain.Protect
+  nameWithType: ManagedProtectionKeychain.Protect
+- uid: Xamarin.Security.Keychains.ManagedProtectionKeychain.Unprotect(System.Byte[])
+  name: Unprotect(Byte[])
+  href: api/Xamarin.Security.Keychains.ManagedProtectionKeychain.html#Xamarin_Security_Keychains_ManagedProtectionKeychain_Unprotect_System_Byte___
+  commentId: M:Xamarin.Security.Keychains.ManagedProtectionKeychain.Unprotect(System.Byte[])
+  name.vb: Unprotect(Byte())
+  fullName: Xamarin.Security.Keychains.ManagedProtectionKeychain.Unprotect(System.Byte[])
+  fullName.vb: Xamarin.Security.Keychains.ManagedProtectionKeychain.Unprotect(System.Byte())
+  nameWithType: ManagedProtectionKeychain.Unprotect(Byte[])
+  nameWithType.vb: ManagedProtectionKeychain.Unprotect(Byte())
+- uid: Xamarin.Security.Keychains.ManagedProtectionKeychain.Unprotect*
+  name: Unprotect
+  href: api/Xamarin.Security.Keychains.ManagedProtectionKeychain.html#Xamarin_Security_Keychains_ManagedProtectionKeychain_Unprotect_
+  commentId: Overload:Xamarin.Security.Keychains.ManagedProtectionKeychain.Unprotect
+  isSpec: "True"
+  fullName: Xamarin.Security.Keychains.ManagedProtectionKeychain.Unprotect
+  nameWithType: ManagedProtectionKeychain.Unprotect
 - uid: Xamarin.Security.Keychains.OSKeychain
   name: OSKeychain
   href: api/Xamarin.Security.Keychains.OSKeychain.html

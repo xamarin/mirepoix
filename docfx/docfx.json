@@ -8,7 +8,8 @@
             "**.csproj"
           ],
           "exclude": [
-            "**.Tests.csproj"
+            "**.Tests.csproj",
+            "**/Xamarin.MSBuild.Tooling.NetFXTests.csproj"
           ]
         }
       ],

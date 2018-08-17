@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Xamarin.Security.Keychains
    ">
-    <meta name="generator" content="docfx 2.37.1.0">
+    <meta name="generator" content="docfx 2.38.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -87,11 +87,21 @@ API for secure storage of secrets, scoped to the current user's login keychain.<
 <a href="https://msdn.microsoft.com/en-us/library/ms995355.aspx">Windows Data Protection</a>
 API for secure storage of secrets, scoped to the current user.</p>
 </section>
+      <h4><a class="xref" href="Xamarin.Security.Keychains.FileSystemKeychain.html">FileSystemKeychain</a></h4>
+      <section><p>An abstract base class <a class="xref" href="Xamarin.Security.Keychains.IKeychain.html">IKeychain</a> implementation for keychains
+that store items as files in a directory structure, like <a class="xref" href="Xamarin.Security.Keychains.DPAPIKeychain.html">DPAPIKeychain</a>
+and <a class="xref" href="Xamarin.Security.Keychains.ManagedProtectionKeychain.html">ManagedProtectionKeychain</a>.</p>
+</section>
       <h4><a class="xref" href="Xamarin.Security.Keychains.IKeychainExtensions.html">IKeychainExtensions</a></h4>
       <section></section>
+      <h4><a class="xref" href="Xamarin.Security.Keychains.ManagedProtectionKeychain.html">ManagedProtectionKeychain</a></h4>
+      <section><p>An <a class="xref" href="Xamarin.Security.Keychains.IKeychain.html">IKeychain</a> implementation backed by Mono's DPAPI-compatible
+<a href="https://github.com/mono/mono/blob/master/mcs/class/System.Security/Mono.Security.Cryptography/ManagedProtection.cs"><code>Mono.Security.Cryptography.ManagedProtection</code></a>.</p>
+</section>
       <h4><a class="xref" href="Xamarin.Security.Keychains.OSKeychain.html">OSKeychain</a></h4>
-      <section><p>An <a class="xref" href="Xamarin.Security.Keychains.IKeychain.html">IKeychain</a> implementation backed by <a class="xref" href="Xamarin.Security.Keychains.AppleKeychain.html">AppleKeychain</a> on
-macOS or <a class="xref" href="Xamarin.Security.Keychains.DPAPIKeychain.html">DPAPIKeychain</a> on other platforms.</p>
+      <section><p>An <a class="xref" href="Xamarin.Security.Keychains.IKeychain.html">IKeychain</a> implementation backed by <a class="xref" href="Xamarin.Security.Keychains.AppleKeychain.html">AppleKeychain</a> on macOS,
+<a class="xref" href="Xamarin.Security.Keychains.DPAPIKeychain.html">DPAPIKeychain</a> on Windows, and <a class="xref" href="Xamarin.Security.Keychains.ManagedProtectionKeychain.html">ManagedProtectionKeychain</a> on
+other platforms.</p>
 </section>
     <h3 id="interfaces">Interfaces
   </h3>

@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IKeychain
+    <title>Class ManagedProtectionKeychain
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IKeychain
+    <meta name="title" content="Class ManagedProtectionKeychain
    ">
     <meta name="generator" content="docfx 2.38.1.0">
     
@@ -68,35 +68,56 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Xamarin.Security.Keychains.IKeychain">
+            <article class="content wrap" id="_content" data-uid="Xamarin.Security.Keychains.ManagedProtectionKeychain">
   
   
-  <h1 id="Xamarin_Security_Keychains_IKeychain" data-uid="Xamarin.Security.Keychains.IKeychain" class="text-break">Interface IKeychain
+  <h1 id="Xamarin_Security_Keychains_ManagedProtectionKeychain" data-uid="Xamarin.Security.Keychains.ManagedProtectionKeychain" class="text-break">Class ManagedProtectionKeychain
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>An <a class="xref" href="Xamarin.Security.Keychains.IKeychain.html">IKeychain</a> implementation backed by Mono's DPAPI-compatible
+<a href="https://github.com/mono/mono/blob/master/mcs/class/System.Security/Mono.Security.Cryptography/ManagedProtection.cs"><code>Mono.Security.Cryptography.ManagedProtection</code></a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Xamarin.Security.Keychains.FileSystemKeychain.html">FileSystemKeychain</a></div>
+    <div class="level2"><span class="xref">ManagedProtectionKeychain</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Xamarin.Security.Keychains.IKeychain.html">IKeychain</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Xamarin.Security.Keychains.FileSystemKeychain.html#Xamarin_Security_Keychains_FileSystemKeychain_TryGetSecret_Xamarin_Security_KeychainSecretName_Xamarin_Security_KeychainSecret__">FileSystemKeychain.TryGetSecret(KeychainSecretName, KeychainSecret)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xamarin.Security.Keychains.FileSystemKeychain.html#Xamarin_Security_Keychains_FileSystemKeychain_StoreSecret_Xamarin_Security_KeychainSecret_System_Boolean_">FileSystemKeychain.StoreSecret(KeychainSecret, Boolean)</a>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Xamarin.Security.Keychains.html">Xamarin.Security.Keychains</a></h6>
   <h6><strong>Assembly</strong>: Xamarin.Security.Keychain.dll</h6>
-  <h5 id="Xamarin_Security_Keychains_IKeychain_syntax">Syntax</h5>
+  <h5 id="Xamarin_Security_Keychains_ManagedProtectionKeychain_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IKeychain</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ManagedProtectionKeychain : FileSystemKeychain, IKeychain</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Security_Keychains_IKeychain_StoreSecret_Xamarin_Security_KeychainSecret_System_Boolean_.md&amp;value=---%0Auid%3A%20Xamarin.Security.Keychains.IKeychain.StoreSecret(Xamarin.Security.KeychainSecret%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Security_Keychains_ManagedProtectionKeychain_Protect_System_Byte___.md&amp;value=---%0Auid%3A%20Xamarin.Security.Keychains.ManagedProtectionKeychain.Protect(System.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Security.Keychain/Keychains/IKeychain.cs/#L17">View Source</a>
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Security.Keychain/Keychains/ManagedProtectionKeychain.cs/#L23">View Source</a>
   </span>
-  <a id="Xamarin_Security_Keychains_IKeychain_StoreSecret_" data-uid="Xamarin.Security.Keychains.IKeychain.StoreSecret*"></a>
-  <h4 id="Xamarin_Security_Keychains_IKeychain_StoreSecret_Xamarin_Security_KeychainSecret_System_Boolean_" data-uid="Xamarin.Security.Keychains.IKeychain.StoreSecret(Xamarin.Security.KeychainSecret,System.Boolean)">StoreSecret(KeychainSecret, Boolean)</h4>
+  <a id="Xamarin_Security_Keychains_ManagedProtectionKeychain_Protect_" data-uid="Xamarin.Security.Keychains.ManagedProtectionKeychain.Protect*"></a>
+  <h4 id="Xamarin_Security_Keychains_ManagedProtectionKeychain_Protect_System_Byte___" data-uid="Xamarin.Security.Keychains.ManagedProtectionKeychain.Protect(System.Byte[])">Protect(Byte[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void StoreSecret(KeychainSecret secret, bool updateExisting = true)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override byte[] Protect(byte[] data)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -109,50 +130,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Xamarin.Security.KeychainSecret.html">KeychainSecret</a></td>
-        <td><span class="parametername">secret</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">updateExisting</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Security_Keychains_IKeychain_TryGetSecret_Xamarin_Security_KeychainSecretName_Xamarin_Security_KeychainSecret__.md&amp;value=---%0Auid%3A%20Xamarin.Security.Keychains.IKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName%2CXamarin.Security.KeychainSecret%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Security.Keychain/Keychains/IKeychain.cs/#L15">View Source</a>
-  </span>
-  <a id="Xamarin_Security_Keychains_IKeychain_TryGetSecret_" data-uid="Xamarin.Security.Keychains.IKeychain.TryGetSecret*"></a>
-  <h4 id="Xamarin_Security_Keychains_IKeychain_TryGetSecret_Xamarin_Security_KeychainSecretName_Xamarin_Security_KeychainSecret__" data-uid="Xamarin.Security.Keychains.IKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName,Xamarin.Security.KeychainSecret@)">TryGetSecret(KeychainSecretName, out KeychainSecret)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool TryGetSecret(KeychainSecretName name, out KeychainSecret secret)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Xamarin.Security.KeychainSecretName.html">KeychainSecretName</a></td>
-        <td><span class="parametername">name</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Xamarin.Security.KeychainSecret.html">KeychainSecret</a></td>
-        <td><span class="parametername">secret</span></td>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">data</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -167,11 +146,66 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">System.Byte</span>[]</td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Xamarin.Security.Keychains.FileSystemKeychain.html#Xamarin_Security_Keychains_FileSystemKeychain_Protect_System_Byte___">FileSystemKeychain.Protect(Byte[])</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Security_Keychains_ManagedProtectionKeychain_Unprotect_System_Byte___.md&amp;value=---%0Auid%3A%20Xamarin.Security.Keychains.ManagedProtectionKeychain.Unprotect(System.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Security.Keychain/Keychains/ManagedProtectionKeychain.cs/#L29">View Source</a>
+  </span>
+  <a id="Xamarin_Security_Keychains_ManagedProtectionKeychain_Unprotect_" data-uid="Xamarin.Security.Keychains.ManagedProtectionKeychain.Unprotect*"></a>
+  <h4 id="Xamarin_Security_Keychains_ManagedProtectionKeychain_Unprotect_System_Byte___" data-uid="Xamarin.Security.Keychains.ManagedProtectionKeychain.Unprotect(System.Byte[])">Unprotect(Byte[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override byte[] Unprotect(byte[] data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Xamarin.Security.Keychains.FileSystemKeychain.html#Xamarin_Security_Keychains_FileSystemKeychain_Unprotect_System_Byte___">FileSystemKeychain.Unprotect(Byte[])</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Xamarin.Security.Keychains.IKeychain.html">IKeychain</a>
+  </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="Xamarin.Security.Keychains.IKeychainExtensions.html#Xamarin_Security_Keychains_IKeychainExtensions_TryGetSecret_Xamarin_Security_Keychains_IKeychain_System_String_System_String_System_String__">IKeychainExtensions.TryGetSecret(IKeychain, String, String, out String)</a>
@@ -193,10 +227,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Security_Keychains_IKeychain.md&amp;value=---%0Auid%3A%20Xamarin.Security.Keychains.IKeychain%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Security_Keychains_ManagedProtectionKeychain.md&amp;value=---%0Auid%3A%20Xamarin.Security.Keychains.ManagedProtectionKeychain%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Security.Keychain/Keychains/IKeychain.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Security.Keychain/Keychains/ManagedProtectionKeychain.cs/#L20" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

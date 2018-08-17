@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Downloader.Download.html",
-          "hash": "qI7ckEB+JUZGQEoyhnckXQ=="
+          "hash": "j9mIGQymqqbpjBEQ1aFz+w=="
         }
       },
       "is_incremental": true,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Downloader.DownloadClient.DefaultOptions.html",
-          "hash": "SUAb0geZo3Dip6ng5KpcCA=="
+          "hash": "zhBz98iwK+V0wTdMBAizhQ=="
         }
       },
       "is_incremental": true,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Downloader.DownloadClient.html",
-          "hash": "1nZwxRM/miBkPe+d2sl1qw=="
+          "hash": "XOZldtg/hWC5tM5TKubjmw=="
         }
       },
       "is_incremental": true,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Downloader.DownloadClientDelegate.html",
-          "hash": "L5cKapakpUb2xopEJ8Zq7w=="
+          "hash": "LkUzQiINsKd2Xp169iohug=="
         }
       },
       "is_incremental": true,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Downloader.DownloadStatus.html",
-          "hash": "lHhaRkd5nj3Ds/N8RQdZJQ=="
+          "hash": "FJHSeY1MfX+ki5WQGsEC2A=="
         }
       },
       "is_incremental": true,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Downloader.html",
-          "hash": "pa4Q1afBDLuJIli3fwXvUA=="
+          "hash": "eNWYETNaIN3bMA6ni+sBIg=="
         }
       },
       "is_incremental": true,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.GuidHelpers.GuidNamespace.html",
-          "hash": "3XeMEZtH2XaE78U8ilK25A=="
+          "hash": "bufGFFtJOpeErLxZ10HQJA=="
         }
       },
       "is_incremental": true,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.GuidHelpers.html",
-          "hash": "8QeMrKpwkcmIz4YSEuZYsw=="
+          "hash": "dbB9Hy1oOqV2hR55b3tX1Q=="
         }
       },
       "is_incremental": true,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory.html",
-          "hash": "ZJMAgARHFoOFy3jS7oRqkQ=="
+          "hash": "6bsmjlCtqIp++uSHEq9uKg=="
         }
       },
       "is_incremental": true,
@@ -117,10 +117,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.MSBuild.Tooling.DependencyGraph.html",
-          "hash": "OZxALpWZAxjdK8rJOVgqAw=="
+          "hash": "5yf9hu0pX6S2a3WP/ZhrEw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.MSBuild.Tooling.MSBuildLocator.html",
-          "hash": "vmVbrnFU0quPhG6mRQgwoA=="
+          "hash": "PnVwQasU1UZ5kjcm3x7Vgw=="
         }
       },
       "is_incremental": true,
@@ -141,10 +141,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.MSBuild.Tooling.html",
-          "hash": "BB108j9xWkhorCGeMzCLuA=="
+          "hash": "RSxjg1vSCIcaC+d78H+xwg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -153,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.NativeHelpers.CoreFoundation.CFRange.html",
-          "hash": "0ixz9HMmFd6+aGeklHRodA=="
+          "hash": "Z+hCAAXbrVSJ1roCFfjTfA=="
         }
       },
       "is_incremental": true,
@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.NativeHelpers.CoreFoundation.html",
-          "hash": "KlA1hQZWJ3oN4+pJMMcbhA=="
+          "hash": "dSizgd+NeGyuuY4EF9nnBQ=="
         }
       },
       "is_incremental": true,
@@ -177,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.NativeHelpers.html",
-          "hash": "G7LTTfGyjG0Xj3J+9a47nA=="
+          "hash": "R8qWtdDEOpE8zxR08LEImw=="
         }
       },
       "is_incremental": true,
@@ -189,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.PathHelpers.Git.html",
-          "hash": "ISdbHZx04DrldaRh24ch6g=="
+          "hash": "5TLdrGToJvGDCnm+AyqD9g=="
         }
       },
       "is_incremental": true,
@@ -201,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.PathHelpers.html",
-          "hash": "1msgQm7japHpM1CaEr6uVg=="
+          "hash": "2cLTbVfi97JgMC105d5EPQ=="
         }
       },
       "is_incremental": true,
@@ -213,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.ProcessControl.ConsoleRedirection.FileDescriptor.html",
-          "hash": "r5GQ8jW6UY+8nSqlOvLlZw=="
+          "hash": "/RH4AyXCPAxB9tthZP3JLA=="
         }
       },
       "is_incremental": true,
@@ -225,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.ProcessControl.ConsoleRedirection.Segment.html",
-          "hash": "MzZtqEgzqLBYSXhYcAFaxw=="
+          "hash": "WL4o7/s8ViM0qyHWArmEXQ=="
         }
       },
       "is_incremental": true,
@@ -237,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.ProcessControl.ConsoleRedirection.SegmentCollection.html",
-          "hash": "Zic2l/HjXoPp8R1JQRAXoQ=="
+          "hash": "UzC08ghRhUnnwPS1MvXqgg=="
         }
       },
       "is_incremental": true,
@@ -249,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.ProcessControl.ConsoleRedirection.html",
-          "hash": "mP6HVVy1WYcprNNJfHkJfA=="
+          "hash": "qHXZvEVjBj8Ms8lBuwVNBA=="
         }
       },
       "is_incremental": true,
@@ -261,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.ProcessControl.Exec.ExecLog.html",
-          "hash": "4AXr5SBRo3GIlD4ktdM1Lw=="
+          "hash": "aUin6mu7Iv5bL6XtpQ9UUQ=="
         }
       },
       "is_incremental": true,
@@ -273,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.ProcessControl.Exec.ExitException.html",
-          "hash": "mpkePZa4bCq+Mx3CE/j77Q=="
+          "hash": "9UvI1SyeAzVi7aPBo4X9cQ=="
         }
       },
       "is_incremental": true,
@@ -285,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.ProcessControl.Exec.ProcessRunnerHandler.html",
-          "hash": "OV45RmUp3dTUFkn8ATY6ew=="
+          "hash": "ZFCxlarl87BGdng1YBwivA=="
         }
       },
       "is_incremental": true,
@@ -297,7 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.ProcessControl.Exec.html",
-          "hash": "gKy32Gpme1ElaCMfcmNSww=="
+          "hash": "9SiXVbh1MmfcIe80BswfDA=="
         }
       },
       "is_incremental": true,
@@ -309,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.ProcessControl.ExecFlags.html",
-          "hash": "aNFQGE8/SyIG4mUoJQPkDw=="
+          "hash": "9TteaCaaMlt1Z+rDFfLe2A=="
         }
       },
       "is_incremental": true,
@@ -321,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.ProcessControl.ProcessArguments.html",
-          "hash": "3M1qtS+z53RTOd3xxF65tA=="
+          "hash": "s/SDvkDe7fp+TFWCjbXAJg=="
         }
       },
       "is_incremental": true,
@@ -333,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.ProcessControl.html",
-          "hash": "4sKMMuzam73C0+m3wYHl5w=="
+          "hash": "4Cjf0lNQMt4gHC7TVShgvg=="
         }
       },
       "is_incremental": true,
@@ -345,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Security.Keychain.html",
-          "hash": "yUapJw5hcsiP6ayc7f4QgQ=="
+          "hash": "vYQLwTUo2I28jJv0HrP2Xg=="
         }
       },
       "is_incremental": true,
@@ -357,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Security.KeychainException.html",
-          "hash": "ej3Y7W8z5HmkdmoCFZUknQ=="
+          "hash": "bglhP4bQQiHLGAj6l3VUjw=="
         }
       },
       "is_incremental": true,
@@ -369,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Security.KeychainItemAlreadyExistsException.html",
-          "hash": "Zl/gzxDc40oQGZRTQxQFtQ=="
+          "hash": "EyHG+EwHwrfFfEoXZDmjGA=="
         }
       },
       "is_incremental": true,
@@ -381,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Security.KeychainSecret.html",
-          "hash": "K3agRZ+6c+dTNt0cn9zEJw=="
+          "hash": "Ren179wghCsKKh76odp3pQ=="
         }
       },
       "is_incremental": true,
@@ -393,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Security.KeychainSecretName.html",
-          "hash": "uk6N9aCH7EvzhhyNP82PBQ=="
+          "hash": "9F2LjKoNfJmZCD5yb45gQQ=="
         }
       },
       "is_incremental": true,
@@ -405,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Security.Keychains.AppleKeychain.html",
-          "hash": "zXD4WwoJCevWQndUHsK6UA=="
+          "hash": "Pd1CEST0RgnmRQYFqgGt0Q=="
         }
       },
       "is_incremental": true,
@@ -417,7 +417,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Security.Keychains.DPAPIKeychain.html",
-          "hash": "AXbOChRG5TgDBTtLBMmrcQ=="
+          "hash": "TOf2kngpoSWGI7Y9kZ7WMA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.Security.Keychains.FileSystemKeychain.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.Security.Keychains.FileSystemKeychain.html",
+          "hash": "Md4EcH7a19Fr6SKJOBuOpw=="
         }
       },
       "is_incremental": true,
@@ -429,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Security.Keychains.IKeychain.html",
-          "hash": "Qulhle/EJN3MEkvPX3uj5w=="
+          "hash": "49OH/r9HbbJk/XCaA3ON8g=="
         }
       },
       "is_incremental": true,
@@ -441,7 +453,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Security.Keychains.IKeychainExtensions.html",
-          "hash": "FuPO7JRGoI6rbs9VUBmNSQ=="
+          "hash": "aJ3ifTPvTUKeOwhD4jFhLw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.Security.Keychains.ManagedProtectionKeychain.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.Security.Keychains.ManagedProtectionKeychain.html",
+          "hash": "d2gDzDyYdA/5+NLTLdP43w=="
         }
       },
       "is_incremental": true,
@@ -453,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Security.Keychains.OSKeychain.html",
-          "hash": "9oZlylgKLUzx4RHh+Bw6bQ=="
+          "hash": "ZWoODPI6IO+/7hDiBwEDkg=="
         }
       },
       "is_incremental": true,
@@ -465,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Security.Keychains.html",
-          "hash": "rwfBmLpAlZpCqJw7i+8OPw=="
+          "hash": "jr3l65ulAPRdNW5PPzqofg=="
         }
       },
       "is_incremental": true,
@@ -477,7 +501,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Security.html",
-          "hash": "HsfOw4teWZznGxr7+eCO+Q=="
+          "hash": "YCgfwfg+vDy/bjFuTol0wA=="
         }
       },
       "is_incremental": true,
@@ -489,7 +513,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.html",
-          "hash": "pMhtvgoNjSMg+1eLmbu1QQ=="
+          "hash": "jiYRPn/jMmquxt//fuBrRQ=="
         }
       },
       "is_incremental": true,
@@ -501,7 +525,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xunit.GB18030TestData.html",
-          "hash": "vh0JEgDjpZbZEqgOjwFlGg=="
+          "hash": "SxjxKAfTSXvwsh+r09y8jA=="
         }
       },
       "is_incremental": true,
@@ -513,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xunit.GB18030TestDataWithNullAndEmpty.html",
-          "hash": "173qnrGHK1lcuMlK5ybtDw=="
+          "hash": "SbyEVMwoK+xxdDt1dkBi6Q=="
         }
       },
       "is_incremental": true,
@@ -525,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xunit.LinuxFactAttribute.html",
-          "hash": "4la/KtAU86qH2jKpgc3y6w=="
+          "hash": "fa38K4QpO6S4lbaKscetoA=="
         }
       },
       "is_incremental": true,
@@ -537,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xunit.LinuxTheoryAttribute.html",
-          "hash": "nfjti8uAThAqT0nmRV2xjQ=="
+          "hash": "alPD4R6g12qO/QcqXq/gyg=="
         }
       },
       "is_incremental": true,
@@ -549,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xunit.MacFactAttribute.html",
-          "hash": "f0wthKlG21otQfuFNKsKgw=="
+          "hash": "zXqJnR6I6L6+bYK7NjGm/Q=="
         }
       },
       "is_incremental": true,
@@ -561,7 +585,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xunit.MacTheoryAttribute.html",
-          "hash": "XI0YcD4Kah187idvX1THqg=="
+          "hash": "RUHN10f9e/WD0aFAH7QcTg=="
         }
       },
       "is_incremental": true,
@@ -573,7 +597,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xunit.OSFactAttribute.html",
-          "hash": "G2yLG0gWhecOWd0Yc583rQ=="
+          "hash": "mbCQYi0HjodwNEL/oZghpA=="
         }
       },
       "is_incremental": true,
@@ -585,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xunit.OSTheoryAttribute.html",
-          "hash": "/U/OrS7j+Q42F7EIiaf1IA=="
+          "hash": "Z7x1FXPj7odFIWKo7CiSgQ=="
         }
       },
       "is_incremental": true,
@@ -597,7 +621,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xunit.UnixFactAttribute.html",
-          "hash": "kD7gBQiPMMXakjJeMW/yVg=="
+          "hash": "NcBmyf8WTfkf+vF7WPdJNQ=="
         }
       },
       "is_incremental": true,
@@ -609,7 +633,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xunit.UnixTheoryAttribute.html",
-          "hash": "Ew2Q7N+UfBoz6ySzphEuwg=="
+          "hash": "Qlh3J7GD2c7s8EiGwkS6dQ=="
         }
       },
       "is_incremental": true,
@@ -621,7 +645,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xunit.WindowsFactAttribute.html",
-          "hash": "h+9ICE54NUXbxerl8UWdfQ=="
+          "hash": "jllMcUwj+OYyXS1AQ0H9bQ=="
         }
       },
       "is_incremental": true,
@@ -633,7 +657,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xunit.WindowsTheoryAttribute.html",
-          "hash": "0MIh3isHmAzbWFcc6qan2g=="
+          "hash": "Vgf3A8YgB1URjjdv4bEDIQ=="
         }
       },
       "is_incremental": true,
@@ -645,7 +669,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xunit.html",
-          "hash": "K9R2P5FaMh27934EZeQczg=="
+          "hash": "XSIeLovdpmd8MUt5HMr0Bw=="
         }
       },
       "is_incremental": true,
@@ -657,7 +681,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "QaoytNoDRo1Ob6AW9ysMDA=="
+          "hash": "EfoW7QaQqS7e04cklhMviw=="
         }
       },
       "is_incremental": true,
@@ -669,7 +693,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "Ynhvw7vhoQt1Zzcoed37tw=="
+          "hash": "xFfNqAdA4Fhmf5sYslXifg=="
         }
       },
       "is_incremental": false,
@@ -681,7 +705,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "7jGjLidqJmqwsYmEVpnwwg=="
+          "hash": "ffPXxtqx4I+nvbmRdvZYnw=="
         }
       },
       "is_incremental": true,
@@ -693,7 +717,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "xVlQaX7Tk85omoiWv3O+Ag=="
+          "hash": "t7iiFrmuYmrKWisdq+lN6Q=="
         }
       },
       "is_incremental": false,
@@ -705,7 +729,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "ElyFr8fHBHyvNMNUsh//Rw=="
+          "hash": "T4GC1QZxJqIjb3n5muqfxQ=="
         }
       },
       "is_incremental": true,
@@ -717,7 +741,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "ob7LqWp4kTNLz+9W4omdTw=="
+          "hash": "k+/dkjFuwAVS32HduMpmBw=="
         }
       },
       "is_incremental": false,
@@ -736,11 +760,11 @@
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         }

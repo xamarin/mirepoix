@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class AppleKeychain
+    <title>Class FileSystemKeychain
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class AppleKeychain
+    <meta name="title" content="Class FileSystemKeychain
    ">
     <meta name="generator" content="docfx 2.38.1.0">
     
@@ -68,20 +68,22 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Xamarin.Security.Keychains.AppleKeychain">
+            <article class="content wrap" id="_content" data-uid="Xamarin.Security.Keychains.FileSystemKeychain">
   
   
-  <h1 id="Xamarin_Security_Keychains_AppleKeychain" data-uid="Xamarin.Security.Keychains.AppleKeychain" class="text-break">Class AppleKeychain
+  <h1 id="Xamarin_Security_Keychains_FileSystemKeychain" data-uid="Xamarin.Security.Keychains.FileSystemKeychain" class="text-break">Class FileSystemKeychain
   </h1>
-  <div class="markdown level0 summary"><p>An <a class="xref" href="Xamarin.Security.Keychains.IKeychain.html">IKeychain</a> implementation backed by the
-<a href="https://developer.apple.com/documentation/security/keychain_services">macOS Keychain Services</a>
-API for secure storage of secrets, scoped to the current user's login keychain.</p>
+  <div class="markdown level0 summary"><p>An abstract base class <a class="xref" href="Xamarin.Security.Keychains.IKeychain.html">IKeychain</a> implementation for keychains
+that store items as files in a directory structure, like <a class="xref" href="Xamarin.Security.Keychains.DPAPIKeychain.html">DPAPIKeychain</a>
+and <a class="xref" href="Xamarin.Security.Keychains.ManagedProtectionKeychain.html">ManagedProtectionKeychain</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">AppleKeychain</span></div>
+    <div class="level1"><span class="xref">FileSystemKeychain</span></div>
+      <div class="level2"><a class="xref" href="Xamarin.Security.Keychains.DPAPIKeychain.html">DPAPIKeychain</a></div>
+      <div class="level2"><a class="xref" href="Xamarin.Security.Keychains.ManagedProtectionKeychain.html">ManagedProtectionKeychain</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -89,21 +91,68 @@ API for secure storage of secrets, scoped to the current user's login keychain.<
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Xamarin.Security.Keychains.html">Xamarin.Security.Keychains</a></h6>
   <h6><strong>Assembly</strong>: Xamarin.Security.Keychain.dll</h6>
-  <h5 id="Xamarin_Security_Keychains_AppleKeychain_syntax">Syntax</h5>
+  <h5 id="Xamarin_Security_Keychains_FileSystemKeychain_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class AppleKeychain : IKeychain</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class FileSystemKeychain : IKeychain</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Security_Keychains_AppleKeychain_StoreSecret_Xamarin_Security_KeychainSecret_System_Boolean_.md&amp;value=---%0Auid%3A%20Xamarin.Security.Keychains.AppleKeychain.StoreSecret(Xamarin.Security.KeychainSecret%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Security_Keychains_FileSystemKeychain_Protect_System_Byte___.md&amp;value=---%0Auid%3A%20Xamarin.Security.Keychains.FileSystemKeychain.Protect(System.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Security.Keychain/Keychains/AppleKeychain.cs/#L64">View Source</a>
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Security.Keychain/Keychains/FileSystemKeychain.cs/#L56">View Source</a>
   </span>
-  <a id="Xamarin_Security_Keychains_AppleKeychain_StoreSecret_" data-uid="Xamarin.Security.Keychains.AppleKeychain.StoreSecret*"></a>
-  <h4 id="Xamarin_Security_Keychains_AppleKeychain_StoreSecret_Xamarin_Security_KeychainSecret_System_Boolean_" data-uid="Xamarin.Security.Keychains.AppleKeychain.StoreSecret(Xamarin.Security.KeychainSecret,System.Boolean)">StoreSecret(KeychainSecret, Boolean)</h4>
+  <a id="Xamarin_Security_Keychains_FileSystemKeychain_Protect_" data-uid="Xamarin.Security.Keychains.FileSystemKeychain.Protect*"></a>
+  <h4 id="Xamarin_Security_Keychains_FileSystemKeychain_Protect_System_Byte___" data-uid="Xamarin.Security.Keychains.FileSystemKeychain.Protect(System.Byte[])">Protect(Byte[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract byte[] Protect(byte[] data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Security_Keychains_FileSystemKeychain_StoreSecret_Xamarin_Security_KeychainSecret_System_Boolean_.md&amp;value=---%0Auid%3A%20Xamarin.Security.Keychains.FileSystemKeychain.StoreSecret(Xamarin.Security.KeychainSecret%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Security.Keychain/Keychains/FileSystemKeychain.cs/#L44">View Source</a>
+  </span>
+  <a id="Xamarin_Security_Keychains_FileSystemKeychain_StoreSecret_" data-uid="Xamarin.Security.Keychains.FileSystemKeychain.StoreSecret*"></a>
+  <h4 id="Xamarin_Security_Keychains_FileSystemKeychain_StoreSecret_Xamarin_Security_KeychainSecret_System_Boolean_" data-uid="Xamarin.Security.Keychains.FileSystemKeychain.StoreSecret(Xamarin.Security.KeychainSecret,System.Boolean)">StoreSecret(KeychainSecret, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -134,13 +183,13 @@ API for secure storage of secrets, scoped to the current user's login keychain.<
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Security_Keychains_AppleKeychain_TryGetSecret_Xamarin_Security_KeychainSecretName_Xamarin_Security_KeychainSecret__.md&amp;value=---%0Auid%3A%20Xamarin.Security.Keychains.AppleKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName%2CXamarin.Security.KeychainSecret%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Security_Keychains_FileSystemKeychain_TryGetSecret_Xamarin_Security_KeychainSecretName_Xamarin_Security_KeychainSecret__.md&amp;value=---%0Auid%3A%20Xamarin.Security.Keychains.FileSystemKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName%2CXamarin.Security.KeychainSecret%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Security.Keychain/Keychains/AppleKeychain.cs/#L31">View Source</a>
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Security.Keychain/Keychains/FileSystemKeychain.cs/#L29">View Source</a>
   </span>
-  <a id="Xamarin_Security_Keychains_AppleKeychain_TryGetSecret_" data-uid="Xamarin.Security.Keychains.AppleKeychain.TryGetSecret*"></a>
-  <h4 id="Xamarin_Security_Keychains_AppleKeychain_TryGetSecret_Xamarin_Security_KeychainSecretName_Xamarin_Security_KeychainSecret__" data-uid="Xamarin.Security.Keychains.AppleKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName,Xamarin.Security.KeychainSecret@)">TryGetSecret(KeychainSecretName, out KeychainSecret)</h4>
+  <a id="Xamarin_Security_Keychains_FileSystemKeychain_TryGetSecret_" data-uid="Xamarin.Security.Keychains.FileSystemKeychain.TryGetSecret*"></a>
+  <h4 id="Xamarin_Security_Keychains_FileSystemKeychain_TryGetSecret_Xamarin_Security_KeychainSecretName_Xamarin_Security_KeychainSecret__" data-uid="Xamarin.Security.Keychains.FileSystemKeychain.TryGetSecret(Xamarin.Security.KeychainSecretName,Xamarin.Security.KeychainSecret@)">TryGetSecret(KeychainSecretName, out KeychainSecret)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -184,6 +233,53 @@ API for secure storage of secrets, scoped to the current user's login keychain.<
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Security_Keychains_FileSystemKeychain_Unprotect_System_Byte___.md&amp;value=---%0Auid%3A%20Xamarin.Security.Keychains.FileSystemKeychain.Unprotect(System.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Security.Keychain/Keychains/FileSystemKeychain.cs/#L58">View Source</a>
+  </span>
+  <a id="Xamarin_Security_Keychains_FileSystemKeychain_Unprotect_" data-uid="Xamarin.Security.Keychains.FileSystemKeychain.Unprotect*"></a>
+  <h4 id="Xamarin_Security_Keychains_FileSystemKeychain_Unprotect_System_Byte___" data-uid="Xamarin.Security.Keychains.FileSystemKeychain.Unprotect(System.Byte[])">Unprotect(Byte[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract byte[] Unprotect(byte[] data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Xamarin.Security.Keychains.IKeychain.html">IKeychain</a>
@@ -209,10 +305,10 @@ API for secure storage of secrets, scoped to the current user's login keychain.<
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Security_Keychains_AppleKeychain.md&amp;value=---%0Auid%3A%20Xamarin.Security.Keychains.AppleKeychain%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Security_Keychains_FileSystemKeychain.md&amp;value=---%0Auid%3A%20Xamarin.Security.Keychains.FileSystemKeychain%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Security.Keychain/Keychains/AppleKeychain.cs/#L28" class="contribution-link">View Source</a>
+                    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Security.Keychain/Keychains/FileSystemKeychain.cs/#L19" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
