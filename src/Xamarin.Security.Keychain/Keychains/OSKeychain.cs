@@ -12,8 +12,9 @@ using System.Runtime.InteropServices;
 namespace Xamarin.Security.Keychains
 {
     /// <summary>
-    /// An <see cref="IKeychain"/> implementation backed by <see cref="AppleKeychain"/> on
-    /// macOS or <see cref="DPAPIKeychain"/> on other platforms.
+    /// An <see cref="IKeychain"/> implementation backed by <see cref="AppleKeychain"/> on macOS,
+    /// <see cref="DPAPIKeychain"/> on Windows, and <see cref="ManagedProtectionKeychain"/> on
+    /// other platforms.
     /// </summary>
     [EditorBrowsable (EditorBrowsableState.Advanced)]
     public sealed class OSKeychain : IKeychain
@@ -24,8 +25,10 @@ namespace Xamarin.Security.Keychains
         {
             if (RuntimeInformation.IsOSPlatform (OSPlatform.OSX))
                 keychain = new AppleKeychain ();
-            else
+            else if (RuntimeInformation.IsOSPlatform (OSPlatform.Windows))
                 keychain = new DPAPIKeychain ();
+            else
+                keychain = new ManagedProtectionKeychain ();
         }
 
         public bool TryGetSecret (KeychainSecretName name, out KeychainSecret secret)

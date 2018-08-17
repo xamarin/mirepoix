@@ -29,6 +29,12 @@ namespace Xamarin.Security.Tests
     {
     }
 
+
+    [Collection (nameof (KeychainImplementations))]
+    public sealed class ManagedProtectionKeychainTests : IKeychainTests<OSKeychain>
+    {
+    }
+
     public abstract class IKeychainTests<TKeychain> where TKeychain : IKeychain, new ()
     {
         readonly TKeychain keychain = new TKeychain ();
