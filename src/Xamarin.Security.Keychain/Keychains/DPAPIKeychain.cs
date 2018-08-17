@@ -7,7 +7,6 @@
 
 using System;
 using System.ComponentModel;
-using System.IO;
 using System.Security.Cryptography;
 
 namespace Xamarin.Security.Keychains
@@ -18,46 +17,18 @@ namespace Xamarin.Security.Keychains
     /// API for secure storage of secrets, scoped to the current user.
     /// </summary>
     [EditorBrowsable (EditorBrowsableState.Advanced)]
-    public sealed class DPAPIKeychain : IKeychain
+    public sealed class DPAPIKeychain : FileSystemKeychain
     {
-        static string GetSecretPath (KeychainSecretName secretName)
-            => Path.Combine (
-                Environment.GetFolderPath (Environment.SpecialFolder.LocalApplicationData),
-                "DPAPIKeychain",
-                secretName.Service,
-                secretName.Account);
-
-        public bool TryGetSecret (KeychainSecretName name, out KeychainSecret secret)
-        {
-            var secretPath = GetSecretPath (name);
-            if (!File.Exists (secretPath)) {
-                secret = null;
-                return false;
-            }
-
-            secret = KeychainSecret.Create (
-                name,
-                ProtectedData.Unprotect (
-                    File.ReadAllBytes (secretPath),
-                    null,
-                    DataProtectionScope.CurrentUser));
-
-            return true;
-        }
-
-        public void StoreSecret (KeychainSecret secret, bool updateExisting = true)
-        {
-            var secretPath = GetSecretPath (secret.Name);
-            if (!updateExisting && File.Exists (secretPath))
-                throw new KeychainItemAlreadyExistsException (
-                    $"'{secret.Name}' already exists");
-
-            Directory.CreateDirectory (Path.GetDirectoryName (secretPath));
-
-            File.WriteAllBytes (secretPath, ProtectedData.Protect (
-                (byte [])secret.Value,
+        protected override byte [] Protect (byte [] data)
+            => ProtectedData.Protect (
+                data,
                 null,
-                DataProtectionScope.CurrentUser));
-        }
+                DataProtectionScope.CurrentUser);
+
+        protected override byte [] Unprotect (byte [] data)
+            => ProtectedData.Unprotect (
+                data,
+                null,
+                DataProtectionScope.CurrentUser);
     }
 }
