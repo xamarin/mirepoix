@@ -2,6 +2,7 @@
 // Licensed under the MIT License.
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -10,6 +11,7 @@ using System.Globalization;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Runtime.Versioning;
+using System.Text.RegularExpressions;
 
 namespace Xamarin.MSBuild.Tooling
 {
@@ -120,16 +122,8 @@ namespace Xamarin.MSBuild.Tooling
                     msbuildExePath = LocateMonoMSBuild ();
                 else if (isNetCore && netCoreSdkPath != null)
                     msbuildExePath = Path.Combine (netCoreSdkPath, "MSBuild.dll");
-                else {
-                    var vsInstallDir = Environment.GetEnvironmentVariable ("VSINSTALLDIR");
-                    if (vsInstallDir != null && Directory.Exists (vsInstallDir))
-                        msbuildExePath = Path.Combine (
-                            vsInstallDir,
-                            "MSBuild",
-                            referencedMSBuildMajorDirectoryVersion,
-                            "Bin",
-                            "MSBuild.exe");
-                }
+                else
+                    msbuildExePath = LocateVSMSBuild ();
 
                 if (msbuildExePath != null)
                     Environment.SetEnvironmentVariable ("MSBUILD_EXE_PATH", msbuildExePath);
@@ -203,6 +197,37 @@ namespace Xamarin.MSBuild.Tooling
                 "MSBuild.dll");
 
             return msbuildRoot;
+        }
+
+        static readonly Regex vsCommonToolsEnvRegex = new Regex (@"VS\d+COMNTOOLS");
+
+        static string LocateVSMSBuild ()
+        {
+            var vsInstallDir = Environment.GetEnvironmentVariable ("VSINSTALLDIR");
+            if (vsInstallDir == null) {
+                var commonTools = new List<(string envVersion, string path)> ();
+                foreach (DictionaryEntry env in Environment.GetEnvironmentVariables ()) {
+                    if (vsCommonToolsEnvRegex.IsMatch ((string)env.Key))
+                        commonTools.Add (((string)env.Key, (string)env.Value));
+                }
+
+                var newestCommonTools = commonTools
+                    .OrderByDescending (tools => tools.envVersion)
+                    .Select (tools => tools.path)
+                    .FirstOrDefault ();
+
+                if (newestCommonTools == null)
+                    return null;
+
+                vsInstallDir = Path.Combine (newestCommonTools, "..", "..");
+            }
+
+            return PathHelpers.ResolveFullPath (
+                vsInstallDir,
+                "MSBuild",
+                referencedMSBuildMajorDirectoryVersion,
+                "Bin",
+                "MSBuild.exe");
         }
 
         #region Adapted from the full MSBuildLocator
