@@ -175,7 +175,7 @@ namespace Xamarin.MSBuild.Tooling
                 foreach (var projectReference in project.GetItems ("ProjectReference")) {
                     cancellationToken.ThrowIfCancellationRequested ();
 
-                    var referencePath = Path.Combine (
+                    var referencePath = ResolveFullPath (
                         project.DirectoryPath,
                         projectReference.EvaluatedInclude);
 
