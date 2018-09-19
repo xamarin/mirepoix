@@ -14,4 +14,10 @@
   <ItemGroup>
     <ProjectReference Include="..\Xamarin.Helpers\Xamarin.Helpers.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\VisJsTemplate.html">
+      <LogicalName>VisJsTemplate.html</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>

@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <title>MSBuild Dependency Graph</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+      html, body, #graph-container {
+        width: 100vw;
+        height: 100vh;
+      }
+
+      #graph-container {
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="graph-container"></div>
+    <script type="text/javascript">
+      var nodes = new vis.DataSet([
+        // @NODES@
+      ]);
+
+      var edges = new vis.DataSet([
+        // @EDGES@
+      ]);
+
+      var network = new vis.Network(
+        document.getElementById('graph-container'),
+        {
+          nodes: nodes,
+          edges: edges
+        },
+        {
+          nodes: {
+            shape: 'box',
+            margin: 15,
+            mass: 6,
+            labelHighlightBold: true,
+            borderWidth: 0,
+            font: {
+              size: 24,
+              color: "#FFFFFF"
+            },
+            color: {
+              background: "#006494",
+              border: "#006494",
+              highlight: {
+                background: "#F58301",
+                border: "#F58301"
+              }
+            }
+          },
+          edges: {
+            arrows: {
+              from: { enabled: true, scaleFactor: 1, type: "arrow" },
+              to: { enabled: false, scaleFactor: 1, type: "arrow" }
+            },
+            smooth: {
+              enabled: true,
+              type: "dynamic"
+            },
+            width: 1,
+            color: {
+              color: "#BBBBBB",
+              highlight: "#F58301"
+            }
+          },
+          physics: {
+            enabled: false
+          }
+        });
+
+      network.stabilize(2000);
+    </script>
+  </body>
+</html>

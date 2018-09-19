@@ -242,5 +242,13 @@ namespace Xamarin.MSBuild.Tooling
                 sortedProjects.ToImmutableList (),
                 relationships.ToImmutableList ());
         }
+
+        public string GenerateVisualization (DependencyGraphVisualizationKind visualizationKind)
+        {
+            if (visualizationKind != DependencyGraphVisualizationKind.VisJsNetwork)
+                throw new NotImplementedException ($"{nameof (DependencyGraphVisualizationKind)}.{visualizationKind}");
+
+            return VisJsGenerator.Generate (this);
+        }
     }
 }
