@@ -62,7 +62,7 @@ namespace Xamarin.MSBuild.Tooling.Tests
             Assert.Collection (
                 dependencyGraph
                     .TopologicallySortedProjects
-                    .Select (p => Path.GetFileNameWithoutExtension (p.FullPath)),
+                    .Select (p => Path.GetFileNameWithoutExtension (p.Project.FullPath)),
                 p => Assert.Equal ("Xamarin.ProcessControl", p),
                 p => Assert.Equal ("Xamarin.ProcessControl.Tests", p),
                 p => Assert.Equal ("Xamarin.Downloader", p),

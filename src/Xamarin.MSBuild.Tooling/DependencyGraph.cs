@@ -15,6 +15,7 @@ using Microsoft.Build.Evaluation;
 using Microsoft.Build.Framework;
 using Microsoft.Build.Utilities;
 
+using static Xamarin.GuidHelpers;
 using static Xamarin.PathHelpers;
 
 namespace Xamarin.MSBuild.Tooling
@@ -60,23 +61,33 @@ namespace Xamarin.MSBuild.Tooling
         /// </summary>
         public ProjectCollection ProjectCollection { get; }
 
-        readonly ImmutableList<Project> topologicallySortedProjects;
+        readonly ImmutableList<ProjectDependencyNode> topologicallySortedProjects;
 
         /// <summary>
         /// A topologically sorted list of loaded projects in <see cref="ProjectCollection"/>.
         /// </summary>
-        public IReadOnlyList<Project> TopologicallySortedProjects => topologicallySortedProjects;
+        public IReadOnlyList<ProjectDependencyNode> TopologicallySortedProjects => topologicallySortedProjects;
+
+
+        readonly ImmutableList<(IDependencyNode, IDependencyNode)> relationships;
+
+        /// <summary>
+        /// A list of dependency relationships within the graph.
+        /// </summary>
+        public IReadOnlyList<(IDependencyNode Dependent, IDependencyNode Dependency)> Relationships => relationships;
 
         DependencyGraph (
             ImmutableList<string> solutionOrProjectPaths,
             ProjectCollectionFactory projectCollectionFactory,
             ProjectCollection projectCollection,
-            ImmutableList<Project> topologicallySortedProjects)
+            ImmutableList<ProjectDependencyNode> topologicallySortedProjects,
+            ImmutableList<(IDependencyNode, IDependencyNode)> relationships)
         {
             this.solutionOrProjectPaths = solutionOrProjectPaths;
             this.projectCollectionFactory = projectCollectionFactory;
             ProjectCollection = projectCollection;
             this.topologicallySortedProjects = topologicallySortedProjects;
+            this.relationships = relationships;
         }
 
         /// <param name="solutionOrProjectPaths">The set of solution or projects paths to process.</param>
@@ -140,7 +151,8 @@ namespace Xamarin.MSBuild.Tooling
                 solutionOrProjectPaths.ToImmutableList (),
                 projectCollectionFactory,
                 projectCollectionFactory (CreateDictionary (globalProperties)),
-                ImmutableList<Project>.Empty);
+                ImmutableList<ProjectDependencyNode>.Empty,
+                ImmutableList<(IDependencyNode, IDependencyNode)>.Empty);
         }
 
         /// <summary>
@@ -151,6 +163,8 @@ namespace Xamarin.MSBuild.Tooling
         public Task<DependencyGraph> LoadGraphAsync (CancellationToken cancellationToken = default)
             => Task.Run (() => LoadGraph (cancellationToken), cancellationToken);
 
+        static readonly Guid namespaceGuid = new Guid ("{9763b901-b185-4859-bbca-faf0cdd17ba3}");
+
         /// <summary>
         /// Loads and fully resolves all projects in the full graph. This method
         /// may take some time (block) for large projects.
@@ -158,19 +172,25 @@ namespace Xamarin.MSBuild.Tooling
         public DependencyGraph LoadGraph (CancellationToken cancellationToken = default)
         {
             var projects = projectCollectionFactory (CreateDictionary (ProjectCollection.GlobalProperties));
-            var loadedProjects = new HashSet<string> ();
-            var sortedProjects = ImmutableList.CreateBuilder<Project> ();
+            var loadedProjects = new Dictionary<string, ProjectDependencyNode> ();
+            var sortedProjects = ImmutableList.CreateBuilder<ProjectDependencyNode> ();
+            var relationships = ImmutableList.CreateBuilder<(IDependencyNode, IDependencyNode)> ();
 
-            void LoadProject (string path)
+            ProjectDependencyNode LoadProject (string relativeDirectory, string path)
             {
                 cancellationToken.ThrowIfCancellationRequested ();
 
                 path = ResolveFullPath (path);
 
-                if (!loadedProjects.Add (path))
-                    return;
+                if (loadedProjects.TryGetValue (path, out var node))
+                    return node;
 
                 var project = projects.LoadProject (path);
+                node = new ProjectDependencyNode (
+                    project,
+                    GuidV5 (namespaceGuid, path).ToString ());
+
+                loadedProjects.Add (path, node);
 
                 foreach (var projectReference in project.GetItems ("ProjectReference")) {
                     cancellationToken.ThrowIfCancellationRequested ();
@@ -183,14 +203,20 @@ namespace Xamarin.MSBuild.Tooling
                         throw new FileNotFoundException (
                             $"Project '{path}' has a <ProjectReference> that does not exist: '{referencePath}'");
 
-                    LoadProject (referencePath);
+                    var dependencyNode = LoadProject (relativeDirectory, referencePath);
+
+                    relationships.Add ((node, dependencyNode));
                 }
 
-                sortedProjects.Add (project);
+                sortedProjects.Add (node);
+
+                return node;
             }
 
             foreach (var path in solutionOrProjectPaths) {
                 cancellationToken.ThrowIfCancellationRequested ();
+
+                var relativeDirectory = ResolveFullPath (Path.GetDirectoryName (path));
 
                 if (string.Equals (Path.GetExtension (path), ".sln", StringComparison.OrdinalIgnoreCase)) {
                     foreach (var solutionProject in SolutionFile.Parse (path).ProjectsInOrder) {
@@ -201,11 +227,11 @@ namespace Xamarin.MSBuild.Tooling
                                 Path.GetDirectoryName (path),
                                 solutionProject.RelativePath);
 
-                            LoadProject (projectPath);
+                            LoadProject (relativeDirectory, projectPath);
                         }
                     }
                 } else {
-                    LoadProject (path);
+                    LoadProject (relativeDirectory, path);
                 }
             }
 
@@ -213,7 +239,8 @@ namespace Xamarin.MSBuild.Tooling
                 solutionOrProjectPaths,
                 projectCollectionFactory,
                 projects,
-                sortedProjects.ToImmutableList ());
+                sortedProjects.ToImmutableList (),
+                relationships.ToImmutableList ());
         }
     }
 }
