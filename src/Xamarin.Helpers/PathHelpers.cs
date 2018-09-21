@@ -84,6 +84,49 @@ namespace Xamarin
                 ?.Replace ('/', Path.DirectorySeparatorChar);
 
         /// <summary>
+        /// Makes <paramref name="path"/> relative to <paramref name="basePath"/>.
+        /// </summary>
+        public static string MakeRelativePath (string basePath, string path)
+        {
+            // Adapted from MSBuild's FileUtilities.MakeRelative aka $([MSBuild]::MakeRelative(basePath, path))
+            // https://github.com/Microsoft/msbuild/blob/master/src/Deprecated/Engine/Shared/FileUtilities.cs
+
+            if (basePath == null)
+                throw new ArgumentNullException (nameof (basePath));
+
+            if (path == null)
+                throw new ArgumentNullException (nameof (path));
+
+            if (path.Length == 0)
+                throw new ArgumentException ("must not be an empty string", nameof (path));
+
+            basePath = ResolveFullPath (basePath);
+            path = ResolveFullPath (path);
+
+            // Ensure trailing slash for non-empty strings
+            if (basePath.Length > 0 && basePath [basePath.Length - 1] != Path.DirectorySeparatorChar)
+                basePath += Path.DirectorySeparatorChar;
+
+            var baseUri = new Uri (basePath, UriKind.Absolute); // May throw UriFormatException
+
+            // Try absolute first, then fall back on relative, otherwise it
+            // makes some absolute UNC paths like (\\foo\bar) relative ...
+            if (!Uri.TryCreate (path, UriKind.Absolute, out var pathUri))
+                pathUri = new Uri (path, UriKind.Relative);
+
+            if (!pathUri.IsAbsoluteUri)
+                // The path is already a relative url, we will just normalize it...
+                pathUri = new Uri (baseUri, pathUri);
+
+            var relativeUri = baseUri.MakeRelativeUri (pathUri);
+            var relativePath = Uri.UnescapeDataString (relativeUri.IsAbsoluteUri
+                ? relativeUri.LocalPath
+                : relativeUri.ToString ());
+
+            return NormalizePath (relativePath);
+        }
+
+        /// <summary>
         /// Locates the path of a program in the system, first searching in <paramref name="preferPaths"/>
         /// if specified, then falling back to the paths in `PATH` environment variable. The first search
         /// path to yield a match for <paramref name="programName"/> will be used to resolve the absolute
