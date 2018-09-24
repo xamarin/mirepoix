@@ -18,7 +18,7 @@ steps:
   displayName: Restore
 
 - script: |
-    dotnet build --no-restore
+    dotnet build --no-restore -v detailed
   displayName: Build
 
 - task: DotNetCoreCLI@2
