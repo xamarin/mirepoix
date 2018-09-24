@@ -41,7 +41,7 @@ namespace Xamarin.MSBuild.Tooling
             var newItems = new Dictionary<string, string> ();
             if (items != null) {
                 foreach (var property in items)
-                    newItems.Add (property.Key, property.Value);
+                    newItems [property.Key] = property.Value;
             }
             return newItems;
         }
@@ -185,27 +185,39 @@ namespace Xamarin.MSBuild.Tooling
                 if (loadedProjects.TryGetValue (path, out var node))
                     return node;
 
-                var project = projects.LoadProject (path);
+                Project project = null;
+                Exception loadException = null;
+
+                try {
+                    project = projects.LoadProject (path);
+                } catch {
+                }
+
                 node = new ProjectDependencyNode (
+                    path,
+                    GuidV5 (namespaceGuid, path).ToString (),
                     project,
-                    GuidV5 (namespaceGuid, path).ToString ());
+                    loadException);
 
                 loadedProjects.Add (path, node);
 
-                foreach (var projectReference in project.GetItems ("ProjectReference")) {
-                    cancellationToken.ThrowIfCancellationRequested ();
+                if (project != null) {
+                    foreach (var projectReference in project.GetItems ("ProjectReference")) {
+                        cancellationToken.ThrowIfCancellationRequested ();
 
-                    var referencePath = ResolveFullPath (
-                        project.DirectoryPath,
-                        projectReference.EvaluatedInclude);
+                        var referencePath = ResolveFullPath (
+                            project.DirectoryPath,
+                            projectReference.EvaluatedInclude);
 
-                    if (!File.Exists (referencePath))
-                        throw new FileNotFoundException (
-                            $"Project '{path}' has a <ProjectReference> that does not exist: '{referencePath}'");
+                        if (!File.Exists (referencePath))
+                            throw new FileNotFoundException (
+                                $"Project '{path}' has a <ProjectReference> that does not exist: '{referencePath}'");
 
-                    var dependencyNode = LoadProject (relativeDirectory, referencePath);
+                        var dependencyNode = LoadProject (relativeDirectory, referencePath);
+                        dependencyNode.AddParent (node);
 
-                    relationships.Add ((node, dependencyNode));
+                        relationships.Add ((node, dependencyNode));
+                    }
                 }
 
                 sortedProjects.Add (node);
