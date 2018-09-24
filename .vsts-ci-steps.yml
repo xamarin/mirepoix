@@ -16,10 +16,12 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: restore
+    projects: mirepoix.proj
   displayName: Restore
 
 - task: DotNetCoreCLI@2
   inputs:
+    projects: mirepoix.proj
     arguments: '--no-restore'
   displayName: Build
 
