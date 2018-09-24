@@ -2,9 +2,13 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <AssemblyName>msbuild-util</AssemblyName>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <TargetFramework>net461</TargetFramework>
-    <NoPackageAnalysis>true</NoPackageAnalysis>
-    <NuspecFile>$(MSBuildThisFileDirectory)$(MSbuildProjectName).nuspec</NuspecFile>
+    <Description>
+      A command line tool that provides various MSBuild related utilities
+      including the ability to generate a solution from an MSBuild Traversal
+      Project and to visualize an MSBuild dependency graph.
+    </Description>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,19 +18,4 @@
   <ItemGroup>
     <ProjectReference Include="..\Xamarin.MSBuild.Tooling\Xamarin.MSBuild.Tooling.csproj"/>
   </ItemGroup>
-
-  <Target Name="SetPackageDependencies" BeforeTargets="GenerateNuspec" DependsOnTargets="Publish">
-    <PropertyGroup>
-      <IntermediatePackDir>$(MSBuildProjectDirectory)\bin\$(Configuration)\$(TargetFramework)\publish\</IntermediatePackDir>
-
-      <NuspecProperties>version=$(PackageVersion)</NuspecProperties>
-      <NuspecProperties>$(NuspecProperties);authors=$(Authors)</NuspecProperties>
-      <NuspecProperties>$(NuspecProperties);owners=$(Authors)</NuspecProperties>
-      <NuspecProperties>$(NuspecProperties);projectUrl=$(PackageProjectUrl)</NuspecProperties>
-      <NuspecProperties>$(NuspecProperties);licenseUrl=$(PackageLicenseUrl)</NuspecProperties>
-      <NuspecProperties>$(NuspecProperties);publishDir=$([MSBuild]::NormalizeDirectory($(IntermediatePackDir)))</NuspecProperties>
-    </PropertyGroup>
-
-    <Message Text="NuspecProperties: $(NuspecProperties)" Importance="high"/>
-  </Target>
 </Project>
