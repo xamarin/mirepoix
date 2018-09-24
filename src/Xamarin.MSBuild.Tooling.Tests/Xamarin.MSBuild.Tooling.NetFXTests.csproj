@@ -17,8 +17,8 @@
   </ItemGroup>
   <Target Name="Test">
     <PropertyGroup>
-      <ClrRunner Condition="!$([MSBuild]::IsOSPlatform('Windows'))">mono --debug</ClrRunner>
+      <ClrRunner Condition="!$([MSBuild]::IsOSPlatform('Windows'))">mono --debug </ClrRunner>
     </PropertyGroup>
-    <Exec Command="$(ClrRunner) $(XunitConsolePath) $(OutputPath)$(AssemblyName).dll -noshadow"/>
+    <Exec Command="$(ClrRunner)$(XunitConsolePath) $(OutputPath)$(AssemblyName).dll -noshadow"/>
   </Target>
 </Project>
