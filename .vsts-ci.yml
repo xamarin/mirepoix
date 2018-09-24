@@ -27,4 +27,5 @@ phases:
   - task: PublishBuildArtifacts@1
     inputs:
       ArtifactName: Artifacts
+      PathtoPublish: _artifacts
     displayName: Publish Artifacts

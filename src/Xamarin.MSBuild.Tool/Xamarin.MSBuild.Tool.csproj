@@ -15,7 +15,6 @@
     <ProjectReference Include="..\Xamarin.MSBuild.Tooling\Xamarin.MSBuild.Tooling.csproj"/>
   </ItemGroup>
 
-  <!-- <Target Name="NuGetPack"> -->
   <Target Name="SetPackageDependencies" BeforeTargets="GenerateNuspec" DependsOnTargets="Publish">
     <PropertyGroup>
       <IntermediatePackDir>$(MSBuildProjectDirectory)\bin\$(Configuration)\$(TargetFramework)\publish\</IntermediatePackDir>
