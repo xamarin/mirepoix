@@ -12,25 +12,9 @@ using static Xamarin.PathHelpers;
 
 namespace Xamarin.MSBuild.Tooling.Tests
 {
-    // MSBuild is crashing with a StackOverflowException on .NET Core
-    // when calling ProjectCollection.LoadProject, so this test project
-    // is actually net471, which means 'dotnet xunit' won't run it,
-    // since the dotnet toolchain won't resolve the framework.
-    // So just run the tests manually for now, because I hate dealing
-    // with xunit.runner.console. Sad.
-    static class SadDriver
+    public class DependencyGraphTests : MSBuildTestBase
     {
-        public static async Task Main ()
-        {
-            MSBuildLocator.RegisterMSBuildPath ();
-
-            await new DependencyGraphTests ().ProcessMirepoixSolution ();
-        }
-    }
-
-    public class DependencyGraphTests
-    {
-        [Fact (Skip = "Does not run under .NET Core xunit")]
+        [Fact]
         public async Task ProcessMirepoixSolution ()
         {
             var solutionPath = Path.Combine (
