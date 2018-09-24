@@ -21,10 +21,10 @@ phases:
     displayName: Pack Libraries
 
   - task: MSBuild@1
-  inputs:
-    solution: src/Xamarin.MSBuild.Tool/Xamarin.MSBuild.Tool.csproj
-    msbuildArguments: '/restore /t:Pack'
-  displayName: Pack Tools
+    inputs:
+      solution: src/Xamarin.MSBuild.Tool/Xamarin.MSBuild.Tool.csproj
+      msbuildArguments: '/restore /t:Pack'
+    displayName: Pack Tools
 
   - task: PublishBuildArtifacts@1
     inputs:
