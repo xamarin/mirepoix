@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup Condition="'$(MSBuildRuntimeType)' != 'Core'">
+    <ProjectReference Include="src\Xamarin.MSBuild.Tool\Xamarin.MSBuild.Tool.csproj"/>
     <ProjectReference Include="src\Xamarin.MSBuild.Tooling.Tests\Xamarin.MSBuild.Tooling.NetFXTests.csproj"/>
   </ItemGroup>
 
@@ -31,5 +32,9 @@
     <RemoveDir Directories="obj"/>
     <RemoveDir Directories="@(ProjectReference -> '%(RelativeDir)bin')"/>
     <RemoveDir Directories="@(ProjectReference -> '%(RelativeDir)obj')"/>
+  </Target>
+
+  <Target Name="UpdateSolution">
+    <Exec Command="src\Xamarin.MSBuild.Tool\bin\Debug\net471\msbuild-util.exe slngen mirepoix.proj"/>
   </Target>
 </Project>

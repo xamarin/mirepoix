@@ -12,7 +12,13 @@
     <PackageReference Include="xunit.runner.console" Version="2.3.1"/>
     <PackageReference Include="System.IO.Compression" Version="4.3.0"/>
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Solutions\**\*.cs"/>
+  </ItemGroup>
   <Target Name="Test">
-    <Exec Command="$(XunitConsolePath) $(OutputPath)$(AssemblyName).dll -noshadow"/>
+    <PropertyGroup>
+      <ClrRunner Condition="!$([MSBuild]::IsOSPlatform('Windows'))">mono --debug</ClrRunner>
+    </PropertyGroup>
+    <Exec Command="$(ClrRunner) $(XunitConsolePath) $(OutputPath)$(AssemblyName).dll -noshadow"/>
   </Target>
 </Project>

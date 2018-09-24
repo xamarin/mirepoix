@@ -1,0 +1,15 @@
+<Project>
+  <ItemGroup>
+    <SolutionConfiguration Include="Debug"/>
+    <SolutionConfiguration Include="Release"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="Projects\A.csproj"/>
+    <ProjectReference Include="Projects\B.csproj"/>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
+    <ProjectReference Include="Projects\C.csproj"/>
+  </ItemGroup>
+</Project>

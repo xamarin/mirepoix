@@ -1,0 +1,20 @@
+<Project>
+  <ItemGroup>
+    <SolutionConfiguration Include="Mac">
+      <Configuration>Debug</Configuration>
+    </SolutionConfiguration>
+    <SolutionConfiguration Include="Windows">
+      <Configuration>Debug</Configuration>
+      <IsWindows>true</IsWindows>
+    </SolutionConfiguration>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="Projects\A.csproj"/>
+    <ProjectReference Include="Projects\B.csproj"/>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(IsWindows)' != ''">
+    <ProjectReference Include="Projects\InvalidSdk.csproj"/>
+  </ItemGroup>
+</Project>
