@@ -215,6 +215,7 @@ namespace Xamarin.MSBuild.Tooling
 
                         var dependencyNode = LoadProject (relativeDirectory, referencePath);
                         dependencyNode.AddParent (node);
+                        dependencyNode.AddProjectReferenceItem (projectReference);
 
                         relationships.Add ((node, dependencyNode));
                     }

@@ -57,6 +57,22 @@ namespace Xamarin.MSBuild.Tooling.Solution
             return $"{Configuration}|{platform}";
         }
 
+        internal ConfigurationPlatform WithConfiguration (string configuration)
+        {
+            if (string.IsNullOrEmpty (configuration))
+                return this;
+
+            return new ConfigurationPlatform (configuration, Platform);
+        }
+
+        internal ConfigurationPlatform WithPlatform (string platform)
+        {
+            if (string.IsNullOrEmpty (platform))
+                return this;
+
+            return new ConfigurationPlatform (Configuration, platform);
+        }
+
         public static ConfigurationPlatform Parse (string spec)
         {
             if (string.IsNullOrEmpty (spec))

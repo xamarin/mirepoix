@@ -14,6 +14,9 @@ namespace Xamarin.MSBuild.Tooling
         readonly List<ProjectDependencyNode> parents = new List<ProjectDependencyNode> ();
         public IReadOnlyList<ProjectDependencyNode> Parents => parents;
 
+        readonly List<ProjectItem> projectReferenceItems = new List<ProjectItem> ();
+        public IReadOnlyList<ProjectItem> ProjectReferenceItems => projectReferenceItems;
+
         public string ProjectPath { get; }
         public string Id { get; }
         public Project Project { get; }
@@ -37,6 +40,12 @@ namespace Xamarin.MSBuild.Tooling
         {
             if (parent != null && !parents.Contains (parent))
                 parents.Add (parent);
+        }
+
+        internal void AddProjectReferenceItem (ProjectItem projectReferenceItem)
+        {
+            if (projectReferenceItem != null && !projectReferenceItems.Contains (projectReferenceItem))
+                projectReferenceItems.Add (projectReferenceItem);
         }
 
         public override string ToString ()

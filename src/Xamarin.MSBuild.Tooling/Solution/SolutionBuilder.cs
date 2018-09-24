@@ -138,6 +138,7 @@ namespace Xamarin.MSBuild.Tooling.Solution
                     item.GetMetadataValue ("Platform") ?? solutionConfigurationPlatform.Platform);
 
                 var globalProperties = new List<(string, string)> {
+                    ("IsGeneratingSolution", "true"),
                     ("Configuration", projectConfigurationPlatform.Configuration),
                     ("Platform", projectConfigurationPlatform.Platform)
                 };
@@ -164,9 +165,21 @@ namespace Xamarin.MSBuild.Tooling.Solution
                             Guid.TryParse (explicitProjectGuid, out projectGuid);
                     }
 
+                    string solutionFolder = null;
+
+                    foreach (var projectReference in node.ProjectReferenceItems) {
+                        projectConfigurationPlatform = projectConfigurationPlatform
+                            .WithConfiguration (projectReference.GetMetadataValue ("Configuration"))
+                            .WithPlatform (projectReference.GetMetadataValue ("Platform"));
+
+                        var _solutionFolder = projectReference.GetMetadataValue ("SolutionFolder");
+                        if (!string.IsNullOrEmpty (_solutionFolder))
+                            solutionFolder = _solutionFolder;
+                    }
+
                     var solutionNode = solution.AddProject (
                         node.ProjectPath,
-                        null,
+                        solutionFolder,
                         projectGuid);
 
                     solutionNode.AddConfigurationMap (new SolutionConfigurationPlatformMap (
