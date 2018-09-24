@@ -13,6 +13,10 @@ steps:
     dotnet --info
   displayName: Dump Environment
 
+- script: |
+    rm mirepoix.sln
+  displayName: Remove Solution
+
 - task: DotNetCoreCLI@2
   inputs:
     command: restore
@@ -36,3 +40,4 @@ steps:
     msbuildArguments: '/restore /t:Build,Test'
   continueOnError: true
   displayName: Run Manual MSBuild.Tooling Tests
+  condition: and(succeeded(), in(variables['agent.os'], 'darwin', 'windows_nt'))
