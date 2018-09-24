@@ -48,9 +48,6 @@ namespace Xamarin
                 0x80, 0xb4, 0x00, 0xc0, 0x4f, 0xd4, 0x30, 0xc8);
         }
 
-        static readonly ThreadLocal<HashAlgorithm> sha1 = new ThreadLocal<HashAlgorithm> (SHA1.Create);
-        static readonly ThreadLocal<HashAlgorithm> md5 = new ThreadLocal<HashAlgorithm> (MD5.Create);
-
         /// <summary>
         /// Creates a version [5 GUID/UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier#Versions_3_and_5_(namespace_name-based))
         /// by combining a given <paramref name="namespaceGuid"/> and arbitrary <paramref name="name"/>, hashed together using SHA-1.
@@ -61,7 +58,8 @@ namespace Xamarin
             if (name == null)
                 throw new ArgumentNullException (nameof (name));
 
-            return CreateHashedGuid (sha1.Value, 0x50, namespaceGuid, name);
+            using (var sha1 = SHA1.Create ())
+                return CreateHashedGuid (sha1, 0x50, namespaceGuid, name);
         }
 
         /// <summary>
@@ -74,7 +72,8 @@ namespace Xamarin
             if (name == null)
                 throw new ArgumentNullException (nameof (name));
 
-            return CreateHashedGuid (md5.Value, 0x30, namespaceGuid, name);
+            using (var md5 = MD5.Create ())
+                return CreateHashedGuid (md5, 0x30, namespaceGuid, name);
         }
 
         static unsafe Guid CreateHashedGuid (
