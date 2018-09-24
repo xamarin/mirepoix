@@ -14,17 +14,11 @@ steps:
   displayName: Dump Environment
 
 - script: |
-    rm mirepoix.sln
-  displayName: Remove Solution
-
-- task: DotNetCoreCLI@2
-  inputs:
-    command: restore
+    dotnet restore
   displayName: Restore
 
-- task: DotNetCoreCLI@2
-  inputs:
-    arguments: '--no-restore'
+- script: |
+    dotnet build --no-restore
   displayName: Build
 
 - task: DotNetCoreCLI@2

@@ -14,10 +14,8 @@ phases:
   steps:
   - template: .vsts-ci-steps.yml
 
-  - task: DotNetCoreCLI@2
-    inputs:
-      command: pack
-      nobuild: true
+  - script: |
+      dotnet pack
     displayName: Pack Libraries
 
   - task: MSBuild@1
