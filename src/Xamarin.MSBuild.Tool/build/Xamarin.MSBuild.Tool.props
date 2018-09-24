@@ -1,0 +1,5 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <XamarinMSBuildToolPath>$(MSBuildThisFileDirectory)..\tools\net471\msbuild-util.exe</XamarinMSBuildToolPath>
+  </PropertyGroup>
+</Project>

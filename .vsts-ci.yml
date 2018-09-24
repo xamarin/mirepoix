@@ -18,7 +18,13 @@ phases:
     inputs:
       command: pack
       nobuild: true
-    displayName: Pack
+    displayName: Pack Libraries
+
+  - task: MSBuild@1
+  inputs:
+    solution: src/Xamarin.MSBuild.Tool/Xamarin.MSBuild.Tool.csproj
+    msbuildArguments: '/restore /t:Pack'
+  displayName: Pack Tools
 
   - task: PublishBuildArtifacts@1
     inputs:
