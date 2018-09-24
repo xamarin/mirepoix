@@ -19,7 +19,7 @@ namespace Xamarin.MSBuild.Tooling.Tests
         {
             var solutionPath = Path.Combine (
                 Git.FindRepositoryRootPathFromAssembly (),
-                "mirepoix.sln");
+                "mirepoix.proj");
 
             var dependencyGraph = await DependencyGraph
                 .Create (solutionPath, ("Configuration", "Debug"))
@@ -29,36 +29,42 @@ namespace Xamarin.MSBuild.Tooling.Tests
                 dependencyGraph
                     .ProjectCollection
                     .LoadedProjects
-                    .Select (p => Path.GetFileNameWithoutExtension (p.FullPath)),
-                p => Assert.Equal ("Xamarin.ProcessControl", p),
-                p => Assert.Equal ("Xamarin.ProcessControl.Tests", p),
-                p => Assert.Equal ("Xamarin.Downloader", p),
-                p => Assert.Equal ("Xamarin.Downloader.Tests", p),
-                p => Assert.Equal ("Xamarin.XunitHelpers", p),
-                p => Assert.Equal ("Xamarin.Security.Keychain", p),
-                p => Assert.Equal ("Xamarin.Security.Keychain.Tests", p),
-                p => Assert.Equal ("Xamarin.NativeHelpers", p),
-                p => Assert.Equal ("Xamarin.NativeHelpers.Tests", p),
-                p => Assert.Equal ("Xamarin.MSBuild.Tooling", p),
-                p => Assert.Equal ("Xamarin.Helpers", p),
-                p => Assert.Equal ("Xamarin.Helpers.Tests", p));
+                    .Select (
+                        p => Path.GetFileNameWithoutExtension (p.FullPath)),
+                        p => Assert.Equal ("Xamarin.ProcessControl", p),
+                        p => Assert.Equal ("Xamarin.Downloader.Tests", p),
+                        p => Assert.Equal ("Xamarin.Downloader", p),
+                        p => Assert.Equal ("Xamarin.XunitHelpers", p),
+                        p => Assert.Equal ("Xamarin.ProcessControl.Tests", p),
+                        p => Assert.Equal ("Xamarin.Helpers", p),
+                        p => Assert.Equal ("Xamarin.NativeHelpers", p),
+                        p => Assert.Equal ("Xamarin.Security.Keychain.Tests", p),
+                        p => Assert.Equal ("Xamarin.Security.Keychain", p),
+                        p => Assert.Equal ("Xamarin.Helpers.Tests", p),
+                        p => Assert.Equal ("Xamarin.MSBuild.Tooling", p),
+                        p => Assert.Equal ("Xamarin.NativeHelpers.Tests", p),
+                        p => Assert.Equal ("Xamarin.MSBuild.Tool", p),
+                        p => Assert.Equal ("Xamarin.MSBuild.Tooling.NetFXTests", p));
 
             Assert.Collection (
                 dependencyGraph
                     .TopologicallySortedProjects
-                    .Select (p => Path.GetFileNameWithoutExtension (p.Project.FullPath)),
-                p => Assert.Equal ("Xamarin.ProcessControl", p),
-                p => Assert.Equal ("Xamarin.ProcessControl.Tests", p),
-                p => Assert.Equal ("Xamarin.Downloader", p),
-                p => Assert.Equal ("Xamarin.XunitHelpers", p),
-                p => Assert.Equal ("Xamarin.Downloader.Tests", p),
-                p => Assert.Equal ("Xamarin.Security.Keychain", p),
-                p => Assert.Equal ("Xamarin.Security.Keychain.Tests", p),
-                p => Assert.Equal ("Xamarin.NativeHelpers", p),
-                p => Assert.Equal ("Xamarin.NativeHelpers.Tests", p),
-                p => Assert.Equal ("Xamarin.Helpers", p),
-                p => Assert.Equal ("Xamarin.MSBuild.Tooling", p),
-                p => Assert.Equal ("Xamarin.Helpers.Tests", p));
+                    .Select (
+                        p => Path.GetFileNameWithoutExtension (p.Project.FullPath)),
+                        p => Assert.Equal ("Xamarin.ProcessControl", p),
+                        p => Assert.Equal ("Xamarin.Downloader", p),
+                        p => Assert.Equal ("Xamarin.XunitHelpers", p),
+                        p => Assert.Equal ("Xamarin.Downloader.Tests", p),
+                        p => Assert.Equal ("Xamarin.ProcessControl.Tests", p),
+                        p => Assert.Equal ("Xamarin.Helpers", p),
+                        p => Assert.Equal ("Xamarin.NativeHelpers", p),
+                        p => Assert.Equal ("Xamarin.Security.Keychain", p),
+                        p => Assert.Equal ("Xamarin.Security.Keychain.Tests", p),
+                        p => Assert.Equal ("Xamarin.Helpers.Tests", p),
+                        p => Assert.Equal ("Xamarin.MSBuild.Tooling", p),
+                        p => Assert.Equal ("Xamarin.NativeHelpers.Tests", p),
+                        p => Assert.Equal ("Xamarin.MSBuild.Tool", p),
+                        p => Assert.Equal ("Xamarin.MSBuild.Tooling.NetFXTests", p));
         }
     }
 }
