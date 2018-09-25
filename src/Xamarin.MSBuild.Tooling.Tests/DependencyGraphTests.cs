@@ -19,52 +19,35 @@ namespace Xamarin.MSBuild.Tooling.Tests
         {
             var solutionPath = Path.Combine (
                 Git.FindRepositoryRootPathFromAssembly (),
-                "mirepoix.proj");
+                "mirepoix.sln");
 
             var dependencyGraph = await DependencyGraph
                 .Create (solutionPath, ("Configuration", "Debug"))
                 .LoadGraphAsync ();
 
-            Assert.Collection (
-                dependencyGraph
-                    .ProjectCollection
-                    .LoadedProjects
-                    .Select (p => Path.GetFileNameWithoutExtension (p.FullPath)),
-                p => Assert.Equal ("mirepoix", p),
-                p => Assert.Equal ("Xamarin.ProcessControl", p),
-                p => Assert.Equal ("Xamarin.Downloader.Tests", p),
-                p => Assert.Equal ("Xamarin.Downloader", p),
-                p => Assert.Equal ("Xamarin.XunitHelpers", p),
-                p => Assert.Equal ("Xamarin.ProcessControl.Tests", p),
-                p => Assert.Equal ("Xamarin.Helpers", p),
-                p => Assert.Equal ("Xamarin.NativeHelpers", p),
-                p => Assert.Equal ("Xamarin.Security.Keychain.Tests", p),
-                p => Assert.Equal ("Xamarin.Security.Keychain", p),
-                p => Assert.Equal ("Xamarin.Helpers.Tests", p),
-                p => Assert.Equal ("Xamarin.MSBuild.Tooling", p),
-                p => Assert.Equal ("Xamarin.MSBuild.Sdk", p),
-                p => Assert.Equal ("Xamarin.NativeHelpers.Tests", p),
-                p => Assert.Equal ("Xamarin.MSBuild.Tooling.NetFXTests", p));
+            Assert.All (dependencyGraph.TopologicallySortedProjects, node => {
+                if (node.LoadException != null)
+                    throw node.LoadException;
+            });
 
             Assert.Collection (
                 dependencyGraph
                     .TopologicallySortedProjects
                     .Select (p => Path.GetFileNameWithoutExtension (p.Project.FullPath)),
                 p => Assert.Equal ("Xamarin.ProcessControl", p),
+                p => Assert.Equal ("Xamarin.ProcessControl.Tests", p),
                 p => Assert.Equal ("Xamarin.Downloader", p),
                 p => Assert.Equal ("Xamarin.XunitHelpers", p),
                 p => Assert.Equal ("Xamarin.Downloader.Tests", p),
-                p => Assert.Equal ("Xamarin.ProcessControl.Tests", p),
-                p => Assert.Equal ("Xamarin.Helpers", p),
-                p => Assert.Equal ("Xamarin.NativeHelpers", p),
                 p => Assert.Equal ("Xamarin.Security.Keychain", p),
                 p => Assert.Equal ("Xamarin.Security.Keychain.Tests", p),
+                p => Assert.Equal ("Xamarin.Helpers", p),
                 p => Assert.Equal ("Xamarin.Helpers.Tests", p),
+                p => Assert.Equal ("Xamarin.NativeHelpers", p),
+                p => Assert.Equal ("Xamarin.NativeHelpers.Tests", p),
                 p => Assert.Equal ("Xamarin.MSBuild.Tooling", p),
                 p => Assert.Equal ("Xamarin.MSBuild.Sdk", p),
-                p => Assert.Equal ("Xamarin.NativeHelpers.Tests", p),
-                p => Assert.Equal ("Xamarin.MSBuild.Tooling.NetFXTests", p),
-                p => Assert.Equal ("mirepoix", p));
+                p => Assert.Equal ("Xamarin.MSBuild.Tooling.Tests", p));
         }
     }
 }

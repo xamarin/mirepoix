@@ -192,7 +192,8 @@ namespace Xamarin.MSBuild.Tooling
 
                 try {
                     project = projects.LoadProject (path);
-                } catch {
+                } catch (Exception e) {
+                    loadException = e;
                 }
 
                 node = new ProjectDependencyNode (

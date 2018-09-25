@@ -1,7 +1,7 @@
 steps:
 - task: DotNetCoreInstaller@0
   inputs:
-    version: 2.1.301
+    version: 2.1.402
   displayName: Install .NET Core
 
 # This script runs both via bash (macOS/Linux) and cmd (Windows).
@@ -31,11 +31,3 @@ steps:
     projects: '**/*.Tests.csproj'
   continueOnError: true
   displayName: Run xUnit Tests
-
-- task: MSBuild@1
-  inputs:
-    solution: src/Xamarin.MSBuild.Tooling.Tests/Xamarin.MSBuild.Tooling.NetFXTests.csproj
-    msbuildArguments: '/restore /t:Build,Test'
-  continueOnError: true
-  displayName: Run Manual MSBuild.Tooling Tests
-  condition: and(succeeded(), in(variables['agent.os'], 'darwin', 'windows_nt'))

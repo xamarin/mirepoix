@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\Xamarin.MSBuild.Tooling\Xamarin.MSBuild.Tooling.csproj" />
+    <ProjectReference Include="..\Xamarin.XunitHelpers\Xamarin.XunitHelpers.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Solutions\**\*.cs"/>
+  </ItemGroup>
+</Project>
