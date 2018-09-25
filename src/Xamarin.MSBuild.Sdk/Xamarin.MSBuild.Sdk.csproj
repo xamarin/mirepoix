@@ -2,6 +2,9 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <NoPackageAnalysis>true</NoPackageAnalysis>
+    <PackageTypes>MSBuildSdk</PackageTypes>
+    <BuildOutputTargetFolder>Sdk</BuildOutputTargetFolder>
+    <DevelopmentDependency>true</DevelopmentDependency>
     <Description>Provides support for generating solutions from MSBuild traversal projects.</Description>
   </PropertyGroup>
 
@@ -11,5 +14,16 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Xamarin.MSBuild.Tooling\Xamarin.MSBuild.Tooling.csproj"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Sdk.props">
+      <Pack>true</Pack>
+      <PackagePath>Sdk</PackagePath>
+    </Content>
+    <Content Include="Sdk.targets">
+      <Pack>true</Pack>
+      <PackagePath>Sdk</PackagePath>
+    </Content>
   </ItemGroup>
 </Project>
