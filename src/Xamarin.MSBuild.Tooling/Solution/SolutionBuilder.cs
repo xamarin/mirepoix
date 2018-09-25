@@ -117,7 +117,7 @@ namespace Xamarin.MSBuild.Tooling.Solution
 
             projectPath = ResolveFullPath (projectPath);
 
-            if (solutionOutputPath == null)
+            if (string.IsNullOrEmpty (solutionOutputPath))
                 solutionOutputPath = Path.ChangeExtension (projectPath, ".sln");
 
             var solution = new SolutionBuilder (solutionOutputPath);

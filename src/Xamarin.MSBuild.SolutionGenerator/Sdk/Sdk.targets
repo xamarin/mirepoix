@@ -1,0 +1,17 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <UsingTask
+      TaskName="Xamarin.MSBuild.GenerateSolution"
+      AssemblyFile="$(SolutionGeneratorAssembly)"/>
+
+  <Target Name="GenerateSolution">
+    <GenerateSolution
+      TraversalProjectFile="$(MSBuildProjectFile)"
+      SolutionFile="$(TraversalProjectSolutionFile)"/>
+  </Target>
+
+  <Target
+    Name="GenerateSolutionAfterBuild"
+    Condition="'$(GenerateSolutionAfterBuild)' == 'true'"
+    AfterTargets="Build"
+    DependsOnTargets="GenerateSolution"/>
+</Project>
