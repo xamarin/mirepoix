@@ -23,7 +23,6 @@
   </ItemGroup>
 
   <ItemGroup Condition="'$(MSBuildRuntimeType)' != 'Core'">
-    <ProjectReference Include="src\Xamarin.MSBuild.Tool\Xamarin.MSBuild.Tool.csproj"/>
     <ProjectReference Include="src\Xamarin.MSBuild.Tooling.Tests\Xamarin.MSBuild.Tooling.NetFXTests.csproj"/>
   </ItemGroup>
 

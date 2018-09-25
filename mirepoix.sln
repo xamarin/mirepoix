@@ -29,8 +29,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.MSBuild.Sdk", "src\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.NativeHelpers.Tests", "src\Xamarin.NativeHelpers.Tests\Xamarin.NativeHelpers.Tests.csproj", "{74D3505C-DCE3-5269-B2EB-F26293FC7713}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.MSBuild.Tool", "src\Xamarin.MSBuild.Tool\Xamarin.MSBuild.Tool.csproj", "{674F21AE-FF79-57E5-A4B7-DEE06921D00F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.MSBuild.Tooling.NetFXTests", "src\Xamarin.MSBuild.Tooling.Tests\Xamarin.MSBuild.Tooling.NetFXTests.csproj", "{4F3057FB-3615-5991-A2D3-E57AAE07FF1C}"
 EndProject
 Global
@@ -96,10 +94,6 @@ Global
 		{74D3505C-DCE3-5269-B2EB-F26293FC7713}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74D3505C-DCE3-5269-B2EB-F26293FC7713}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{74D3505C-DCE3-5269-B2EB-F26293FC7713}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{674F21AE-FF79-57E5-A4B7-DEE06921D00F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{674F21AE-FF79-57E5-A4B7-DEE06921D00F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{674F21AE-FF79-57E5-A4B7-DEE06921D00F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{674F21AE-FF79-57E5-A4B7-DEE06921D00F}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{4F3057FB-3615-5991-A2D3-E57AAE07FF1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4F3057FB-3615-5991-A2D3-E57AAE07FF1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F3057FB-3615-5991-A2D3-E57AAE07FF1C}.Release|Any CPU.ActiveCfg = Debug|Any CPU
