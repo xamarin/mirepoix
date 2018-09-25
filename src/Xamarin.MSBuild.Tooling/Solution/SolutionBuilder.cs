@@ -84,29 +84,29 @@ namespace Xamarin.MSBuild.Tooling.Solution
                 // for the GUID, force path separators so Win vs Mac produces the same
                 projectGuid = GuidV5 (solutionGuid, relativePath.Replace ('\\', '/'));
 
-            SolutionNode childNode;
-            bool addedChild;
             var parentNode = solution;
 
             if (!string.IsNullOrEmpty (solutionFolder)) {
                 foreach (var name in solutionFolder.Split ('\\', '/')) {
-                    (childNode, addedChild) = parentNode.AddFolder (name);
-                    if (addedChild && log != null)
-                        log.LogMessage (MessageImportance.Normal, $"Added solution folder: {solutionFolder}");
+                    var folderAddOperation = parentNode.AddFolder (name);
+                    if (folderAddOperation.added) {
+                        parentNode = folderAddOperation.node;
+                        log?.LogMessage (MessageImportance.Normal, $"Added solution folder: {solutionFolder}");
+                    }
                 }
             }
 
-            (childNode, addedChild) = parentNode.AddProject (
+            var (projectNode, addedProject) = parentNode.AddProject (
                 projectGuid,
                 relativePath);
 
-            if (addedChild && log != null) {
+            if (addedProject && log != null) {
                 log.LogMessage (MessageImportance.Normal, $"Added project: {relativePath} ({projectGuid})");
                 log.LogMessage (MessageImportance.Low, $"  solutionDirectory: {solutionDirectory}");
                 log.LogMessage (MessageImportance.Low, $"  projectPath: {projectPath}");
             }
 
-            return childNode;
+            return projectNode;
         }
 
         /// <summary>

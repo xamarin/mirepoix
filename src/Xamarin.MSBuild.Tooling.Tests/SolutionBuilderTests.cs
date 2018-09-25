@@ -23,6 +23,7 @@ namespace Xamarin.MSBuild.Tooling.Tests
             "Solutions");
 
         [Theory]
+        [InlineData ("Folders.proj")]
         [InlineData ("DisabledProjectsInConfig.proj")]
         [InlineData ("UnsupportedProjectDependency.proj")]
         [InlineData ("FallbackToXmlForProjectGuid.proj")]
