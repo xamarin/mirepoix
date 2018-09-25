@@ -5,6 +5,7 @@
     <PackageTypes>MSBuildSdk</PackageTypes>
     <BuildOutputTargetFolder>Sdk</BuildOutputTargetFolder>
     <DevelopmentDependency>true</DevelopmentDependency>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
     <Description>Provides support for generating solutions from MSBuild traversal projects.</Description>
   </PropertyGroup>
 
@@ -13,7 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Xamarin.MSBuild.Tooling\Xamarin.MSBuild.Tooling.csproj"/>
+    <ProjectReference Include="..\Xamarin.MSBuild.Tooling\Xamarin.MSBuild.Tooling.csproj">
+      <IncludeAssets>all</IncludeAssets>
+    </ProjectReference>
   </ItemGroup>
 
   <ItemGroup>
@@ -26,4 +29,16 @@
       <PackagePath>Sdk</PackagePath>
     </Content>
   </ItemGroup>
+
+  <PropertyGroup>
+    <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);XamarinMirepoixDepsContent</TargetsForTfmSpecificContentInPackage>
+  </PropertyGroup>
+
+  <Target Name="XamarinMirepoixDepsContent">
+    <ItemGroup>
+      <TfmSpecificPackageFile Include="bin\$(Configuration)\$(TargetFramework)\Xamarin.*.dll">
+        <PackagePath>Sdk/$(TargetFramework)</PackagePath>
+      </TfmSpecificPackageFile>
+    </ItemGroup>
+  </Target>
 </Project>
