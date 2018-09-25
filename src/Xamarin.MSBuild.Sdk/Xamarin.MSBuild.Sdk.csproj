@@ -20,11 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Sdk.props">
-      <Pack>true</Pack>
-      <PackagePath>Sdk</PackagePath>
-    </Content>
-    <Content Include="Sdk.targets">
+    <Content Include="Sdk.props;Sdk.targets">
       <Pack>true</Pack>
       <PackagePath>Sdk</PackagePath>
     </Content>
@@ -37,7 +33,7 @@
   <Target Name="XamarinMirepoixDepsContent">
     <ItemGroup>
       <TfmSpecificPackageFile Include="bin\$(Configuration)\$(TargetFramework)\Xamarin.*.dll">
-        <PackagePath>Sdk/$(TargetFramework)</PackagePath>
+        <PackagePath>Sdk\$(TargetFramework)</PackagePath>
       </TfmSpecificPackageFile>
     </ItemGroup>
   </Target>
