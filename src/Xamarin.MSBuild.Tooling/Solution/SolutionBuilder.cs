@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Xml.Linq;
 
 using Microsoft.Build.Evaluation;
 using Microsoft.Build.Framework;
@@ -185,11 +186,25 @@ namespace Xamarin.MSBuild.Tooling.Solution
 
                     // Prefer an explicit project GUID if one exists (old style projects)
                     Guid projectGuid = default;
-                    if (node.Project != null) {
-                        var explicitProjectGuid = node.Project.GetPropertyValue ("ProjectGuid");
-                        if (!string.IsNullOrEmpty (explicitProjectGuid))
-                            Guid.TryParse (explicitProjectGuid, out projectGuid);
-                    }
+                    var explicitProjectGuid = node.Project == null
+                        ? XDocument
+                            .Load (node.ProjectPath)
+                            .Root
+                            .Elements ()
+                            .FirstOrDefault (e => !e.HasAttributes && string.Equals (
+                                e.Name.LocalName,
+                                "PropertyGroup",
+                                StringComparison.OrdinalIgnoreCase))
+                            ?.Elements ()
+                            .FirstOrDefault (e => string.Equals (
+                                e.Name.LocalName,
+                                "ProjectGuid",
+                                StringComparison.OrdinalIgnoreCase))
+                            ?.Value
+                        : node.Project.GetPropertyValue ("ProjectGuid");
+
+                    if (!string.IsNullOrEmpty (explicitProjectGuid))
+                        Guid.TryParse (explicitProjectGuid, out projectGuid);
 
                     string solutionFolder = null;
 

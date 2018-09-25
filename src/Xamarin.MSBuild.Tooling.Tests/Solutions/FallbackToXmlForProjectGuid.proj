@@ -1,0 +1,8 @@
+<Project>
+  <ItemGroup>
+    <SolutionConfiguration Include="Debug"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Projects\FallbackToXmlForProjectGuid.csproj"/>
+  </ItemGroup>
+</Project>

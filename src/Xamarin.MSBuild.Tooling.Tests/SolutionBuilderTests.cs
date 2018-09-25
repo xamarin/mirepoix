@@ -25,6 +25,7 @@ namespace Xamarin.MSBuild.Tooling.Tests
         [Theory]
         [InlineData ("DisabledProjectsInConfig.proj")]
         [InlineData ("UnsupportedProjectDependency.proj")]
+        [InlineData ("FallbackToXmlForProjectGuid.proj")]
         public void GenerateSolution (string projectFile)
         {
             var projectPath = Path.Combine (solutionsDirectory, projectFile);
