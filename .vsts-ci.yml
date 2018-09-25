@@ -18,12 +18,6 @@ phases:
       dotnet pack
     displayName: Pack Libraries
 
-  - task: MSBuild@1
-    inputs:
-      solution: src/Xamarin.MSBuild.Tool/Xamarin.MSBuild.Tool.csproj
-      msbuildArguments: '/restore /t:Build'
-    displayName: Pack Tools
-
   - task: PublishBuildArtifacts@1
     inputs:
       ArtifactName: Artifacts
