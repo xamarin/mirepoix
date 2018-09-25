@@ -18,6 +18,8 @@ using Microsoft.Build.Utilities;
 using static Xamarin.GuidHelpers;
 using static Xamarin.PathHelpers;
 
+using Task = System.Threading.Tasks.Task;
+
 namespace Xamarin.MSBuild.Tooling
 {
     /// <summary>

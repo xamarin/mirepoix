@@ -8,6 +8,8 @@ using System.Linq;
 using System.Reflection;
 
 using Microsoft.Build.Evaluation;
+using Microsoft.Build.Framework;
+using Microsoft.Build.Utilities;
 
 using static Xamarin.GuidHelpers;
 using static Xamarin.PathHelpers;
@@ -21,15 +23,17 @@ namespace Xamarin.MSBuild.Tooling.Solution
         static readonly Guid solutionGuid = new Guid ("{17ad6350-380a-4d65-9b2c-aa44b5da8111}");
 
         readonly SolutionNode solution = new SolutionNode ();
+        readonly TaskLoggingHelper log;
 
         readonly List<ConfigurationPlatform> solutionConfigurations = new List<ConfigurationPlatform> ();
         public IReadOnlyList<ConfigurationPlatform> SolutionConfigurations => solutionConfigurations;
 
         public string FileName { get; }
 
-        public SolutionBuilder (string fileName)
+        public SolutionBuilder (string fileName, TaskLoggingHelper log = null)
         {
             FileName = fileName ?? throw new ArgumentNullException (nameof (fileName));
+            this.log = log;
         }
 
         public void Write (string fileName = null)
@@ -79,16 +83,29 @@ namespace Xamarin.MSBuild.Tooling.Solution
                 // for the GUID, force path separators so Win vs Mac produces the same
                 projectGuid = GuidV5 (solutionGuid, relativePath.Replace ('\\', '/'));
 
+            SolutionNode childNode;
+            bool addedChild;
             var parentNode = solution;
 
             if (!string.IsNullOrEmpty (solutionFolder)) {
-                foreach (var name in solutionFolder.Split ('\\', '/'))
-                    parentNode = parentNode.AddFolder (name);
+                foreach (var name in solutionFolder.Split ('\\', '/')) {
+                    (childNode, addedChild) = parentNode.AddFolder (name);
+                    if (addedChild && log != null)
+                        log.LogMessage (MessageImportance.Normal, $"Added solution folder: {solutionFolder}");
+                }
             }
 
-            return parentNode.AddProject (
+            (childNode, addedChild) = parentNode.AddProject (
                 projectGuid,
                 relativePath);
+
+            if (addedChild && log != null) {
+                log.LogMessage (MessageImportance.Normal, $"Added project: {relativePath} ({projectGuid})");
+                log.LogMessage (MessageImportance.Low, $"  solutionDirectory: {solutionDirectory}");
+                log.LogMessage (MessageImportance.Low, $"  projectPath: {projectPath}");
+            }
+
+            return childNode;
         }
 
         /// <summary>
@@ -104,10 +121,14 @@ namespace Xamarin.MSBuild.Tooling.Solution
         /// <param name="addAllProjectReferences">
         /// Whether or not to add transient `&lt;ProjectReference&gt;` projects to the solution.
         /// </param>
+        /// <param name="log">
+        /// An optional logger.
+        /// </param>
         public static SolutionBuilder FromTraversalProject (
             string projectPath,
             string solutionOutputPath = null,
-            bool addTransientProjectReferences = true)
+            bool addTransientProjectReferences = true,
+            TaskLoggingHelper log = null)
         {
             if (projectPath == null)
                 throw new ArgumentNullException (nameof (projectPath));
@@ -120,7 +141,12 @@ namespace Xamarin.MSBuild.Tooling.Solution
             if (string.IsNullOrEmpty (solutionOutputPath))
                 solutionOutputPath = Path.ChangeExtension (projectPath, ".sln");
 
-            var solution = new SolutionBuilder (solutionOutputPath);
+            log?.LogMessage (MessageImportance.High, "Generating solution from traversal project");
+            log?.LogMessage (MessageImportance.Normal, $"  projectPath: {projectPath}");
+            log?.LogMessage (MessageImportance.Normal, $"  solutionOutputPath: {solutionOutputPath}");
+            log?.LogMessage (MessageImportance.Normal, $"  addTransientProjectReferences: {addTransientProjectReferences}");
+
+            var solution = new SolutionBuilder (solutionOutputPath, log);
             var traversalProject = new ProjectCollection ().LoadProject (projectPath);
 
             // Add the explicit solution configurations
@@ -184,8 +210,7 @@ namespace Xamarin.MSBuild.Tooling.Solution
 
                     solutionNode.AddConfigurationMap (new SolutionConfigurationPlatformMap (
                         solutionConfigurationPlatform,
-                        projectConfigurationPlatform
-                    ));
+                        projectConfigurationPlatform));
                 }
             }
 

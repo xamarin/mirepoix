@@ -20,7 +20,8 @@ namespace Xamarin.MSBuild.Sdk
             SolutionBuilder
                 .FromTraversalProject (
                     TraversalProjectFile,
-                    SolutionFile)
+                    SolutionFile,
+                    log: Log)
                 .Write ();
 
             return true;

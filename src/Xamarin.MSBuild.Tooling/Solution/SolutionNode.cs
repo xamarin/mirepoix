@@ -82,7 +82,7 @@ namespace Xamarin.MSBuild.Tooling.Solution
         /// Adds a new solution folder child node. If a folder of the same name has
         /// already been added it is returned instead.
         /// </summary>
-        public SolutionNode AddFolder (string folderName)
+        public (SolutionNode node, bool added) AddFolder (string folderName)
         {
             if (folderName == null)
                 throw new ArgumentNullException (nameof (folderName));
@@ -91,37 +91,45 @@ namespace Xamarin.MSBuild.Tooling.Solution
                 c.TypeGuid == solutionFolderTypeGuid &&
                 string.Equals (c.Name, folderName, StringComparison.Ordinal));
 
-            if (child == null)
+            if (child == null) {
                 children.Add (child = new SolutionNode (Top, this, folderName));
+                return (child, true);
+            }
 
-            return child;
+            return (child, false);
         }
 
         /// <summary>
         /// Adds a project child node. If a project at the same <paramref name="relativePath"/>
         /// has already been added it is returned instead.
         /// </summary>
-        public SolutionNode AddProject (Guid projectGuid, string relativePath)
+        public (SolutionNode node, bool added) AddProject (Guid projectGuid, string relativePath)
         {
             if (relativePath == null)
                 throw new ArgumentNullException (nameof (relativePath));
 
             var child = children.Find (c => c.RelativePath == relativePath);
 
-            if (child == null)
+            if (child == null) {
                 children.Add (child = new SolutionNode (
                     Top,
                     this,
                     projectGuid,
                     relativePath));
+                return (child, true);
+            }
 
-            return child;
+            return (child, false);
         }
 
-        public void AddConfigurationMap (SolutionConfigurationPlatformMap configurationMap)
+        public bool AddConfigurationMap (SolutionConfigurationPlatformMap configurationMap)
         {
-            if (!configurations.Contains (configurationMap))
+            if (!configurations.Contains (configurationMap)) {
                 configurations.Add (configurationMap);
+                return true;
+            }
+
+            return false;
         }
     }
 }
