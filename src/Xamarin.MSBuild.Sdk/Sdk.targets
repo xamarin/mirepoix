@@ -1,7 +1,8 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <UsingTask
-      TaskName="Xamarin.MSBuild.GenerateSolution"
-      AssemblyFile="$(SolutionGeneratorAssembly)"/>
+      TaskName="Xamarin.MSBuild.Sdk.GenerateSolution"
+      AssemblyFile="$(SolutionGeneratorAssembly)"
+      Condition="'$(SolutionGeneratorAssembly)' != ''"/>
 
   <Target Name="GenerateSolution">
     <GenerateSolution
