@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Xamarin.MSBuild.Tooling\Xamarin.MSBuild.Tooling.csproj">
-      <IncludeAssets>all</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
     </ProjectReference>
   </ItemGroup>
 
