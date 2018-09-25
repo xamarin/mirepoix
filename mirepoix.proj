@@ -29,6 +29,15 @@
     <ProjectReference Include="src\Xamarin.XunitHelpers\Xamarin.XunitHelpers.csproj"/>
   </ItemGroup>
 
+  <Target Name="TestAll">
+    <ItemGroup>
+      <TestProjectReferences
+        Include="@(ProjectReference)"
+        Condition="$([System.Text.RegularExpressions.Regex]::IsMatch(%(Filename), '\.Tests$'))"/>
+    </ItemGroup>
+    <Exec Command="dotnet xunit" WorkingDirectory="%(TestProjectReferences.RelativeDir)"/>
+  </Target>
+
   <Target
     Name="DeepClean"
     AfterTargets="Clean">

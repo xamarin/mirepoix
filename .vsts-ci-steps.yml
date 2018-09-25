@@ -29,5 +29,9 @@ steps:
   inputs:
     command: test
     projects: '**/*.Tests.csproj'
-  continueOnError: true
   displayName: Run xUnit Tests
+
+- script: |
+    dotnet msbuild mirepoix.proj /t:TestAll
+  continueOnError: true
+  displayName: Run Unit Tests
