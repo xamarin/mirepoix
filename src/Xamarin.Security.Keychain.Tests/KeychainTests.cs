@@ -41,7 +41,7 @@ namespace Xamarin.Security.Tests
 
         const string serviceName = "com.xamarin.mirepoix.tests";
 
-        [Theory]
+        [WindowsMacTheory]
         [ClassData (typeof (GB18030TestData))]
         public void RoundtripString (string key, string value)
         {
@@ -51,7 +51,7 @@ namespace Xamarin.Security.Tests
             Assert.Equal (value, secret.GetUtf8StringValue ());
         }
 
-        [Fact]
+        [WindowsMacFact]
         public void RoundtripBytes ()
         {
             var random = new Random ();
@@ -63,7 +63,7 @@ namespace Xamarin.Security.Tests
             Assert.Equal (value, secret.Value);
         }
 
-        [Fact]
+        [WindowsMacFact]
         public void UpdateSecret ()
         {
             var secret = KeychainSecret.Create (
@@ -79,7 +79,7 @@ namespace Xamarin.Security.Tests
             Assert.Equal ("new value", querySecret2.GetUtf8StringValue ());
         }
 
-        [Fact]
+        [WindowsMacFact]
         public void StoreSecret ()
         {
             KeychainSecretName name = (serviceName, "dont-update-me");
@@ -95,7 +95,7 @@ namespace Xamarin.Security.Tests
     {
         const string serviceName = "com.xamarin.mirepoix.tests";
 
-        [Fact]
+        [WindowsMacFact]
         public void RoundtripString ()
         {
             const string key = "helper-api-roundtrip-string";
@@ -105,7 +105,7 @@ namespace Xamarin.Security.Tests
             Assert.Equal (value, secret);
         }
 
-        [Fact]
+        [WindowsMacFact]
         public void RoundtripBytes ()
         {
             const string key = "helper-api-roundtrip-bytes";
