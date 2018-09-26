@@ -1,7 +1,7 @@
 <Project>
   <PropertyGroup>
     <GitThisAssemblyMetadata>false</GitThisAssemblyMetadata>
-    <GitVersionFile>$(MSBuildThisFileDirectory)..\VERSION</GitVersionFile>
+    <GitVersionFile>VERSION</GitVersionFile>
     <GitSkipCache>true</GitSkipCache>
   </PropertyGroup>
 
@@ -23,7 +23,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <VersionMetadata Include="$(GitCommits)"/>
+      <VersionMetadata
+        Condition="'$(GitCommits)' != '0'"
+        Include="$(GitCommits)"/>
 
       <VersionMetadata
         Condition="$(InVSTS) and '$(BUILD_REASON)' == 'PullRequest'"

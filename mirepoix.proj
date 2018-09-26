@@ -1,5 +1,6 @@
 <Project Sdk="Microsoft.Build.Traversal">
   <Import Project="src\Xamarin.MSBuild.Sdk\Sdk.props"/>
+  <Import Project="src\Directory.Build.props"/>
 
   <ItemGroup>
     <SolutionConfiguration Include="Debug"/>
@@ -44,5 +45,11 @@
     <Exec Command="docfx build -s docfx\docfx.json"/>
   </Target>
 
+  <Target Name="ShowVersion" AfterTargets="Build;Pack" DependsOnTargets="SetVersions">
+    <Message Text="Version: $(Version)" Importance="high"/>
+    <Message Text="PackageVersion: $(PackageVersion)" Importance="high"/>
+  </Target>
+
+  <Import Project="src\Version.targets"/>
   <Import Project="src\Xamarin.MSBuild.Sdk\Sdk.targets"/>
 </Project>
