@@ -176,3 +176,60 @@ automatically after a successful build.
   …
 </Project>
 ```
+
+## Rationale for Solution Generation
+
+While this may change in the future, the solution generator specifically
+ignores any changes made to the solution itself (e.g. configuration changes
+introduced via the IDE or extra metadata the IDE may add to the solution).
+
+This is because the canonical definition of the build _should_ come from the
+traversal project itself. A solution is simply a scoped view of the project
+to drive the development experience in the IDE.
+
+### Always discard solution edits/changes made by the IDE
+
+Only changes to solution files made as a result of running
+`/t:GenerateSolution` should be committed to the repository. Discard any
+edits/changes made by the IDE.
+
+## GUIDs
+
+Solutions define the shape of the project tree based on the mapping of
+two GUIDs. In older MSBuild projects, each project had a unique
+`<ProjectGuid>` property. These GUIDs were reused to reference projects
+in the solution and map their configurations.
+
+With the advent of SDK-style projects however, `<ProjectGuid>` is optional
+and discouraged. It is an artifact of the solution structure itself.
+
+However, since a GUID _is_ needed _inside_ the solution, we have to provide
+one. If we were to use the .NET `Guid.NewGuid` method to create one, the
+solution would change _on every single generation_, because this method
+creates a version 4 random GUID.
+
+`/t:GenerateSolution` solves this by using
+[version 5 SHA-1 hashed GUIDs](xref:Xamarin.GuidHelpers.GuidV5(System.Guid,System.String))
+instead, which are stable: given a constant namespace GUID and a value (in
+this case, the _path to the project file relative to the solution file_), a
+version 5 GUID will always produce the same value and thus result in a
+solution file that does not change on each generation.
+
+> [!NOTE]
+> If a project _does_ happen to provide an explicit `<ProjectGuid>`,
+> that value is used instead of creating a hashed GUID based on the path.
+
+### Example
+
+```csharp
+using static Xamarin.GuidHelpers;
+
+var itemGuid = GuidV5 (
+  // constant namespace
+  new Guid ("{17ad6350-380a-4d65-9b2c-aa44b5da8111}"),
+  // path to project relative to solution with normalized separators
+  @"path\to\project.csproj".Replace ('\\', '/')
+);
+
+// itemGuid will always be '{5984500c-0dbf-5c42-947b-c6674ccdbe30}'
+```

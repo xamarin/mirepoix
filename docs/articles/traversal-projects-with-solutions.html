@@ -257,6 +257,51 @@ automatically after a successful build.</p>
   …
 &lt;/Project&gt;
 </code></pre>
+<h2 id="rationale-for-solution-generation">Rationale for Solution Generation</h2>
+<p>While this may change in the future, the solution generator specifically
+ignores any changes made to the solution itself (e.g. configuration changes
+introduced via the IDE or extra metadata the IDE may add to the solution).</p>
+<p>This is because the canonical definition of the build <em>should</em> come from the
+traversal project itself. A solution is simply a scoped view of the project
+to drive the development experience in the IDE.</p>
+<h3 id="always-discard-solution-editschanges-made-by-the-ide">Always discard solution edits/changes made by the IDE</h3>
+<p>Only changes to solution files made as a result of running
+<code>/t:GenerateSolution</code> should be committed to the repository. Discard any
+edits/changes made by the IDE.</p>
+<h2 id="guids">GUIDs</h2>
+<p>Solutions define the shape of the project tree based on the mapping of
+two GUIDs. In older MSBuild projects, each project had a unique
+<code>&lt;ProjectGuid&gt;</code> property. These GUIDs were reused to reference projects
+in the solution and map their configurations.</p>
+<p>With the advent of SDK-style projects however, <code>&lt;ProjectGuid&gt;</code> is optional
+and discouraged. It is an artifact of the solution structure itself.</p>
+<p>However, since a GUID <em>is</em> needed <em>inside</em> the solution, we have to provide
+one. If we were to use the .NET <code>Guid.NewGuid</code> method to create one, the
+solution would change <em>on every single generation</em>, because this method
+creates a version 4 random GUID.</p>
+<p><code>/t:GenerateSolution</code> solves this by using
+<a class="xref" href="../api/Xamarin.GuidHelpers.html#Xamarin_GuidHelpers_GuidV5_System_Guid_System_String_">version 5 SHA-1 hashed GUIDs</a>
+instead, which are stable: given a constant namespace GUID and a value (in
+this case, the <em>path to the project file relative to the solution file</em>), a
+version 5 GUID will always produce the same value and thus result in a
+solution file that does not change on each generation.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If a project <em>does</em> happen to provide an explicit <code>&lt;ProjectGuid&gt;</code>,
+that value is used instead of creating a hashed GUID based on the path.</p>
+</div>
+<h3 id="example">Example</h3>
+<pre><code class="lang-csharp">using static Xamarin.GuidHelpers;
+
+var itemGuid = GuidV5 (
+  // constant namespace
+  new Guid (&quot;{17ad6350-380a-4d65-9b2c-aa44b5da8111}&quot;),
+  // path to project relative to solution with normalized separators
+  @&quot;path\to\project.csproj&quot;.Replace ('\\', '/')
+);
+
+// itemGuid will always be '{5984500c-0dbf-5c42-947b-c6674ccdbe30}'
+</code></pre>
 </article>
           </div>
           
