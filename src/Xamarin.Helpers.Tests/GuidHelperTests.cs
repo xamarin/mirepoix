@@ -8,7 +8,7 @@ using Xunit;
 
 using static Xamarin.GuidHelpers;
 
-namespace Xamarin.Helpers
+namespace Xamarin
 {
     public class GuidHelperTests
     {

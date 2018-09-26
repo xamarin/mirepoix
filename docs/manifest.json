@@ -77,6 +77,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.FileHelpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.FileHelpers.html",
+          "hash": "JxHqeYBnD5jEGSBZJTo41w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Xamarin.GuidHelpers.GuidNamespace.yml",
       "output": {
         ".html": {
@@ -237,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.html",
-          "hash": "wUdf+KjcwWtjkgbTXAsAQQ=="
+          "hash": "IfUOk7I24/215jb2NyCQFA=="
         }
       },
       "is_incremental": true,
@@ -633,7 +645,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.html",
-          "hash": "zgMpND2X57vm2RdPhoPRlQ=="
+          "hash": "725DfXLqTjUBEPscOKy1Hw=="
         }
       },
       "is_incremental": true,
@@ -837,7 +849,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "dBPlJfG9F+Ge0tfZ3qaNTw=="
+          "hash": "LOjlyvFidHJ5dueBmK9GjA=="
         }
       },
       "is_incremental": false,

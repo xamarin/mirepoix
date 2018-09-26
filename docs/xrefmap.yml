@@ -407,6 +407,25 @@ references:
   isSpec: "True"
   fullName: Xamarin.Downloader.DownloadStatus.TimeElapsed
   nameWithType: DownloadStatus.TimeElapsed
+- uid: Xamarin.FileHelpers
+  name: FileHelpers
+  href: api/Xamarin.FileHelpers.html
+  commentId: T:Xamarin.FileHelpers
+  fullName: Xamarin.FileHelpers
+  nameWithType: FileHelpers
+- uid: Xamarin.FileHelpers.DetectFileLineEnding(System.String)
+  name: DetectFileLineEnding(String)
+  href: api/Xamarin.FileHelpers.html#Xamarin_FileHelpers_DetectFileLineEnding_System_String_
+  commentId: M:Xamarin.FileHelpers.DetectFileLineEnding(System.String)
+  fullName: Xamarin.FileHelpers.DetectFileLineEnding(System.String)
+  nameWithType: FileHelpers.DetectFileLineEnding(String)
+- uid: Xamarin.FileHelpers.DetectFileLineEnding*
+  name: DetectFileLineEnding
+  href: api/Xamarin.FileHelpers.html#Xamarin_FileHelpers_DetectFileLineEnding_
+  commentId: Overload:Xamarin.FileHelpers.DetectFileLineEnding
+  isSpec: "True"
+  fullName: Xamarin.FileHelpers.DetectFileLineEnding
+  nameWithType: FileHelpers.DetectFileLineEnding
 - uid: Xamarin.GuidHelpers
   name: GuidHelpers
   href: api/Xamarin.GuidHelpers.html
@@ -1318,6 +1337,19 @@ references:
   isSpec: "True"
   fullName: Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.Execute
   nameWithType: GenerateSolution.Execute
+- uid: Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.LineEnding
+  name: LineEnding
+  href: api/Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.html#Xamarin_MSBuild_Sdk_Tasks_GenerateSolution_LineEnding
+  commentId: P:Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.LineEnding
+  fullName: Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.LineEnding
+  nameWithType: GenerateSolution.LineEnding
+- uid: Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.LineEnding*
+  name: LineEnding
+  href: api/Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.html#Xamarin_MSBuild_Sdk_Tasks_GenerateSolution_LineEnding_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.LineEnding
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.LineEnding
+  nameWithType: GenerateSolution.LineEnding
 - uid: Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.SolutionFile
   name: SolutionFile
   href: api/Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.html#Xamarin_MSBuild_Sdk_Tasks_GenerateSolution_SolutionFile
