@@ -29,15 +29,6 @@
     <ProjectReference Include="src\Xamarin.XunitHelpers\Xamarin.XunitHelpers.csproj"/>
   </ItemGroup>
 
-  <Target Name="TestAll">
-    <ItemGroup>
-      <TestProjectReferences
-        Include="@(ProjectReference)"
-        Condition="$([System.Text.RegularExpressions.Regex]::IsMatch(%(Filename), '\.Tests$'))"/>
-    </ItemGroup>
-    <Exec Command="dotnet xunit" WorkingDirectory="%(TestProjectReferences.RelativeDir)"/>
-  </Target>
-
   <Target
     Name="DeepClean"
     AfterTargets="Clean">
@@ -46,6 +37,10 @@
     <RemoveDir Directories="obj"/>
     <RemoveDir Directories="@(ProjectReference -> '%(RelativeDir)bin')"/>
     <RemoveDir Directories="@(ProjectReference -> '%(RelativeDir)obj')"/>
+  </Target>
+
+  <Target Name="UpdateDocs">
+    <Exec Command="docfx build -s docfx/docfx.json"/>
   </Target>
 
   <Import Project="src\Xamarin.MSBuild.Sdk\Sdk.targets"/>
