@@ -38,6 +38,13 @@ namespace Xunit
         }
     }
 
+    public class WindowsMacTheoryAttribute : OSFactAttribute
+    {
+        public WindowsMacTheoryAttribute () : base (OSPlatform.Windows, OSPlatform.OSX)
+        {
+        }
+    }
+
     public class OSTheoryAttribute : TheoryAttribute
     {
         readonly string osSkipString;
