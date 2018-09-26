@@ -1,0 +1,13 @@
+<Project>
+  <PropertyGroup>
+    <GitThisAssemblyMetadata>false</GitThisAssemblyMetadata>
+    <GitVersionFile>VERSION</GitVersionFile>
+    <GitSkipCache>true</GitSkipCache>
+    <GitInfoReportImportance Condition="'$(InCI)'">high</GitInfoReportImportance>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GenerateNuspecDependsOn>SetVersions;$(GenerateNuspecDependsOn)</GenerateNuspecDependsOn>
+    <GetPackageVersionDependsOn>SetVersions;$(GetPackageVersionDependsOn)</GetPackageVersionDependsOn>
+  </PropertyGroup>
+</Project>

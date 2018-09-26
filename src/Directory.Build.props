@@ -1,5 +1,6 @@
 <Project>
   <Import Project="CI.props"/>
+  <Import Project="Version.props"/>
 
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
@@ -38,7 +39,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="GitInfo" Version="2.0.11">
+    <PackageReference Include="GitInfo" Version="2.0.17">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>

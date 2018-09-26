@@ -1,5 +1,7 @@
 # Mirepoix
 
+[![Build Status](https://devdiv.visualstudio.com/DevDiv/_apis/build/status/Xamarin/Mirepoix)](https://devdiv.visualstudio.com/DevDiv/_build/latest?definitionId=9683)
+
 > A mirepoix (/mɪərˈpwɑː/ meer-PWAH) is a flavor base made from diced
 vegetables that are cooked, usually with butter or oil or other fat,
 for a long time on a low heat without color or browning.

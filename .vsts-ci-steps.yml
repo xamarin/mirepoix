@@ -14,15 +14,11 @@ steps:
   displayName: Dump Environment
 
 - script: |
-    rm msbuild.rsp
-  displayName: Remove MSBuild autoresponse file
-
-- script: |
-    dotnet restore
+    dotnet msbuild /restore
   displayName: Restore
 
 - script: |
-    dotnet build --no-restore -v detailed mirepoix.proj
+    dotnet msbuild /noautoresponse /v:detailed /bl:_artifacts/build.binlog mirepoix.proj
   displayName: Build
 
 - task: DotNetCoreCLI@2

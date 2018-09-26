@@ -1,15 +1,4 @@
 <Project>
-  <PropertyGroup>
-    <GitThisAssemblyMetadata>false</GitThisAssemblyMetadata>
-    <GitVersionFile>VERSION</GitVersionFile>
-    <GitSkipCache>true</GitSkipCache>
-  </PropertyGroup>
-
-  <PropertyGroup>
-    <GenerateNuspecDependsOn>SetVersions;$(GenerateNuspecDependsOn)</GenerateNuspecDependsOn>
-    <GetPackageVersionDependsOn>SetVersions;$(GetPackageVersionDependsOn)</GetPackageVersionDependsOn>
-  </PropertyGroup>
-
   <Target
     Name="SetVersions"
     BeforeTargets="GetAssemblyVersion;GetPackageVersion;Pack"
