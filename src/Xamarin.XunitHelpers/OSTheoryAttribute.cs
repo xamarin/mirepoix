@@ -38,7 +38,7 @@ namespace Xunit
         }
     }
 
-    public class WindowsMacTheoryAttribute : OSFactAttribute
+    public class WindowsMacTheoryAttribute : OSTheoryAttribute
     {
         public WindowsMacTheoryAttribute () : base (OSPlatform.Windows, OSPlatform.OSX)
         {
