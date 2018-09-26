@@ -1,7 +1,6 @@
 <Project>
   <PropertyGroup>
     <GitThisAssemblyMetadata>false</GitThisAssemblyMetadata>
-    <GitVersionFile>VERSION</GitVersionFile>
     <GitSkipCache>true</GitSkipCache>
     <GitInfoReportImportance Condition="'$(InCI)'">high</GitInfoReportImportance>
   </PropertyGroup>
