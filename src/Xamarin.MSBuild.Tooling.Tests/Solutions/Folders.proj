@@ -9,5 +9,8 @@
     <ProjectReference Include="Projects\B.csproj">
       <SolutionFolder>A\B\C\D\E</SolutionFolder>
     </ProjectReference>
+    <ProjectReference Include="Projects\C.csproj">
+      <SolutionFolder>A\B</SolutionFolder>
+    </ProjectReference>
   </ItemGroup>
 </Project>

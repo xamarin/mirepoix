@@ -89,10 +89,9 @@ namespace Xamarin.MSBuild.Tooling.Solution
             if (!string.IsNullOrEmpty (solutionFolder)) {
                 foreach (var name in solutionFolder.Split ('\\', '/')) {
                     var folderAddOperation = parentNode.AddFolder (name);
-                    if (folderAddOperation.added) {
-                        parentNode = folderAddOperation.node;
+                    parentNode = folderAddOperation.node;
+                    if (folderAddOperation.added)
                         log?.LogMessage (MessageImportance.Normal, $"Added solution folder: {solutionFolder}");
-                    }
                 }
             }
 
