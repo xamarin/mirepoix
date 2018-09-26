@@ -3,7 +3,7 @@
 
 using System;
 
-namespace Xamarin.MSBuild.Tooling.Tests
+namespace Xamarin.MSBuild.Sdk.Tests
 {
     public abstract class MSBuildTestBase
     {

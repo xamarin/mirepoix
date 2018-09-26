@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace Xamarin.MSBuild.Tooling
+namespace Xamarin.MSBuild.Sdk
 {
     static class VisJsGenerator
     {

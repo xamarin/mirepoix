@@ -20,7 +20,7 @@ using static Xamarin.PathHelpers;
 
 using Task = System.Threading.Tasks.Task;
 
-namespace Xamarin.MSBuild.Tooling
+namespace Xamarin.MSBuild.Sdk
 {
     /// <summary>
     /// Uses MSBuild to load and evaluate all projects from a set of project and/or solution

@@ -3,7 +3,7 @@
 
 using System;
 
-namespace Xamarin.MSBuild.Tooling.Solution
+namespace Xamarin.MSBuild.Sdk.Solution
 {
     public struct SolutionConfigurationPlatformMap : IEquatable<SolutionConfigurationPlatformMap>
     {

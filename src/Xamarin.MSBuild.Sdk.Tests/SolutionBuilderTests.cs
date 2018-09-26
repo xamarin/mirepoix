@@ -10,16 +10,16 @@ using Xunit;
 
 using static Xamarin.PathHelpers;
 
-using Xamarin.MSBuild.Tooling.Solution;
+using Xamarin.MSBuild.Sdk.Solution;
 
-namespace Xamarin.MSBuild.Tooling.Tests
+namespace Xamarin.MSBuild.Sdk.Tests
 {
     public class SolutionBuilderTests : MSBuildTestBase
     {
         static readonly string solutionsDirectory = Path.Combine (
             Git.FindRepositoryRootPathFromAssembly (),
             "src",
-            "Xamarin.MSBuild.Tooling.Tests",
+            "Xamarin.MSBuild.Sdk.Tests",
             "Solutions");
 
         [Theory]

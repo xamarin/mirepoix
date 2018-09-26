@@ -2,21 +2,34 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <NoPackageAnalysis>true</NoPackageAnalysis>
-    <PackageTypes>MSBuildSdk</PackageTypes>
-    <BuildOutputTargetFolder>Sdk</BuildOutputTargetFolder>
+    <PackageTypes>Dependency;MSBuildSdk</PackageTypes>
     <DevelopmentDependency>true</DevelopmentDependency>
     <IncludeBuildOutput>false</IncludeBuildOutput>
-    <Description>Provides support for generating solutions from MSBuild traversal projects.</Description>
+    <Description>
+      Provides support for generating solutions from MSBuild traversal projects,
+      working with a project's dependency graph (including generating visualizations),
+      and other various MSBuild utility APIs, targets, and tasks.
+    </Description>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Build.Utilities.Core" Version="15.8.166" />
+    <PackageReference Include="Microsoft.Build" Version="15.8.166"/>
+    <PackageReference Include="Microsoft.Build.Utilities.Core" Version="15.8.166"/>
+    <PackageReference Include="Microsoft.Win32.Registry" Version="4.5.0"/>
+    <PackageReference Include="System.Collections.Immutable" Version="1.5.0"/>
+    <PackageReference Include="System.Threading.Tasks.Dataflow" Version="4.9.0"/>
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Xamarin.MSBuild.Tooling\Xamarin.MSBuild.Tooling.csproj">
+    <ProjectReference Include="..\Xamarin.Helpers\Xamarin.Helpers.csproj">
       <PrivateAssets>all</PrivateAssets>
     </ProjectReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\VisJsTemplate.html">
+      <LogicalName>VisJsTemplate.html</LogicalName>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
@@ -33,7 +46,7 @@
   <Target Name="XamarinMirepoixDepsContent">
     <ItemGroup>
       <TfmSpecificPackageFile Include="bin\$(Configuration)\$(TargetFramework)\Xamarin.*.dll">
-        <PackagePath>Sdk\$(TargetFramework)</PackagePath>
+        <PackagePath>lib\$(TargetFramework)</PackagePath>
       </TfmSpecificPackageFile>
     </ItemGroup>
   </Target>

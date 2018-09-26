@@ -3,7 +3,7 @@
 
 using System;
 
-namespace Xamarin.MSBuild.Tooling
+namespace Xamarin.MSBuild.Sdk
 {
     public interface IDependencyNode
     {

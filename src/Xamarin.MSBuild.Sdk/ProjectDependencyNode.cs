@@ -7,7 +7,7 @@ using System.IO;
 
 using Microsoft.Build.Evaluation;
 
-namespace Xamarin.MSBuild.Tooling
+namespace Xamarin.MSBuild.Sdk
 {
     public sealed class ProjectDependencyNode : IDependencyNode
     {

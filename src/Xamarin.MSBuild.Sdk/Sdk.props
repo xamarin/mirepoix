@@ -1,6 +1,6 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <SolutionGeneratorNuGetTaskAssembly>$(MSBuildThisFileDirectory)netstandard2.0\Xamarin.MSBuild.Sdk.dll</SolutionGeneratorNuGetTaskAssembly>
+    <SolutionGeneratorNuGetTaskAssembly>$(MSBuildThisFileDirectory)..\lib\netstandard2.0\Xamarin.MSBuild.Sdk.dll</SolutionGeneratorNuGetTaskAssembly>
     <SolutionGeneratorAssembly Condition="Exists('$(SolutionGeneratorNuGetTaskAssembly)')">$(SolutionGeneratorNuGetTaskAssembly)</SolutionGeneratorAssembly>
 
     <SolutionGeneratorLocalBuildTaskAssembly>$(MSBuildThisFileDirectory)\bin\Debug\netstandard2.0\Xamarin.MSBuild.Sdk.dll</SolutionGeneratorLocalBuildTaskAssembly>

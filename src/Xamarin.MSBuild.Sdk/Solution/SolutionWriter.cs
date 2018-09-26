@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace Xamarin.MSBuild.Tooling.Solution
+namespace Xamarin.MSBuild.Sdk.Solution
 {
     static class SolutionWriter
     {

@@ -7,7 +7,7 @@ using System.Reflection;
 using Microsoft.Build.Construction;
 using Microsoft.Build.Evaluation;
 
-namespace Xamarin.MSBuild.Tooling
+namespace Xamarin.MSBuild.Sdk
 {
     static class ConditionParser
     {
@@ -32,7 +32,7 @@ namespace Xamarin.MSBuild.Tooling
         static ConditionParser ()
         {
             var msbuildAssembly = typeof (Project).Assembly;
-            
+
             parserType = msbuildAssembly.GetType ("Microsoft.Build.Evaluation.Parser");
             parserOptionsType = msbuildAssembly.GetType ("Microsoft.Build.Evaluation.ParserOptions");
             parserParseMethod = parserType.GetMethod (
@@ -47,12 +47,12 @@ namespace Xamarin.MSBuild.Tooling
                 null);
 
             equalExpressionNodeType = msbuildAssembly.GetType ("Microsoft.Build.Evaluation.EqualExpressionNode");
-            
+
             operatorExpressionNodeType = msbuildAssembly.GetType ("Microsoft.Build.Evaluation.OperatorExpressionNode");
 
             operatorExpressionNodeLeftChildProperty = operatorExpressionNodeType.GetProperty ("LeftChild", bindingFlags);
             operatorExpressionNodeRightChildProperty = operatorExpressionNodeType.GetProperty ("RightChild", bindingFlags);
- 
+
             stringExpressionNodeType = msbuildAssembly.GetType ("Microsoft.Build.Evaluation.StringExpressionNode");
             stringExpressionNodeValueField = stringExpressionNodeType.GetField ("_value", bindingFlags);
         }

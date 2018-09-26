@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
-    <ProjectReference Include="..\Xamarin.MSBuild.Tooling\Xamarin.MSBuild.Tooling.csproj" />
+    <ProjectReference Include="..\Xamarin.MSBuild.Sdk\Xamarin.MSBuild.Sdk.csproj" />
+    <ProjectReference Include="..\Xamarin.Helpers\Xamarin.Helpers.csproj" />
     <ProjectReference Include="..\Xamarin.XunitHelpers\Xamarin.XunitHelpers.csproj" />
   </ItemGroup>
   <ItemGroup>

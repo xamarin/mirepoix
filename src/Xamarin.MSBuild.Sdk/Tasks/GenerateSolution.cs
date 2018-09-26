@@ -4,9 +4,9 @@
 using Microsoft.Build.Framework;
 using Microsoft.Build.Utilities;
 
-using Xamarin.MSBuild.Tooling.Solution;
+using Xamarin.MSBuild.Sdk.Solution;
 
-namespace Xamarin.MSBuild.Sdk
+namespace Xamarin.MSBuild.Sdk.Tasks
 {
     public sealed class GenerateSolution : Task
     {

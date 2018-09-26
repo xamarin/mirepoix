@@ -15,7 +15,7 @@ using Microsoft.Build.Utilities;
 using static Xamarin.GuidHelpers;
 using static Xamarin.PathHelpers;
 
-namespace Xamarin.MSBuild.Tooling.Solution
+namespace Xamarin.MSBuild.Sdk.Solution
 {
     public sealed class SolutionBuilder
     {

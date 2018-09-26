@@ -8,7 +8,7 @@ using System.Linq;
 
 using Microsoft.Build.Evaluation;
 
-namespace Xamarin.MSBuild.Tooling.Solution
+namespace Xamarin.MSBuild.Sdk.Solution
 {
     sealed class SolutionNode
     {

@@ -23,8 +23,7 @@
     <ProjectReference Include="src\Xamarin.NativeHelpers.Tests\Xamarin.NativeHelpers.Tests.csproj"/>
 
     <ProjectReference Include="src\Xamarin.MSBuild.Sdk\Xamarin.MSBuild.Sdk.csproj"/>
-    <ProjectReference Include="src\Xamarin.MSBuild.Tooling\Xamarin.MSBuild.Tooling.csproj"/>
-    <ProjectReference Include="src\Xamarin.MSBuild.Tooling.Tests\Xamarin.MSBuild.Tooling.Tests.csproj"/>
+    <ProjectReference Include="src\Xamarin.MSBuild.Sdk.Tests\Xamarin.MSBuild.Sdk.Tests.csproj"/>
 
     <ProjectReference Include="src\Xamarin.XunitHelpers\Xamarin.XunitHelpers.csproj"/>
   </ItemGroup>

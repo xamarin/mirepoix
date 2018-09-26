@@ -10,7 +10,7 @@ using Xunit;
 
 using static Xamarin.PathHelpers;
 
-namespace Xamarin.MSBuild.Tooling.Tests
+namespace Xamarin.MSBuild.Sdk.Tests
 {
     public class DependencyGraphTests : MSBuildTestBase
     {
@@ -45,9 +45,8 @@ namespace Xamarin.MSBuild.Tooling.Tests
                 p => Assert.Equal ("Xamarin.Helpers.Tests", p),
                 p => Assert.Equal ("Xamarin.NativeHelpers", p),
                 p => Assert.Equal ("Xamarin.NativeHelpers.Tests", p),
-                p => Assert.Equal ("Xamarin.MSBuild.Tooling", p),
                 p => Assert.Equal ("Xamarin.MSBuild.Sdk", p),
-                p => Assert.Equal ("Xamarin.MSBuild.Tooling.Tests", p));
+                p => Assert.Equal ("Xamarin.MSBuild.Sdk.Tests", p));
         }
     }
 }

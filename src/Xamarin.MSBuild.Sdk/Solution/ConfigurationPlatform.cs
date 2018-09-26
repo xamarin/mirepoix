@@ -4,7 +4,7 @@
 using System;
 using System.Linq;
 
-namespace Xamarin.MSBuild.Tooling.Solution
+namespace Xamarin.MSBuild.Sdk.Solution
 {
     public struct ConfigurationPlatform : IEquatable<ConfigurationPlatform>
     {

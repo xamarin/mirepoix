@@ -13,7 +13,7 @@ using System.Runtime.Versioning;
 
 using Microsoft.Win32;
 
-namespace Xamarin.MSBuild.Tooling
+namespace Xamarin.MSBuild.Sdk
 {
     public static class MSBuildLocator
     {
