@@ -39,7 +39,8 @@
   </Target>
 
   <Target Name="UpdateDocs">
-    <Exec Command="docfx build -s docfx/docfx.json"/>
+    <Exec Command="docfx docfx\docfx.json"/>
+    <Exec Command="docfx build -s docfx\docfx.json"/>
   </Target>
 
   <Import Project="src\Xamarin.MSBuild.Sdk\Sdk.targets"/>

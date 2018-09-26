@@ -94,7 +94,7 @@
     <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_PathHelpers_FindProgramPath_System_String_System_Collections_Generic_IEnumerable_System_String__.md&amp;value=---%0Auid%3A%20Xamarin.PathHelpers.FindProgramPath(System.String%2CSystem.Collections.Generic.IEnumerable%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Helpers/PathHelpers.cs/#L105">View Source</a>
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Helpers/PathHelpers.cs/#L148">View Source</a>
   </span>
   <a id="Xamarin_PathHelpers_FindProgramPath_" data-uid="Xamarin.PathHelpers.FindProgramPath*"></a>
   <h4 id="Xamarin_PathHelpers_FindProgramPath_System_String_System_Collections_Generic_IEnumerable_System_String__" data-uid="Xamarin.PathHelpers.FindProgramPath(System.String,System.Collections.Generic.IEnumerable{System.String})">FindProgramPath(String, IEnumerable&lt;String&gt;)</h4>
@@ -154,6 +154,59 @@ also be returned if found - that is, one should not specify an extension at all 
 <code data-dev-comment-type="paramref" class="paramref">programName</code>. Finally, <code data-dev-comment-type="paramref" class="paramref">programName</code> comparison is <em>case
 insensitive</em>! For example, <code>msbuild</code> may yield <code>/path/to/MSBuild.exe</code>.</p>
 </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_PathHelpers_MakeRelativePath_System_String_System_String_.md&amp;value=---%0Auid%3A%20Xamarin.PathHelpers.MakeRelativePath(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Helpers/PathHelpers.cs/#L89">View Source</a>
+  </span>
+  <a id="Xamarin_PathHelpers_MakeRelativePath_" data-uid="Xamarin.PathHelpers.MakeRelativePath*"></a>
+  <h4 id="Xamarin_PathHelpers_MakeRelativePath_System_String_System_String_" data-uid="Xamarin.PathHelpers.MakeRelativePath(System.String,System.String)">MakeRelativePath(String, String)</h4>
+  <div class="markdown level1 summary"><p>Makes <code data-dev-comment-type="paramref" class="paramref">path</code> relative to <code data-dev-comment-type="paramref" class="paramref">basePath</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string MakeRelativePath(string basePath, string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">basePath</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_PathHelpers_NormalizePath_System_String_.md&amp;value=---%0Auid%3A%20Xamarin.PathHelpers.NormalizePath(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>

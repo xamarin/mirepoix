@@ -497,147 +497,853 @@ references:
   isSpec: "True"
   fullName: Xamarin.GuidHelpers.GuidV5
   nameWithType: GuidHelpers.GuidV5
-- uid: Xamarin.MSBuild.Tooling
-  name: Xamarin.MSBuild.Tooling
-  href: api/Xamarin.MSBuild.Tooling.html
-  commentId: N:Xamarin.MSBuild.Tooling
-  fullName: Xamarin.MSBuild.Tooling
-  nameWithType: Xamarin.MSBuild.Tooling
-- uid: Xamarin.MSBuild.Tooling.DependencyGraph
+- uid: Xamarin.HashHelpers
+  name: HashHelpers
+  href: api/Xamarin.HashHelpers.html
+  commentId: T:Xamarin.HashHelpers
+  fullName: Xamarin.HashHelpers
+  nameWithType: HashHelpers
+- uid: Xamarin.HashHelpers.Hash(System.Boolean,System.Int32)
+  name: Hash(Boolean, Int32)
+  href: api/Xamarin.HashHelpers.html#Xamarin_HashHelpers_Hash_System_Boolean_System_Int32_
+  commentId: M:Xamarin.HashHelpers.Hash(System.Boolean,System.Int32)
+  fullName: Xamarin.HashHelpers.Hash(System.Boolean, System.Int32)
+  nameWithType: HashHelpers.Hash(Boolean, Int32)
+- uid: Xamarin.HashHelpers.Hash(System.Double[])
+  name: Hash(Double[])
+  href: api/Xamarin.HashHelpers.html#Xamarin_HashHelpers_Hash_System_Double___
+  commentId: M:Xamarin.HashHelpers.Hash(System.Double[])
+  name.vb: Hash(Double())
+  fullName: Xamarin.HashHelpers.Hash(System.Double[])
+  fullName.vb: Xamarin.HashHelpers.Hash(System.Double())
+  nameWithType: HashHelpers.Hash(Double[])
+  nameWithType.vb: HashHelpers.Hash(Double())
+- uid: Xamarin.HashHelpers.Hash(System.Int32,System.Int32)
+  name: Hash(Int32, Int32)
+  href: api/Xamarin.HashHelpers.html#Xamarin_HashHelpers_Hash_System_Int32_System_Int32_
+  commentId: M:Xamarin.HashHelpers.Hash(System.Int32,System.Int32)
+  fullName: Xamarin.HashHelpers.Hash(System.Int32, System.Int32)
+  nameWithType: HashHelpers.Hash(Int32, Int32)
+- uid: Xamarin.HashHelpers.Hash(System.Int32[])
+  name: Hash(Int32[])
+  href: api/Xamarin.HashHelpers.html#Xamarin_HashHelpers_Hash_System_Int32___
+  commentId: M:Xamarin.HashHelpers.Hash(System.Int32[])
+  name.vb: Hash(Int32())
+  fullName: Xamarin.HashHelpers.Hash(System.Int32[])
+  fullName.vb: Xamarin.HashHelpers.Hash(System.Int32())
+  nameWithType: HashHelpers.Hash(Int32[])
+  nameWithType.vb: HashHelpers.Hash(Int32())
+- uid: Xamarin.HashHelpers.Hash(System.Object[])
+  name: Hash(Object[])
+  href: api/Xamarin.HashHelpers.html#Xamarin_HashHelpers_Hash_System_Object___
+  commentId: M:Xamarin.HashHelpers.Hash(System.Object[])
+  name.vb: Hash(Object())
+  fullName: Xamarin.HashHelpers.Hash(System.Object[])
+  fullName.vb: Xamarin.HashHelpers.Hash(System.Object())
+  nameWithType: HashHelpers.Hash(Object[])
+  nameWithType.vb: HashHelpers.Hash(Object())
+- uid: Xamarin.HashHelpers.Hash*
+  name: Hash
+  href: api/Xamarin.HashHelpers.html#Xamarin_HashHelpers_Hash_
+  commentId: Overload:Xamarin.HashHelpers.Hash
+  isSpec: "True"
+  fullName: Xamarin.HashHelpers.Hash
+  nameWithType: HashHelpers.Hash
+- uid: Xamarin.HashHelpers.Hash``1(``0,System.Int32)
+  name: Hash<T>(T, Int32)
+  href: api/Xamarin.HashHelpers.html#Xamarin_HashHelpers_Hash__1___0_System_Int32_
+  commentId: M:Xamarin.HashHelpers.Hash``1(``0,System.Int32)
+  name.vb: Hash(Of T)(T, Int32)
+  fullName: Xamarin.HashHelpers.Hash<T>(T, System.Int32)
+  fullName.vb: Xamarin.HashHelpers.Hash(Of T)(T, System.Int32)
+  nameWithType: HashHelpers.Hash<T>(T, Int32)
+  nameWithType.vb: HashHelpers.Hash(Of T)(T, Int32)
+- uid: Xamarin.MSBuild.Sdk
+  name: Xamarin.MSBuild.Sdk
+  href: api/Xamarin.MSBuild.Sdk.html
+  commentId: N:Xamarin.MSBuild.Sdk
+  fullName: Xamarin.MSBuild.Sdk
+  nameWithType: Xamarin.MSBuild.Sdk
+- uid: Xamarin.MSBuild.Sdk.DependencyGraph
   name: DependencyGraph
-  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html
-  commentId: T:Xamarin.MSBuild.Tooling.DependencyGraph
-  fullName: Xamarin.MSBuild.Tooling.DependencyGraph
+  href: api/Xamarin.MSBuild.Sdk.DependencyGraph.html
+  commentId: T:Xamarin.MSBuild.Sdk.DependencyGraph
+  fullName: Xamarin.MSBuild.Sdk.DependencyGraph
   nameWithType: DependencyGraph
-- uid: Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable{System.String},IEnumerable{KeyValuePair{System.String,System.String}},Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory)
+- uid: Xamarin.MSBuild.Sdk.DependencyGraph.Create(IEnumerable{System.String},IEnumerable{KeyValuePair{System.String,System.String}},Xamarin.MSBuild.Sdk.DependencyGraph.ProjectCollectionFactory)
   name: Create(IEnumerable<String>, IEnumerable<KeyValuePair<String, String>>, DependencyGraph.ProjectCollectionFactory)
-  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_Create_IEnumerable_System_String__IEnumerable_KeyValuePair_System_String_System_String___Xamarin_MSBuild_Tooling_DependencyGraph_ProjectCollectionFactory_
-  commentId: M:Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable{System.String},IEnumerable{KeyValuePair{System.String,System.String}},Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory)
+  href: api/Xamarin.MSBuild.Sdk.DependencyGraph.html#Xamarin_MSBuild_Sdk_DependencyGraph_Create_IEnumerable_System_String__IEnumerable_KeyValuePair_System_String_System_String___Xamarin_MSBuild_Sdk_DependencyGraph_ProjectCollectionFactory_
+  commentId: M:Xamarin.MSBuild.Sdk.DependencyGraph.Create(IEnumerable{System.String},IEnumerable{KeyValuePair{System.String,System.String}},Xamarin.MSBuild.Sdk.DependencyGraph.ProjectCollectionFactory)
   name.vb: Create(IEnumerable(Of String), IEnumerable(Of KeyValuePair(Of String, String)), DependencyGraph.ProjectCollectionFactory)
-  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable<System.String>, IEnumerable<KeyValuePair<System.String, System.String>>, Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory)
-  fullName.vb: Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable(Of System.String), IEnumerable(Of KeyValuePair(Of System.String, System.String)), Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory)
+  fullName: Xamarin.MSBuild.Sdk.DependencyGraph.Create(IEnumerable<System.String>, IEnumerable<KeyValuePair<System.String, System.String>>, Xamarin.MSBuild.Sdk.DependencyGraph.ProjectCollectionFactory)
+  fullName.vb: Xamarin.MSBuild.Sdk.DependencyGraph.Create(IEnumerable(Of System.String), IEnumerable(Of KeyValuePair(Of System.String, System.String)), Xamarin.MSBuild.Sdk.DependencyGraph.ProjectCollectionFactory)
   nameWithType: DependencyGraph.Create(IEnumerable<String>, IEnumerable<KeyValuePair<String, String>>, DependencyGraph.ProjectCollectionFactory)
   nameWithType.vb: DependencyGraph.Create(IEnumerable(Of String), IEnumerable(Of KeyValuePair(Of String, String)), DependencyGraph.ProjectCollectionFactory)
-- uid: Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable{System.String},IEnumerable{System.ValueTuple{System.String,System.String}})
+- uid: Xamarin.MSBuild.Sdk.DependencyGraph.Create(IEnumerable{System.String},IEnumerable{System.ValueTuple{System.String,System.String}})
   name: Create(IEnumerable<String>, IEnumerable<>)
-  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_Create_IEnumerable_System_String__IEnumerable_System_ValueTuple_System_String_System_String___
-  commentId: M:Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable{System.String},IEnumerable{System.ValueTuple{System.String,System.String}})
+  href: api/Xamarin.MSBuild.Sdk.DependencyGraph.html#Xamarin_MSBuild_Sdk_DependencyGraph_Create_IEnumerable_System_String__IEnumerable_System_ValueTuple_System_String_System_String___
+  commentId: M:Xamarin.MSBuild.Sdk.DependencyGraph.Create(IEnumerable{System.String},IEnumerable{System.ValueTuple{System.String,System.String}})
   name.vb: Create(IEnumerable(Of String), IEnumerable(Of ))
-  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable<System.String>, IEnumerable<System.>)
-  fullName.vb: Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable(Of System.String), IEnumerable(Of System.))
+  fullName: Xamarin.MSBuild.Sdk.DependencyGraph.Create(IEnumerable<System.String>, IEnumerable<System.>)
+  fullName.vb: Xamarin.MSBuild.Sdk.DependencyGraph.Create(IEnumerable(Of System.String), IEnumerable(Of System.))
   nameWithType: DependencyGraph.Create(IEnumerable<String>, IEnumerable<>)
   nameWithType.vb: DependencyGraph.Create(IEnumerable(Of String), IEnumerable(Of ))
-- uid: Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable{System.String},System.ValueTuple{System.String,System.String}[])
+- uid: Xamarin.MSBuild.Sdk.DependencyGraph.Create(IEnumerable{System.String},System.ValueTuple{System.String,System.String}[])
   name: Create(IEnumerable<String>, [])
-  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_Create_IEnumerable_System_String__System_ValueTuple_System_String_System_String____
-  commentId: M:Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable{System.String},System.ValueTuple{System.String,System.String}[])
+  href: api/Xamarin.MSBuild.Sdk.DependencyGraph.html#Xamarin_MSBuild_Sdk_DependencyGraph_Create_IEnumerable_System_String__System_ValueTuple_System_String_System_String____
+  commentId: M:Xamarin.MSBuild.Sdk.DependencyGraph.Create(IEnumerable{System.String},System.ValueTuple{System.String,System.String}[])
   name.vb: Create(IEnumerable(Of String), ())
-  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable<System.String>, System.[])
-  fullName.vb: Xamarin.MSBuild.Tooling.DependencyGraph.Create(IEnumerable(Of System.String), System.())
+  fullName: Xamarin.MSBuild.Sdk.DependencyGraph.Create(IEnumerable<System.String>, System.[])
+  fullName.vb: Xamarin.MSBuild.Sdk.DependencyGraph.Create(IEnumerable(Of System.String), System.())
   nameWithType: DependencyGraph.Create(IEnumerable<String>, [])
   nameWithType.vb: DependencyGraph.Create(IEnumerable(Of String), ())
-- uid: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String,IEnumerable{System.ValueTuple{System.String,System.String}})
+- uid: Xamarin.MSBuild.Sdk.DependencyGraph.Create(System.String,IEnumerable{System.ValueTuple{System.String,System.String}})
   name: Create(String, IEnumerable<>)
-  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_Create_System_String_IEnumerable_System_ValueTuple_System_String_System_String___
-  commentId: M:Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String,IEnumerable{System.ValueTuple{System.String,System.String}})
+  href: api/Xamarin.MSBuild.Sdk.DependencyGraph.html#Xamarin_MSBuild_Sdk_DependencyGraph_Create_System_String_IEnumerable_System_ValueTuple_System_String_System_String___
+  commentId: M:Xamarin.MSBuild.Sdk.DependencyGraph.Create(System.String,IEnumerable{System.ValueTuple{System.String,System.String}})
   name.vb: Create(String, IEnumerable(Of ))
-  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String, IEnumerable<System.>)
-  fullName.vb: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String, IEnumerable(Of System.))
+  fullName: Xamarin.MSBuild.Sdk.DependencyGraph.Create(System.String, IEnumerable<System.>)
+  fullName.vb: Xamarin.MSBuild.Sdk.DependencyGraph.Create(System.String, IEnumerable(Of System.))
   nameWithType: DependencyGraph.Create(String, IEnumerable<>)
   nameWithType.vb: DependencyGraph.Create(String, IEnumerable(Of ))
-- uid: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String,System.ValueTuple{System.String,System.String}[])
+- uid: Xamarin.MSBuild.Sdk.DependencyGraph.Create(System.String,System.ValueTuple{System.String,System.String}[])
   name: Create(String, [])
-  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_Create_System_String_System_ValueTuple_System_String_System_String____
-  commentId: M:Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String,System.ValueTuple{System.String,System.String}[])
+  href: api/Xamarin.MSBuild.Sdk.DependencyGraph.html#Xamarin_MSBuild_Sdk_DependencyGraph_Create_System_String_System_ValueTuple_System_String_System_String____
+  commentId: M:Xamarin.MSBuild.Sdk.DependencyGraph.Create(System.String,System.ValueTuple{System.String,System.String}[])
   name.vb: Create(String, ())
-  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String, System.[])
-  fullName.vb: Xamarin.MSBuild.Tooling.DependencyGraph.Create(System.String, System.())
+  fullName: Xamarin.MSBuild.Sdk.DependencyGraph.Create(System.String, System.[])
+  fullName.vb: Xamarin.MSBuild.Sdk.DependencyGraph.Create(System.String, System.())
   nameWithType: DependencyGraph.Create(String, [])
   nameWithType.vb: DependencyGraph.Create(String, ())
-- uid: Xamarin.MSBuild.Tooling.DependencyGraph.Create*
+- uid: Xamarin.MSBuild.Sdk.DependencyGraph.Create*
   name: Create
-  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_Create_
-  commentId: Overload:Xamarin.MSBuild.Tooling.DependencyGraph.Create
+  href: api/Xamarin.MSBuild.Sdk.DependencyGraph.html#Xamarin_MSBuild_Sdk_DependencyGraph_Create_
+  commentId: Overload:Xamarin.MSBuild.Sdk.DependencyGraph.Create
   isSpec: "True"
-  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.Create
+  fullName: Xamarin.MSBuild.Sdk.DependencyGraph.Create
   nameWithType: DependencyGraph.Create
-- uid: Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraph(CancellationToken)
+- uid: Xamarin.MSBuild.Sdk.DependencyGraph.GenerateVisualization(Xamarin.MSBuild.Sdk.DependencyGraphVisualizationKind)
+  name: GenerateVisualization(DependencyGraphVisualizationKind)
+  href: api/Xamarin.MSBuild.Sdk.DependencyGraph.html#Xamarin_MSBuild_Sdk_DependencyGraph_GenerateVisualization_Xamarin_MSBuild_Sdk_DependencyGraphVisualizationKind_
+  commentId: M:Xamarin.MSBuild.Sdk.DependencyGraph.GenerateVisualization(Xamarin.MSBuild.Sdk.DependencyGraphVisualizationKind)
+  fullName: Xamarin.MSBuild.Sdk.DependencyGraph.GenerateVisualization(Xamarin.MSBuild.Sdk.DependencyGraphVisualizationKind)
+  nameWithType: DependencyGraph.GenerateVisualization(DependencyGraphVisualizationKind)
+- uid: Xamarin.MSBuild.Sdk.DependencyGraph.GenerateVisualization*
+  name: GenerateVisualization
+  href: api/Xamarin.MSBuild.Sdk.DependencyGraph.html#Xamarin_MSBuild_Sdk_DependencyGraph_GenerateVisualization_
+  commentId: Overload:Xamarin.MSBuild.Sdk.DependencyGraph.GenerateVisualization
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.DependencyGraph.GenerateVisualization
+  nameWithType: DependencyGraph.GenerateVisualization
+- uid: Xamarin.MSBuild.Sdk.DependencyGraph.LoadGraph(CancellationToken)
   name: LoadGraph(CancellationToken)
-  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_LoadGraph_CancellationToken_
-  commentId: M:Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraph(CancellationToken)
-  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraph(CancellationToken)
+  href: api/Xamarin.MSBuild.Sdk.DependencyGraph.html#Xamarin_MSBuild_Sdk_DependencyGraph_LoadGraph_CancellationToken_
+  commentId: M:Xamarin.MSBuild.Sdk.DependencyGraph.LoadGraph(CancellationToken)
+  fullName: Xamarin.MSBuild.Sdk.DependencyGraph.LoadGraph(CancellationToken)
   nameWithType: DependencyGraph.LoadGraph(CancellationToken)
-- uid: Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraph*
+- uid: Xamarin.MSBuild.Sdk.DependencyGraph.LoadGraph*
   name: LoadGraph
-  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_LoadGraph_
-  commentId: Overload:Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraph
+  href: api/Xamarin.MSBuild.Sdk.DependencyGraph.html#Xamarin_MSBuild_Sdk_DependencyGraph_LoadGraph_
+  commentId: Overload:Xamarin.MSBuild.Sdk.DependencyGraph.LoadGraph
   isSpec: "True"
-  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraph
+  fullName: Xamarin.MSBuild.Sdk.DependencyGraph.LoadGraph
   nameWithType: DependencyGraph.LoadGraph
-- uid: Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraphAsync(CancellationToken)
+- uid: Xamarin.MSBuild.Sdk.DependencyGraph.LoadGraphAsync(CancellationToken)
   name: LoadGraphAsync(CancellationToken)
-  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_LoadGraphAsync_CancellationToken_
-  commentId: M:Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraphAsync(CancellationToken)
-  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraphAsync(CancellationToken)
+  href: api/Xamarin.MSBuild.Sdk.DependencyGraph.html#Xamarin_MSBuild_Sdk_DependencyGraph_LoadGraphAsync_CancellationToken_
+  commentId: M:Xamarin.MSBuild.Sdk.DependencyGraph.LoadGraphAsync(CancellationToken)
+  fullName: Xamarin.MSBuild.Sdk.DependencyGraph.LoadGraphAsync(CancellationToken)
   nameWithType: DependencyGraph.LoadGraphAsync(CancellationToken)
-- uid: Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraphAsync*
+- uid: Xamarin.MSBuild.Sdk.DependencyGraph.LoadGraphAsync*
   name: LoadGraphAsync
-  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_LoadGraphAsync_
-  commentId: Overload:Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraphAsync
+  href: api/Xamarin.MSBuild.Sdk.DependencyGraph.html#Xamarin_MSBuild_Sdk_DependencyGraph_LoadGraphAsync_
+  commentId: Overload:Xamarin.MSBuild.Sdk.DependencyGraph.LoadGraphAsync
   isSpec: "True"
-  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.LoadGraphAsync
+  fullName: Xamarin.MSBuild.Sdk.DependencyGraph.LoadGraphAsync
   nameWithType: DependencyGraph.LoadGraphAsync
-- uid: Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollection
+- uid: Xamarin.MSBuild.Sdk.DependencyGraph.ProjectCollection
   name: ProjectCollection
-  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_ProjectCollection
-  commentId: P:Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollection
-  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollection
+  href: api/Xamarin.MSBuild.Sdk.DependencyGraph.html#Xamarin_MSBuild_Sdk_DependencyGraph_ProjectCollection
+  commentId: P:Xamarin.MSBuild.Sdk.DependencyGraph.ProjectCollection
+  fullName: Xamarin.MSBuild.Sdk.DependencyGraph.ProjectCollection
   nameWithType: DependencyGraph.ProjectCollection
-- uid: Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollection*
+- uid: Xamarin.MSBuild.Sdk.DependencyGraph.ProjectCollection*
   name: ProjectCollection
-  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_ProjectCollection_
-  commentId: Overload:Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollection
+  href: api/Xamarin.MSBuild.Sdk.DependencyGraph.html#Xamarin_MSBuild_Sdk_DependencyGraph_ProjectCollection_
+  commentId: Overload:Xamarin.MSBuild.Sdk.DependencyGraph.ProjectCollection
   isSpec: "True"
-  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollection
+  fullName: Xamarin.MSBuild.Sdk.DependencyGraph.ProjectCollection
   nameWithType: DependencyGraph.ProjectCollection
-- uid: Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory
+- uid: Xamarin.MSBuild.Sdk.DependencyGraph.ProjectCollectionFactory
   name: DependencyGraph.ProjectCollectionFactory
-  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory.html
-  commentId: T:Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory
-  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory
+  href: api/Xamarin.MSBuild.Sdk.DependencyGraph.ProjectCollectionFactory.html
+  commentId: T:Xamarin.MSBuild.Sdk.DependencyGraph.ProjectCollectionFactory
+  fullName: Xamarin.MSBuild.Sdk.DependencyGraph.ProjectCollectionFactory
   nameWithType: DependencyGraph.ProjectCollectionFactory
-- uid: Xamarin.MSBuild.Tooling.DependencyGraph.TopologicallySortedProjects
-  name: TopologicallySortedProjects
-  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_TopologicallySortedProjects
-  commentId: P:Xamarin.MSBuild.Tooling.DependencyGraph.TopologicallySortedProjects
-  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.TopologicallySortedProjects
-  nameWithType: DependencyGraph.TopologicallySortedProjects
-- uid: Xamarin.MSBuild.Tooling.DependencyGraph.TopologicallySortedProjects*
-  name: TopologicallySortedProjects
-  href: api/Xamarin.MSBuild.Tooling.DependencyGraph.html#Xamarin_MSBuild_Tooling_DependencyGraph_TopologicallySortedProjects_
-  commentId: Overload:Xamarin.MSBuild.Tooling.DependencyGraph.TopologicallySortedProjects
+- uid: Xamarin.MSBuild.Sdk.DependencyGraph.Relationships
+  name: Relationships
+  href: api/Xamarin.MSBuild.Sdk.DependencyGraph.html#Xamarin_MSBuild_Sdk_DependencyGraph_Relationships
+  commentId: P:Xamarin.MSBuild.Sdk.DependencyGraph.Relationships
+  fullName: Xamarin.MSBuild.Sdk.DependencyGraph.Relationships
+  nameWithType: DependencyGraph.Relationships
+- uid: Xamarin.MSBuild.Sdk.DependencyGraph.Relationships*
+  name: Relationships
+  href: api/Xamarin.MSBuild.Sdk.DependencyGraph.html#Xamarin_MSBuild_Sdk_DependencyGraph_Relationships_
+  commentId: Overload:Xamarin.MSBuild.Sdk.DependencyGraph.Relationships
   isSpec: "True"
-  fullName: Xamarin.MSBuild.Tooling.DependencyGraph.TopologicallySortedProjects
+  fullName: Xamarin.MSBuild.Sdk.DependencyGraph.Relationships
+  nameWithType: DependencyGraph.Relationships
+- uid: Xamarin.MSBuild.Sdk.DependencyGraph.TopologicallySortedProjects
+  name: TopologicallySortedProjects
+  href: api/Xamarin.MSBuild.Sdk.DependencyGraph.html#Xamarin_MSBuild_Sdk_DependencyGraph_TopologicallySortedProjects
+  commentId: P:Xamarin.MSBuild.Sdk.DependencyGraph.TopologicallySortedProjects
+  fullName: Xamarin.MSBuild.Sdk.DependencyGraph.TopologicallySortedProjects
   nameWithType: DependencyGraph.TopologicallySortedProjects
-- uid: Xamarin.MSBuild.Tooling.MSBuildLocator
+- uid: Xamarin.MSBuild.Sdk.DependencyGraph.TopologicallySortedProjects*
+  name: TopologicallySortedProjects
+  href: api/Xamarin.MSBuild.Sdk.DependencyGraph.html#Xamarin_MSBuild_Sdk_DependencyGraph_TopologicallySortedProjects_
+  commentId: Overload:Xamarin.MSBuild.Sdk.DependencyGraph.TopologicallySortedProjects
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.DependencyGraph.TopologicallySortedProjects
+  nameWithType: DependencyGraph.TopologicallySortedProjects
+- uid: Xamarin.MSBuild.Sdk.DependencyGraphVisualizationKind
+  name: DependencyGraphVisualizationKind
+  href: api/Xamarin.MSBuild.Sdk.DependencyGraphVisualizationKind.html
+  commentId: T:Xamarin.MSBuild.Sdk.DependencyGraphVisualizationKind
+  fullName: Xamarin.MSBuild.Sdk.DependencyGraphVisualizationKind
+  nameWithType: DependencyGraphVisualizationKind
+- uid: Xamarin.MSBuild.Sdk.DependencyGraphVisualizationKind.None
+  name: None
+  href: api/Xamarin.MSBuild.Sdk.DependencyGraphVisualizationKind.html#Xamarin_MSBuild_Sdk_DependencyGraphVisualizationKind_None
+  commentId: F:Xamarin.MSBuild.Sdk.DependencyGraphVisualizationKind.None
+  fullName: Xamarin.MSBuild.Sdk.DependencyGraphVisualizationKind.None
+  nameWithType: DependencyGraphVisualizationKind.None
+- uid: Xamarin.MSBuild.Sdk.DependencyGraphVisualizationKind.VisJsNetwork
+  name: VisJsNetwork
+  href: api/Xamarin.MSBuild.Sdk.DependencyGraphVisualizationKind.html#Xamarin_MSBuild_Sdk_DependencyGraphVisualizationKind_VisJsNetwork
+  commentId: F:Xamarin.MSBuild.Sdk.DependencyGraphVisualizationKind.VisJsNetwork
+  fullName: Xamarin.MSBuild.Sdk.DependencyGraphVisualizationKind.VisJsNetwork
+  nameWithType: DependencyGraphVisualizationKind.VisJsNetwork
+- uid: Xamarin.MSBuild.Sdk.IDependencyNode
+  name: IDependencyNode
+  href: api/Xamarin.MSBuild.Sdk.IDependencyNode.html
+  commentId: T:Xamarin.MSBuild.Sdk.IDependencyNode
+  fullName: Xamarin.MSBuild.Sdk.IDependencyNode
+  nameWithType: IDependencyNode
+- uid: Xamarin.MSBuild.Sdk.IDependencyNode.Id
+  name: Id
+  href: api/Xamarin.MSBuild.Sdk.IDependencyNode.html#Xamarin_MSBuild_Sdk_IDependencyNode_Id
+  commentId: P:Xamarin.MSBuild.Sdk.IDependencyNode.Id
+  fullName: Xamarin.MSBuild.Sdk.IDependencyNode.Id
+  nameWithType: IDependencyNode.Id
+- uid: Xamarin.MSBuild.Sdk.IDependencyNode.Id*
+  name: Id
+  href: api/Xamarin.MSBuild.Sdk.IDependencyNode.html#Xamarin_MSBuild_Sdk_IDependencyNode_Id_
+  commentId: Overload:Xamarin.MSBuild.Sdk.IDependencyNode.Id
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.IDependencyNode.Id
+  nameWithType: IDependencyNode.Id
+- uid: Xamarin.MSBuild.Sdk.IDependencyNode.Label
+  name: Label
+  href: api/Xamarin.MSBuild.Sdk.IDependencyNode.html#Xamarin_MSBuild_Sdk_IDependencyNode_Label
+  commentId: P:Xamarin.MSBuild.Sdk.IDependencyNode.Label
+  fullName: Xamarin.MSBuild.Sdk.IDependencyNode.Label
+  nameWithType: IDependencyNode.Label
+- uid: Xamarin.MSBuild.Sdk.IDependencyNode.Label*
+  name: Label
+  href: api/Xamarin.MSBuild.Sdk.IDependencyNode.html#Xamarin_MSBuild_Sdk_IDependencyNode_Label_
+  commentId: Overload:Xamarin.MSBuild.Sdk.IDependencyNode.Label
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.IDependencyNode.Label
+  nameWithType: IDependencyNode.Label
+- uid: Xamarin.MSBuild.Sdk.IDependencyNode.LoadException
+  name: LoadException
+  href: api/Xamarin.MSBuild.Sdk.IDependencyNode.html#Xamarin_MSBuild_Sdk_IDependencyNode_LoadException
+  commentId: P:Xamarin.MSBuild.Sdk.IDependencyNode.LoadException
+  fullName: Xamarin.MSBuild.Sdk.IDependencyNode.LoadException
+  nameWithType: IDependencyNode.LoadException
+- uid: Xamarin.MSBuild.Sdk.IDependencyNode.LoadException*
+  name: LoadException
+  href: api/Xamarin.MSBuild.Sdk.IDependencyNode.html#Xamarin_MSBuild_Sdk_IDependencyNode_LoadException_
+  commentId: Overload:Xamarin.MSBuild.Sdk.IDependencyNode.LoadException
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.IDependencyNode.LoadException
+  nameWithType: IDependencyNode.LoadException
+- uid: Xamarin.MSBuild.Sdk.MSBuildLocator
   name: MSBuildLocator
-  href: api/Xamarin.MSBuild.Tooling.MSBuildLocator.html
-  commentId: T:Xamarin.MSBuild.Tooling.MSBuildLocator
-  fullName: Xamarin.MSBuild.Tooling.MSBuildLocator
+  href: api/Xamarin.MSBuild.Sdk.MSBuildLocator.html
+  commentId: T:Xamarin.MSBuild.Sdk.MSBuildLocator
+  fullName: Xamarin.MSBuild.Sdk.MSBuildLocator
   nameWithType: MSBuildLocator
-- uid: Xamarin.MSBuild.Tooling.MSBuildLocator.RegisterMSBuildPath(System.String)
+- uid: Xamarin.MSBuild.Sdk.MSBuildLocator.RegisterMSBuildPath(System.String)
   name: RegisterMSBuildPath(String)
-  href: api/Xamarin.MSBuild.Tooling.MSBuildLocator.html#Xamarin_MSBuild_Tooling_MSBuildLocator_RegisterMSBuildPath_System_String_
-  commentId: M:Xamarin.MSBuild.Tooling.MSBuildLocator.RegisterMSBuildPath(System.String)
-  fullName: Xamarin.MSBuild.Tooling.MSBuildLocator.RegisterMSBuildPath(System.String)
+  href: api/Xamarin.MSBuild.Sdk.MSBuildLocator.html#Xamarin_MSBuild_Sdk_MSBuildLocator_RegisterMSBuildPath_System_String_
+  commentId: M:Xamarin.MSBuild.Sdk.MSBuildLocator.RegisterMSBuildPath(System.String)
+  fullName: Xamarin.MSBuild.Sdk.MSBuildLocator.RegisterMSBuildPath(System.String)
   nameWithType: MSBuildLocator.RegisterMSBuildPath(String)
-- uid: Xamarin.MSBuild.Tooling.MSBuildLocator.RegisterMSBuildPath*
+- uid: Xamarin.MSBuild.Sdk.MSBuildLocator.RegisterMSBuildPath*
   name: RegisterMSBuildPath
-  href: api/Xamarin.MSBuild.Tooling.MSBuildLocator.html#Xamarin_MSBuild_Tooling_MSBuildLocator_RegisterMSBuildPath_
-  commentId: Overload:Xamarin.MSBuild.Tooling.MSBuildLocator.RegisterMSBuildPath
+  href: api/Xamarin.MSBuild.Sdk.MSBuildLocator.html#Xamarin_MSBuild_Sdk_MSBuildLocator_RegisterMSBuildPath_
+  commentId: Overload:Xamarin.MSBuild.Sdk.MSBuildLocator.RegisterMSBuildPath
   isSpec: "True"
-  fullName: Xamarin.MSBuild.Tooling.MSBuildLocator.RegisterMSBuildPath
+  fullName: Xamarin.MSBuild.Sdk.MSBuildLocator.RegisterMSBuildPath
   nameWithType: MSBuildLocator.RegisterMSBuildPath
+- uid: Xamarin.MSBuild.Sdk.ProjectDependencyNode
+  name: ProjectDependencyNode
+  href: api/Xamarin.MSBuild.Sdk.ProjectDependencyNode.html
+  commentId: T:Xamarin.MSBuild.Sdk.ProjectDependencyNode
+  fullName: Xamarin.MSBuild.Sdk.ProjectDependencyNode
+  nameWithType: ProjectDependencyNode
+- uid: Xamarin.MSBuild.Sdk.ProjectDependencyNode.Id
+  name: Id
+  href: api/Xamarin.MSBuild.Sdk.ProjectDependencyNode.html#Xamarin_MSBuild_Sdk_ProjectDependencyNode_Id
+  commentId: P:Xamarin.MSBuild.Sdk.ProjectDependencyNode.Id
+  fullName: Xamarin.MSBuild.Sdk.ProjectDependencyNode.Id
+  nameWithType: ProjectDependencyNode.Id
+- uid: Xamarin.MSBuild.Sdk.ProjectDependencyNode.Id*
+  name: Id
+  href: api/Xamarin.MSBuild.Sdk.ProjectDependencyNode.html#Xamarin_MSBuild_Sdk_ProjectDependencyNode_Id_
+  commentId: Overload:Xamarin.MSBuild.Sdk.ProjectDependencyNode.Id
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.ProjectDependencyNode.Id
+  nameWithType: ProjectDependencyNode.Id
+- uid: Xamarin.MSBuild.Sdk.ProjectDependencyNode.Label
+  name: Label
+  href: api/Xamarin.MSBuild.Sdk.ProjectDependencyNode.html#Xamarin_MSBuild_Sdk_ProjectDependencyNode_Label
+  commentId: P:Xamarin.MSBuild.Sdk.ProjectDependencyNode.Label
+  fullName: Xamarin.MSBuild.Sdk.ProjectDependencyNode.Label
+  nameWithType: ProjectDependencyNode.Label
+- uid: Xamarin.MSBuild.Sdk.ProjectDependencyNode.Label*
+  name: Label
+  href: api/Xamarin.MSBuild.Sdk.ProjectDependencyNode.html#Xamarin_MSBuild_Sdk_ProjectDependencyNode_Label_
+  commentId: Overload:Xamarin.MSBuild.Sdk.ProjectDependencyNode.Label
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.ProjectDependencyNode.Label
+  nameWithType: ProjectDependencyNode.Label
+- uid: Xamarin.MSBuild.Sdk.ProjectDependencyNode.LoadException
+  name: LoadException
+  href: api/Xamarin.MSBuild.Sdk.ProjectDependencyNode.html#Xamarin_MSBuild_Sdk_ProjectDependencyNode_LoadException
+  commentId: P:Xamarin.MSBuild.Sdk.ProjectDependencyNode.LoadException
+  fullName: Xamarin.MSBuild.Sdk.ProjectDependencyNode.LoadException
+  nameWithType: ProjectDependencyNode.LoadException
+- uid: Xamarin.MSBuild.Sdk.ProjectDependencyNode.LoadException*
+  name: LoadException
+  href: api/Xamarin.MSBuild.Sdk.ProjectDependencyNode.html#Xamarin_MSBuild_Sdk_ProjectDependencyNode_LoadException_
+  commentId: Overload:Xamarin.MSBuild.Sdk.ProjectDependencyNode.LoadException
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.ProjectDependencyNode.LoadException
+  nameWithType: ProjectDependencyNode.LoadException
+- uid: Xamarin.MSBuild.Sdk.ProjectDependencyNode.Parents
+  name: Parents
+  href: api/Xamarin.MSBuild.Sdk.ProjectDependencyNode.html#Xamarin_MSBuild_Sdk_ProjectDependencyNode_Parents
+  commentId: P:Xamarin.MSBuild.Sdk.ProjectDependencyNode.Parents
+  fullName: Xamarin.MSBuild.Sdk.ProjectDependencyNode.Parents
+  nameWithType: ProjectDependencyNode.Parents
+- uid: Xamarin.MSBuild.Sdk.ProjectDependencyNode.Parents*
+  name: Parents
+  href: api/Xamarin.MSBuild.Sdk.ProjectDependencyNode.html#Xamarin_MSBuild_Sdk_ProjectDependencyNode_Parents_
+  commentId: Overload:Xamarin.MSBuild.Sdk.ProjectDependencyNode.Parents
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.ProjectDependencyNode.Parents
+  nameWithType: ProjectDependencyNode.Parents
+- uid: Xamarin.MSBuild.Sdk.ProjectDependencyNode.Project
+  name: Project
+  href: api/Xamarin.MSBuild.Sdk.ProjectDependencyNode.html#Xamarin_MSBuild_Sdk_ProjectDependencyNode_Project
+  commentId: P:Xamarin.MSBuild.Sdk.ProjectDependencyNode.Project
+  fullName: Xamarin.MSBuild.Sdk.ProjectDependencyNode.Project
+  nameWithType: ProjectDependencyNode.Project
+- uid: Xamarin.MSBuild.Sdk.ProjectDependencyNode.Project*
+  name: Project
+  href: api/Xamarin.MSBuild.Sdk.ProjectDependencyNode.html#Xamarin_MSBuild_Sdk_ProjectDependencyNode_Project_
+  commentId: Overload:Xamarin.MSBuild.Sdk.ProjectDependencyNode.Project
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.ProjectDependencyNode.Project
+  nameWithType: ProjectDependencyNode.Project
+- uid: Xamarin.MSBuild.Sdk.ProjectDependencyNode.ProjectPath
+  name: ProjectPath
+  href: api/Xamarin.MSBuild.Sdk.ProjectDependencyNode.html#Xamarin_MSBuild_Sdk_ProjectDependencyNode_ProjectPath
+  commentId: P:Xamarin.MSBuild.Sdk.ProjectDependencyNode.ProjectPath
+  fullName: Xamarin.MSBuild.Sdk.ProjectDependencyNode.ProjectPath
+  nameWithType: ProjectDependencyNode.ProjectPath
+- uid: Xamarin.MSBuild.Sdk.ProjectDependencyNode.ProjectPath*
+  name: ProjectPath
+  href: api/Xamarin.MSBuild.Sdk.ProjectDependencyNode.html#Xamarin_MSBuild_Sdk_ProjectDependencyNode_ProjectPath_
+  commentId: Overload:Xamarin.MSBuild.Sdk.ProjectDependencyNode.ProjectPath
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.ProjectDependencyNode.ProjectPath
+  nameWithType: ProjectDependencyNode.ProjectPath
+- uid: Xamarin.MSBuild.Sdk.ProjectDependencyNode.ProjectReferenceItems
+  name: ProjectReferenceItems
+  href: api/Xamarin.MSBuild.Sdk.ProjectDependencyNode.html#Xamarin_MSBuild_Sdk_ProjectDependencyNode_ProjectReferenceItems
+  commentId: P:Xamarin.MSBuild.Sdk.ProjectDependencyNode.ProjectReferenceItems
+  fullName: Xamarin.MSBuild.Sdk.ProjectDependencyNode.ProjectReferenceItems
+  nameWithType: ProjectDependencyNode.ProjectReferenceItems
+- uid: Xamarin.MSBuild.Sdk.ProjectDependencyNode.ProjectReferenceItems*
+  name: ProjectReferenceItems
+  href: api/Xamarin.MSBuild.Sdk.ProjectDependencyNode.html#Xamarin_MSBuild_Sdk_ProjectDependencyNode_ProjectReferenceItems_
+  commentId: Overload:Xamarin.MSBuild.Sdk.ProjectDependencyNode.ProjectReferenceItems
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.ProjectDependencyNode.ProjectReferenceItems
+  nameWithType: ProjectDependencyNode.ProjectReferenceItems
+- uid: Xamarin.MSBuild.Sdk.ProjectDependencyNode.ToString
+  name: ToString()
+  href: api/Xamarin.MSBuild.Sdk.ProjectDependencyNode.html#Xamarin_MSBuild_Sdk_ProjectDependencyNode_ToString
+  commentId: M:Xamarin.MSBuild.Sdk.ProjectDependencyNode.ToString
+  fullName: Xamarin.MSBuild.Sdk.ProjectDependencyNode.ToString()
+  nameWithType: ProjectDependencyNode.ToString()
+- uid: Xamarin.MSBuild.Sdk.ProjectDependencyNode.ToString*
+  name: ToString
+  href: api/Xamarin.MSBuild.Sdk.ProjectDependencyNode.html#Xamarin_MSBuild_Sdk_ProjectDependencyNode_ToString_
+  commentId: Overload:Xamarin.MSBuild.Sdk.ProjectDependencyNode.ToString
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.ProjectDependencyNode.ToString
+  nameWithType: ProjectDependencyNode.ToString
+- uid: Xamarin.MSBuild.Sdk.Solution
+  name: Xamarin.MSBuild.Sdk.Solution
+  href: api/Xamarin.MSBuild.Sdk.Solution.html
+  commentId: N:Xamarin.MSBuild.Sdk.Solution
+  fullName: Xamarin.MSBuild.Sdk.Solution
+  nameWithType: Xamarin.MSBuild.Sdk.Solution
+- uid: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform
+  name: ConfigurationPlatform
+  href: api/Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.html
+  commentId: T:Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform
+  fullName: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform
+  nameWithType: ConfigurationPlatform
+- uid: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.#ctor(System.String,System.String)
+  name: ConfigurationPlatform(String, String)
+  href: api/Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.html#Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform__ctor_System_String_System_String_
+  commentId: M:Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.#ctor(System.String,System.String)
+  fullName: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.ConfigurationPlatform(System.String, System.String)
+  nameWithType: ConfigurationPlatform.ConfigurationPlatform(String, String)
+- uid: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.#ctor*
+  name: ConfigurationPlatform
+  href: api/Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.html#Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform__ctor_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.#ctor
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.ConfigurationPlatform
+  nameWithType: ConfigurationPlatform.ConfigurationPlatform
+- uid: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Configuration
+  name: Configuration
+  href: api/Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.html#Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_Configuration
+  commentId: P:Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Configuration
+  fullName: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Configuration
+  nameWithType: ConfigurationPlatform.Configuration
+- uid: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Configuration*
+  name: Configuration
+  href: api/Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.html#Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_Configuration_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Configuration
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Configuration
+  nameWithType: ConfigurationPlatform.Configuration
+- uid: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.DefaultConfiguration
+  name: DefaultConfiguration
+  href: api/Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.html#Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_DefaultConfiguration
+  commentId: F:Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.DefaultConfiguration
+  fullName: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.DefaultConfiguration
+  nameWithType: ConfigurationPlatform.DefaultConfiguration
+- uid: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.DefaultPlatform
+  name: DefaultPlatform
+  href: api/Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.html#Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_DefaultPlatform
+  commentId: F:Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.DefaultPlatform
+  fullName: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.DefaultPlatform
+  nameWithType: ConfigurationPlatform.DefaultPlatform
+- uid: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.html#Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_Equals_System_Object_
+  commentId: M:Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Equals(System.Object)
+  fullName: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Equals(System.Object)
+  nameWithType: ConfigurationPlatform.Equals(Object)
+- uid: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Equals(Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform)
+  name: Equals(ConfigurationPlatform)
+  href: api/Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.html#Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_Equals_Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_
+  commentId: M:Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Equals(Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform)
+  fullName: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Equals(Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform)
+  nameWithType: ConfigurationPlatform.Equals(ConfigurationPlatform)
+- uid: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Equals*
+  name: Equals
+  href: api/Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.html#Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_Equals_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Equals
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Equals
+  nameWithType: ConfigurationPlatform.Equals
+- uid: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.GetHashCode
+  name: GetHashCode()
+  href: api/Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.html#Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_GetHashCode
+  commentId: M:Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.GetHashCode
+  fullName: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.GetHashCode()
+  nameWithType: ConfigurationPlatform.GetHashCode()
+- uid: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.GetHashCode*
+  name: GetHashCode
+  href: api/Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.html#Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_GetHashCode_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.GetHashCode
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.GetHashCode
+  nameWithType: ConfigurationPlatform.GetHashCode
+- uid: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.op_Equality(Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform,Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform)
+  name: Equality(ConfigurationPlatform, ConfigurationPlatform)
+  href: api/Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.html#Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_op_Equality_Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_
+  commentId: M:Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.op_Equality(Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform,Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform)
+  fullName: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Equality(Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform, Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform)
+  nameWithType: ConfigurationPlatform.Equality(ConfigurationPlatform, ConfigurationPlatform)
+- uid: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.op_Equality*
+  name: Equality
+  href: api/Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.html#Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_op_Equality_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.op_Equality
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Equality
+  nameWithType: ConfigurationPlatform.Equality
+- uid: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.op_Inequality(Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform,Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform)
+  name: Inequality(ConfigurationPlatform, ConfigurationPlatform)
+  href: api/Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.html#Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_op_Inequality_Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_
+  commentId: M:Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.op_Inequality(Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform,Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform)
+  fullName: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Inequality(Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform, Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform)
+  nameWithType: ConfigurationPlatform.Inequality(ConfigurationPlatform, ConfigurationPlatform)
+- uid: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.op_Inequality*
+  name: Inequality
+  href: api/Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.html#Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_op_Inequality_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.op_Inequality
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Inequality
+  nameWithType: ConfigurationPlatform.Inequality
+- uid: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Parse(System.String)
+  name: Parse(String)
+  href: api/Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.html#Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_Parse_System_String_
+  commentId: M:Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Parse(System.String)
+  fullName: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Parse(System.String)
+  nameWithType: ConfigurationPlatform.Parse(String)
+- uid: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Parse*
+  name: Parse
+  href: api/Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.html#Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_Parse_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Parse
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Parse
+  nameWithType: ConfigurationPlatform.Parse
+- uid: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Platform
+  name: Platform
+  href: api/Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.html#Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_Platform
+  commentId: P:Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Platform
+  fullName: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Platform
+  nameWithType: ConfigurationPlatform.Platform
+- uid: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Platform*
+  name: Platform
+  href: api/Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.html#Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_Platform_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Platform
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.Platform
+  nameWithType: ConfigurationPlatform.Platform
+- uid: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.ToSolutionString
+  name: ToSolutionString()
+  href: api/Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.html#Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_ToSolutionString
+  commentId: M:Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.ToSolutionString
+  fullName: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.ToSolutionString()
+  nameWithType: ConfigurationPlatform.ToSolutionString()
+- uid: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.ToSolutionString*
+  name: ToSolutionString
+  href: api/Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.html#Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_ToSolutionString_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.ToSolutionString
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.ToSolutionString
+  nameWithType: ConfigurationPlatform.ToSolutionString
+- uid: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.ToString
+  name: ToString()
+  href: api/Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.html#Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_ToString
+  commentId: M:Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.ToString
+  fullName: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.ToString()
+  nameWithType: ConfigurationPlatform.ToString()
+- uid: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.ToString*
+  name: ToString
+  href: api/Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.html#Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_ToString_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.ToString
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.ToString
+  nameWithType: ConfigurationPlatform.ToString
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder
+  name: SolutionBuilder
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.html
+  commentId: T:Xamarin.MSBuild.Sdk.Solution.SolutionBuilder
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder
+  nameWithType: SolutionBuilder
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.#ctor(System.String,TaskLoggingHelper)
+  name: SolutionBuilder(String, TaskLoggingHelper)
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.html#Xamarin_MSBuild_Sdk_Solution_SolutionBuilder__ctor_System_String_TaskLoggingHelper_
+  commentId: M:Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.#ctor(System.String,TaskLoggingHelper)
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.SolutionBuilder(System.String, TaskLoggingHelper)
+  nameWithType: SolutionBuilder.SolutionBuilder(String, TaskLoggingHelper)
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.#ctor*
+  name: SolutionBuilder
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.html#Xamarin_MSBuild_Sdk_Solution_SolutionBuilder__ctor_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.#ctor
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.SolutionBuilder
+  nameWithType: SolutionBuilder.SolutionBuilder
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.AddProject(System.String,IEnumerable{Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap},System.String,Guid)
+  name: AddProject(String, IEnumerable<SolutionConfigurationPlatformMap>, String, Guid)
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.html#Xamarin_MSBuild_Sdk_Solution_SolutionBuilder_AddProject_System_String_IEnumerable_Xamarin_MSBuild_Sdk_Solution_SolutionConfigurationPlatformMap__System_String_Guid_
+  commentId: M:Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.AddProject(System.String,IEnumerable{Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap},System.String,Guid)
+  name.vb: AddProject(String, IEnumerable(Of SolutionConfigurationPlatformMap), String, Guid)
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.AddProject(System.String, IEnumerable<Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap>, System.String, Guid)
+  fullName.vb: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.AddProject(System.String, IEnumerable(Of Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap), System.String, Guid)
+  nameWithType: SolutionBuilder.AddProject(String, IEnumerable<SolutionConfigurationPlatformMap>, String, Guid)
+  nameWithType.vb: SolutionBuilder.AddProject(String, IEnumerable(Of SolutionConfigurationPlatformMap), String, Guid)
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.AddProject*
+  name: AddProject
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.html#Xamarin_MSBuild_Sdk_Solution_SolutionBuilder_AddProject_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.AddProject
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.AddProject
+  nameWithType: SolutionBuilder.AddProject
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.AddSolutionConfiguration(Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform)
+  name: AddSolutionConfiguration(ConfigurationPlatform)
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.html#Xamarin_MSBuild_Sdk_Solution_SolutionBuilder_AddSolutionConfiguration_Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_
+  commentId: M:Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.AddSolutionConfiguration(Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform)
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.AddSolutionConfiguration(Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform)
+  nameWithType: SolutionBuilder.AddSolutionConfiguration(ConfigurationPlatform)
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.AddSolutionConfiguration*
+  name: AddSolutionConfiguration
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.html#Xamarin_MSBuild_Sdk_Solution_SolutionBuilder_AddSolutionConfiguration_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.AddSolutionConfiguration
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.AddSolutionConfiguration
+  nameWithType: SolutionBuilder.AddSolutionConfiguration
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.FileName
+  name: FileName
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.html#Xamarin_MSBuild_Sdk_Solution_SolutionBuilder_FileName
+  commentId: P:Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.FileName
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.FileName
+  nameWithType: SolutionBuilder.FileName
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.FileName*
+  name: FileName
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.html#Xamarin_MSBuild_Sdk_Solution_SolutionBuilder_FileName_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.FileName
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.FileName
+  nameWithType: SolutionBuilder.FileName
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.FromTraversalProject(System.String,System.String,System.Boolean,TaskLoggingHelper)
+  name: FromTraversalProject(String, String, Boolean, TaskLoggingHelper)
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.html#Xamarin_MSBuild_Sdk_Solution_SolutionBuilder_FromTraversalProject_System_String_System_String_System_Boolean_TaskLoggingHelper_
+  commentId: M:Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.FromTraversalProject(System.String,System.String,System.Boolean,TaskLoggingHelper)
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.FromTraversalProject(System.String, System.String, System.Boolean, TaskLoggingHelper)
+  nameWithType: SolutionBuilder.FromTraversalProject(String, String, Boolean, TaskLoggingHelper)
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.FromTraversalProject*
+  name: FromTraversalProject
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.html#Xamarin_MSBuild_Sdk_Solution_SolutionBuilder_FromTraversalProject_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.FromTraversalProject
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.FromTraversalProject
+  nameWithType: SolutionBuilder.FromTraversalProject
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.SolutionConfigurations
+  name: SolutionConfigurations
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.html#Xamarin_MSBuild_Sdk_Solution_SolutionBuilder_SolutionConfigurations
+  commentId: P:Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.SolutionConfigurations
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.SolutionConfigurations
+  nameWithType: SolutionBuilder.SolutionConfigurations
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.SolutionConfigurations*
+  name: SolutionConfigurations
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.html#Xamarin_MSBuild_Sdk_Solution_SolutionBuilder_SolutionConfigurations_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.SolutionConfigurations
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.SolutionConfigurations
+  nameWithType: SolutionBuilder.SolutionConfigurations
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.Write(System.String)
+  name: Write(String)
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.html#Xamarin_MSBuild_Sdk_Solution_SolutionBuilder_Write_System_String_
+  commentId: M:Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.Write(System.String)
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.Write(System.String)
+  nameWithType: SolutionBuilder.Write(String)
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.Write(TextWriter)
+  name: Write(TextWriter)
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.html#Xamarin_MSBuild_Sdk_Solution_SolutionBuilder_Write_TextWriter_
+  commentId: M:Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.Write(TextWriter)
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.Write(TextWriter)
+  nameWithType: SolutionBuilder.Write(TextWriter)
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.Write*
+  name: Write
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.html#Xamarin_MSBuild_Sdk_Solution_SolutionBuilder_Write_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.Write
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.Write
+  nameWithType: SolutionBuilder.Write
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap
+  name: SolutionConfigurationPlatformMap
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.html
+  commentId: T:Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap
+  nameWithType: SolutionConfigurationPlatformMap
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.#ctor(Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform,Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform,System.Boolean)
+  name: SolutionConfigurationPlatformMap(ConfigurationPlatform, ConfigurationPlatform, Boolean)
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.html#Xamarin_MSBuild_Sdk_Solution_SolutionConfigurationPlatformMap__ctor_Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_Xamarin_MSBuild_Sdk_Solution_ConfigurationPlatform_System_Boolean_
+  commentId: M:Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.#ctor(Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform,Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform,System.Boolean)
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.SolutionConfigurationPlatformMap(Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform, Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform, System.Boolean)
+  nameWithType: SolutionConfigurationPlatformMap.SolutionConfigurationPlatformMap(ConfigurationPlatform, ConfigurationPlatform, Boolean)
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.#ctor*
+  name: SolutionConfigurationPlatformMap
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.html#Xamarin_MSBuild_Sdk_Solution_SolutionConfigurationPlatformMap__ctor_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.#ctor
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.SolutionConfigurationPlatformMap
+  nameWithType: SolutionConfigurationPlatformMap.SolutionConfigurationPlatformMap
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.BuildEnabled
+  name: BuildEnabled
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.html#Xamarin_MSBuild_Sdk_Solution_SolutionConfigurationPlatformMap_BuildEnabled
+  commentId: P:Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.BuildEnabled
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.BuildEnabled
+  nameWithType: SolutionConfigurationPlatformMap.BuildEnabled
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.BuildEnabled*
+  name: BuildEnabled
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.html#Xamarin_MSBuild_Sdk_Solution_SolutionConfigurationPlatformMap_BuildEnabled_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.BuildEnabled
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.BuildEnabled
+  nameWithType: SolutionConfigurationPlatformMap.BuildEnabled
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.html#Xamarin_MSBuild_Sdk_Solution_SolutionConfigurationPlatformMap_Equals_System_Object_
+  commentId: M:Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.Equals(System.Object)
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.Equals(System.Object)
+  nameWithType: SolutionConfigurationPlatformMap.Equals(Object)
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.Equals(Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap)
+  name: Equals(SolutionConfigurationPlatformMap)
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.html#Xamarin_MSBuild_Sdk_Solution_SolutionConfigurationPlatformMap_Equals_Xamarin_MSBuild_Sdk_Solution_SolutionConfigurationPlatformMap_
+  commentId: M:Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.Equals(Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap)
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.Equals(Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap)
+  nameWithType: SolutionConfigurationPlatformMap.Equals(SolutionConfigurationPlatformMap)
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.Equals*
+  name: Equals
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.html#Xamarin_MSBuild_Sdk_Solution_SolutionConfigurationPlatformMap_Equals_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.Equals
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.Equals
+  nameWithType: SolutionConfigurationPlatformMap.Equals
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.GetHashCode
+  name: GetHashCode()
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.html#Xamarin_MSBuild_Sdk_Solution_SolutionConfigurationPlatformMap_GetHashCode
+  commentId: M:Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.GetHashCode
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.GetHashCode()
+  nameWithType: SolutionConfigurationPlatformMap.GetHashCode()
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.GetHashCode*
+  name: GetHashCode
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.html#Xamarin_MSBuild_Sdk_Solution_SolutionConfigurationPlatformMap_GetHashCode_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.GetHashCode
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.GetHashCode
+  nameWithType: SolutionConfigurationPlatformMap.GetHashCode
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.op_Equality(Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap,Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap)
+  name: Equality(SolutionConfigurationPlatformMap, SolutionConfigurationPlatformMap)
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.html#Xamarin_MSBuild_Sdk_Solution_SolutionConfigurationPlatformMap_op_Equality_Xamarin_MSBuild_Sdk_Solution_SolutionConfigurationPlatformMap_Xamarin_MSBuild_Sdk_Solution_SolutionConfigurationPlatformMap_
+  commentId: M:Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.op_Equality(Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap,Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap)
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.Equality(Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap, Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap)
+  nameWithType: SolutionConfigurationPlatformMap.Equality(SolutionConfigurationPlatformMap, SolutionConfigurationPlatformMap)
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.op_Equality*
+  name: Equality
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.html#Xamarin_MSBuild_Sdk_Solution_SolutionConfigurationPlatformMap_op_Equality_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.op_Equality
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.Equality
+  nameWithType: SolutionConfigurationPlatformMap.Equality
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.op_Inequality(Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap,Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap)
+  name: Inequality(SolutionConfigurationPlatformMap, SolutionConfigurationPlatformMap)
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.html#Xamarin_MSBuild_Sdk_Solution_SolutionConfigurationPlatformMap_op_Inequality_Xamarin_MSBuild_Sdk_Solution_SolutionConfigurationPlatformMap_Xamarin_MSBuild_Sdk_Solution_SolutionConfigurationPlatformMap_
+  commentId: M:Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.op_Inequality(Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap,Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap)
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.Inequality(Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap, Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap)
+  nameWithType: SolutionConfigurationPlatformMap.Inequality(SolutionConfigurationPlatformMap, SolutionConfigurationPlatformMap)
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.op_Inequality*
+  name: Inequality
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.html#Xamarin_MSBuild_Sdk_Solution_SolutionConfigurationPlatformMap_op_Inequality_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.op_Inequality
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.Inequality
+  nameWithType: SolutionConfigurationPlatformMap.Inequality
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.Project
+  name: Project
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.html#Xamarin_MSBuild_Sdk_Solution_SolutionConfigurationPlatformMap_Project
+  commentId: P:Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.Project
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.Project
+  nameWithType: SolutionConfigurationPlatformMap.Project
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.Project*
+  name: Project
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.html#Xamarin_MSBuild_Sdk_Solution_SolutionConfigurationPlatformMap_Project_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.Project
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.Project
+  nameWithType: SolutionConfigurationPlatformMap.Project
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.Solution
+  name: Solution
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.html#Xamarin_MSBuild_Sdk_Solution_SolutionConfigurationPlatformMap_Solution
+  commentId: P:Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.Solution
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.Solution
+  nameWithType: SolutionConfigurationPlatformMap.Solution
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.Solution*
+  name: Solution
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.html#Xamarin_MSBuild_Sdk_Solution_SolutionConfigurationPlatformMap_Solution_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.Solution
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.Solution
+  nameWithType: SolutionConfigurationPlatformMap.Solution
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.ToString
+  name: ToString()
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.html#Xamarin_MSBuild_Sdk_Solution_SolutionConfigurationPlatformMap_ToString
+  commentId: M:Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.ToString
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.ToString()
+  nameWithType: SolutionConfigurationPlatformMap.ToString()
+- uid: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.ToString*
+  name: ToString
+  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.html#Xamarin_MSBuild_Sdk_Solution_SolutionConfigurationPlatformMap_ToString_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.ToString
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.ToString
+  nameWithType: SolutionConfigurationPlatformMap.ToString
+- uid: Xamarin.MSBuild.Sdk.Tasks
+  name: Xamarin.MSBuild.Sdk.Tasks
+  href: api/Xamarin.MSBuild.Sdk.Tasks.html
+  commentId: N:Xamarin.MSBuild.Sdk.Tasks
+  fullName: Xamarin.MSBuild.Sdk.Tasks
+  nameWithType: Xamarin.MSBuild.Sdk.Tasks
+- uid: Xamarin.MSBuild.Sdk.Tasks.GenerateSolution
+  name: GenerateSolution
+  href: api/Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.html
+  commentId: T:Xamarin.MSBuild.Sdk.Tasks.GenerateSolution
+  fullName: Xamarin.MSBuild.Sdk.Tasks.GenerateSolution
+  nameWithType: GenerateSolution
+- uid: Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.Execute
+  name: Execute()
+  href: api/Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.html#Xamarin_MSBuild_Sdk_Tasks_GenerateSolution_Execute
+  commentId: M:Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.Execute
+  fullName: Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.Execute()
+  nameWithType: GenerateSolution.Execute()
+- uid: Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.Execute*
+  name: Execute
+  href: api/Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.html#Xamarin_MSBuild_Sdk_Tasks_GenerateSolution_Execute_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.Execute
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.Execute
+  nameWithType: GenerateSolution.Execute
+- uid: Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.SolutionFile
+  name: SolutionFile
+  href: api/Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.html#Xamarin_MSBuild_Sdk_Tasks_GenerateSolution_SolutionFile
+  commentId: P:Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.SolutionFile
+  fullName: Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.SolutionFile
+  nameWithType: GenerateSolution.SolutionFile
+- uid: Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.SolutionFile*
+  name: SolutionFile
+  href: api/Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.html#Xamarin_MSBuild_Sdk_Tasks_GenerateSolution_SolutionFile_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.SolutionFile
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.SolutionFile
+  nameWithType: GenerateSolution.SolutionFile
+- uid: Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.TraversalProjectFile
+  name: TraversalProjectFile
+  href: api/Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.html#Xamarin_MSBuild_Sdk_Tasks_GenerateSolution_TraversalProjectFile
+  commentId: P:Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.TraversalProjectFile
+  fullName: Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.TraversalProjectFile
+  nameWithType: GenerateSolution.TraversalProjectFile
+- uid: Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.TraversalProjectFile*
+  name: TraversalProjectFile
+  href: api/Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.html#Xamarin_MSBuild_Sdk_Tasks_GenerateSolution_TraversalProjectFile_
+  commentId: Overload:Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.TraversalProjectFile
+  isSpec: "True"
+  fullName: Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.TraversalProjectFile
+  nameWithType: GenerateSolution.TraversalProjectFile
 - uid: Xamarin.NativeHelpers
   name: Xamarin.NativeHelpers
   href: api/Xamarin.NativeHelpers.html
@@ -791,6 +1497,19 @@ references:
   isSpec: "True"
   fullName: Xamarin.PathHelpers.Git.FindRepositoryRootPathFromAssembly
   nameWithType: PathHelpers.Git.FindRepositoryRootPathFromAssembly
+- uid: Xamarin.PathHelpers.MakeRelativePath(System.String,System.String)
+  name: MakeRelativePath(String, String)
+  href: api/Xamarin.PathHelpers.html#Xamarin_PathHelpers_MakeRelativePath_System_String_System_String_
+  commentId: M:Xamarin.PathHelpers.MakeRelativePath(System.String,System.String)
+  fullName: Xamarin.PathHelpers.MakeRelativePath(System.String, System.String)
+  nameWithType: PathHelpers.MakeRelativePath(String, String)
+- uid: Xamarin.PathHelpers.MakeRelativePath*
+  name: MakeRelativePath
+  href: api/Xamarin.PathHelpers.html#Xamarin_PathHelpers_MakeRelativePath_
+  commentId: Overload:Xamarin.PathHelpers.MakeRelativePath
+  isSpec: "True"
+  fullName: Xamarin.PathHelpers.MakeRelativePath
+  nameWithType: PathHelpers.MakeRelativePath
 - uid: Xamarin.PathHelpers.NormalizePath(System.String)
   name: NormalizePath(String)
   href: api/Xamarin.PathHelpers.html#Xamarin_PathHelpers_NormalizePath_System_String_
@@ -2556,6 +3275,44 @@ references:
   isSpec: "True"
   fullName: Xunit.WindowsFactAttribute.WindowsFactAttribute
   nameWithType: WindowsFactAttribute.WindowsFactAttribute
+- uid: Xunit.WindowsMacFactAttribute
+  name: WindowsMacFactAttribute
+  href: api/Xunit.WindowsMacFactAttribute.html
+  commentId: T:Xunit.WindowsMacFactAttribute
+  fullName: Xunit.WindowsMacFactAttribute
+  nameWithType: WindowsMacFactAttribute
+- uid: Xunit.WindowsMacFactAttribute.#ctor
+  name: WindowsMacFactAttribute()
+  href: api/Xunit.WindowsMacFactAttribute.html#Xunit_WindowsMacFactAttribute__ctor
+  commentId: M:Xunit.WindowsMacFactAttribute.#ctor
+  fullName: Xunit.WindowsMacFactAttribute.WindowsMacFactAttribute()
+  nameWithType: WindowsMacFactAttribute.WindowsMacFactAttribute()
+- uid: Xunit.WindowsMacFactAttribute.#ctor*
+  name: WindowsMacFactAttribute
+  href: api/Xunit.WindowsMacFactAttribute.html#Xunit_WindowsMacFactAttribute__ctor_
+  commentId: Overload:Xunit.WindowsMacFactAttribute.#ctor
+  isSpec: "True"
+  fullName: Xunit.WindowsMacFactAttribute.WindowsMacFactAttribute
+  nameWithType: WindowsMacFactAttribute.WindowsMacFactAttribute
+- uid: Xunit.WindowsMacTheoryAttribute
+  name: WindowsMacTheoryAttribute
+  href: api/Xunit.WindowsMacTheoryAttribute.html
+  commentId: T:Xunit.WindowsMacTheoryAttribute
+  fullName: Xunit.WindowsMacTheoryAttribute
+  nameWithType: WindowsMacTheoryAttribute
+- uid: Xunit.WindowsMacTheoryAttribute.#ctor
+  name: WindowsMacTheoryAttribute()
+  href: api/Xunit.WindowsMacTheoryAttribute.html#Xunit_WindowsMacTheoryAttribute__ctor
+  commentId: M:Xunit.WindowsMacTheoryAttribute.#ctor
+  fullName: Xunit.WindowsMacTheoryAttribute.WindowsMacTheoryAttribute()
+  nameWithType: WindowsMacTheoryAttribute.WindowsMacTheoryAttribute()
+- uid: Xunit.WindowsMacTheoryAttribute.#ctor*
+  name: WindowsMacTheoryAttribute
+  href: api/Xunit.WindowsMacTheoryAttribute.html#Xunit_WindowsMacTheoryAttribute__ctor_
+  commentId: Overload:Xunit.WindowsMacTheoryAttribute.#ctor
+  isSpec: "True"
+  fullName: Xunit.WindowsMacTheoryAttribute.WindowsMacTheoryAttribute
+  nameWithType: WindowsMacTheoryAttribute.WindowsMacTheoryAttribute
 - uid: Xunit.WindowsTheoryAttribute
   name: WindowsTheoryAttribute
   href: api/Xunit.WindowsTheoryAttribute.html

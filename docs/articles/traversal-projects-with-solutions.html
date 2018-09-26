@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>MSBuild Traversal Projects with Solution Generation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="MSBuild Traversal Projects with Solution Generation ">
+    <meta name="generator" content="docfx 2.38.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="msbuild-traversal-projects-with-solution-generation">MSBuild Traversal Projects with Solution Generation</h1>
+
+<p>The <a href="https://github.com/Microsoft/MSBuildSdks/tree/master/src/Traversal"><code>Microsoft.Build.Traversal</code></a>
+MSBuild project SDK allows project tree owners the ability to define what
+projects should be built. Visual Studio solution files are more targeted for
+end-users and are not good for build systems. Additionally, large project
+trees usually have several Visual Studio solution files scoped to different
+parts of the tree.</p>
+<p>In an enterprise-level build, you want to have a way to control what projects
+are a built in your hosted build system. Traversal projects allow you to
+define a set of projects at any level of your folder structure and can be
+built locally or in a hosted build environment.</p>
+<p>To supplement traversal projects, the <code>Xamarin.MSBuild.Sdk</code> MSBuild project
+SDK adds a <code>GenerateSolution</code> target. This allows the traversal project to
+define the canonical build <em>and</em> generate solutions suitable for loading into
+IDEs - without having to maintain both the traversal project, solutions, or
+configuration mappings.</p>
+<h2 id="defining-solutions">Defining Solutions</h2>
+<p>Solutions support mapping an outer-level solution configuration to inner-level
+project configurations for each project in the solution. This mapping is
+typically maintained in the IDE as the solution format is very tedious to
+update by hand. Because of this solutions often become out of sync when using
+non-solution-driven build definitions, such as traversal projects.</p>
+<p>With <code>Xamarin.MSBuild.Sdk</code>'s <code>GenerateSolution</code> target however, defining these
+mappings directly in the traversal project is easy, and even supports
+solution folders for nicer in-IDE project tree grouping.</p>
+<p>A traversal project that generates a solution must import the SDK and must
+have at least one <code>&lt;SolutionConfiguration&gt;</code> item.</p>
+<pre><code class="lang-xml">&lt;Project Sdk=&quot;Microsoft.Build.Traversal&quot;&gt;
+  &lt;Sdk Name=&quot;Xamarin.MSBuild.Sdk&quot;/&gt;
+
+  &lt;ItemGroup&gt;
+    &lt;SolutionConfiguration Include=&quot;Debug&quot;/&gt;
+  &lt;/ItemGroup&gt;
+
+  &lt;ItemGroup&gt;
+    &lt;ProjectReference Include=&quot;SomeProject.csproj&quot;/&gt;
+  &lt;/ItemGroup&gt;
+&lt;/Project&gt;
+</code></pre>
+<p>When <code>msbuild /t:GenerateSolution</code> is run against the traversal project, a
+solution will be generated that includes a <code>Debug|Any CPU</code> solution
+configuration that maps to building <code>SomeProject.csproj</code> setting <code>/p:Configuration=Debug</code> and <code>/p:Platform=AnyCPU</code></p>
+<h3 id="the-solutionconfiguration-msbuild-item">The <code>&lt;SolutionConfiguration&gt;</code> MSBuild Item</h3>
+<p>Any number of these items may be defined in the traversal project. Its
+<code>Include</code> attribute defines the list of solution configurations and each
+should take the form of <code>$(Configuration)|$(Platform)</code> per standard solution
+syntax. Configuration and platform values are always case insensitive.</p>
+<p>Note that the <code>|$(Platform)</code> component may be omitted which will imply
+<code>Any CPU</code>. Additionally, <code>Any CPU</code> and <code>AnyCPU</code> are treated as equal.</p>
+<p>The following three <code>&lt;SolutionConfiguration&gt;</code> items are identical and
+would only result in a single actual solution configuration at the time
+of generation:</p>
+<pre><code class="lang-xml">&lt;ItemGroup&gt;
+  &lt;SolutionConfiguration Include=&quot;Debug&quot;/&gt;
+  &lt;SolutionConfiguration Include=&quot;Debug|Any CPU&quot;/&gt;
+  &lt;SolutionConfiguration Include=&quot;Debug|anycpu&quot;/&gt;
+&lt;/ItemGroup&gt;
+</code></pre>
+<p>Each item may provide metadata that influences the configuration. These
+metadata properties will be passed to <code>msbuild</code> when evaluating the traversal
+project. Any number of properties may be provided as metadata. This is best
+demonstrated by example.</p>
+<h4 id="multi-platform-build-and-solution">Multi-platform Build and Solution</h4>
+<pre><code class="lang-xml">&lt;Project Sdk=&quot;Microsoft.Build.Traversal&quot;&gt;
+  &lt;Sdk Name=&quot;Xamarin.MSBuild.Sdk&quot;/&gt;
+
+  &lt;!-- Set platform helper properties --&gt;
+  &lt;PropertyGroup&gt;
+    &lt;IsWindows&gt;$([MSBuild]::IsOSPlatform('Windows'))&lt;/IsWindows&gt;
+    &lt;IsMac&gt;$([MSBuild]::IsOSPlatform('OSX'))&lt;/IsMac&gt;
+  &lt;/PropertyGroup&gt;
+
+  &lt;ItemGroup&gt;
+    &lt;SolutionConfiguration Include=&quot;macOS Debug&quot;&gt;
+      &lt;!-- Define the Configuration and Platform to be passed to projects --&gt;
+      &lt;Configuration&gt;Debug&lt;/Configuration&gt;
+      &lt;Platform&gt;x64&lt;/Platform&gt;
+
+      &lt;!-- Override the platform helper properties via /t:GenerateSolution --&gt;
+      &lt;IsMac&gt;true&lt;/IsMac&gt;
+      &lt;IsWindows&gt;false&lt;/IsWindows&gt;
+    &lt;/SolutionConfiguration&gt;
+
+    &lt;SolutionConfiguration Include=&quot;Windows Debug&quot;&gt;
+      &lt;!-- Define the Configuration and Platform to be passed to projects --&gt;
+      &lt;Configuration&gt;Debug&lt;/Configuration&gt;
+
+      &lt;!-- Override the platform helper properties via /t:GenerateSolution --&gt;
+      &lt;IsMac&gt;false&lt;/IsMac&gt;
+      &lt;IsWindows&gt;true&lt;/IsWindows&gt;
+    &lt;/SolutionConfiguration&gt;
+  &lt;/ItemGroup&gt;
+
+  &lt;ItemGroup&gt;
+    &lt;ProjectReference Include=&quot;CrossPlatformProject.csproj&quot;/&gt;
+  &lt;/ItemGroup&gt;
+
+  &lt;ItemGroup Condition=&quot;$(IsMac)&quot;&gt;
+    &lt;ProjectReference Include=&quot;MacOnlyProject.csproj&quot;/&gt;
+  &lt;/ItemGroup&gt;
+
+  &lt;ItemGroup Condition=&quot;$(IsWindows)&quot;&gt;
+    &lt;ProjectReference Include=&quot;WindowsOnlyProject.csproj&quot;/&gt;
+  &lt;/ItemGroup&gt;
+&lt;/Project&gt;
+</code></pre>
+<p>When the <code>GenerateSolution</code> target is run, a solution with a <code>macOS Debug</code>
+and a <code>Windows Debug</code> configuration will be generated.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Project</th>
+<th style="text-align: left;">Built in <code>macOS Debug</code></th>
+<th style="text-align: left;">Built in <code>Windows Debug</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">CrossPlatformProject.csproj</td>
+<td style="text-align: left;">✓ <em>(as <code>Debug|x64</code>)</em></td>
+<td style="text-align: left;">✓ <em>(as <code>Debug|AnyCPU</code>)</em></td>
+</tr>
+<tr>
+<td style="text-align: left;">MacOnlyProject.csproj</td>
+<td style="text-align: left;">✓ <em>(as <code>Debug|x64</code>)</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WindowsOnlyProject.csproj</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">✓ <em>(as <code>Debug|AnyCPU</code>)</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="additions-to-the-projectreference-msbuild-item">Additions to the <code>&lt;ProjectReference&gt;</code> MSBuild Item</h3>
+<p>The <code>GenerateSolution</code> target supports the following optional metadata
+properties:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Property</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Example Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>&lt;Configuration&gt;</code></td>
+<td style="text-align: left;">Overrides the value from <code>&lt;SolutionConfiguration&gt;</code> for this project only.</td>
+<td style="text-align: left;"><code>AppStore</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&lt;Platform&gt;</code></td>
+<td style="text-align: left;">Overrides the value from <code>&lt;SolutionConfiguration&gt;</code> for this project only.</td>
+<td style="text-align: left;"><code>Arm64</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&lt;SolutionFolder&gt;</code></td>
+<td style="text-align: left;">A relative virtual path for grouping this project in the solution. Either <code>\</code> or <code>/</code> may be used as a path separator.</td>
+<td style="text-align: left;"><code>A\B\C</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-xml">&lt;Project Sdk=&quot;Microsoft.Build.Traversal&quot;&gt;
+  &lt;Sdk Name=&quot;Xamarin.MSBuild.Sdk&quot;/&gt;
+
+  &lt;ItemGroup&gt;
+    &lt;ProjectReference Include=&quot;…&quot;&gt;
+      &lt;SolutionFolder&gt;Client Applications&lt;/SolutionFolder&gt;
+    &lt;/ProjectReference&gt;
+  &lt;/ItemGroup&gt;
+
+  …
+&lt;/Project&gt;
+</code></pre>
+<h3 id="generate-solution-automatically-after-build">Generate Solution Automatically after Build</h3>
+<p>To avoid having to explicitly run the <code>/t:GenerateSolution</code> target, set the
+<code>GenerateSolutionAfterBuild</code> to <code>true</code>. Doing so will run the target
+automatically after a successful build.</p>
+<pre><code class="lang-xml">&lt;Project Sdk=&quot;Microsoft.Build.Traversal&quot;&gt;
+  &lt;Sdk Name=&quot;Xamarin.MSBuild.Sdk&quot;/&gt;
+
+  &lt;PropertyGroup&gt;
+    &lt;GenerateSolutionAfterBuild&gt;true&lt;/GenerateSolutionAfterBuild&gt;
+  &lt;/PropertyGroup&gt;
+
+  …
+&lt;/Project&gt;
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/xamarin/mirepoix/blob/master/docfx/articles/traversal-projects-with-solutions.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

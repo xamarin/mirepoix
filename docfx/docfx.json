@@ -5,12 +5,15 @@
         {
           "src": "../src",
           "files": [
-            "**.csproj"
+            "Xamarin.ProcessControl/Xamarin.ProcessControl.csproj",
+            "Xamarin.Helpers/Xamarin.Helpers.csproj",
+            "Xamarin.NativeHelpers/Xamarin.NativeHelpers.csproj",
+            "Xamarin.Downloader/Xamarin.Downloader.csproj",
+            "Xamarin.MSBuild.Sdk/Xamarin.MSBuild.Sdk.csproj",
+            "Xamarin.XunitHelpers/Xamarin.XunitHelpers.csproj",
+            "Xamarin.Security.Keychain/Xamarin.Security.Keychain.csproj"
           ],
-          "exclude": [
-            "**.Tests.csproj",
-            "**/Xamarin.MSBuild.Tooling.NetFXTests.csproj"
-          ]
+          "exclude": []
         }
       ],
       "dest": "api",

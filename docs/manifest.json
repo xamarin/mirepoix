@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.GuidHelpers.html",
-          "hash": "dbB9Hy1oOqV2hR55b3tX1Q=="
+          "hash": "sZcUFXt1KZoGLmXWP1b+Eg=="
         }
       },
       "is_incremental": true,
@@ -101,11 +101,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory.yml",
+      "source_relative_path": "api/Xamarin.HashHelpers.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Xamarin.MSBuild.Tooling.DependencyGraph.ProjectCollectionFactory.html",
-          "hash": "6bsmjlCtqIp++uSHEq9uKg=="
+          "relative_path": "api/Xamarin.HashHelpers.html",
+          "hash": "0/V0+x06kOTEVIjDnByHKw=="
         }
       },
       "is_incremental": true,
@@ -113,11 +113,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Xamarin.MSBuild.Tooling.DependencyGraph.yml",
+      "source_relative_path": "api/Xamarin.MSBuild.Sdk.DependencyGraph.ProjectCollectionFactory.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Xamarin.MSBuild.Tooling.DependencyGraph.html",
-          "hash": "5yf9hu0pX6S2a3WP/ZhrEw=="
+          "relative_path": "api/Xamarin.MSBuild.Sdk.DependencyGraph.ProjectCollectionFactory.html",
+          "hash": "h7Ca773B+kNfT8eb3Mzcyg=="
         }
       },
       "is_incremental": true,
@@ -125,11 +125,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Xamarin.MSBuild.Tooling.MSBuildLocator.yml",
+      "source_relative_path": "api/Xamarin.MSBuild.Sdk.DependencyGraph.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Xamarin.MSBuild.Tooling.MSBuildLocator.html",
-          "hash": "PnVwQasU1UZ5kjcm3x7Vgw=="
+          "relative_path": "api/Xamarin.MSBuild.Sdk.DependencyGraph.html",
+          "hash": "irqdF4+gtd/V/8VNSOqjNw=="
         }
       },
       "is_incremental": true,
@@ -137,11 +137,131 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Xamarin.MSBuild.Tooling.yml",
+      "source_relative_path": "api/Xamarin.MSBuild.Sdk.DependencyGraphVisualizationKind.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Xamarin.MSBuild.Tooling.html",
-          "hash": "RSxjg1vSCIcaC+d78H+xwg=="
+          "relative_path": "api/Xamarin.MSBuild.Sdk.DependencyGraphVisualizationKind.html",
+          "hash": "sJxz5vmqfrGzraEd0UUttA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.MSBuild.Sdk.IDependencyNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.MSBuild.Sdk.IDependencyNode.html",
+          "hash": "WwhDa2qxnb4mVxCm2MTHdQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.MSBuild.Sdk.MSBuildLocator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.MSBuild.Sdk.MSBuildLocator.html",
+          "hash": "2jqm3nA/h0R+tS/iAKTVEg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.MSBuild.Sdk.ProjectDependencyNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.MSBuild.Sdk.ProjectDependencyNode.html",
+          "hash": "omCn3DWYOhOIRJ7dcU908g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.MSBuild.Sdk.Solution.ConfigurationPlatform.html",
+          "hash": "5DYNZHY+jDaGKjMefUeWaQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.html",
+          "hash": "uVXxxE09ur4aqef4yHryGg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.MSBuild.Sdk.Solution.SolutionConfigurationPlatformMap.html",
+          "hash": "nkcEUzVknn9bP9C8EHJF+w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.MSBuild.Sdk.Solution.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.MSBuild.Sdk.Solution.html",
+          "hash": "g9c87+gpKL2BBJQ4hHzJOg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.html",
+          "hash": "wUdf+KjcwWtjkgbTXAsAQQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.MSBuild.Sdk.Tasks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.MSBuild.Sdk.Tasks.html",
+          "hash": "IudD/CPyiRHh0yLNC25Gow=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.MSBuild.Sdk.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.MSBuild.Sdk.html",
+          "hash": "2o825RZXSroGkzXLQLt45Q=="
         }
       },
       "is_incremental": true,
@@ -189,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.PathHelpers.Git.html",
-          "hash": "5TLdrGToJvGDCnm+AyqD9g=="
+          "hash": "S3BtVY6yLgtL34p3YF6Dww=="
         }
       },
       "is_incremental": true,
@@ -201,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.PathHelpers.html",
-          "hash": "2cLTbVfi97JgMC105d5EPQ=="
+          "hash": "ZwPLHZZwnefIv0mpAKVK5w=="
         }
       },
       "is_incremental": true,
@@ -513,7 +633,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.html",
-          "hash": "jiYRPn/jMmquxt//fuBrRQ=="
+          "hash": "zgMpND2X57vm2RdPhoPRlQ=="
         }
       },
       "is_incremental": true,
@@ -597,7 +717,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xunit.OSFactAttribute.html",
-          "hash": "mbCQYi0HjodwNEL/oZghpA=="
+          "hash": "eCJgpHxAJKCbXlCodyIqmQ=="
         }
       },
       "is_incremental": true,
@@ -609,7 +729,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xunit.OSTheoryAttribute.html",
-          "hash": "Z7x1FXPj7odFIWKo7CiSgQ=="
+          "hash": "k41RdTxO4NYBrYrytYzhqA=="
         }
       },
       "is_incremental": true,
@@ -653,6 +773,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Xunit.WindowsMacFactAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xunit.WindowsMacFactAttribute.html",
+          "hash": "hOLrqeqbyYDwHT4vsgeC4g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xunit.WindowsMacTheoryAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xunit.WindowsMacTheoryAttribute.html",
+          "hash": "aMl1HiO6p0bSi4mHqIpe9g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Xunit.WindowsTheoryAttribute.yml",
       "output": {
         ".html": {
@@ -669,7 +813,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xunit.html",
-          "hash": "XSIeLovdpmd8MUt5HMr0Bw=="
+          "hash": "QYTW5QrcL80hMz6WHhhWlw=="
         }
       },
       "is_incremental": true,
@@ -693,22 +837,10 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "xFfNqAdA4Fhmf5sYslXifg=="
+          "hash": "dBPlJfG9F+Ge0tfZ3qaNTw=="
         }
       },
       "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/intro.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/intro.html",
-          "hash": "ffPXxtqx4I+nvbmRdvZYnw=="
-        }
-      },
-      "is_incremental": true,
       "version": ""
     },
     {
@@ -717,10 +849,22 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "t7iiFrmuYmrKWisdq+lN6Q=="
+          "hash": "Ns59N5Kh87HQJ6tdHS4/iQ=="
         }
       },
       "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/traversal-projects-with-solutions.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/traversal-projects-with-solutions.html",
+          "hash": "xG6Z+dzHmwCan+Nj5kyXyQ=="
+        }
+      },
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -741,7 +885,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "k+/dkjFuwAVS32HduMpmBw=="
+          "hash": "qMfoaqKtwbsieFdAyP/H1Q=="
         }
       },
       "is_incremental": false,
