@@ -27,9 +27,13 @@ namespace Xamarin.MSBuild.Sdk.Solution
 
             Directory.CreateDirectory (solutionDirectory);
 
+            string lineEnding = null;
+            if (File.Exists (solutionPath))
+                lineEnding = FileHelpers.DetectFileLineEnding (solutionPath);
+
             var encoding = new UTF8Encoding (true, true);
             using (var writer = new StreamWriter (solutionPath, false, encoding)
-                { NewLine = "\r\n" })
+                { NewLine = lineEnding ?? "\r\n" })
                 Write (
                     solution,
                     solutionConfigurations,
