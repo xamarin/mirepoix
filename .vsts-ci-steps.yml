@@ -25,7 +25,9 @@ steps:
     dotnet build --no-restore -v detailed mirepoix.proj
   displayName: Build
 
-- script: |
-    dotnet msbuild mirepoix.proj /t:TestAll
-  continueOnError: true
-  displayName: Run Unit Tests
+- task: DotNetCoreCLI@2
+  inputs:
+    command: test
+    projects: '**/*.Tests.csproj'
+    arguments: '--no-restore --no-build'
+  displayName: Run xUnit Tests
