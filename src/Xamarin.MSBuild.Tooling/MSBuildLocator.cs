@@ -53,24 +53,16 @@ namespace Xamarin.MSBuild.Tooling
 
         static (Version runtimeVersion, Version sdkVersion, string sdkPath) GetNetCoreInfo ()
         {
-            var targetFrameworkName = Assembly
-                .GetEntryAssembly ()
-                ?.GetCustomAttribute<TargetFrameworkAttribute> ()
-                ?.FrameworkName;
+            Version runtimeVersion = null;
 
-            if (targetFrameworkName == null)
-                return default;
-
-            var targetFramework = new FrameworkName (targetFrameworkName);
-            if (targetFramework.Identifier != ".NETCoreApp" || targetFramework.Version == null)
-                return default;
-
-            // The .NET Core framework version at least for now happens to be
-            // aligned with the runtime version, for at least the major and
-            // minor components, which is what we need to map to the SDK version,
-            // so just roll with it. Would like a better way of getting the
-            // actual runtime version...
-            var runtimeVersion = targetFramework.Version;
+            var assemblyPath = typeof (object).Assembly.Location.Split ('/', '\\');
+            for (int i = 0; i < assemblyPath.Length; i++) {
+                if (string.Equals (assemblyPath [i], "Microsoft.NETCore.App", StringComparison.OrdinalIgnoreCase)
+                    && i < assemblyPath.Length - 1) {
+                    Version.TryParse (assemblyPath [i + 1], out runtimeVersion);
+                    break;
+                }
+            }
 
             // now attempt to locate an SDK; this should probably be expanded
             // to support RID-published apps as well since the process that's
