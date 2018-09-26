@@ -20,7 +20,7 @@ namespace Xamarin
                 throw new ArgumentNullException (nameof (fileName));
 
             using (var reader = new StreamReader (fileName))
-                return DetectFileLineEndings (reader);
+                return DetectFileLineEnding (reader);
         }
 
         [EditorBrowsable (EditorBrowsableState.Never)]
