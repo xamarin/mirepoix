@@ -7,7 +7,7 @@
   <Target Name="GenerateSolution">
     <GenerateSolution
       TraversalProjectFile="$(MSBuildProjectFile)"
-      SolutionFile="$(TraversalProjectSolutionFile)"/>
+      SolutionFile="$(GenerateSolutionFilePath)"/>
   </Target>
 
   <Target

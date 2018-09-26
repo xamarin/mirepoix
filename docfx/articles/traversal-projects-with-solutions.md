@@ -159,11 +159,13 @@ properties:
 </Project>
 ```
 
-### Generate Solution Automatically after Build
+### Additional Solution Generation Properties
 
-To avoid having to explicitly run the `/t:GenerateSolution` target, set the
-`GenerateSolutionAfterBuild` to `true`. Doing so will run the target
-automatically after a successful build.
+| Property | Description |
+|:-|:-|
+| `<GenerateSolutionAfterBuild>` | To avoid having to explicitly run the `/t:GenerateSolution` target, set the `GenerateSolutionAfterBuild` to `true`. Doing so will run the target automatically after a successful build. |
+| `<GenerateSolutionFilePath>` | Override the path to the solution to generate. If not specified, the solution will be generated in the same directory as the traversal project with the same name (e.g. `path/to/traversal.proj` → `path/to/traversal.sln`) |
+
 
 ```xml
 <Project Sdk="Microsoft.Build.Traversal">
@@ -171,6 +173,7 @@ automatically after a successful build.
 
   <PropertyGroup>
     <GenerateSolutionAfterBuild>true</GenerateSolutionAfterBuild>
+    <GenerateSolutionFilePath>Solutions\Foo.sln</GenerateSolutionFilePath>
   </PropertyGroup>
 
   …

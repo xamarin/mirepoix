@@ -243,15 +243,31 @@ properties:</p>
   …
 &lt;/Project&gt;
 </code></pre>
-<h3 id="generate-solution-automatically-after-build">Generate Solution Automatically after Build</h3>
-<p>To avoid having to explicitly run the <code>/t:GenerateSolution</code> target, set the
-<code>GenerateSolutionAfterBuild</code> to <code>true</code>. Doing so will run the target
-automatically after a successful build.</p>
+<h3 id="additional-solution-generation-properties">Additional Solution Generation Properties</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Property</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>&lt;GenerateSolutionAfterBuild&gt;</code></td>
+<td style="text-align: left;">To avoid having to explicitly run the <code>/t:GenerateSolution</code> target, set the <code>GenerateSolutionAfterBuild</code> to <code>true</code>. Doing so will run the target automatically after a successful build.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&lt;GenerateSolutionFilePath&gt;</code></td>
+<td style="text-align: left;">Override the path to the solution to generate. If not specified, the solution will be generated in the same directory as the traversal project with the same name (e.g. <code>path/to/traversal.proj</code> → <code>path/to/traversal.sln</code>)</td>
+</tr>
+</tbody>
+</table>
 <pre><code class="lang-xml">&lt;Project Sdk=&quot;Microsoft.Build.Traversal&quot;&gt;
   &lt;Sdk Name=&quot;Xamarin.MSBuild.Sdk&quot;/&gt;
 
   &lt;PropertyGroup&gt;
     &lt;GenerateSolutionAfterBuild&gt;true&lt;/GenerateSolutionAfterBuild&gt;
+    &lt;GenerateSolutionFilePath&gt;Solutions\Foo.sln&lt;/GenerateSolutionFilePath&gt;
   &lt;/PropertyGroup&gt;
 
   …
