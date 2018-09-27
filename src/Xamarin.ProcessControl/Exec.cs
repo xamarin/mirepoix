@@ -11,6 +11,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Security.Principal;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -170,8 +171,18 @@ namespace Xamarin.ProcessControl
             Log?.Invoke (null, logEntry);
 
             if (isWindows && Flags.HasFlag (Elevate)) {
-                proc.StartInfo.UseShellExecute = true;
-                proc.StartInfo.Verb = "runas";
+                // Check if we are not already running as administrator
+                var identity = WindowsIdentity.GetCurrent ();
+                if (identity == null || !new WindowsPrincipal (identity).IsInRole (WindowsBuiltInRole.Administrator)) {
+                    Log?.Invoke (null, logEntry.WithMessage (
+                        "Elevating process as current user is not in the Administrator role."));
+                    proc.StartInfo.UseShellExecute = true;
+                    proc.StartInfo.Verb = "runas";
+                } else {
+                    Log?.Invoke (null, logEntry.WithMessage (
+                        $"Ignoring {nameof (ExecFlags)}.{nameof (Elevate)}: " +
+                        "current user is already in the Administrator role."));
+                }
             } else {
                 proc.StartInfo.RedirectStandardInput = Flags.HasFlag (RedirectStdin);
                 proc.StartInfo.RedirectStandardOutput = Flags.HasFlag (RedirectStdout);
