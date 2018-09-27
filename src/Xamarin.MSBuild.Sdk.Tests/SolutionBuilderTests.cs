@@ -23,15 +23,24 @@ namespace Xamarin.MSBuild.Sdk.Tests
             "Solutions");
 
         [Theory]
-        [InlineData ("Folders.proj")]
-        [InlineData ("DisabledProjectsInConfig.proj")]
-        [InlineData ("UnsupportedProjectDependency.proj")]
-        [InlineData ("FallbackToXmlForProjectGuid.proj")]
-        public void GenerateSolution (string projectFile)
+        [InlineData ("Folders.proj", true)]
+        [InlineData ("Folders.proj", false)]
+        [InlineData ("DisabledProjectsInConfig.proj", true)]
+        [InlineData ("DisabledProjectsInConfig.proj", false)]
+        [InlineData ("UnsupportedProjectDependency.proj", true)]
+        [InlineData ("UnsupportedProjectDependency.proj", false)]
+        [InlineData ("FallbackToXmlForProjectGuid.proj", true)]
+        [InlineData ("FallbackToXmlForProjectGuid.proj", false)]
+        public void GenerateSolution (string projectFile, bool updateExistingSolution)
         {
             var projectPath = Path.Combine (solutionsDirectory, projectFile);
             var referenceSolutionPath = Path.ChangeExtension (projectPath, ".sln");
             var testSolutionPath = referenceSolutionPath + ".test";
+
+            File.Delete (testSolutionPath);
+
+            if (updateExistingSolution)
+                File.Copy (referenceSolutionPath, testSolutionPath, true);
 
             SolutionBuilder
                 .FromTraversalProject (projectPath, testSolutionPath)

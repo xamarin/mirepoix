@@ -34,8 +34,27 @@ namespace Xamarin.MSBuild.Sdk.Solution
             var slnFile = File.Exists (solutionPath)
                 ? SlnFile.Read (solutionPath)
                 : new SlnFile {
-                    FullPath = solutionPath
+                    FullPath = solutionPath,
+                    FormatVersion = "12.00",
+                    ProductDescription =
+                        "Visual Studio 15\r\n" +
+                        "VisualStudioVersion = 15.0.26124.0\r\n" +
+                        "MinimumVisualStudioVersion = 15.0.26124.0"
                 };
+
+            slnFile.SolutionConfigurationsSection.Clear ();
+
+            slnFile
+                .Sections
+                .GetOrCreateSection (
+                    "SolutionProperties",
+                    SlnSectionType.PreProcess)
+                .Properties
+                .SetValue (
+                    "HideSolutionNode",
+                    "FALSE");
+
+            slnFile.ProjectConfigurationsSection.Clear ();
 
             var nestedProjectsSection = slnFile.Sections.GetOrCreateSection (
                 "NestedProjects",
@@ -44,8 +63,6 @@ namespace Xamarin.MSBuild.Sdk.Solution
             nestedProjectsSection.SkipIfEmpty = true;
 
             slnFile.Projects.Clear ();
-            slnFile.SolutionConfigurationsSection.Clear ();
-            slnFile.ProjectConfigurationsSection.Clear ();
 
             foreach (var solutionConfiguration in solutionConfigurations)
                 slnFile.SolutionConfigurationsSection.SetValue (
@@ -71,9 +88,10 @@ namespace Xamarin.MSBuild.Sdk.Solution
             {
                 if (node != node.Top && node.Parent != node.Top)
                     nestedProjectsSection
-                        .Properties.SetValue (
-                        node.Guid.ToSolutionId (),
-                        node.Parent.Guid.ToSolutionId ());
+                        .Properties
+                        .SetValue (
+                            node.Guid.ToSolutionId (),
+                            node.Parent.Guid.ToSolutionId ());
 
                 foreach (var child in node.Children)
                     WriteNestedProjects (child);
