@@ -34,18 +34,33 @@ using System.Collections;
 using System.Globalization;
 using System.Reflection;
 using System.Text;
-using Microsoft.DotNet.Cli.Sln.Internal.FileManipulation;
-using Microsoft.DotNet.Tools.Common;
 
-namespace Microsoft.DotNet.Cli.Sln.Internal
+using static Xamarin.FileHelpers;
+
+namespace Xamarin.MSBuild.Sdk.Solution
 {
-    public class SlnFile
+    internal static class LocalizableStrings
+    {
+        public const string ErrorMessageFormatString = "Invalid format in line {0}: {1}";
+        public const string ProjectParsingErrorFormatString = "Project section is missing '{0}' when parsing the line starting at position {1}";
+        public const string InvalidPropertySetFormatString = "Property set is missing '{0}'";
+        public const string GlobalSectionMoreThanOnceError = "Global section specified more than once";
+        public const string GlobalSectionNotClosedError = "Global section not closed";
+        public const string FileHeaderMissingVersionError = "File header is missing version";
+        public const string FileHeaderMissingError = "Expected file header not found";
+        public const string ProjectSectionNotClosedError = "Project section not closed";
+        public const string InvalidSectionTypeError = "Invalid section type: {0}";
+        public const string SectionIdMissingError = "Section id missing";
+        public const string ClosingSectionTagNotFoundError = "Closing section tag not found";
+    }
+
+    internal class SlnFile
     {
         private SlnProjectCollection _projects = new SlnProjectCollection();
         private SlnSectionCollection _sections = new SlnSectionCollection();
         private SlnPropertySet _metadata = new SlnPropertySet(true);
         private int _prefixBlankLines = 1;
-        private TextFormatInfo _format = new TextFormatInfo();
+        private string _newLine = "\r\n";
 
         public string FormatVersion { get; set; }
         public string ProductDescription { get; set; }
@@ -109,7 +124,7 @@ namespace Microsoft.DotNet.Cli.Sln.Internal
         {
             SlnFile slnFile = new SlnFile();
             slnFile.FullPath = Path.GetFullPath(file);
-            slnFile._format = FileUtil.GetTextFormatInfo(file);
+            slnFile._newLine = FileHelpers.DetectFileLineEnding(file);
 
             using (var sr = new StreamReader(new FileStream(file, FileMode.Open)))
             {
@@ -217,7 +232,7 @@ namespace Microsoft.DotNet.Cli.Sln.Internal
 
         private void Write(TextWriter writer)
         {
-            writer.NewLine = _format.NewLine;
+            writer.NewLine = _newLine;
             for (int n = 0; n < _prefixBlankLines; n++)
             {
                 writer.WriteLine();
@@ -241,7 +256,7 @@ namespace Microsoft.DotNet.Cli.Sln.Internal
         }
     }
 
-    public class SlnProject
+    internal class SlnProject
     {
         private SlnSectionCollection _sections = new SlnSectionCollection();
 
@@ -263,20 +278,7 @@ namespace Microsoft.DotNet.Cli.Sln.Internal
         public string Id { get; set; }
         public string TypeGuid { get; set; }
         public string Name { get; set; }
-
-        private string _filePath;
-        public string FilePath
-        {
-            get
-            {
-                return _filePath;
-            }
-            set
-            {
-                _filePath = PathUtility.RemoveExtraPathSeparators(
-                    PathUtility.GetPathWithDirectorySeparator(value));
-            }
-        }
+        public string FilePath { get; set; }
 
         public int Line { get; private set; }
         internal bool Processed { get; set; }
@@ -373,7 +375,7 @@ namespace Microsoft.DotNet.Cli.Sln.Internal
             writer.Write("\") = \"");
             writer.Write(Name);
             writer.Write("\", \"");
-            writer.Write(PathUtility.GetPathWithBackSlashes(FilePath));
+            writer.Write(FilePath.Replace('/', '\\'));
             writer.Write("\", \"");
             writer.Write(Id);
             writer.WriteLine("\"");
@@ -388,7 +390,7 @@ namespace Microsoft.DotNet.Cli.Sln.Internal
         }
     }
 
-    public class SlnSection
+    internal class SlnSection
     {
         private SlnPropertySetCollection _nestedPropertySets;
         private SlnPropertySet _properties;
@@ -406,8 +408,8 @@ namespace Microsoft.DotNet.Cli.Sln.Internal
         {
             get
             {
-                return (_properties == null || _properties.Count == 0) && 
-                    (_nestedPropertySets == null || _nestedPropertySets.All(t => t.IsEmpty)) && 
+                return (_properties == null || _properties.Count == 0) &&
+                    (_nestedPropertySets == null || _nestedPropertySets.All(t => t.IsEmpty)) &&
                     (_sectionLines == null || _sectionLines.Count == 0);
             }
         }
@@ -505,7 +507,7 @@ namespace Microsoft.DotNet.Cli.Sln.Internal
                 return SlnSectionType.PostProcess;
             }
             throw new InvalidSolutionFormatException(
-                curLineNum, 
+                curLineNum,
                 String.Format(LocalizableStrings.InvalidSectionTypeError, s));
         }
 
@@ -635,7 +637,7 @@ namespace Microsoft.DotNet.Cli.Sln.Internal
     /// <summary>
     /// A collection of properties
     /// </summary>
-    public class SlnPropertySet : IDictionary<string, string>
+    internal class SlnPropertySet : IDictionary<string, string>
     {
         private OrderedDictionary _values = new OrderedDictionary();
         private bool _isMetadata;
@@ -964,7 +966,7 @@ namespace Microsoft.DotNet.Cli.Sln.Internal
         }
     }
 
-    public class SlnProjectCollection : Collection<SlnProject>
+    internal class SlnProjectCollection : Collection<SlnProject>
     {
         private SlnFile _parentFile;
 
@@ -1029,7 +1031,7 @@ namespace Microsoft.DotNet.Cli.Sln.Internal
         }
     }
 
-    public class SlnSectionCollection : Collection<SlnSection>
+    internal class SlnSectionCollection : Collection<SlnSection>
     {
         private SlnFile _parentFile;
 
@@ -1117,7 +1119,7 @@ namespace Microsoft.DotNet.Cli.Sln.Internal
         }
     }
 
-    public class SlnPropertySetCollection : Collection<SlnPropertySet>
+    internal class SlnPropertySetCollection : Collection<SlnPropertySet>
     {
         private SlnSection _parentSection;
 
@@ -1172,7 +1174,7 @@ namespace Microsoft.DotNet.Cli.Sln.Internal
         }
     }
 
-    public class InvalidSolutionFormatException : Exception
+    internal class InvalidSolutionFormatException : Exception
     {
         public InvalidSolutionFormatException(string details)
             : base(details)
@@ -1185,7 +1187,7 @@ namespace Microsoft.DotNet.Cli.Sln.Internal
         }
     }
 
-    public enum SlnSectionType
+    internal enum SlnSectionType
     {
         PreProcess,
         PostProcess
