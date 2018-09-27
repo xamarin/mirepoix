@@ -36,23 +36,18 @@ namespace Xamarin.MSBuild.Sdk.Solution
                 : new SlnFile {
                     FullPath = solutionPath,
                     FormatVersion = "12.00",
-                    ProductDescription =
-                        "Visual Studio 15\r\n" +
-                        "VisualStudioVersion = 15.0.26124.0\r\n" +
-                        "MinimumVisualStudioVersion = 15.0.26124.0"
+                    ProductDescription = "Visual Studio 15",
+                    VisualStudioVersion = "15.0.26124.0",
+                    MinimumVisualStudioVersion = "15.0.26124.0"
                 };
 
             slnFile.SolutionConfigurationsSection.Clear ();
 
             slnFile
                 .Sections
-                .GetOrCreateSection (
-                    "SolutionProperties",
-                    SlnSectionType.PreProcess)
+                .GetOrCreateSection ("SolutionProperties", SlnSectionType.PreProcess)
                 .Properties
-                .SetValue (
-                    "HideSolutionNode",
-                    "FALSE");
+                .SetValue ("HideSolutionNode", "FALSE");
 
             slnFile.ProjectConfigurationsSection.Clear ();
 
