@@ -26,18 +26,29 @@ namespace Xamarin.ProcessControl
             public ExecFlags Flags { get; }
             public ProcessArguments Arguments { get; }
             public int? ExitCode { get; }
+            public string Message { get; }
 
             internal ExecLog (
                 int execId,
                 ExecFlags flags,
                 ProcessArguments arguments,
-                int? exitCode = null)
+                int? exitCode = null,
+                string message = null)
             {
                 ExecId = execId;
                 Flags = flags;
                 Arguments = arguments;
                 ExitCode = exitCode;
+                Message = message;
             }
+
+            public ExecLog WithMessage (string message)
+                => new ExecLog (
+                    ExecId,
+                    Flags,
+                    Arguments,
+                    ExitCode,
+                    message);
         }
 
         public delegate Task<int> ProcessRunnerHandler (ProcessArguments arguments, Process process);
@@ -155,7 +166,8 @@ namespace Xamarin.ProcessControl
                 }
             };
 
-            Log?.Invoke (null, new ExecLog (id, Flags, arguments));
+            var logEntry = new ExecLog (id, Flags, arguments);
+            Log?.Invoke (null, logEntry);
 
             if (isWindows && Flags.HasFlag (Elevate)) {
                 proc.StartInfo.UseShellExecute = true;
