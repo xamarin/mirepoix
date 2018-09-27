@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
+using static Xamarin.PathHelpers;
+
 namespace Xamarin.MSBuild.Sdk.Solution
 {
     static class SolutionWriter
@@ -21,51 +23,42 @@ namespace Xamarin.MSBuild.Sdk.Solution
             if (solutionPath == null)
                 throw new ArgumentNullException (nameof (solutionPath));
 
+            solutionPath = ResolveFullPath (solutionPath);
+
             var solutionDirectory = Path.GetDirectoryName (solutionPath);
             if (string.IsNullOrEmpty (solutionDirectory))
                 solutionDirectory = ".";
 
             Directory.CreateDirectory (solutionDirectory);
 
-            string lineEnding = null;
-            if (File.Exists (solutionPath))
-                lineEnding = FileHelpers.DetectFileLineEnding (solutionPath);
+            var slnFile = File.Exists (solutionPath)
+                ? SlnFile.Read (solutionPath)
+                : new SlnFile {
+                    FullPath = solutionPath
+                };
 
-            var encoding = new UTF8Encoding (true, true);
-            using (var writer = new StreamWriter (solutionPath, false, encoding)
-                { NewLine = lineEnding ?? "\r\n" })
-                Write (
-                    solution,
-                    solutionConfigurations,
-                    writer);
-        }
+            var nestedProjectsSection = slnFile.Sections.GetOrCreateSection (
+                "NestedProjects",
+                SlnSectionType.PreProcess);
+            nestedProjectsSection.Clear ();
+            nestedProjectsSection.SkipIfEmpty = true;
 
-        public static void Write (
-            SolutionNode solution,
-            IEnumerable<ConfigurationPlatform> solutionConfigurations,
-            TextWriter writer)
-        {
-            string FixPath (string path)
-                => path.Replace ('/', '\\');
+            slnFile.Projects.Clear ();
+            slnFile.SolutionConfigurationsSection.Clear ();
+            slnFile.ProjectConfigurationsSection.Clear ();
 
-            string GuidString (Guid guid)
-                => guid.ToString ("B").ToUpperInvariant ();
-
-            writer.WriteLine ();
-            writer.WriteLine ("Microsoft Visual Studio Solution File, Format Version 12.00");
-            writer.WriteLine ("# Visual Studio 15");
-            writer.WriteLine ("VisualStudioVersion = 15.0.26124.0");
-            writer.WriteLine ("MinimumVisualStudioVersion = 15.0.26124.0");
+            foreach (var solutionConfiguration in solutionConfigurations)
+                slnFile.SolutionConfigurationsSection.SetValue (
+                    solutionConfiguration.ToSolutionString (),
+                    solutionConfiguration.ToSolutionString ());
 
             void WriteAllNodes (SolutionNode node)
             {
                 if (node != node.Top) {
-                    writer.WriteLine (
-                        $"Project(\"{GuidString (node.TypeGuid)}\") = " +
-                        $"\"{node.Name}\", " +
-                        $"\"{FixPath (node.RelativePath)}\", " +
-                        $"\"{GuidString (node.Guid)}\"");
-                    writer.WriteLine ("EndProject");
+                    var project = slnFile.Projects.GetOrCreateProject (node.Guid.ToSolutionId ());
+                    project.TypeGuid = node.TypeGuid.ToSolutionId ();
+                    project.Name = node.Name;
+                    project.FilePath = node.RelativePath;
                 }
 
                 foreach (var child in node.Children)
@@ -74,25 +67,13 @@ namespace Xamarin.MSBuild.Sdk.Solution
 
             WriteAllNodes (solution);
 
-            writer.WriteLine ("Global");
-
-            writer.WriteLine ("\tGlobalSection(SolutionConfigurationPlatforms) = preSolution");
-            foreach (var configuration in solutionConfigurations)
-                writer.WriteLine ($"\t\t{configuration.ToSolutionString ()} = {configuration.ToSolutionString ()}");
-            writer.WriteLine ("\tEndGlobalSection");
-
-            writer.WriteLine ("\tGlobalSection(SolutionProperties) = preSolution");
-            writer.WriteLine ("\t\tHideSolutionNode = FALSE");
-            writer.WriteLine ("\tEndGlobalSection");
-
-            writer.WriteLine ("\tGlobalSection(NestedProjects) = preSolution");
-
             void WriteNestedProjects (SolutionNode node)
             {
                 if (node != node.Top && node.Parent != node.Top)
-                    writer.WriteLine (
-                        $"\t\t{GuidString (node.Guid)} = " +
-                        $"{GuidString (node.Parent.Guid)}");
+                    nestedProjectsSection
+                        .Properties.SetValue (
+                        node.Guid.ToSolutionId (),
+                        node.Parent.Guid.ToSolutionId ());
 
                 foreach (var child in node.Children)
                     WriteNestedProjects (child);
@@ -100,22 +81,24 @@ namespace Xamarin.MSBuild.Sdk.Solution
 
             WriteNestedProjects (solution);
 
-            writer.WriteLine ("\tEndGlobalSection");
-
-            writer.WriteLine ("\tGlobalSection(ProjectConfigurationPlatforms) = postSolution");
-
             void WriteConfigurations (SolutionNode node)
             {
                 foreach (var configuration in node.Configurations) {
-                    void WriteConfiguration (string property)
-                        => writer.WriteLine (
-                            $"\t\t{GuidString (node.Guid)}.{configuration.Solution.ToSolutionString ()}" +
-                            $".{property} = {configuration.Project.ToSolutionString ()}");
+                    var propertySet = slnFile
+                        .ProjectConfigurationsSection
+                        .GetOrCreatePropertySet (
+                            node.Guid.ToSolutionId (),
+                            ignoreCase: true);
 
-                    WriteConfiguration ("ActiveCfg");
+                    void SetProperty (string property)
+                        => propertySet.SetValue (
+                            $"{configuration.Solution.ToSolutionString ()}.{property}",
+                            configuration.Project.ToSolutionString ());
+
+                    SetProperty ("ActiveCfg");
 
                     if (configuration.BuildEnabled)
-                        WriteConfiguration ("Build.0");
+                        SetProperty ("Build.0");
                 }
 
                 foreach (var child in node.Children)
@@ -124,9 +107,10 @@ namespace Xamarin.MSBuild.Sdk.Solution
 
             WriteConfigurations (solution);
 
-            writer.WriteLine ("\tEndGlobalSection");
-
-            writer.WriteLine ("EndGlobal");
+            slnFile.Write ();
         }
+
+        static string ToSolutionId (this Guid guid)
+            => guid.ToString ("B").ToUpperInvariant ();
     }
 }

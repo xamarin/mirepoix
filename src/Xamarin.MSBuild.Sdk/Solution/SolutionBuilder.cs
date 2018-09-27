@@ -43,12 +43,6 @@ namespace Xamarin.MSBuild.Sdk.Solution
                 SolutionConfigurations,
                 fileName ?? FileName);
 
-        public void Write (TextWriter writer)
-            => SolutionWriter.Write (
-                solution,
-                SolutionConfigurations,
-                writer);
-
         public void AddSolutionConfiguration (ConfigurationPlatform solutionConfiguration)
         {
             if (!solutionConfigurations.Contains (solutionConfiguration))
