@@ -405,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.ProcessControl.Exec.ExitException.html",
-          "hash": "wJ/mf1HbAZi2U6D1ha6mkQ=="
+          "hash": "WCRlKicLlLwouokWBMMIEA=="
         }
       },
       "is_incremental": true,
@@ -429,7 +429,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.ProcessControl.Exec.html",
-          "hash": "MZZXCp6bTpi3I1+GzHovPw=="
+          "hash": "0Oyuvpktu/VSS7FWTNZaFA=="
         }
       },
       "is_incremental": true,
@@ -442,6 +442,30 @@
         ".html": {
           "relative_path": "api/Xamarin.ProcessControl.ExecFlags.html",
           "hash": "Vl3T3XnU3KaVbVE3W2/v3Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.ProcessControl.ExecStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.ProcessControl.ExecStatus.html",
+          "hash": "3+NMcOjYxjdIHe99epoVmw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.ProcessControl.ExecStatusEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.ProcessControl.ExecStatusEventArgs.html",
+          "hash": "SkbN++5GbvgFcRparyPlVg=="
         }
       },
       "is_incremental": true,
@@ -465,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.ProcessControl.html",
-          "hash": "ms872atOiuJoa9zlPQ80Fg=="
+          "hash": "pdOvaZUOjR5Z94vOd5qfcw=="
         }
       },
       "is_incremental": true,
@@ -849,7 +873,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "xAAJxyC8cGP/uD2B2VTd4Q=="
+          "hash": "ABveXRZ+SKcJyZ1nW3Rl2w=="
         }
       },
       "is_incremental": false,
@@ -916,11 +940,11 @@
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         }

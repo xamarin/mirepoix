@@ -1834,12 +1834,6 @@ references:
   isSpec: "True"
   fullName: Xamarin.ProcessControl.Exec.Elevated
   nameWithType: Exec.Elevated
-- uid: Xamarin.ProcessControl.Exec.Ended
-  name: Ended
-  href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_Ended
-  commentId: E:Xamarin.ProcessControl.Exec.Ended
-  fullName: Xamarin.ProcessControl.Exec.Ended
-  nameWithType: Exec.Ended
 - uid: Xamarin.ProcessControl.Exec.ExitCode
   name: ExitCode
   href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_ExitCode
@@ -1911,6 +1905,19 @@ references:
   isSpec: "True"
   fullName: Xamarin.ProcessControl.Exec.Flags
   nameWithType: Exec.Flags
+- uid: Xamarin.ProcessControl.Exec.Id
+  name: Id
+  href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_Id
+  commentId: P:Xamarin.ProcessControl.Exec.Id
+  fullName: Xamarin.ProcessControl.Exec.Id
+  nameWithType: Exec.Id
+- uid: Xamarin.ProcessControl.Exec.Id*
+  name: Id
+  href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_Id_
+  commentId: Overload:Xamarin.ProcessControl.Exec.Id
+  isSpec: "True"
+  fullName: Xamarin.ProcessControl.Exec.Id
+  nameWithType: Exec.Id
 - uid: Xamarin.ProcessControl.Exec.InputHandler
   name: InputHandler
   href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_InputHandler
@@ -1924,6 +1931,12 @@ references:
   isSpec: "True"
   fullName: Xamarin.ProcessControl.Exec.InputHandler
   nameWithType: Exec.InputHandler
+- uid: Xamarin.ProcessControl.Exec.Monitor
+  name: Monitor
+  href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_Monitor
+  commentId: E:Xamarin.ProcessControl.Exec.Monitor
+  fullName: Xamarin.ProcessControl.Exec.Monitor
+  nameWithType: Exec.Monitor
 - uid: Xamarin.ProcessControl.Exec.OutputRedirection
   name: OutputRedirection
   href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_OutputRedirection
@@ -2012,12 +2025,6 @@ references:
   isSpec: "True"
   fullName: Xamarin.ProcessControl.Exec.RunAsync
   nameWithType: Exec.RunAsync
-- uid: Xamarin.ProcessControl.Exec.Started
-  name: Started
-  href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_Started
-  commentId: E:Xamarin.ProcessControl.Exec.Started
-  fullName: Xamarin.ProcessControl.Exec.Started
-  nameWithType: Exec.Started
 - uid: Xamarin.ProcessControl.Exec.WorkingDirectory
   name: WorkingDirectory
   href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_WorkingDirectory
@@ -2079,6 +2086,88 @@ references:
   commentId: F:Xamarin.ProcessControl.ExecFlags.RedirectStdout
   fullName: Xamarin.ProcessControl.ExecFlags.RedirectStdout
   nameWithType: ExecFlags.RedirectStdout
+- uid: Xamarin.ProcessControl.ExecStatus
+  name: ExecStatus
+  href: api/Xamarin.ProcessControl.ExecStatus.html
+  commentId: T:Xamarin.ProcessControl.ExecStatus
+  fullName: Xamarin.ProcessControl.ExecStatus
+  nameWithType: ExecStatus
+- uid: Xamarin.ProcessControl.ExecStatus.None
+  name: None
+  href: api/Xamarin.ProcessControl.ExecStatus.html#Xamarin_ProcessControl_ExecStatus_None
+  commentId: F:Xamarin.ProcessControl.ExecStatus.None
+  fullName: Xamarin.ProcessControl.ExecStatus.None
+  nameWithType: ExecStatus.None
+- uid: Xamarin.ProcessControl.ExecStatus.ProcessEnded
+  name: ProcessEnded
+  href: api/Xamarin.ProcessControl.ExecStatus.html#Xamarin_ProcessControl_ExecStatus_ProcessEnded
+  commentId: F:Xamarin.ProcessControl.ExecStatus.ProcessEnded
+  fullName: Xamarin.ProcessControl.ExecStatus.ProcessEnded
+  nameWithType: ExecStatus.ProcessEnded
+- uid: Xamarin.ProcessControl.ExecStatus.ProcessStarted
+  name: ProcessStarted
+  href: api/Xamarin.ProcessControl.ExecStatus.html#Xamarin_ProcessControl_ExecStatus_ProcessStarted
+  commentId: F:Xamarin.ProcessControl.ExecStatus.ProcessStarted
+  fullName: Xamarin.ProcessControl.ExecStatus.ProcessStarted
+  nameWithType: ExecStatus.ProcessStarted
+- uid: Xamarin.ProcessControl.ExecStatusEventArgs
+  name: ExecStatusEventArgs
+  href: api/Xamarin.ProcessControl.ExecStatusEventArgs.html
+  commentId: T:Xamarin.ProcessControl.ExecStatusEventArgs
+  fullName: Xamarin.ProcessControl.ExecStatusEventArgs
+  nameWithType: ExecStatusEventArgs
+- uid: Xamarin.ProcessControl.ExecStatusEventArgs.EventTime
+  name: EventTime
+  href: api/Xamarin.ProcessControl.ExecStatusEventArgs.html#Xamarin_ProcessControl_ExecStatusEventArgs_EventTime
+  commentId: P:Xamarin.ProcessControl.ExecStatusEventArgs.EventTime
+  fullName: Xamarin.ProcessControl.ExecStatusEventArgs.EventTime
+  nameWithType: ExecStatusEventArgs.EventTime
+- uid: Xamarin.ProcessControl.ExecStatusEventArgs.EventTime*
+  name: EventTime
+  href: api/Xamarin.ProcessControl.ExecStatusEventArgs.html#Xamarin_ProcessControl_ExecStatusEventArgs_EventTime_
+  commentId: Overload:Xamarin.ProcessControl.ExecStatusEventArgs.EventTime
+  isSpec: "True"
+  fullName: Xamarin.ProcessControl.ExecStatusEventArgs.EventTime
+  nameWithType: ExecStatusEventArgs.EventTime
+- uid: Xamarin.ProcessControl.ExecStatusEventArgs.Exec
+  name: Exec
+  href: api/Xamarin.ProcessControl.ExecStatusEventArgs.html#Xamarin_ProcessControl_ExecStatusEventArgs_Exec
+  commentId: P:Xamarin.ProcessControl.ExecStatusEventArgs.Exec
+  fullName: Xamarin.ProcessControl.ExecStatusEventArgs.Exec
+  nameWithType: ExecStatusEventArgs.Exec
+- uid: Xamarin.ProcessControl.ExecStatusEventArgs.Exec*
+  name: Exec
+  href: api/Xamarin.ProcessControl.ExecStatusEventArgs.html#Xamarin_ProcessControl_ExecStatusEventArgs_Exec_
+  commentId: Overload:Xamarin.ProcessControl.ExecStatusEventArgs.Exec
+  isSpec: "True"
+  fullName: Xamarin.ProcessControl.ExecStatusEventArgs.Exec
+  nameWithType: ExecStatusEventArgs.Exec
+- uid: Xamarin.ProcessControl.ExecStatusEventArgs.ExecDuration
+  name: ExecDuration
+  href: api/Xamarin.ProcessControl.ExecStatusEventArgs.html#Xamarin_ProcessControl_ExecStatusEventArgs_ExecDuration
+  commentId: P:Xamarin.ProcessControl.ExecStatusEventArgs.ExecDuration
+  fullName: Xamarin.ProcessControl.ExecStatusEventArgs.ExecDuration
+  nameWithType: ExecStatusEventArgs.ExecDuration
+- uid: Xamarin.ProcessControl.ExecStatusEventArgs.ExecDuration*
+  name: ExecDuration
+  href: api/Xamarin.ProcessControl.ExecStatusEventArgs.html#Xamarin_ProcessControl_ExecStatusEventArgs_ExecDuration_
+  commentId: Overload:Xamarin.ProcessControl.ExecStatusEventArgs.ExecDuration
+  isSpec: "True"
+  fullName: Xamarin.ProcessControl.ExecStatusEventArgs.ExecDuration
+  nameWithType: ExecStatusEventArgs.ExecDuration
+- uid: Xamarin.ProcessControl.ExecStatusEventArgs.Status
+  name: Status
+  href: api/Xamarin.ProcessControl.ExecStatusEventArgs.html#Xamarin_ProcessControl_ExecStatusEventArgs_Status
+  commentId: P:Xamarin.ProcessControl.ExecStatusEventArgs.Status
+  fullName: Xamarin.ProcessControl.ExecStatusEventArgs.Status
+  nameWithType: ExecStatusEventArgs.Status
+- uid: Xamarin.ProcessControl.ExecStatusEventArgs.Status*
+  name: Status
+  href: api/Xamarin.ProcessControl.ExecStatusEventArgs.html#Xamarin_ProcessControl_ExecStatusEventArgs_Status_
+  commentId: Overload:Xamarin.ProcessControl.ExecStatusEventArgs.Status
+  isSpec: "True"
+  fullName: Xamarin.ProcessControl.ExecStatusEventArgs.Status
+  nameWithType: ExecStatusEventArgs.Status
 - uid: Xamarin.ProcessControl.ProcessArguments
   name: ProcessArguments
   href: api/Xamarin.ProcessControl.ProcessArguments.html

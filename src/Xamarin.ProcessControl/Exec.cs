@@ -28,13 +28,11 @@ namespace Xamarin.ProcessControl
 
         public delegate Task<int> ProcessRunnerHandler (ProcessArguments arguments, Process process);
 
-        public static event Action<Exec> Started;
-        public static event Action<Exec> Ended;
+        public static event EventHandler<ExecStatusEventArgs> Monitor;
 
         static volatile int lastId;
 
-        readonly int id;
-
+        public int Id { get; }
         public ProcessArguments Arguments { get; }
         public ConsoleRedirection OutputRedirection { get; }
         public Action<StreamWriter> InputHandler { get; }
@@ -61,6 +59,7 @@ namespace Xamarin.ProcessControl
                     nameof (arguments),
                     "must have at least one argument (the file name to execute)");
 
+            Id = lastId++;
             Flags = flags;
             Elevated = flags.HasFlag (Elevate);
             InputHandler = inputHandler;
@@ -103,8 +102,6 @@ namespace Xamarin.ProcessControl
 
             WorkingDirectory = workingDirectory;
             ProcessRunner = processRunner ?? DefaultProcessRunner;
-
-            id = lastId++;
         }
 
         public sealed class ExitException : Exception
@@ -165,9 +162,10 @@ namespace Xamarin.ProcessControl
                     writer.Write (data);
             }
 
-            Started?.Invoke (this);
+            var eventArgs = new ExecStatusEventArgs (this);
+            Monitor?.Invoke (null, eventArgs);
             ExitCode = await ProcessRunner (Arguments, proc).ConfigureAwait (false);
-            Ended?.Invoke (this);
+            Monitor?.Invoke (null, eventArgs.WithProcessEnded ());
 
             if (ExitCode.Value != 0)
                 throw new ExitException (this, ExitCode.Value);
