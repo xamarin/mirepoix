@@ -40,9 +40,12 @@
   </Target>
 
   <Target Name="UpdateDocs">
+    <PropertyGroup>
+      <DocfxJson>$([MSBuild]::NormalizePath('docfx\docfx.json'))</DocfxJson>
+    </PropertyGroup>
     <RemoveDir Directories="docs"/>
-    <Exec Command="docfx docfx\docfx.json"/>
-    <Exec Command="docfx build -s docfx\docfx.json"/>
+    <Exec Command="docfx &quot;$(DocfxJson)&quot;"/>
+    <Exec Command="docfx build -s &quot;$(DocfxJson)&quot;"/>
   </Target>
 
   <Target Name="ShowVersion" AfterTargets="Build;Pack" DependsOnTargets="SetVersions">
