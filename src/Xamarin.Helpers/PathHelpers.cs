@@ -13,7 +13,7 @@ namespace Xamarin
     /// <summary>
     /// Various utilities that should be provided via System.IO.Path.
     /// </summary>
-    public static class PathHelpers
+    public static partial class PathHelpers
     {
         [DllImport ("libc")]
         static extern string realpath (string path, IntPtr resolvedName);

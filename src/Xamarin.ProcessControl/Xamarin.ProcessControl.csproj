@@ -7,7 +7,12 @@
       execution, and console output redirection handling.
     </Description>
   </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="System.Security.Principal.Windows" Version="4.5.0"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Xamarin.Helpers\Xamarin.Helpers.csproj"/>
   </ItemGroup>
 </Project>

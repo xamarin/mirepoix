@@ -88,7 +88,8 @@ namespace Xamarin.ProcessControl
             var builder = new StringBuilder ();
             var quote = Char.MinValue;
 
-            Action<char, string> appendArg = (q, a) => {
+            void AppendArg (char q, string a)
+            {
                 if (q == Char.MinValue && String.IsNullOrWhiteSpace (a))
                     return;
 
@@ -97,9 +98,9 @@ namespace Xamarin.ProcessControl
                     return;
                 }
 
-                foreach (var glob in Glob.ShellExpand (a))
+                foreach (var glob in PathHelpers.Glob.ShellExpand (a))
                     args = args.Add (glob);
-            };
+            }
 
             for (int i = 0; i < commandLine.Length; i++) {
                 var c = commandLine [i];
@@ -108,7 +109,7 @@ namespace Xamarin.ProcessControl
                     n = commandLine [i + 1];
 
                 if (Char.IsWhiteSpace (c) && quote == Char.MinValue) {
-                    appendArg (quote, builder.ToString ());
+                    AppendArg (quote, builder.ToString ());
                     builder.Length = 0;
                 } else if (quote == Char.MinValue && (c == '\'' || c == '"')) {
                     quote = c;
@@ -123,7 +124,7 @@ namespace Xamarin.ProcessControl
             }
 
             if (builder.Length > 0)
-                appendArg (quote, builder.ToString ());
+                AppendArg (quote, builder.ToString ());
 
             return args;
         }
