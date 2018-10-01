@@ -213,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.html",
-          "hash": "uVXxxE09ur4aqef4yHryGg=="
+          "hash": "zOAAq2nBbNFEg7IPqFcXHg=="
         }
       },
       "is_incremental": true,
@@ -249,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.html",
-          "hash": "IfUOk7I24/215jb2NyCQFA=="
+          "hash": "wUdf+KjcwWtjkgbTXAsAQQ=="
         }
       },
       "is_incremental": true,
@@ -329,11 +329,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.PathHelpers.Glob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.PathHelpers.Glob.html",
+          "hash": "1Q+y/sfFrd1ULFfdv6qzzA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Xamarin.PathHelpers.yml",
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.PathHelpers.html",
-          "hash": "ZwPLHZZwnefIv0mpAKVK5w=="
+          "hash": "+lJg5r8UJlGCk88aNp+9tQ=="
         }
       },
       "is_incremental": true,
@@ -345,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.ProcessControl.ConsoleRedirection.FileDescriptor.html",
-          "hash": "/RH4AyXCPAxB9tthZP3JLA=="
+          "hash": "Zx5g6YpLb4NvfNU+McYcLg=="
         }
       },
       "is_incremental": true,
@@ -357,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.ProcessControl.ConsoleRedirection.Segment.html",
-          "hash": "WL4o7/s8ViM0qyHWArmEXQ=="
+          "hash": "CXcU+J2jJ+3OTbOdjKxZwQ=="
         }
       },
       "is_incremental": true,
@@ -369,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.ProcessControl.ConsoleRedirection.SegmentCollection.html",
-          "hash": "UzC08ghRhUnnwPS1MvXqgg=="
+          "hash": "YpU1ULIGNb/Hzdr339f8fw=="
         }
       },
       "is_incremental": true,
@@ -381,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.ProcessControl.ConsoleRedirection.html",
-          "hash": "qHXZvEVjBj8Ms8lBuwVNBA=="
+          "hash": "BEg511c2JXoEqsDq8gpBKA=="
         }
       },
       "is_incremental": true,
@@ -393,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.ProcessControl.Exec.ExecLog.html",
-          "hash": "aUin6mu7Iv5bL6XtpQ9UUQ=="
+          "hash": "mMsWPl9dxUigqqm5BmmKxQ=="
         }
       },
       "is_incremental": true,
@@ -405,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.ProcessControl.Exec.ExitException.html",
-          "hash": "9UvI1SyeAzVi7aPBo4X9cQ=="
+          "hash": "BeUwGcGUEIA0QqYLNvslgg=="
         }
       },
       "is_incremental": true,
@@ -417,7 +429,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.ProcessControl.Exec.ProcessRunnerHandler.html",
-          "hash": "ZFCxlarl87BGdng1YBwivA=="
+          "hash": "TXhgcbnpgQKh2SZCnUTxww=="
         }
       },
       "is_incremental": true,
@@ -429,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.ProcessControl.Exec.html",
-          "hash": "9SiXVbh1MmfcIe80BswfDA=="
+          "hash": "dXcGTC+3DOikds11g7FwWw=="
         }
       },
       "is_incremental": true,
@@ -441,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.ProcessControl.ExecFlags.html",
-          "hash": "9TteaCaaMlt1Z+rDFfLe2A=="
+          "hash": "Vl3T3XnU3KaVbVE3W2/v3Q=="
         }
       },
       "is_incremental": true,
@@ -453,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.ProcessControl.ProcessArguments.html",
-          "hash": "s/SDvkDe7fp+TFWCjbXAJg=="
+          "hash": "XVCgsjmpJNdEyUk39aVKug=="
         }
       },
       "is_incremental": true,
@@ -645,7 +657,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.html",
-          "hash": "725DfXLqTjUBEPscOKy1Hw=="
+          "hash": "nryEdxVRsyJspVgCET/9GA=="
         }
       },
       "is_incremental": true,
@@ -849,7 +861,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "LOjlyvFidHJ5dueBmK9GjA=="
+          "hash": "tc4zI9LWFj6aA5C9k7zCFg=="
         }
       },
       "is_incremental": false,

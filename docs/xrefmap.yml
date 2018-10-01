@@ -1170,12 +1170,6 @@ references:
   commentId: M:Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.Write(System.String)
   fullName: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.Write(System.String)
   nameWithType: SolutionBuilder.Write(String)
-- uid: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.Write(TextWriter)
-  name: Write(TextWriter)
-  href: api/Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.html#Xamarin_MSBuild_Sdk_Solution_SolutionBuilder_Write_TextWriter_
-  commentId: M:Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.Write(TextWriter)
-  fullName: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.Write(TextWriter)
-  nameWithType: SolutionBuilder.Write(TextWriter)
 - uid: Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.Write*
   name: Write
   href: api/Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.html#Xamarin_MSBuild_Sdk_Solution_SolutionBuilder_Write_
@@ -1337,19 +1331,6 @@ references:
   isSpec: "True"
   fullName: Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.Execute
   nameWithType: GenerateSolution.Execute
-- uid: Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.LineEnding
-  name: LineEnding
-  href: api/Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.html#Xamarin_MSBuild_Sdk_Tasks_GenerateSolution_LineEnding
-  commentId: P:Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.LineEnding
-  fullName: Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.LineEnding
-  nameWithType: GenerateSolution.LineEnding
-- uid: Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.LineEnding*
-  name: LineEnding
-  href: api/Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.html#Xamarin_MSBuild_Sdk_Tasks_GenerateSolution_LineEnding_
-  commentId: Overload:Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.LineEnding
-  isSpec: "True"
-  fullName: Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.LineEnding
-  nameWithType: GenerateSolution.LineEnding
 - uid: Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.SolutionFile
   name: SolutionFile
   href: api/Xamarin.MSBuild.Sdk.Tasks.GenerateSolution.html#Xamarin_MSBuild_Sdk_Tasks_GenerateSolution_SolutionFile
@@ -1529,6 +1510,44 @@ references:
   isSpec: "True"
   fullName: Xamarin.PathHelpers.Git.FindRepositoryRootPathFromAssembly
   nameWithType: PathHelpers.Git.FindRepositoryRootPathFromAssembly
+- uid: Xamarin.PathHelpers.Glob
+  name: PathHelpers.Glob
+  href: api/Xamarin.PathHelpers.Glob.html
+  commentId: T:Xamarin.PathHelpers.Glob
+  fullName: Xamarin.PathHelpers.Glob
+  nameWithType: PathHelpers.Glob
+- uid: Xamarin.PathHelpers.Glob.Expand(System.String)
+  name: Expand(String)
+  href: api/Xamarin.PathHelpers.Glob.html#Xamarin_PathHelpers_Glob_Expand_System_String_
+  commentId: M:Xamarin.PathHelpers.Glob.Expand(System.String)
+  fullName: Xamarin.PathHelpers.Glob.Expand(System.String)
+  nameWithType: PathHelpers.Glob.Expand(String)
+- uid: Xamarin.PathHelpers.Glob.Expand(System.String,System.String)
+  name: Expand(String, String)
+  href: api/Xamarin.PathHelpers.Glob.html#Xamarin_PathHelpers_Glob_Expand_System_String_System_String_
+  commentId: M:Xamarin.PathHelpers.Glob.Expand(System.String,System.String)
+  fullName: Xamarin.PathHelpers.Glob.Expand(System.String, System.String)
+  nameWithType: PathHelpers.Glob.Expand(String, String)
+- uid: Xamarin.PathHelpers.Glob.Expand*
+  name: Expand
+  href: api/Xamarin.PathHelpers.Glob.html#Xamarin_PathHelpers_Glob_Expand_
+  commentId: Overload:Xamarin.PathHelpers.Glob.Expand
+  isSpec: "True"
+  fullName: Xamarin.PathHelpers.Glob.Expand
+  nameWithType: PathHelpers.Glob.Expand
+- uid: Xamarin.PathHelpers.Glob.ShellExpand(System.String)
+  name: ShellExpand(String)
+  href: api/Xamarin.PathHelpers.Glob.html#Xamarin_PathHelpers_Glob_ShellExpand_System_String_
+  commentId: M:Xamarin.PathHelpers.Glob.ShellExpand(System.String)
+  fullName: Xamarin.PathHelpers.Glob.ShellExpand(System.String)
+  nameWithType: PathHelpers.Glob.ShellExpand(String)
+- uid: Xamarin.PathHelpers.Glob.ShellExpand*
+  name: ShellExpand
+  href: api/Xamarin.PathHelpers.Glob.html#Xamarin_PathHelpers_Glob_ShellExpand_
+  commentId: Overload:Xamarin.PathHelpers.Glob.ShellExpand
+  isSpec: "True"
+  fullName: Xamarin.PathHelpers.Glob.ShellExpand
+  nameWithType: PathHelpers.Glob.ShellExpand
 - uid: Xamarin.PathHelpers.MakeRelativePath(System.String,System.String)
   name: MakeRelativePath(String, String)
   href: api/Xamarin.PathHelpers.html#Xamarin_PathHelpers_MakeRelativePath_System_String_System_String_
@@ -1583,13 +1602,13 @@ references:
   commentId: T:Xamarin.ProcessControl.ConsoleRedirection
   fullName: Xamarin.ProcessControl.ConsoleRedirection
   nameWithType: ConsoleRedirection
-- uid: Xamarin.ProcessControl.ConsoleRedirection.#ctor(System.Action{Xamarin.ProcessControl.ConsoleRedirection.Segment})
+- uid: Xamarin.ProcessControl.ConsoleRedirection.#ctor(Action{Xamarin.ProcessControl.ConsoleRedirection.Segment})
   name: ConsoleRedirection(Action<ConsoleRedirection.Segment>)
-  href: api/Xamarin.ProcessControl.ConsoleRedirection.html#Xamarin_ProcessControl_ConsoleRedirection__ctor_System_Action_Xamarin_ProcessControl_ConsoleRedirection_Segment__
-  commentId: M:Xamarin.ProcessControl.ConsoleRedirection.#ctor(System.Action{Xamarin.ProcessControl.ConsoleRedirection.Segment})
+  href: api/Xamarin.ProcessControl.ConsoleRedirection.html#Xamarin_ProcessControl_ConsoleRedirection__ctor_Action_Xamarin_ProcessControl_ConsoleRedirection_Segment__
+  commentId: M:Xamarin.ProcessControl.ConsoleRedirection.#ctor(Action{Xamarin.ProcessControl.ConsoleRedirection.Segment})
   name.vb: ConsoleRedirection(Action(Of ConsoleRedirection.Segment))
-  fullName: Xamarin.ProcessControl.ConsoleRedirection.ConsoleRedirection(System.Action<Xamarin.ProcessControl.ConsoleRedirection.Segment>)
-  fullName.vb: Xamarin.ProcessControl.ConsoleRedirection.ConsoleRedirection(System.Action(Of Xamarin.ProcessControl.ConsoleRedirection.Segment))
+  fullName: Xamarin.ProcessControl.ConsoleRedirection.ConsoleRedirection(Action<Xamarin.ProcessControl.ConsoleRedirection.Segment>)
+  fullName.vb: Xamarin.ProcessControl.ConsoleRedirection.ConsoleRedirection(Action(Of Xamarin.ProcessControl.ConsoleRedirection.Segment))
   nameWithType: ConsoleRedirection.ConsoleRedirection(Action<ConsoleRedirection.Segment>)
   nameWithType.vb: ConsoleRedirection.ConsoleRedirection(Action(Of ConsoleRedirection.Segment))
 - uid: Xamarin.ProcessControl.ConsoleRedirection.#ctor*
@@ -1715,11 +1734,11 @@ references:
   isSpec: "True"
   fullName: Xamarin.ProcessControl.ConsoleRedirection.SegmentCollection.ToString
   nameWithType: ConsoleRedirection.SegmentCollection.ToString
-- uid: Xamarin.ProcessControl.ConsoleRedirection.SegmentCollection.Write(System.IO.TextWriter,Xamarin.ProcessControl.ConsoleRedirection.FileDescriptor)
+- uid: Xamarin.ProcessControl.ConsoleRedirection.SegmentCollection.Write(TextWriter,Xamarin.ProcessControl.ConsoleRedirection.FileDescriptor)
   name: Write(TextWriter, ConsoleRedirection.FileDescriptor)
-  href: api/Xamarin.ProcessControl.ConsoleRedirection.SegmentCollection.html#Xamarin_ProcessControl_ConsoleRedirection_SegmentCollection_Write_System_IO_TextWriter_Xamarin_ProcessControl_ConsoleRedirection_FileDescriptor_
-  commentId: M:Xamarin.ProcessControl.ConsoleRedirection.SegmentCollection.Write(System.IO.TextWriter,Xamarin.ProcessControl.ConsoleRedirection.FileDescriptor)
-  fullName: Xamarin.ProcessControl.ConsoleRedirection.SegmentCollection.Write(System.IO.TextWriter, Xamarin.ProcessControl.ConsoleRedirection.FileDescriptor)
+  href: api/Xamarin.ProcessControl.ConsoleRedirection.SegmentCollection.html#Xamarin_ProcessControl_ConsoleRedirection_SegmentCollection_Write_TextWriter_Xamarin_ProcessControl_ConsoleRedirection_FileDescriptor_
+  commentId: M:Xamarin.ProcessControl.ConsoleRedirection.SegmentCollection.Write(TextWriter,Xamarin.ProcessControl.ConsoleRedirection.FileDescriptor)
+  fullName: Xamarin.ProcessControl.ConsoleRedirection.SegmentCollection.Write(TextWriter, Xamarin.ProcessControl.ConsoleRedirection.FileDescriptor)
   nameWithType: ConsoleRedirection.SegmentCollection.Write(TextWriter, ConsoleRedirection.FileDescriptor)
 - uid: Xamarin.ProcessControl.ConsoleRedirection.SegmentCollection.Write*
   name: Write
@@ -1773,22 +1792,22 @@ references:
   commentId: T:Xamarin.ProcessControl.Exec
   fullName: Xamarin.ProcessControl.Exec
   nameWithType: Exec
-- uid: Xamarin.ProcessControl.Exec.#ctor(Xamarin.ProcessControl.ProcessArguments,Xamarin.ProcessControl.ExecFlags,System.Action{Xamarin.ProcessControl.ConsoleRedirection.Segment},System.Action{System.IO.StreamWriter},System.String,Xamarin.ProcessControl.Exec.ProcessRunnerHandler)
+- uid: Xamarin.ProcessControl.Exec.#ctor(Xamarin.ProcessControl.ProcessArguments,Xamarin.ProcessControl.ExecFlags,Action{Xamarin.ProcessControl.ConsoleRedirection.Segment},Action{StreamWriter},System.String,Xamarin.ProcessControl.Exec.ProcessRunnerHandler)
   name: Exec(ProcessArguments, ExecFlags, Action<ConsoleRedirection.Segment>, Action<StreamWriter>, String, Exec.ProcessRunnerHandler)
-  href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec__ctor_Xamarin_ProcessControl_ProcessArguments_Xamarin_ProcessControl_ExecFlags_System_Action_Xamarin_ProcessControl_ConsoleRedirection_Segment__System_Action_System_IO_StreamWriter__System_String_Xamarin_ProcessControl_Exec_ProcessRunnerHandler_
-  commentId: M:Xamarin.ProcessControl.Exec.#ctor(Xamarin.ProcessControl.ProcessArguments,Xamarin.ProcessControl.ExecFlags,System.Action{Xamarin.ProcessControl.ConsoleRedirection.Segment},System.Action{System.IO.StreamWriter},System.String,Xamarin.ProcessControl.Exec.ProcessRunnerHandler)
+  href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec__ctor_Xamarin_ProcessControl_ProcessArguments_Xamarin_ProcessControl_ExecFlags_Action_Xamarin_ProcessControl_ConsoleRedirection_Segment__Action_StreamWriter__System_String_Xamarin_ProcessControl_Exec_ProcessRunnerHandler_
+  commentId: M:Xamarin.ProcessControl.Exec.#ctor(Xamarin.ProcessControl.ProcessArguments,Xamarin.ProcessControl.ExecFlags,Action{Xamarin.ProcessControl.ConsoleRedirection.Segment},Action{StreamWriter},System.String,Xamarin.ProcessControl.Exec.ProcessRunnerHandler)
   name.vb: Exec(ProcessArguments, ExecFlags, Action(Of ConsoleRedirection.Segment), Action(Of StreamWriter), String, Exec.ProcessRunnerHandler)
-  fullName: Xamarin.ProcessControl.Exec.Exec(Xamarin.ProcessControl.ProcessArguments, Xamarin.ProcessControl.ExecFlags, System.Action<Xamarin.ProcessControl.ConsoleRedirection.Segment>, System.Action<System.IO.StreamWriter>, System.String, Xamarin.ProcessControl.Exec.ProcessRunnerHandler)
-  fullName.vb: Xamarin.ProcessControl.Exec.Exec(Xamarin.ProcessControl.ProcessArguments, Xamarin.ProcessControl.ExecFlags, System.Action(Of Xamarin.ProcessControl.ConsoleRedirection.Segment), System.Action(Of System.IO.StreamWriter), System.String, Xamarin.ProcessControl.Exec.ProcessRunnerHandler)
+  fullName: Xamarin.ProcessControl.Exec.Exec(Xamarin.ProcessControl.ProcessArguments, Xamarin.ProcessControl.ExecFlags, Action<Xamarin.ProcessControl.ConsoleRedirection.Segment>, Action<StreamWriter>, System.String, Xamarin.ProcessControl.Exec.ProcessRunnerHandler)
+  fullName.vb: Xamarin.ProcessControl.Exec.Exec(Xamarin.ProcessControl.ProcessArguments, Xamarin.ProcessControl.ExecFlags, Action(Of Xamarin.ProcessControl.ConsoleRedirection.Segment), Action(Of StreamWriter), System.String, Xamarin.ProcessControl.Exec.ProcessRunnerHandler)
   nameWithType: Exec.Exec(ProcessArguments, ExecFlags, Action<ConsoleRedirection.Segment>, Action<StreamWriter>, String, Exec.ProcessRunnerHandler)
   nameWithType.vb: Exec.Exec(ProcessArguments, ExecFlags, Action(Of ConsoleRedirection.Segment), Action(Of StreamWriter), String, Exec.ProcessRunnerHandler)
-- uid: Xamarin.ProcessControl.Exec.#ctor(Xamarin.ProcessControl.ProcessArguments,Xamarin.ProcessControl.ExecFlags,Xamarin.ProcessControl.ConsoleRedirection,System.Action{System.IO.StreamWriter},System.String,Xamarin.ProcessControl.Exec.ProcessRunnerHandler)
+- uid: Xamarin.ProcessControl.Exec.#ctor(Xamarin.ProcessControl.ProcessArguments,Xamarin.ProcessControl.ExecFlags,Xamarin.ProcessControl.ConsoleRedirection,Action{StreamWriter},System.String,Xamarin.ProcessControl.Exec.ProcessRunnerHandler)
   name: Exec(ProcessArguments, ExecFlags, ConsoleRedirection, Action<StreamWriter>, String, Exec.ProcessRunnerHandler)
-  href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec__ctor_Xamarin_ProcessControl_ProcessArguments_Xamarin_ProcessControl_ExecFlags_Xamarin_ProcessControl_ConsoleRedirection_System_Action_System_IO_StreamWriter__System_String_Xamarin_ProcessControl_Exec_ProcessRunnerHandler_
-  commentId: M:Xamarin.ProcessControl.Exec.#ctor(Xamarin.ProcessControl.ProcessArguments,Xamarin.ProcessControl.ExecFlags,Xamarin.ProcessControl.ConsoleRedirection,System.Action{System.IO.StreamWriter},System.String,Xamarin.ProcessControl.Exec.ProcessRunnerHandler)
+  href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec__ctor_Xamarin_ProcessControl_ProcessArguments_Xamarin_ProcessControl_ExecFlags_Xamarin_ProcessControl_ConsoleRedirection_Action_StreamWriter__System_String_Xamarin_ProcessControl_Exec_ProcessRunnerHandler_
+  commentId: M:Xamarin.ProcessControl.Exec.#ctor(Xamarin.ProcessControl.ProcessArguments,Xamarin.ProcessControl.ExecFlags,Xamarin.ProcessControl.ConsoleRedirection,Action{StreamWriter},System.String,Xamarin.ProcessControl.Exec.ProcessRunnerHandler)
   name.vb: Exec(ProcessArguments, ExecFlags, ConsoleRedirection, Action(Of StreamWriter), String, Exec.ProcessRunnerHandler)
-  fullName: Xamarin.ProcessControl.Exec.Exec(Xamarin.ProcessControl.ProcessArguments, Xamarin.ProcessControl.ExecFlags, Xamarin.ProcessControl.ConsoleRedirection, System.Action<System.IO.StreamWriter>, System.String, Xamarin.ProcessControl.Exec.ProcessRunnerHandler)
-  fullName.vb: Xamarin.ProcessControl.Exec.Exec(Xamarin.ProcessControl.ProcessArguments, Xamarin.ProcessControl.ExecFlags, Xamarin.ProcessControl.ConsoleRedirection, System.Action(Of System.IO.StreamWriter), System.String, Xamarin.ProcessControl.Exec.ProcessRunnerHandler)
+  fullName: Xamarin.ProcessControl.Exec.Exec(Xamarin.ProcessControl.ProcessArguments, Xamarin.ProcessControl.ExecFlags, Xamarin.ProcessControl.ConsoleRedirection, Action<StreamWriter>, System.String, Xamarin.ProcessControl.Exec.ProcessRunnerHandler)
+  fullName.vb: Xamarin.ProcessControl.Exec.Exec(Xamarin.ProcessControl.ProcessArguments, Xamarin.ProcessControl.ExecFlags, Xamarin.ProcessControl.ConsoleRedirection, Action(Of StreamWriter), System.String, Xamarin.ProcessControl.Exec.ProcessRunnerHandler)
   nameWithType: Exec.Exec(ProcessArguments, ExecFlags, ConsoleRedirection, Action<StreamWriter>, String, Exec.ProcessRunnerHandler)
   nameWithType.vb: Exec.Exec(ProcessArguments, ExecFlags, ConsoleRedirection, Action(Of StreamWriter), String, Exec.ProcessRunnerHandler)
 - uid: Xamarin.ProcessControl.Exec.#ctor*
@@ -1869,6 +1888,32 @@ references:
   isSpec: "True"
   fullName: Xamarin.ProcessControl.Exec.ExecLog.Flags
   nameWithType: Exec.ExecLog.Flags
+- uid: Xamarin.ProcessControl.Exec.ExecLog.Message
+  name: Message
+  href: api/Xamarin.ProcessControl.Exec.ExecLog.html#Xamarin_ProcessControl_Exec_ExecLog_Message
+  commentId: P:Xamarin.ProcessControl.Exec.ExecLog.Message
+  fullName: Xamarin.ProcessControl.Exec.ExecLog.Message
+  nameWithType: Exec.ExecLog.Message
+- uid: Xamarin.ProcessControl.Exec.ExecLog.Message*
+  name: Message
+  href: api/Xamarin.ProcessControl.Exec.ExecLog.html#Xamarin_ProcessControl_Exec_ExecLog_Message_
+  commentId: Overload:Xamarin.ProcessControl.Exec.ExecLog.Message
+  isSpec: "True"
+  fullName: Xamarin.ProcessControl.Exec.ExecLog.Message
+  nameWithType: Exec.ExecLog.Message
+- uid: Xamarin.ProcessControl.Exec.ExecLog.WithMessage(System.String)
+  name: WithMessage(String)
+  href: api/Xamarin.ProcessControl.Exec.ExecLog.html#Xamarin_ProcessControl_Exec_ExecLog_WithMessage_System_String_
+  commentId: M:Xamarin.ProcessControl.Exec.ExecLog.WithMessage(System.String)
+  fullName: Xamarin.ProcessControl.Exec.ExecLog.WithMessage(System.String)
+  nameWithType: Exec.ExecLog.WithMessage(String)
+- uid: Xamarin.ProcessControl.Exec.ExecLog.WithMessage*
+  name: WithMessage
+  href: api/Xamarin.ProcessControl.Exec.ExecLog.html#Xamarin_ProcessControl_Exec_ExecLog_WithMessage_
+  commentId: Overload:Xamarin.ProcessControl.Exec.ExecLog.WithMessage
+  isSpec: "True"
+  fullName: Xamarin.ProcessControl.Exec.ExecLog.WithMessage
+  nameWithType: Exec.ExecLog.WithMessage
 - uid: Xamarin.ProcessControl.Exec.ExitException
   name: Exec.ExitException
   href: api/Xamarin.ProcessControl.Exec.ExitException.html
@@ -2009,22 +2054,22 @@ references:
   commentId: M:Xamarin.ProcessControl.Exec.RunAsync
   fullName: Xamarin.ProcessControl.Exec.RunAsync()
   nameWithType: Exec.RunAsync()
-- uid: Xamarin.ProcessControl.Exec.RunAsync(System.Action{Xamarin.ProcessControl.ConsoleRedirection.Segment},System.String,System.String[])
+- uid: Xamarin.ProcessControl.Exec.RunAsync(Action{Xamarin.ProcessControl.ConsoleRedirection.Segment},System.String,System.String[])
   name: RunAsync(Action<ConsoleRedirection.Segment>, String, String[])
-  href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_RunAsync_System_Action_Xamarin_ProcessControl_ConsoleRedirection_Segment__System_String_System_String___
-  commentId: M:Xamarin.ProcessControl.Exec.RunAsync(System.Action{Xamarin.ProcessControl.ConsoleRedirection.Segment},System.String,System.String[])
+  href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_RunAsync_Action_Xamarin_ProcessControl_ConsoleRedirection_Segment__System_String_System_String___
+  commentId: M:Xamarin.ProcessControl.Exec.RunAsync(Action{Xamarin.ProcessControl.ConsoleRedirection.Segment},System.String,System.String[])
   name.vb: RunAsync(Action(Of ConsoleRedirection.Segment), String, String())
-  fullName: Xamarin.ProcessControl.Exec.RunAsync(System.Action<Xamarin.ProcessControl.ConsoleRedirection.Segment>, System.String, System.String[])
-  fullName.vb: Xamarin.ProcessControl.Exec.RunAsync(System.Action(Of Xamarin.ProcessControl.ConsoleRedirection.Segment), System.String, System.String())
+  fullName: Xamarin.ProcessControl.Exec.RunAsync(Action<Xamarin.ProcessControl.ConsoleRedirection.Segment>, System.String, System.String[])
+  fullName.vb: Xamarin.ProcessControl.Exec.RunAsync(Action(Of Xamarin.ProcessControl.ConsoleRedirection.Segment), System.String, System.String())
   nameWithType: Exec.RunAsync(Action<ConsoleRedirection.Segment>, String, String[])
   nameWithType.vb: Exec.RunAsync(Action(Of ConsoleRedirection.Segment), String, String())
-- uid: Xamarin.ProcessControl.Exec.RunAsync(Xamarin.ProcessControl.ExecFlags,System.Action{Xamarin.ProcessControl.ConsoleRedirection.Segment},System.String,System.String[])
+- uid: Xamarin.ProcessControl.Exec.RunAsync(Xamarin.ProcessControl.ExecFlags,Action{Xamarin.ProcessControl.ConsoleRedirection.Segment},System.String,System.String[])
   name: RunAsync(ExecFlags, Action<ConsoleRedirection.Segment>, String, String[])
-  href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_RunAsync_Xamarin_ProcessControl_ExecFlags_System_Action_Xamarin_ProcessControl_ConsoleRedirection_Segment__System_String_System_String___
-  commentId: M:Xamarin.ProcessControl.Exec.RunAsync(Xamarin.ProcessControl.ExecFlags,System.Action{Xamarin.ProcessControl.ConsoleRedirection.Segment},System.String,System.String[])
+  href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_RunAsync_Xamarin_ProcessControl_ExecFlags_Action_Xamarin_ProcessControl_ConsoleRedirection_Segment__System_String_System_String___
+  commentId: M:Xamarin.ProcessControl.Exec.RunAsync(Xamarin.ProcessControl.ExecFlags,Action{Xamarin.ProcessControl.ConsoleRedirection.Segment},System.String,System.String[])
   name.vb: RunAsync(ExecFlags, Action(Of ConsoleRedirection.Segment), String, String())
-  fullName: Xamarin.ProcessControl.Exec.RunAsync(Xamarin.ProcessControl.ExecFlags, System.Action<Xamarin.ProcessControl.ConsoleRedirection.Segment>, System.String, System.String[])
-  fullName.vb: Xamarin.ProcessControl.Exec.RunAsync(Xamarin.ProcessControl.ExecFlags, System.Action(Of Xamarin.ProcessControl.ConsoleRedirection.Segment), System.String, System.String())
+  fullName: Xamarin.ProcessControl.Exec.RunAsync(Xamarin.ProcessControl.ExecFlags, Action<Xamarin.ProcessControl.ConsoleRedirection.Segment>, System.String, System.String[])
+  fullName.vb: Xamarin.ProcessControl.Exec.RunAsync(Xamarin.ProcessControl.ExecFlags, Action(Of Xamarin.ProcessControl.ConsoleRedirection.Segment), System.String, System.String())
   nameWithType: Exec.RunAsync(ExecFlags, Action<ConsoleRedirection.Segment>, String, String[])
   nameWithType.vb: Exec.RunAsync(ExecFlags, Action(Of ConsoleRedirection.Segment), String, String())
 - uid: Xamarin.ProcessControl.Exec.RunAsync*
@@ -2114,13 +2159,13 @@ references:
   isSpec: "True"
   fullName: Xamarin.ProcessControl.ProcessArguments.Add
   nameWithType: ProcessArguments.Add
-- uid: Xamarin.ProcessControl.ProcessArguments.AddRange(System.Collections.Generic.IEnumerable{System.String})
+- uid: Xamarin.ProcessControl.ProcessArguments.AddRange(IEnumerable{System.String})
   name: AddRange(IEnumerable<String>)
-  href: api/Xamarin.ProcessControl.ProcessArguments.html#Xamarin_ProcessControl_ProcessArguments_AddRange_System_Collections_Generic_IEnumerable_System_String__
-  commentId: M:Xamarin.ProcessControl.ProcessArguments.AddRange(System.Collections.Generic.IEnumerable{System.String})
+  href: api/Xamarin.ProcessControl.ProcessArguments.html#Xamarin_ProcessControl_ProcessArguments_AddRange_IEnumerable_System_String__
+  commentId: M:Xamarin.ProcessControl.ProcessArguments.AddRange(IEnumerable{System.String})
   name.vb: AddRange(IEnumerable(Of String))
-  fullName: Xamarin.ProcessControl.ProcessArguments.AddRange(System.Collections.Generic.IEnumerable<System.String>)
-  fullName.vb: Xamarin.ProcessControl.ProcessArguments.AddRange(System.Collections.Generic.IEnumerable(Of System.String))
+  fullName: Xamarin.ProcessControl.ProcessArguments.AddRange(IEnumerable<System.String>)
+  fullName.vb: Xamarin.ProcessControl.ProcessArguments.AddRange(IEnumerable(Of System.String))
   nameWithType: ProcessArguments.AddRange(IEnumerable<String>)
   nameWithType.vb: ProcessArguments.AddRange(IEnumerable(Of String))
 - uid: Xamarin.ProcessControl.ProcessArguments.AddRange(System.String[])
@@ -2152,13 +2197,13 @@ references:
   isSpec: "True"
   fullName: Xamarin.ProcessControl.ProcessArguments.Count
   nameWithType: ProcessArguments.Count
-- uid: Xamarin.ProcessControl.ProcessArguments.Create(System.Collections.Generic.IEnumerable{System.String})
+- uid: Xamarin.ProcessControl.ProcessArguments.Create(IEnumerable{System.String})
   name: Create(IEnumerable<String>)
-  href: api/Xamarin.ProcessControl.ProcessArguments.html#Xamarin_ProcessControl_ProcessArguments_Create_System_Collections_Generic_IEnumerable_System_String__
-  commentId: M:Xamarin.ProcessControl.ProcessArguments.Create(System.Collections.Generic.IEnumerable{System.String})
+  href: api/Xamarin.ProcessControl.ProcessArguments.html#Xamarin_ProcessControl_ProcessArguments_Create_IEnumerable_System_String__
+  commentId: M:Xamarin.ProcessControl.ProcessArguments.Create(IEnumerable{System.String})
   name.vb: Create(IEnumerable(Of String))
-  fullName: Xamarin.ProcessControl.ProcessArguments.Create(System.Collections.Generic.IEnumerable<System.String>)
-  fullName.vb: Xamarin.ProcessControl.ProcessArguments.Create(System.Collections.Generic.IEnumerable(Of System.String))
+  fullName: Xamarin.ProcessControl.ProcessArguments.Create(IEnumerable<System.String>)
+  fullName.vb: Xamarin.ProcessControl.ProcessArguments.Create(IEnumerable(Of System.String))
   nameWithType: ProcessArguments.Create(IEnumerable<String>)
   nameWithType.vb: ProcessArguments.Create(IEnumerable(Of String))
 - uid: Xamarin.ProcessControl.ProcessArguments.Create(System.String[])
@@ -2183,13 +2228,13 @@ references:
   commentId: F:Xamarin.ProcessControl.ProcessArguments.Empty
   fullName: Xamarin.ProcessControl.ProcessArguments.Empty
   nameWithType: ProcessArguments.Empty
-- uid: Xamarin.ProcessControl.ProcessArguments.FromCommandAndArguments(System.String,System.Collections.Generic.IEnumerable{System.String})
+- uid: Xamarin.ProcessControl.ProcessArguments.FromCommandAndArguments(System.String,IEnumerable{System.String})
   name: FromCommandAndArguments(String, IEnumerable<String>)
-  href: api/Xamarin.ProcessControl.ProcessArguments.html#Xamarin_ProcessControl_ProcessArguments_FromCommandAndArguments_System_String_System_Collections_Generic_IEnumerable_System_String__
-  commentId: M:Xamarin.ProcessControl.ProcessArguments.FromCommandAndArguments(System.String,System.Collections.Generic.IEnumerable{System.String})
+  href: api/Xamarin.ProcessControl.ProcessArguments.html#Xamarin_ProcessControl_ProcessArguments_FromCommandAndArguments_System_String_IEnumerable_System_String__
+  commentId: M:Xamarin.ProcessControl.ProcessArguments.FromCommandAndArguments(System.String,IEnumerable{System.String})
   name.vb: FromCommandAndArguments(String, IEnumerable(Of String))
-  fullName: Xamarin.ProcessControl.ProcessArguments.FromCommandAndArguments(System.String, System.Collections.Generic.IEnumerable<System.String>)
-  fullName.vb: Xamarin.ProcessControl.ProcessArguments.FromCommandAndArguments(System.String, System.Collections.Generic.IEnumerable(Of System.String))
+  fullName: Xamarin.ProcessControl.ProcessArguments.FromCommandAndArguments(System.String, IEnumerable<System.String>)
+  fullName.vb: Xamarin.ProcessControl.ProcessArguments.FromCommandAndArguments(System.String, IEnumerable(Of System.String))
   nameWithType: ProcessArguments.FromCommandAndArguments(String, IEnumerable<String>)
   nameWithType.vb: ProcessArguments.FromCommandAndArguments(String, IEnumerable(Of String))
 - uid: Xamarin.ProcessControl.ProcessArguments.FromCommandAndArguments*
@@ -2225,13 +2270,13 @@ references:
   isSpec: "True"
   fullName: Xamarin.ProcessControl.ProcessArguments.Insert
   nameWithType: ProcessArguments.Insert
-- uid: Xamarin.ProcessControl.ProcessArguments.InsertRange(System.Int32,System.Collections.Generic.IEnumerable{System.String})
+- uid: Xamarin.ProcessControl.ProcessArguments.InsertRange(System.Int32,IEnumerable{System.String})
   name: InsertRange(Int32, IEnumerable<String>)
-  href: api/Xamarin.ProcessControl.ProcessArguments.html#Xamarin_ProcessControl_ProcessArguments_InsertRange_System_Int32_System_Collections_Generic_IEnumerable_System_String__
-  commentId: M:Xamarin.ProcessControl.ProcessArguments.InsertRange(System.Int32,System.Collections.Generic.IEnumerable{System.String})
+  href: api/Xamarin.ProcessControl.ProcessArguments.html#Xamarin_ProcessControl_ProcessArguments_InsertRange_System_Int32_IEnumerable_System_String__
+  commentId: M:Xamarin.ProcessControl.ProcessArguments.InsertRange(System.Int32,IEnumerable{System.String})
   name.vb: InsertRange(Int32, IEnumerable(Of String))
-  fullName: Xamarin.ProcessControl.ProcessArguments.InsertRange(System.Int32, System.Collections.Generic.IEnumerable<System.String>)
-  fullName.vb: Xamarin.ProcessControl.ProcessArguments.InsertRange(System.Int32, System.Collections.Generic.IEnumerable(Of System.String))
+  fullName: Xamarin.ProcessControl.ProcessArguments.InsertRange(System.Int32, IEnumerable<System.String>)
+  fullName.vb: Xamarin.ProcessControl.ProcessArguments.InsertRange(System.Int32, IEnumerable(Of System.String))
   nameWithType: ProcessArguments.InsertRange(Int32, IEnumerable<String>)
   nameWithType.vb: ProcessArguments.InsertRange(Int32, IEnumerable(Of String))
 - uid: Xamarin.ProcessControl.ProcessArguments.InsertRange(System.Int32,System.String[])
@@ -2292,23 +2337,6 @@ references:
   isSpec: "True"
   fullName: Xamarin.ProcessControl.ProcessArguments.Quote
   nameWithType: ProcessArguments.Quote
-- uid: Xamarin.ProcessControl.ProcessArguments.System#Collections#IEnumerable#GetEnumerator
-  name: IEnumerable.GetEnumerator()
-  href: api/Xamarin.ProcessControl.ProcessArguments.html#Xamarin_ProcessControl_ProcessArguments_System_Collections_IEnumerable_GetEnumerator
-  commentId: M:Xamarin.ProcessControl.ProcessArguments.System#Collections#IEnumerable#GetEnumerator
-  name.vb: System.Collections.IEnumerable.GetEnumerator()
-  fullName: Xamarin.ProcessControl.ProcessArguments.System.Collections.IEnumerable.GetEnumerator()
-  nameWithType: ProcessArguments.IEnumerable.GetEnumerator()
-  nameWithType.vb: ProcessArguments.System.Collections.IEnumerable.GetEnumerator()
-- uid: Xamarin.ProcessControl.ProcessArguments.System#Collections#IEnumerable#GetEnumerator*
-  name: IEnumerable.GetEnumerator
-  href: api/Xamarin.ProcessControl.ProcessArguments.html#Xamarin_ProcessControl_ProcessArguments_System_Collections_IEnumerable_GetEnumerator_
-  commentId: Overload:Xamarin.ProcessControl.ProcessArguments.System#Collections#IEnumerable#GetEnumerator
-  isSpec: "True"
-  name.vb: System.Collections.IEnumerable.GetEnumerator
-  fullName: Xamarin.ProcessControl.ProcessArguments.System.Collections.IEnumerable.GetEnumerator
-  nameWithType: ProcessArguments.IEnumerable.GetEnumerator
-  nameWithType.vb: ProcessArguments.System.Collections.IEnumerable.GetEnumerator
 - uid: Xamarin.ProcessControl.ProcessArguments.ToString
   name: ToString()
   href: api/Xamarin.ProcessControl.ProcessArguments.html#Xamarin_ProcessControl_ProcessArguments_ToString
