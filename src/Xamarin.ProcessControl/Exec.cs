@@ -21,40 +21,15 @@ namespace Xamarin.ProcessControl
 
     public sealed class Exec
     {
-        public sealed class ExecLog : EventArgs
-        {
-            public int ExecId { get; }
-            public ExecFlags Flags { get; }
-            public ProcessArguments Arguments { get; }
-            public int? ExitCode { get; }
-            public string Message { get; }
+        static readonly bool isWindows = RuntimeInformation.IsOSPlatform (OSPlatform.Windows);
 
-            internal ExecLog (
-                int execId,
-                ExecFlags flags,
-                ProcessArguments arguments,
-                int? exitCode = null,
-                string message = null)
-            {
-                ExecId = execId;
-                Flags = flags;
-                Arguments = arguments;
-                ExitCode = exitCode;
-                Message = message;
-            }
-
-            public ExecLog WithMessage (string message)
-                => new ExecLog (
-                    ExecId,
-                    Flags,
-                    Arguments,
-                    ExitCode,
-                    message);
-        }
+        [DllImport ("libc")]
+        static extern uint geteuid ();
 
         public delegate Task<int> ProcessRunnerHandler (ProcessArguments arguments, Process process);
 
-        public static event EventHandler<ExecLog> Log;
+        public static event Action<Exec> Started;
+        public static event Action<Exec> Ended;
 
         static volatile int lastId;
 
@@ -66,24 +41,10 @@ namespace Xamarin.ProcessControl
         public ExecFlags Flags { get; }
         public string WorkingDirectory { get; }
 
-        public ProcessRunnerHandler ProcessRunner { get; }
+        public bool Elevated { get; }
+        public int? ExitCode { get; private set; }
 
-        public Exec (
-            ProcessArguments arguments,
-            ExecFlags flags = None,
-            Action<ConsoleRedirection.Segment> outputHandler = null,
-            Action<StreamWriter> inputHandler = null,
-            string workingDirectory = null,
-            ProcessRunnerHandler processRunner = null)
-            : this (
-                arguments,
-                flags,
-                outputHandler == null ? null : new ConsoleRedirection (outputHandler),
-                inputHandler,
-                workingDirectory,
-                processRunner)
-        {
-        }
+        public ProcessRunnerHandler ProcessRunner { get; }
 
         public Exec (
             ProcessArguments arguments,
@@ -101,8 +62,26 @@ namespace Xamarin.ProcessControl
                     "must have at least one argument (the file name to execute)");
 
             Flags = flags;
+            Elevated = flags.HasFlag (Elevate);
             InputHandler = inputHandler;
             OutputRedirection = outputRedirection;
+
+            if (isWindows) {
+                // Ignore elevation flag if we are already running in the Administrator role
+                var identity = WindowsIdentity.GetCurrent ();
+                if (identity != null && new WindowsPrincipal (identity).IsInRole (WindowsBuiltInRole.Administrator))
+                    Elevated = false;
+            } else {
+                if (Path.GetExtension (arguments [0]) == ".exe")
+                    Arguments = Arguments.Insert (0, "mono");
+
+                if (Elevated) {
+                    if (geteuid () == 0)
+                        Elevated = false;
+                    else
+                        Arguments = Arguments.Insert (0, "/usr/bin/sudo");
+                }
+            }
 
             if (Flags.HasFlag (RedirectStdin) && InputHandler == null)
                 throw new ArgumentException (
@@ -141,48 +120,23 @@ namespace Xamarin.ProcessControl
             }
         }
 
-        static readonly bool isWindows = RuntimeInformation.IsOSPlatform (OSPlatform.Windows);
-
         public async Task RunAsync ()
         {
-            var arguments = Arguments;
-
-            if (!isWindows) {
-                if (Path.GetExtension (arguments [0]) == ".exe")
-                    arguments = arguments.Insert (0, "mono");
-
-                if (Flags.HasFlag (Elevate))
-                    arguments = arguments.Insert (0, "/usr/bin/sudo");
-            }
-
             var proc = new Process {
                 StartInfo = new ProcessStartInfo {
-                    FileName = arguments [0],
+                    FileName = Arguments [0],
                     Arguments = string.Join (
                         " ",
-                        arguments.Skip (1).Select (ProcessArguments.Quote)),
+                        Arguments.Skip (1).Select (ProcessArguments.Quote)),
                     UseShellExecute = false,
                     CreateNoWindow = true,
                     WorkingDirectory = WorkingDirectory
                 }
             };
 
-            var logEntry = new ExecLog (id, Flags, arguments);
-            Log?.Invoke (null, logEntry);
-
-            if (isWindows && Flags.HasFlag (Elevate)) {
-                // Check if we are not already running as administrator
-                var identity = WindowsIdentity.GetCurrent ();
-                if (identity == null || !new WindowsPrincipal (identity).IsInRole (WindowsBuiltInRole.Administrator)) {
-                    Log?.Invoke (null, logEntry.WithMessage (
-                        "Elevating process as current user is not in the Administrator role."));
-                    proc.StartInfo.UseShellExecute = true;
-                    proc.StartInfo.Verb = "runas";
-                } else {
-                    Log?.Invoke (null, logEntry.WithMessage (
-                        $"Ignoring {nameof (ExecFlags)}.{nameof (Elevate)}: " +
-                        "current user is already in the Administrator role."));
-                }
+            if (isWindows && Elevated) {
+                proc.StartInfo.UseShellExecute = true;
+                proc.StartInfo.Verb = "runas";
             } else {
                 proc.StartInfo.RedirectStandardInput = Flags.HasFlag (RedirectStdin);
                 proc.StartInfo.RedirectStandardOutput = Flags.HasFlag (RedirectStdout);
@@ -211,9 +165,12 @@ namespace Xamarin.ProcessControl
                     writer.Write (data);
             }
 
-            var exitCode = await ProcessRunner (arguments, proc).ConfigureAwait (false);
-            if (exitCode != 0)
-                throw new ExitException (this, exitCode);
+            Started?.Invoke (this);
+            ExitCode = await ProcessRunner (Arguments, proc).ConfigureAwait (false);
+            Ended?.Invoke (this);
+
+            if (ExitCode.Value != 0)
+                throw new ExitException (this, ExitCode.Value);
         }
 
         Task<int> DefaultProcessRunner (ProcessArguments arguments, Process proc)
@@ -233,8 +190,6 @@ namespace Xamarin.ProcessControl
                     InputHandler?.Invoke (proc.StandardInput);
 
                     proc.WaitForExit ();
-
-                    Log?.Invoke (null, new ExecLog (id, Flags, arguments, proc.ExitCode));
 
                     tcs.SetResult (proc.ExitCode);
                 } catch (Exception e) {
@@ -263,7 +218,7 @@ namespace Xamarin.ProcessControl
             => new Exec (
                 ProcessArguments.FromCommandAndArguments (command, arguments),
                 flags | RedirectStdout | RedirectStderr,
-                outputHandler).RunAsync ();
+                new ConsoleRedirection (outputHandler)).RunAsync ();
 
         public static IReadOnlyList<string> Run (
             string command,
@@ -280,7 +235,7 @@ namespace Xamarin.ProcessControl
             new Exec (
                 ProcessArguments.FromCommandAndArguments (command, arguments),
                 flags | RedirectStdout | RedirectStderr,
-                segment => lines.Add (segment.Data.TrimEnd ('\r', '\n')))
+                new ConsoleRedirection (segment => lines.Add (segment.Data.TrimEnd ('\r', '\n'))))
                 .RunAsync ()
                 .GetAwaiter ()
                 .GetResult ();

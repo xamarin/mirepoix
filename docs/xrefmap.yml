@@ -1792,15 +1792,6 @@ references:
   commentId: T:Xamarin.ProcessControl.Exec
   fullName: Xamarin.ProcessControl.Exec
   nameWithType: Exec
-- uid: Xamarin.ProcessControl.Exec.#ctor(Xamarin.ProcessControl.ProcessArguments,Xamarin.ProcessControl.ExecFlags,Action{Xamarin.ProcessControl.ConsoleRedirection.Segment},Action{StreamWriter},System.String,Xamarin.ProcessControl.Exec.ProcessRunnerHandler)
-  name: Exec(ProcessArguments, ExecFlags, Action<ConsoleRedirection.Segment>, Action<StreamWriter>, String, Exec.ProcessRunnerHandler)
-  href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec__ctor_Xamarin_ProcessControl_ProcessArguments_Xamarin_ProcessControl_ExecFlags_Action_Xamarin_ProcessControl_ConsoleRedirection_Segment__Action_StreamWriter__System_String_Xamarin_ProcessControl_Exec_ProcessRunnerHandler_
-  commentId: M:Xamarin.ProcessControl.Exec.#ctor(Xamarin.ProcessControl.ProcessArguments,Xamarin.ProcessControl.ExecFlags,Action{Xamarin.ProcessControl.ConsoleRedirection.Segment},Action{StreamWriter},System.String,Xamarin.ProcessControl.Exec.ProcessRunnerHandler)
-  name.vb: Exec(ProcessArguments, ExecFlags, Action(Of ConsoleRedirection.Segment), Action(Of StreamWriter), String, Exec.ProcessRunnerHandler)
-  fullName: Xamarin.ProcessControl.Exec.Exec(Xamarin.ProcessControl.ProcessArguments, Xamarin.ProcessControl.ExecFlags, Action<Xamarin.ProcessControl.ConsoleRedirection.Segment>, Action<StreamWriter>, System.String, Xamarin.ProcessControl.Exec.ProcessRunnerHandler)
-  fullName.vb: Xamarin.ProcessControl.Exec.Exec(Xamarin.ProcessControl.ProcessArguments, Xamarin.ProcessControl.ExecFlags, Action(Of Xamarin.ProcessControl.ConsoleRedirection.Segment), Action(Of StreamWriter), System.String, Xamarin.ProcessControl.Exec.ProcessRunnerHandler)
-  nameWithType: Exec.Exec(ProcessArguments, ExecFlags, Action<ConsoleRedirection.Segment>, Action<StreamWriter>, String, Exec.ProcessRunnerHandler)
-  nameWithType.vb: Exec.Exec(ProcessArguments, ExecFlags, Action(Of ConsoleRedirection.Segment), Action(Of StreamWriter), String, Exec.ProcessRunnerHandler)
 - uid: Xamarin.ProcessControl.Exec.#ctor(Xamarin.ProcessControl.ProcessArguments,Xamarin.ProcessControl.ExecFlags,Xamarin.ProcessControl.ConsoleRedirection,Action{StreamWriter},System.String,Xamarin.ProcessControl.Exec.ProcessRunnerHandler)
   name: Exec(ProcessArguments, ExecFlags, ConsoleRedirection, Action<StreamWriter>, String, Exec.ProcessRunnerHandler)
   href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec__ctor_Xamarin_ProcessControl_ProcessArguments_Xamarin_ProcessControl_ExecFlags_Xamarin_ProcessControl_ConsoleRedirection_Action_StreamWriter__System_String_Xamarin_ProcessControl_Exec_ProcessRunnerHandler_
@@ -1830,90 +1821,38 @@ references:
   isSpec: "True"
   fullName: Xamarin.ProcessControl.Exec.Arguments
   nameWithType: Exec.Arguments
-- uid: Xamarin.ProcessControl.Exec.ExecLog
-  name: Exec.ExecLog
-  href: api/Xamarin.ProcessControl.Exec.ExecLog.html
-  commentId: T:Xamarin.ProcessControl.Exec.ExecLog
-  fullName: Xamarin.ProcessControl.Exec.ExecLog
-  nameWithType: Exec.ExecLog
-- uid: Xamarin.ProcessControl.Exec.ExecLog.Arguments
-  name: Arguments
-  href: api/Xamarin.ProcessControl.Exec.ExecLog.html#Xamarin_ProcessControl_Exec_ExecLog_Arguments
-  commentId: P:Xamarin.ProcessControl.Exec.ExecLog.Arguments
-  fullName: Xamarin.ProcessControl.Exec.ExecLog.Arguments
-  nameWithType: Exec.ExecLog.Arguments
-- uid: Xamarin.ProcessControl.Exec.ExecLog.Arguments*
-  name: Arguments
-  href: api/Xamarin.ProcessControl.Exec.ExecLog.html#Xamarin_ProcessControl_Exec_ExecLog_Arguments_
-  commentId: Overload:Xamarin.ProcessControl.Exec.ExecLog.Arguments
+- uid: Xamarin.ProcessControl.Exec.Elevated
+  name: Elevated
+  href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_Elevated
+  commentId: P:Xamarin.ProcessControl.Exec.Elevated
+  fullName: Xamarin.ProcessControl.Exec.Elevated
+  nameWithType: Exec.Elevated
+- uid: Xamarin.ProcessControl.Exec.Elevated*
+  name: Elevated
+  href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_Elevated_
+  commentId: Overload:Xamarin.ProcessControl.Exec.Elevated
   isSpec: "True"
-  fullName: Xamarin.ProcessControl.Exec.ExecLog.Arguments
-  nameWithType: Exec.ExecLog.Arguments
-- uid: Xamarin.ProcessControl.Exec.ExecLog.ExecId
-  name: ExecId
-  href: api/Xamarin.ProcessControl.Exec.ExecLog.html#Xamarin_ProcessControl_Exec_ExecLog_ExecId
-  commentId: P:Xamarin.ProcessControl.Exec.ExecLog.ExecId
-  fullName: Xamarin.ProcessControl.Exec.ExecLog.ExecId
-  nameWithType: Exec.ExecLog.ExecId
-- uid: Xamarin.ProcessControl.Exec.ExecLog.ExecId*
-  name: ExecId
-  href: api/Xamarin.ProcessControl.Exec.ExecLog.html#Xamarin_ProcessControl_Exec_ExecLog_ExecId_
-  commentId: Overload:Xamarin.ProcessControl.Exec.ExecLog.ExecId
-  isSpec: "True"
-  fullName: Xamarin.ProcessControl.Exec.ExecLog.ExecId
-  nameWithType: Exec.ExecLog.ExecId
-- uid: Xamarin.ProcessControl.Exec.ExecLog.ExitCode
+  fullName: Xamarin.ProcessControl.Exec.Elevated
+  nameWithType: Exec.Elevated
+- uid: Xamarin.ProcessControl.Exec.Ended
+  name: Ended
+  href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_Ended
+  commentId: E:Xamarin.ProcessControl.Exec.Ended
+  fullName: Xamarin.ProcessControl.Exec.Ended
+  nameWithType: Exec.Ended
+- uid: Xamarin.ProcessControl.Exec.ExitCode
   name: ExitCode
-  href: api/Xamarin.ProcessControl.Exec.ExecLog.html#Xamarin_ProcessControl_Exec_ExecLog_ExitCode
-  commentId: P:Xamarin.ProcessControl.Exec.ExecLog.ExitCode
-  fullName: Xamarin.ProcessControl.Exec.ExecLog.ExitCode
-  nameWithType: Exec.ExecLog.ExitCode
-- uid: Xamarin.ProcessControl.Exec.ExecLog.ExitCode*
+  href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_ExitCode
+  commentId: P:Xamarin.ProcessControl.Exec.ExitCode
+  fullName: Xamarin.ProcessControl.Exec.ExitCode
+  nameWithType: Exec.ExitCode
+- uid: Xamarin.ProcessControl.Exec.ExitCode*
   name: ExitCode
-  href: api/Xamarin.ProcessControl.Exec.ExecLog.html#Xamarin_ProcessControl_Exec_ExecLog_ExitCode_
-  commentId: Overload:Xamarin.ProcessControl.Exec.ExecLog.ExitCode
+  href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_ExitCode_
+  commentId: Overload:Xamarin.ProcessControl.Exec.ExitCode
   isSpec: "True"
-  fullName: Xamarin.ProcessControl.Exec.ExecLog.ExitCode
-  nameWithType: Exec.ExecLog.ExitCode
-- uid: Xamarin.ProcessControl.Exec.ExecLog.Flags
-  name: Flags
-  href: api/Xamarin.ProcessControl.Exec.ExecLog.html#Xamarin_ProcessControl_Exec_ExecLog_Flags
-  commentId: P:Xamarin.ProcessControl.Exec.ExecLog.Flags
-  fullName: Xamarin.ProcessControl.Exec.ExecLog.Flags
-  nameWithType: Exec.ExecLog.Flags
-- uid: Xamarin.ProcessControl.Exec.ExecLog.Flags*
-  name: Flags
-  href: api/Xamarin.ProcessControl.Exec.ExecLog.html#Xamarin_ProcessControl_Exec_ExecLog_Flags_
-  commentId: Overload:Xamarin.ProcessControl.Exec.ExecLog.Flags
-  isSpec: "True"
-  fullName: Xamarin.ProcessControl.Exec.ExecLog.Flags
-  nameWithType: Exec.ExecLog.Flags
-- uid: Xamarin.ProcessControl.Exec.ExecLog.Message
-  name: Message
-  href: api/Xamarin.ProcessControl.Exec.ExecLog.html#Xamarin_ProcessControl_Exec_ExecLog_Message
-  commentId: P:Xamarin.ProcessControl.Exec.ExecLog.Message
-  fullName: Xamarin.ProcessControl.Exec.ExecLog.Message
-  nameWithType: Exec.ExecLog.Message
-- uid: Xamarin.ProcessControl.Exec.ExecLog.Message*
-  name: Message
-  href: api/Xamarin.ProcessControl.Exec.ExecLog.html#Xamarin_ProcessControl_Exec_ExecLog_Message_
-  commentId: Overload:Xamarin.ProcessControl.Exec.ExecLog.Message
-  isSpec: "True"
-  fullName: Xamarin.ProcessControl.Exec.ExecLog.Message
-  nameWithType: Exec.ExecLog.Message
-- uid: Xamarin.ProcessControl.Exec.ExecLog.WithMessage(System.String)
-  name: WithMessage(String)
-  href: api/Xamarin.ProcessControl.Exec.ExecLog.html#Xamarin_ProcessControl_Exec_ExecLog_WithMessage_System_String_
-  commentId: M:Xamarin.ProcessControl.Exec.ExecLog.WithMessage(System.String)
-  fullName: Xamarin.ProcessControl.Exec.ExecLog.WithMessage(System.String)
-  nameWithType: Exec.ExecLog.WithMessage(String)
-- uid: Xamarin.ProcessControl.Exec.ExecLog.WithMessage*
-  name: WithMessage
-  href: api/Xamarin.ProcessControl.Exec.ExecLog.html#Xamarin_ProcessControl_Exec_ExecLog_WithMessage_
-  commentId: Overload:Xamarin.ProcessControl.Exec.ExecLog.WithMessage
-  isSpec: "True"
-  fullName: Xamarin.ProcessControl.Exec.ExecLog.WithMessage
-  nameWithType: Exec.ExecLog.WithMessage
+  fullName: Xamarin.ProcessControl.Exec.ExitCode
+  nameWithType: Exec.ExitCode
 - uid: Xamarin.ProcessControl.Exec.ExitException
   name: Exec.ExitException
   href: api/Xamarin.ProcessControl.Exec.ExitException.html
@@ -1985,12 +1924,6 @@ references:
   isSpec: "True"
   fullName: Xamarin.ProcessControl.Exec.InputHandler
   nameWithType: Exec.InputHandler
-- uid: Xamarin.ProcessControl.Exec.Log
-  name: Log
-  href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_Log
-  commentId: E:Xamarin.ProcessControl.Exec.Log
-  fullName: Xamarin.ProcessControl.Exec.Log
-  nameWithType: Exec.Log
 - uid: Xamarin.ProcessControl.Exec.OutputRedirection
   name: OutputRedirection
   href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_OutputRedirection
@@ -2079,6 +2012,12 @@ references:
   isSpec: "True"
   fullName: Xamarin.ProcessControl.Exec.RunAsync
   nameWithType: Exec.RunAsync
+- uid: Xamarin.ProcessControl.Exec.Started
+  name: Started
+  href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_Started
+  commentId: E:Xamarin.ProcessControl.Exec.Started
+  fullName: Xamarin.ProcessControl.Exec.Started
+  nameWithType: Exec.Started
 - uid: Xamarin.ProcessControl.Exec.WorkingDirectory
   name: WorkingDirectory
   href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_WorkingDirectory

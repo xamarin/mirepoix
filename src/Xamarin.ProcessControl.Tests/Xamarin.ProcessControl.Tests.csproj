@@ -1,5 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
     <ProjectReference Include="..\Xamarin.ProcessControl\Xamarin.ProcessControl.csproj" />
+    <ProjectReference Include="..\Xamarin.XunitHelpers\Xamarin.XunitHelpers.csproj" />
   </ItemGroup>
 </Project>
