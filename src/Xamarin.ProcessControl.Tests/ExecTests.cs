@@ -1,6 +1,7 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+using System;
 using System.Linq;
 
 using Xunit;
@@ -21,8 +22,8 @@ namespace Xamarin.ProcessControl.Tests
                 ProcessArguments.Create ("mono", "test.exe", "a", "b"));
         }
 
-        [UnixFact]
-        public void ElevateOnUnix ()
+        [MacFact]
+        public void ElevateOnMac ()
         {
             var exec = new Exec (
                 ProcessArguments.Create ("installer"),
@@ -33,8 +34,25 @@ namespace Xamarin.ProcessControl.Tests
                 ProcessArguments.Create ("/usr/bin/sudo", "installer"));
         }
 
-        [UnixFact]
-        public void ElevateAndImplicitlyExecAssemblyWithMonoOnUnix ()
+        [LinuxFact]
+        public void IgnoreElevateOnUnix ()
+        {
+            // On VSTS the hosted Linux pool runs as root (sigh, but we can take
+            // advantage of that fact to test that we are _not_ wrapping with
+            // sudo if we already are root).
+            if (Environment.GetEnvironmentVariable ("TF_BUILD") == "True") {
+                var exec = new Exec (
+                    ProcessArguments.Create ("installer"),
+                    ExecFlags.Elevate);
+                Assert.False (exec.Elevated);
+                Assert.Equal (
+                    exec.Arguments,
+                    ProcessArguments.Create ("installer"));
+            }
+        }
+
+        [MacFact]
+        public void ElevateOnMacAndImplicitlyExecAssemblyWithMonoOnUnix ()
         {
             var exec = new Exec (
                 ProcessArguments.Create ("test.exe", "a", "b"),
