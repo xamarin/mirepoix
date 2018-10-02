@@ -1834,64 +1834,25 @@ references:
   isSpec: "True"
   fullName: Xamarin.ProcessControl.Exec.Elevated
   nameWithType: Exec.Elevated
-- uid: Xamarin.ProcessControl.Exec.ExitCode
-  name: ExitCode
-  href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_ExitCode
-  commentId: P:Xamarin.ProcessControl.Exec.ExitCode
-  fullName: Xamarin.ProcessControl.Exec.ExitCode
-  nameWithType: Exec.ExitCode
-- uid: Xamarin.ProcessControl.Exec.ExitCode*
-  name: ExitCode
-  href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_ExitCode_
-  commentId: Overload:Xamarin.ProcessControl.Exec.ExitCode
-  isSpec: "True"
-  fullName: Xamarin.ProcessControl.Exec.ExitCode
-  nameWithType: Exec.ExitCode
 - uid: Xamarin.ProcessControl.Exec.ExitException
   name: Exec.ExitException
   href: api/Xamarin.ProcessControl.Exec.ExitException.html
   commentId: T:Xamarin.ProcessControl.Exec.ExitException
   fullName: Xamarin.ProcessControl.Exec.ExitException
   nameWithType: Exec.ExitException
-- uid: Xamarin.ProcessControl.Exec.ExitException.#ctor(Xamarin.ProcessControl.Exec,System.Int32)
-  name: ExitException(Exec, Int32)
-  href: api/Xamarin.ProcessControl.Exec.ExitException.html#Xamarin_ProcessControl_Exec_ExitException__ctor_Xamarin_ProcessControl_Exec_System_Int32_
-  commentId: M:Xamarin.ProcessControl.Exec.ExitException.#ctor(Xamarin.ProcessControl.Exec,System.Int32)
-  fullName: Xamarin.ProcessControl.Exec.ExitException.ExitException(Xamarin.ProcessControl.Exec, System.Int32)
-  nameWithType: Exec.ExitException.ExitException(Exec, Int32)
-- uid: Xamarin.ProcessControl.Exec.ExitException.#ctor*
-  name: ExitException
-  href: api/Xamarin.ProcessControl.Exec.ExitException.html#Xamarin_ProcessControl_Exec_ExitException__ctor_
-  commentId: Overload:Xamarin.ProcessControl.Exec.ExitException.#ctor
+- uid: Xamarin.ProcessControl.Exec.ExitException.Event
+  name: Event
+  href: api/Xamarin.ProcessControl.Exec.ExitException.html#Xamarin_ProcessControl_Exec_ExitException_Event
+  commentId: P:Xamarin.ProcessControl.Exec.ExitException.Event
+  fullName: Xamarin.ProcessControl.Exec.ExitException.Event
+  nameWithType: Exec.ExitException.Event
+- uid: Xamarin.ProcessControl.Exec.ExitException.Event*
+  name: Event
+  href: api/Xamarin.ProcessControl.Exec.ExitException.html#Xamarin_ProcessControl_Exec_ExitException_Event_
+  commentId: Overload:Xamarin.ProcessControl.Exec.ExitException.Event
   isSpec: "True"
-  fullName: Xamarin.ProcessControl.Exec.ExitException.ExitException
-  nameWithType: Exec.ExitException.ExitException
-- uid: Xamarin.ProcessControl.Exec.ExitException.Exec
-  name: Exec
-  href: api/Xamarin.ProcessControl.Exec.ExitException.html#Xamarin_ProcessControl_Exec_ExitException_Exec
-  commentId: P:Xamarin.ProcessControl.Exec.ExitException.Exec
-  fullName: Xamarin.ProcessControl.Exec.ExitException.Exec
-  nameWithType: Exec.ExitException.Exec
-- uid: Xamarin.ProcessControl.Exec.ExitException.Exec*
-  name: Exec
-  href: api/Xamarin.ProcessControl.Exec.ExitException.html#Xamarin_ProcessControl_Exec_ExitException_Exec_
-  commentId: Overload:Xamarin.ProcessControl.Exec.ExitException.Exec
-  isSpec: "True"
-  fullName: Xamarin.ProcessControl.Exec.ExitException.Exec
-  nameWithType: Exec.ExitException.Exec
-- uid: Xamarin.ProcessControl.Exec.ExitException.ExitCode
-  name: ExitCode
-  href: api/Xamarin.ProcessControl.Exec.ExitException.html#Xamarin_ProcessControl_Exec_ExitException_ExitCode
-  commentId: P:Xamarin.ProcessControl.Exec.ExitException.ExitCode
-  fullName: Xamarin.ProcessControl.Exec.ExitException.ExitCode
-  nameWithType: Exec.ExitException.ExitCode
-- uid: Xamarin.ProcessControl.Exec.ExitException.ExitCode*
-  name: ExitCode
-  href: api/Xamarin.ProcessControl.Exec.ExitException.html#Xamarin_ProcessControl_Exec_ExitException_ExitCode_
-  commentId: Overload:Xamarin.ProcessControl.Exec.ExitException.ExitCode
-  isSpec: "True"
-  fullName: Xamarin.ProcessControl.Exec.ExitException.ExitCode
-  nameWithType: Exec.ExitException.ExitCode
+  fullName: Xamarin.ProcessControl.Exec.ExitException.Event
+  nameWithType: Exec.ExitException.Event
 - uid: Xamarin.ProcessControl.Exec.Flags
   name: Flags
   href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_Flags
@@ -1905,6 +1866,19 @@ references:
   isSpec: "True"
   fullName: Xamarin.ProcessControl.Exec.Flags
   nameWithType: Exec.Flags
+- uid: Xamarin.ProcessControl.Exec.GlobalProcessRunner
+  name: GlobalProcessRunner
+  href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_GlobalProcessRunner
+  commentId: P:Xamarin.ProcessControl.Exec.GlobalProcessRunner
+  fullName: Xamarin.ProcessControl.Exec.GlobalProcessRunner
+  nameWithType: Exec.GlobalProcessRunner
+- uid: Xamarin.ProcessControl.Exec.GlobalProcessRunner*
+  name: GlobalProcessRunner
+  href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_GlobalProcessRunner_
+  commentId: Overload:Xamarin.ProcessControl.Exec.GlobalProcessRunner
+  isSpec: "True"
+  fullName: Xamarin.ProcessControl.Exec.GlobalProcessRunner
+  nameWithType: Exec.GlobalProcessRunner
 - uid: Xamarin.ProcessControl.Exec.Id
   name: Id
   href: api/Xamarin.ProcessControl.Exec.html#Xamarin_ProcessControl_Exec_Id
@@ -2155,6 +2129,19 @@ references:
   isSpec: "True"
   fullName: Xamarin.ProcessControl.ExecStatusEventArgs.ExecDuration
   nameWithType: ExecStatusEventArgs.ExecDuration
+- uid: Xamarin.ProcessControl.ExecStatusEventArgs.ExitCode
+  name: ExitCode
+  href: api/Xamarin.ProcessControl.ExecStatusEventArgs.html#Xamarin_ProcessControl_ExecStatusEventArgs_ExitCode
+  commentId: P:Xamarin.ProcessControl.ExecStatusEventArgs.ExitCode
+  fullName: Xamarin.ProcessControl.ExecStatusEventArgs.ExitCode
+  nameWithType: ExecStatusEventArgs.ExitCode
+- uid: Xamarin.ProcessControl.ExecStatusEventArgs.ExitCode*
+  name: ExitCode
+  href: api/Xamarin.ProcessControl.ExecStatusEventArgs.html#Xamarin_ProcessControl_ExecStatusEventArgs_ExitCode_
+  commentId: Overload:Xamarin.ProcessControl.ExecStatusEventArgs.ExitCode
+  isSpec: "True"
+  fullName: Xamarin.ProcessControl.ExecStatusEventArgs.ExitCode
+  nameWithType: ExecStatusEventArgs.ExitCode
 - uid: Xamarin.ProcessControl.ExecStatusEventArgs.Status
   name: Status
   href: api/Xamarin.ProcessControl.ExecStatusEventArgs.html#Xamarin_ProcessControl_ExecStatusEventArgs_Status
