@@ -17,7 +17,7 @@ using System.Threading.Tasks;
 
 namespace Xamarin.ProcessControl
 {
-    using static ExecFlags;
+  using static ExecFlags;
 
     public sealed class Exec
     {
@@ -27,6 +27,8 @@ namespace Xamarin.ProcessControl
         static extern uint geteuid ();
 
         public delegate Task<int> ProcessRunnerHandler (ProcessArguments arguments, Process process);
+
+        public static ProcessRunnerHandler GlobalProcessRunner { get; set; }
 
         public static event EventHandler<ExecStatusEventArgs> Monitor;
 
@@ -38,10 +40,7 @@ namespace Xamarin.ProcessControl
         public Action<StreamWriter> InputHandler { get; }
         public ExecFlags Flags { get; }
         public string WorkingDirectory { get; }
-
         public bool Elevated { get; }
-        public int? ExitCode { get; private set; }
-
         public ProcessRunnerHandler ProcessRunner { get; }
 
         public Exec (
@@ -101,23 +100,21 @@ namespace Xamarin.ProcessControl
                     nameof (flags));
 
             WorkingDirectory = workingDirectory;
-            ProcessRunner = processRunner ?? DefaultProcessRunner;
+            ProcessRunner = processRunner
+                ?? GlobalProcessRunner
+                ?? DefaultProcessRunner;
         }
 
         public sealed class ExitException : Exception
         {
-            public Exec Exec { get; }
-            public int ExitCode { get; }
+            public ExecStatusEventArgs Event { get; }
 
-            public ExitException (Exec exec, int exitCode)
-                : base ($"{exec.Arguments [0]} terminated with exit code {exitCode}")
-            {
-                Exec = exec;
-                ExitCode = exitCode;
-            }
+            internal ExitException (ExecStatusEventArgs @event)
+                : base ($"{@event.Exec.Arguments [0]} terminated with exit code {@event.ExitCode}")
+                => Event = @event;
         }
 
-        public async Task RunAsync ()
+        public async Task<ExecStatusEventArgs> RunAsync ()
         {
             var proc = new Process {
                 StartInfo = new ProcessStartInfo {
@@ -164,11 +161,14 @@ namespace Xamarin.ProcessControl
 
             var eventArgs = new ExecStatusEventArgs (this);
             Monitor?.Invoke (null, eventArgs);
-            ExitCode = await ProcessRunner (Arguments, proc).ConfigureAwait (false);
-            Monitor?.Invoke (null, eventArgs.WithProcessEnded ());
+            var exitCode = await ProcessRunner (Arguments, proc).ConfigureAwait (false);
+            eventArgs = eventArgs.WithProcessEnded (exitCode);
+            Monitor?.Invoke (null, eventArgs);
 
-            if (ExitCode.Value != 0)
-                throw new ExitException (this, ExitCode.Value);
+            if (exitCode != 0)
+                throw new ExitException (eventArgs);
+
+            return eventArgs;
         }
 
         Task<int> DefaultProcessRunner (ProcessArguments arguments, Process proc)
@@ -202,13 +202,13 @@ namespace Xamarin.ProcessControl
 
         #region Convenience Methods
 
-        public static Task RunAsync (
+        public static Task<ExecStatusEventArgs> RunAsync (
             Action<ConsoleRedirection.Segment> outputHandler,
             string command,
             params string [] arguments)
             => RunAsync (Default, outputHandler, command, arguments);
 
-        public static Task RunAsync (
+        public static Task<ExecStatusEventArgs> RunAsync (
             ExecFlags flags,
             Action<ConsoleRedirection.Segment> outputHandler,
             string command,

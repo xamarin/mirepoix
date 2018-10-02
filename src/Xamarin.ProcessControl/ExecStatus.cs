@@ -16,17 +16,20 @@ namespace Xamarin.ProcessControl
     {
         public Exec Exec { get; }
         public ExecStatus Status { get; }
+        public int? ExitCode { get; }
         public DateTimeOffset EventTime { get; }
         public TimeSpan ExecDuration { get; }
 
         ExecStatusEventArgs (
             Exec exec,
             ExecStatus status,
+            int? exitCode,
             DateTimeOffset eventTime,
             TimeSpan execDuration)
         {
             Exec = exec;
             Status = status;
+            ExitCode = exitCode;
             EventTime = eventTime;
             ExecDuration = execDuration;
         }
@@ -35,17 +38,19 @@ namespace Xamarin.ProcessControl
             : this (
                 exec,
                 ExecStatus.ProcessStarted,
+                null,
                 DateTimeOffset.UtcNow,
                 TimeSpan.Zero)
         {
         }
 
-        internal ExecStatusEventArgs WithProcessEnded ()
+        internal ExecStatusEventArgs WithProcessEnded (int exitCode)
         {
             var now = DateTimeOffset.UtcNow;
             return new ExecStatusEventArgs (
                 Exec,
                 ExecStatus.ProcessEnded,
+                exitCode,
                 now,
                 now - EventTime);
         }
