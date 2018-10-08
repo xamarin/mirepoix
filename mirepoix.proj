@@ -27,6 +27,8 @@
     <ProjectReference Include="src\Xamarin.MSBuild.Sdk.Tests\Xamarin.MSBuild.Sdk.Tests.csproj"/>
 
     <ProjectReference Include="src\Xamarin.XunitHelpers\Xamarin.XunitHelpers.csproj"/>
+
+    <ProjectReference Include="src\Xamarin.Mac.Sdk\Xamarin.Mac.Sdk.csproj"/>
   </ItemGroup>
 
   <Target
