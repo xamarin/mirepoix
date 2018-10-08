@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <NoPackageAnalysis>true</NoPackageAnalysis>
+    <PackageTypes>MSBuildSdk</PackageTypes>
+    <DevelopmentDependency>true</DevelopmentDependency>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <Description>Provides basic SDK-style project support for Xamarin.Mac.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Sdk.props;Sdk.targets">
+      <Pack>true</Pack>
+      <PackagePath>Sdk</PackagePath>
+    </Content>
+  </ItemGroup>
+</Project>

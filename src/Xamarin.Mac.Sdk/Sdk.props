@@ -1,0 +1,33 @@
+<Project>
+  <Import Sdk="Microsoft.Net.Sdk" Project="Sdk.props"/>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.Common.props"/>
+
+  <ItemGroup>
+    <Reference Include="Xamarin.Mac"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ImageAsset Include="**\*.xcassets\**\*.*"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <InterfaceDefinition Include="**\*.storyboard"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="*.designer.cs">
+      <!--
+      Produce DependentUpon item metadata via convention:
+        <Compile Include="Foo.designer.cs">
+          <DependentUpon>Foo.cs</DependentUpon>
+        </Compile>
+      -->
+      <DependentUpon>$([System.String]::Copy('%(Identity)').Substring(
+          0,
+          $([System.String]::Copy('%(Identity)').LastIndexOf(
+            '.designer.cs',
+            System.StringComparison.OrdinalIgnoreCase))
+        )).cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

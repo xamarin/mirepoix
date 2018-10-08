@@ -1,0 +1,19 @@
+<Project>
+  <Import Sdk="Microsoft.Net.Sdk" Project="Sdk.targets"/>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.Common.targets"/>
+
+  <PropertyGroup>
+    <AppBundleManifest Condition="'$(AppBundleManifest)' == ''">$(MSBuildProjectDirectory)\Info.plist</AppBundleManifest>
+    <_AppManifest>$(AppBundleManifest)</_AppManifest>
+  </PropertyGroup>
+
+  <!--
+    Override the private Xamarin.Mac.Common.targets target to prevent searching through old item groups
+    and just set the private _AppManifest property explicitly from AppBundleManifest or by convention.
+  -->
+  <Target Name="_DetectAppManifest">
+    <Error
+      Condition="!Exists('$(AppBundleManifest)')"
+      Text="Application manifest not found: '$(AppBundleManifest)'. An Info.plist application manifest should be placed in the same directory as the project file or explicitly provided through the 'AppBundleManifest' property."/>
+  </Target>
+</Project>
