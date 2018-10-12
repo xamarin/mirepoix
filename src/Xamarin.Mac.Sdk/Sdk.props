@@ -2,6 +2,12 @@
   <Import Sdk="Microsoft.Net.Sdk" Project="Sdk.props"/>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.Common.props"/>
 
+  <PropertyGroup Condition="'$(RunConfiguration)' == 'Default' And '$(OutputType)' == 'Exe'">
+    <StartAction>Program</StartAction>
+    <StartProgram>$(OutputPath)$(AssemblyName).app</StartProgram>
+    <ExternalConsole>false</ExternalConsole>
+  </PropertyGroup>
+
   <ItemGroup>
     <Reference Include="Xamarin.Mac"/>
   </ItemGroup>
