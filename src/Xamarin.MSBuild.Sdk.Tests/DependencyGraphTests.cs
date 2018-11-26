@@ -34,6 +34,8 @@ namespace Xamarin.MSBuild.Sdk.Tests
                 dependencyGraph
                     .TopologicallySortedProjects
                     .Select (p => Path.GetFileNameWithoutExtension (p.Project.FullPath)),
+                p => Assert.Equal ("Xamarin.Preferences", p),
+                p => Assert.Equal ("Xamarin.Preferences.Tests", p),
                 p => Assert.Equal ("Xamarin.Helpers", p),
                 p => Assert.Equal ("Xamarin.ProcessControl", p),
                 p => Assert.Equal ("Xamarin.XunitHelpers", p),

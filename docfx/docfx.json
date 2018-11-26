@@ -5,6 +5,7 @@
         {
           "src": "../src",
           "files": [
+            "Xamarin.Preferences/Xamarin.Preferences.csproj",
             "Xamarin.ProcessControl/Xamarin.ProcessControl.csproj",
             "Xamarin.Helpers/Xamarin.Helpers.csproj",
             "Xamarin.NativeHelpers/Xamarin.NativeHelpers.csproj",

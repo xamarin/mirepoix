@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Preferences", "src\Xamarin.Preferences\Xamarin.Preferences.csproj", "{D69ED381-D5E4-5DCB-986D-A4FCC7962065}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Preferences.Tests", "src\Xamarin.Preferences.Tests\Xamarin.Preferences.Tests.csproj", "{F785C93C-3080-5F71-B27F-A0D3BB4434A4}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Helpers", "src\Xamarin.Helpers\Xamarin.Helpers.csproj", "{8B6F200D-DB1A-5DF0-AC56-0C7FE3F39374}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.ProcessControl", "src\Xamarin.ProcessControl\Xamarin.ProcessControl.csproj", "{B888AAEC-2A57-573E-902E-84A2152A4E1C}"
@@ -40,6 +44,14 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D69ED381-D5E4-5DCB-986D-A4FCC7962065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D69ED381-D5E4-5DCB-986D-A4FCC7962065}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D69ED381-D5E4-5DCB-986D-A4FCC7962065}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{D69ED381-D5E4-5DCB-986D-A4FCC7962065}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{F785C93C-3080-5F71-B27F-A0D3BB4434A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F785C93C-3080-5F71-B27F-A0D3BB4434A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F785C93C-3080-5F71-B27F-A0D3BB4434A4}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{F785C93C-3080-5F71-B27F-A0D3BB4434A4}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{8B6F200D-DB1A-5DF0-AC56-0C7FE3F39374}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8B6F200D-DB1A-5DF0-AC56-0C7FE3F39374}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B6F200D-DB1A-5DF0-AC56-0C7FE3F39374}.Release|Any CPU.ActiveCfg = Debug|Any CPU

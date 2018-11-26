@@ -8,6 +8,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="src\Xamarin.Preferences\Xamarin.Preferences.csproj"/>
+    <ProjectReference Include="src\Xamarin.Preferences.Tests\Xamarin.Preferences.Tests.csproj"/>
+
     <ProjectReference Include="src\Xamarin.ProcessControl\Xamarin.ProcessControl.csproj"/>
     <ProjectReference Include="src\Xamarin.ProcessControl.Tests\Xamarin.ProcessControl.Tests.csproj"/>
 
