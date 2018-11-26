@@ -457,5 +457,29 @@ namespace Xamarin.Preferences.Tests
 
             Assert.Equal (pref.DefaultValue, pref.GetValue ());
         }
+
+        // TODO: this probably is not great behavior but for now this is testing
+        // for consistency across all the backends (e.g. throws InvalidCastException when
+        // trying to read an existing preference that is not actually convertible to
+        // the desired type).
+        //
+        // Instead the preference should probably return the default value...
+        [Fact]
+        public void StorageClassChangeOfPrefThrowsInvalidCastException ()
+        {
+            var intPref = new Preference<int> ("ThePrefWithManyTypes", defaultValue: 99);
+            var strPref = new Preference<string> ("ThePrefWithManyTypes", defaultValue: "some string");
+
+            Assert.Equal (intPref.DefaultValue, intPref.GetValue ());
+            Assert.Equal (strPref.DefaultValue, strPref.GetValue ());
+
+            intPref.SetValue (300);
+            Assert.Equal (300, intPref.GetValue ());
+
+            strPref.SetValue ("some string");
+            Assert.Equal ("some string", strPref.GetValue ());
+
+            Assert.Throws<InvalidCastException> (() => intPref.GetValue ());
+        }
     }
 }

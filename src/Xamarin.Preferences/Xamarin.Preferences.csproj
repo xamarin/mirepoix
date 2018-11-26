@@ -4,6 +4,9 @@
     <Description>An API for storing user preferences through a number of backends.</Description>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Xamarin.NativeHelpers\Xamarin.NativeHelpers.csproj" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Microsoft.Win32.Registry" Version="4.5.0" />
   </ItemGroup>
 </Project>
