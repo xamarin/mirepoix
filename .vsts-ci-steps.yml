@@ -1,7 +1,7 @@
 steps:
 - task: DotNetCoreInstaller@0
   inputs:
-    version: 2.1.402
+    version: 2.1.500
   displayName: Install .NET Core
 
 # This script runs both via bash (macOS/Linux) and cmd (Windows).
