@@ -35,5 +35,11 @@ namespace Xamarin.Preferences
 
             initializedPreferenceStore = preferenceStore;
         }
+
+        /// <summary>
+        /// Strictly for unit tests. Do not use elsewhere!
+        /// </summary>
+        internal static void InitializeForUnitTests (IPreferenceStore preferenceStore)
+            => initializedPreferenceStore = preferenceStore;
     }
 }

@@ -9,6 +9,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+using Microsoft.Win32;
 
 using Xunit;
 
@@ -16,10 +19,68 @@ using Xamarin.Preferences;
 
 namespace Xamarin.Preferences.Tests
 {
-    public class PreferenceTests
+    [CollectionDefinition (
+        nameof (PreferenceStores),
+        DisableParallelization = true)]
+    public sealed class PreferenceStores
     {
-        public PreferenceTests ()
-            => PreferenceStore.SharedInstance.RemoveAll ();
+    }
+
+    [Collection (nameof (PreferenceStores))]
+    public sealed class MemoryOnlyPreferenceTests : PreferenceTests
+    {
+        public MemoryOnlyPreferenceTests () : base (
+            new MemoryOnlyPreferenceStore ())
+        {
+        }
+    }
+
+    [Collection (nameof (PreferenceStores))]
+    public sealed class WindowsRegistryPreferenceTests : PreferenceTests
+    {
+        public const string SubKey = @"Software\Xamarin\Mirepoix\Tests\Preferences";
+
+        public WindowsRegistryPreferenceTests () : base (
+            GetStoreForPlatform (
+                OSPlatform.Windows,
+                () => new RegistryPreferenceStore (
+                    RegistryHive.CurrentUser,
+                    RegistryView.Default,
+                    SubKey)))
+        {
+        }
+    }
+
+    [Collection (nameof (PreferenceStores))]
+    public sealed class MacUserDefaultsPreferenceTests : PreferenceTests
+    {
+        public const string AppDomain = "com.xamarin.mirepoix.tests.preferences";
+
+        public MacUserDefaultsPreferenceTests () : base (
+            GetStoreForPlatform (
+                OSPlatform.OSX,
+                () => new MacUserDefaultsPreferenceStore (AppDomain)))
+        {
+        }
+    }
+
+    public abstract class PreferenceTests
+    {
+        public static IPreferenceStore GetStoreForPlatform (
+            OSPlatform platform,
+            Func<IPreferenceStore> factory)
+        {
+            if (RuntimeInformation.IsOSPlatform (platform))
+                return factory ();
+
+            return new MemoryOnlyPreferenceStore ();
+        }
+
+        protected PreferenceTests (IPreferenceStore preferenceStore)
+        {
+            PreferenceStore.InitializeForUnitTests (preferenceStore);
+            PreferenceStore.SharedInstance.RemoveAll ();
+        }
 
         [Fact]
         public void DeleteNonExistantPrefTest ()
