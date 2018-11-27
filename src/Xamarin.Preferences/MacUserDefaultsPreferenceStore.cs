@@ -14,7 +14,7 @@ using static Xamarin.NativeHelpers.CoreFoundation;
 
 namespace Xamarin.Preferences
 {
-    public sealed class MacUserDefaultsPreferenceStore : IPreferenceStore, IDisposable
+    public sealed class MacUserDefaultsPreferenceStore : PreferenceStore, IDisposable
     {
         static class CFPreferences
         {
@@ -58,10 +58,6 @@ namespace Xamarin.Preferences
                 IntPtr hostName);
         }
 
-        #pragma warning disable 67
-        public event EventHandler<PreferenceChangedEventArgs> PreferenceChanged;
-        #pragma warning restore 67
-
         readonly CFString applicationId;
 
         public MacUserDefaultsPreferenceStore (string applicationId)
@@ -75,84 +71,7 @@ namespace Xamarin.Preferences
         public void Dispose ()
             => applicationId.Dispose ();
 
-        void OnPreferenceChanged (string key)
-            => PreferenceChanged?.Invoke (this, new PreferenceChangedEventArgs (key));
-
-        IntPtr GetValue<T> (string key, long expectedCFTypeID)
-        {
-            using (var cfKey = new CFString (key)) {
-                var valuePtr = CFPreferences.CopyValue (
-                    cfKey.Handle,
-                    applicationId.Handle,
-                    CFPreferences.kCFPreferencesCurrentUser,
-                    CFPreferences.kCFPreferencesAnyHost);
-
-                if (valuePtr != IntPtr.Zero && CoreFoundation.CFGetTypeID (valuePtr) != expectedCFTypeID)
-                    throw new InvalidCastException (
-                        $"Unable to read native defaults value as CFTypeID '{expectedCFTypeID}'" +
-                        $"(for conversion to {typeof (T)})");
-
-                return valuePtr;
-            }
-        }
-
-        public bool GetBoolean (string key, bool defaultValue = false)
-        {
-            var valuePtr = GetValue<bool> (
-                key,
-                CoreFoundation.CFTypeID.CFBoolean);
-
-            if (valuePtr == IntPtr.Zero)
-                return defaultValue;
-
-            return CFBoolean.ToBoolean (valuePtr);
-        }
-
-        public double GetDouble (string key, double defaultValue = 0)
-        {
-            var valuePtr = GetValue<double> (
-                key,
-                CoreFoundation.CFTypeID.CFNumber);
-
-            if (valuePtr == IntPtr.Zero)
-                return defaultValue;
-
-            using (var cfNumber = new CFNumber (valuePtr))
-                return cfNumber.ToDouble ();
-        }
-
-        public long GetInt64 (string key, long defaultValue = 0)
-        {
-            var valuePtr = GetValue<long> (
-                key,
-                CoreFoundation.CFTypeID.CFNumber);
-
-            if (valuePtr == IntPtr.Zero)
-                return defaultValue;
-
-            using (var cfNumber = new CFNumber (valuePtr))
-                return cfNumber.ToInt64 ();
-        }
-
-        public string GetString (string key, string defaultValue = null)
-        {
-            var valuePtr = GetValue<string> (
-                key,
-                CoreFoundation.CFTypeID.CFString);
-
-            if (valuePtr == IntPtr.Zero)
-                return defaultValue;
-
-            using (var cfString = new CFString (valuePtr))
-                return cfString.ToString ();
-        }
-
-        public string [] GetStrings (string key, string [] defaultValue = null)
-            => CFArray.FromCFStringArray (GetValue<string []> (
-                key,
-                CoreFoundation.CFTypeID.CFArray)) ?.ToArray () ?? defaultValue;
-
-        void SetValue (string key, IntPtr value)
+       void SetValue (string key, IntPtr value)
         {
             using (var cfKey = new CFString (key)) {
                 CFPreferences.SetValue (
@@ -167,59 +86,164 @@ namespace Xamarin.Preferences
                     CFPreferences.kCFPreferencesCurrentUser,
                     CFPreferences.kCFPreferencesAnyHost);
             }
-
-            OnPreferenceChanged (key);
         }
 
-        public void Set (string key, bool value)
-            => SetValue (key, CFBoolean.ToCFBoolean (value));
-
-        public void Set (string key, long value)
+        protected override bool StorageSetValue (string key, object value)
         {
-            using (var cfValue = new CFNumber (value))
+            CFObject cfValue = null;
+
+            try {
+                switch (value) {
+                case bool v:
+                    SetValue (key, CFBoolean.ToCFBoolean (v));
+                    return true;
+                case string v:
+                    cfValue = new CFString (v);
+                    break;
+                case IEnumerable<string> v:
+                    var cfArray = new CFMutableArray ();
+                    cfArray.AddRange (v);
+                    cfValue = cfArray;
+                    break;
+                case sbyte v:
+                    cfValue = new CFNumber (v);
+                    break;
+                case byte v:
+                    cfValue = new CFNumber (v);
+                    break;
+                case short v:
+                    cfValue = new CFNumber (v);
+                    break;
+                case ushort v:
+                    cfValue = new CFNumber (v);
+                    break;
+                case int v:
+                    cfValue = new CFNumber (v);
+                    break;
+                case uint v:
+                    cfValue = new CFNumber (v);
+                    break;
+                case long v:
+                    cfValue = new CFNumber (v);
+                    break;
+                case ulong v:
+                    cfValue = new CFNumber (v);
+                    break;
+                case float v:
+                    cfValue = new CFNumber (v);
+                    break;
+                case double v:
+                    cfValue = new CFNumber (v);
+                    break;
+                default:
+                    return false;
+                }
+
                 SetValue (key, cfValue.Handle);
-        }
-
-        public void Set (string key, double value)
-        {
-            using (var cfValue = new CFNumber (value))
-                SetValue (key, cfValue.Handle);
-        }
-
-        public void Set (string key, string value)
-        {
-            if (value == null) {
-                SetValue (key, IntPtr.Zero);
-                return;
-            }
-
-            using (var cfValue = new CFString (value))
-                SetValue (key, cfValue.Handle);
-        }
-
-        public void Set (string key, string [] value)
-        {
-            if (value == null) {
-                SetValue (key, IntPtr.Zero);
-                return;
-            }
-
-            using (var cfArray = new CFMutableArray ()) {
-                cfArray.AddRange (value);
-                SetValue (key, cfArray.Handle);
+                return true;
+            } finally {
+                cfValue?.Dispose ();
             }
         }
 
-        public void Remove (string key)
-            => SetValue (key, IntPtr.Zero);
-
-        public void RemoveAll ()
+        protected override bool StorageTryGetValue (
+            string key,
+            Type valueType,
+            TypeCode valueTypeCode,
+            out object value)
         {
-            foreach (var key in Keys)
-                Remove (key);
+            using (var cfKey = new CFString (key)) {
+                var valuePtr = CFPreferences.CopyValue (
+                    cfKey.Handle,
+                    applicationId.Handle,
+                    CFPreferences.kCFPreferencesCurrentUser,
+                    CFPreferences.kCFPreferencesAnyHost);
+
+                if (valuePtr == IntPtr.Zero) {
+                    value = null;
+                    return false;
+                }
+
+                var typeId = CoreFoundation.CFGetTypeID (valuePtr);
+
+                if (typeId == CoreFoundation.CFTypeID.CFBoolean) {
+                    value = CFBoolean.ToBoolean (valuePtr);
+                    return true;
+                }
+
+                if (typeId == CoreFoundation.CFTypeID.CFString) {
+                    using (var cfString = new CFString (valuePtr))
+                        value = cfString.ToString ();
+                    return true;
+                }
+
+                if (typeId == CoreFoundation.CFTypeID.CFNumber) {
+                    using (var cfNumber = new CFNumber (valuePtr)) {
+                        switch (cfNumber.Type) {
+                        case CFNumberType.SInt8:
+                        case CFNumberType.Char:
+                            value = valueTypeCode == TypeCode.Byte
+                                ? cfNumber.ToByte ()
+                                : (object)cfNumber.ToSByte ();
+                            return true;
+                        case CFNumberType.SInt16:
+                        case CFNumberType.Short:
+                            value = valueTypeCode == TypeCode.UInt16
+                                ? cfNumber.ToUInt16 ()
+                                : (object)cfNumber.ToInt16 ();
+                            return true;
+                        case CFNumberType.SInt32:
+                        case CFNumberType.Int:
+                        case CFNumberType.Long:
+                            value = valueTypeCode == TypeCode.UInt32
+                                ? cfNumber.ToUInt32 ()
+                                : (object)cfNumber.ToInt32 ();
+                            return true;
+                        case CFNumberType.SInt64:
+                        case CFNumberType.LongLong:
+                        case CFNumberType.CFIndex:
+                        case CFNumberType.NSInteger:
+                            value = valueTypeCode == TypeCode.UInt64
+                                ? cfNumber.ToUInt64 ()
+                                : (object)cfNumber.ToInt64 ();
+                            return true;
+                        case CFNumberType.Float32:
+                        case CFNumberType.Float:
+                            value = cfNumber.ToSingle ();
+                            return true;
+                        case CFNumberType.Float64:
+                        case CFNumberType.Double:
+                        case CFNumberType.CGFloat:
+                            value = cfNumber.ToDouble ();
+                            return true;
+                        }
+                    }
+                }
+
+                if (typeId == CoreFoundation.CFTypeID.CFArray) {
+                    try {
+                        value = CFArray
+                            .FromCFStringArray (valuePtr)
+                            ?.ToArray ();
+                        return value != null;
+                    } catch {
+                        value = null;
+                        return false;
+                    }
+                }
+
+                value = null;
+                return false;
+            }
         }
 
-        public IReadOnlyList<string> Keys
+        protected override bool StorageRemove (string key)
+        {
+            SetValue (key, IntPtr.Zero);
+            return true;
+        }
+
+        protected override IReadOnlyList<string> GetKeys ()
             => CFArray.FromCFStringArray (CFPreferences.CopyKeyList (
                 applicationId.Handle,
                 CFPreferences.kCFPreferencesCurrentUser,

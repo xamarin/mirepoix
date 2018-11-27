@@ -60,7 +60,7 @@ namespace Xamarin.Preferences
                 registryView,
                 registrySubKey,
                 this.memoryStoreFallback);
-        
+
         public PreferenceStoreConfiguration WithMemoryFallback (
             bool memoryFallback)
             => new PreferenceStoreConfiguration (
@@ -70,17 +70,17 @@ namespace Xamarin.Preferences
                 this.windowsRegistrySubKey,
                 memoryFallback);
 
-        public IPreferenceStore Create ()
+        public PreferenceStore Create ()
         {
             if (macosAppDomain != null && RuntimeInformation.IsOSPlatform (OSPlatform.OSX))
-                return new MemoryOnlyPreferenceStore ();
+                return new MacUserDefaultsPreferenceStore (macosAppDomain);
 
             if (windowsRegistrySubKey != null && RuntimeInformation.IsOSPlatform (OSPlatform.Windows))
                 return new RegistryPreferenceStore (
                     windowsRegistryHive,
                     windowsRegistryView,
                     windowsRegistrySubKey);
-            
+
             if (memoryStoreFallback)
                 return new MemoryOnlyPreferenceStore ();
 

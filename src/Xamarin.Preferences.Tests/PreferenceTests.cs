@@ -66,9 +66,9 @@ namespace Xamarin.Preferences.Tests
 
     public abstract class PreferenceTests
     {
-        public static IPreferenceStore GetStoreForPlatform (
+        public static PreferenceStore GetStoreForPlatform (
             OSPlatform platform,
-            Func<IPreferenceStore> factory)
+            Func<PreferenceStore> factory)
         {
             if (RuntimeInformation.IsOSPlatform (platform))
                 return factory ();
@@ -76,7 +76,7 @@ namespace Xamarin.Preferences.Tests
             return new MemoryOnlyPreferenceStore ();
         }
 
-        protected PreferenceTests (IPreferenceStore preferenceStore)
+        protected PreferenceTests (PreferenceStore preferenceStore)
         {
             PreferenceStore.InitializeForUnitTests (preferenceStore);
             PreferenceStore.SharedInstance.RemoveAll ();
@@ -89,25 +89,43 @@ namespace Xamarin.Preferences.Tests
             pref.Reset (); // This should not throw
         }
 
-        readonly struct AnUnsupportedType
+        sealed class AnUnsupportedType
         {
+            public static readonly AnUnsupportedType Instance
+                = new AnUnsupportedType ("shared instance");
+
+            public string Name { get; }
+
+            public AnUnsupportedType (string name)
+                => Name = name;
         }
 
         [Fact]
         public void UnsupportedTypeTest ()
-            => Assert.Throws<NotSupportedException> (
-                () => new Preference<AnUnsupportedType> ("unsupported"));
+        {
+            var pref = new Preference<AnUnsupportedType> (
+                "unsupported",
+                AnUnsupportedType.Instance);
+
+            Assert.Equal (pref.DefaultValue, pref.GetValue ());
+
+            pref.SetValue (new AnUnsupportedType ("never to be persisted"));
+
+            var oldSetting = PreferenceStore.ReturnDefaultValueOnException;
+            try {
+                PreferenceStore.ReturnDefaultValueOnException = false;
+                Assert.Throws<InvalidCastException> (() => pref.GetValue ());
+
+                PreferenceStore.ReturnDefaultValueOnException = true;
+                Assert.Equal (pref.DefaultValue, pref.GetValue ());
+            } finally {
+                PreferenceStore.ReturnDefaultValueOnException = oldSetting;
+            }
+        }
 
         sealed class UselessConverter : TypeConverter
         {
         }
-
-        [Fact]
-        public void InvalidExplicitConverterTest ()
-            => Assert.Throws<ArgumentException> (
-                () => new Preference<AnUnsupportedType> (
-                    "unsupported",
-                    converter: new UselessConverter ()));
 
         void AssertPref<T> (
             T defaultValue,
@@ -152,11 +170,12 @@ namespace Xamarin.Preferences.Tests
 
             Assert.Equal (defaultValue, pref.GetValue ());
 
-            pref.SetValue (null);
-            Assert.Empty (pref.GetValue ());
-
             pref.SetValue (string.Empty);
             Assert.Empty (pref.GetValue ());
+
+            // any null is explicitly treated as a removal
+            pref.SetValue (null);
+            Assert.Equal (defaultValue, pref.GetValue ());
 
             pref.SetValue ("something else");
             Assert.Equal ("something else", pref.GetValue ());
@@ -196,6 +215,29 @@ namespace Xamarin.Preferences.Tests
             Assert.Collection (
                 pref.GetValue (),
                 v => Assert.Equal ("default", v));
+
+            var prefAsEnumerable = new Preference<IEnumerable<string>> (
+                "StringArrayPref",
+                new [] { "default" });
+
+            prefAsEnumerable.SetValue (new [] { "one", "two", "three" });
+            Assert.Collection (
+                prefAsEnumerable.GetValue (),
+                v => Assert.Equal ("one", v),
+                v => Assert.Equal ("two", v),
+                v => Assert.Equal ("three", v));
+
+            var prefAsReadonlyList = new Preference<IEnumerable<string>> (
+                "StringArrayPref",
+                new [] { "default" });
+
+            prefAsReadonlyList.SetValue (new [] { "one", "two", "three", "four" });
+            Assert.Collection (
+                prefAsReadonlyList.GetValue (),
+                v => Assert.Equal ("one", v),
+                v => Assert.Equal ("two", v),
+                v => Assert.Equal ("three", v),
+                v => Assert.Equal ("four", v));
         }
 
         [Fact]
@@ -292,6 +334,24 @@ namespace Xamarin.Preferences.Tests
                 });
 
         [Fact]
+        public void DecimalPref ()
+            => AssertPref<decimal> (
+                defaultValue: 99.999999m,
+                minValue: decimal.MinValue,
+                maxValue: decimal.MaxValue,
+                otherValues: new [] {
+                    decimal.MinusOne,
+                    decimal.One
+                });
+
+        [Fact]
+        public void CharPref ()
+            => AssertPref<char> (
+                defaultValue: '☕',
+                minValue: char.MinValue,
+                maxValue: char.MaxValue);
+
+        [Fact]
         public void DateTimePref ()
             => AssertPref<DateTime> (
                 defaultValue: DateTime.Now,
@@ -304,6 +364,13 @@ namespace Xamarin.Preferences.Tests
                 defaultValue: DateTimeOffset.Now,
                 minValue: DateTimeOffset.MinValue,
                 maxValue: DateTimeOffset.MaxValue);
+
+        [Fact]
+        public void GuidPref ()
+            => AssertPref<Guid> (
+                defaultValue: Guid.NewGuid (),
+                minValue: Guid.NewGuid (),
+                maxValue: Guid.NewGuid ());
 
         public enum TestEnum
         {
@@ -456,30 +523,6 @@ namespace Xamarin.Preferences.Tests
                 () => pref.Reset ());
 
             Assert.Equal (pref.DefaultValue, pref.GetValue ());
-        }
-
-        // TODO: this probably is not great behavior but for now this is testing
-        // for consistency across all the backends (e.g. throws InvalidCastException when
-        // trying to read an existing preference that is not actually convertible to
-        // the desired type).
-        //
-        // Instead the preference should probably return the default value...
-        [Fact]
-        public void StorageClassChangeOfPrefThrowsInvalidCastException ()
-        {
-            var intPref = new Preference<int> ("ThePrefWithManyTypes", defaultValue: 99);
-            var strPref = new Preference<string> ("ThePrefWithManyTypes", defaultValue: "some string");
-
-            Assert.Equal (intPref.DefaultValue, intPref.GetValue ());
-            Assert.Equal (strPref.DefaultValue, strPref.GetValue ());
-
-            intPref.SetValue (300);
-            Assert.Equal (300, intPref.GetValue ());
-
-            strPref.SetValue ("some string");
-            Assert.Equal ("some string", strPref.GetValue ());
-
-            Assert.Throws<InvalidCastException> (() => intPref.GetValue ());
         }
     }
 }

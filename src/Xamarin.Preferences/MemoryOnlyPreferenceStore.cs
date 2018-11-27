@@ -1,4 +1,4 @@
-﻿//
+//
 // Author:
 //   Aaron Bockover <abock@microsoft.com>
 //
@@ -10,60 +10,36 @@ using System.Collections.Generic;
 
 namespace Xamarin.Preferences
 {
-    public sealed class MemoryOnlyPreferenceStore : IPreferenceStore
+    public class MemoryOnlyPreferenceStore : PreferenceStore
     {
-        readonly Dictionary<string, object> store = new Dictionary<string, object> ();
+        readonly Dictionary<string, object> storage = new Dictionary<string, object> ();
 
-        public event EventHandler<PreferenceChangedEventArgs> PreferenceChanged;
-
-        void OnPreferenceChanged (string key)
-            => PreferenceChanged?.Invoke (this, new PreferenceChangedEventArgs (key));
-
-        void Set (string key, object value)
+        protected override IReadOnlyList<string> GetKeys ()
         {
-            store [key] = value;
-            OnPreferenceChanged (key);
+            var keys = storage.Keys;
+            var keysArray = new string [keys.Count];
+            keys.CopyTo (keysArray, 0);
+            return keysArray;
         }
 
-        public void Set (string key, bool value) => Set (key, (object)value);
-        public void Set (string key, long value) => Set (key, (object)value);
-        public void Set (string key, double value) => Set (key, (object)value);
-        public void Set (string key, string value) => Set (key, (object)value);
-        public void Set (string key, string [] value) => Set (key, (object)value);
-
-        public bool GetBoolean (string key, bool defaultValue = false)
-            => store.TryGetValue (key, out var value) ? (bool)value : defaultValue;
-
-        public double GetDouble (string key, double defaultValue = 0.0)
-            => store.TryGetValue (key, out var value) ? (double)value : defaultValue;
-
-        public long GetInt64 (string key, long defaultValue = 0)
-            => store.TryGetValue (key, out var value) ? (long)value : defaultValue;
-
-        public string GetString (string key, string defaultValue = null)
-            => store.TryGetValue (key, out var value) ? (string)value : defaultValue;
-
-        public string [] GetStrings (string key, string [] defaultValue = null)
-            => store.TryGetValue (key, out var value) ? (string [])value : defaultValue;
-
-        public void Remove (string key)
+        protected override bool StorageSetValue (string key, object value)
         {
-            if (store.Remove (key))
-                OnPreferenceChanged (key);
-        }
-
-        public void RemoveAll ()
-        {
-            foreach (var key in Keys)
-                Remove (key);
-        }
-
-        public IReadOnlyList<string> Keys {
-            get {
-                var keys = new string [store.Keys.Count];
-                store.Keys.CopyTo (keys, 0);
-                return keys;
+            if (value is string || value is IEnumerable<string>) {
+                storage [key] = value;
+                return true;
             }
+
+            return false;
         }
+
+        protected override bool StorageTryGetValue (
+            string key,
+            Type valueType,
+            TypeCode valueTypeCode,
+            out object value)
+            => storage.TryGetValue (key, out value);
+
+        protected override bool StorageRemove (string key)
+            => storage.Remove (key);
     }
 }

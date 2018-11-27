@@ -7,19 +7,16 @@
 
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 
 using Microsoft.Win32;
 
 namespace Xamarin.Preferences
 {
-    public sealed class RegistryPreferenceStore : IPreferenceStore
+    public sealed class RegistryPreferenceStore : PreferenceStore
     {
         readonly RegistryHive hive;
         readonly RegistryView view;
         readonly string prefsSubKey;
-
-        public event EventHandler<PreferenceChangedEventArgs> PreferenceChanged;
 
         public RegistryPreferenceStore (
             RegistryHive hive,
@@ -30,9 +27,6 @@ namespace Xamarin.Preferences
             this.view = view;
             this.prefsSubKey = prefsSubKey;
         }
-
-        void OnPreferenceChanged (string key)
-            => PreferenceChanged?.Invoke (this, new PreferenceChangedEventArgs (key));
 
         RegistryKey GetPrefsBaseKey ()
             => RegistryKey.OpenBaseKey (hive, view);
@@ -70,81 +64,128 @@ namespace Xamarin.Preferences
             }
         }
 
-        object Get (string key, object defaultValue)
+        protected override bool StorageSetValue (string key, object value)
         {
-            var keyPath = new KeyPath (key);
-            using (var registryKey = GetSubKey (keyPath))
-                return registryKey?.GetValue (keyPath.Name, defaultValue) ?? defaultValue;
-        }
+            RegistryValueKind valueKind;
 
-        void Set (string key, object value, RegistryValueKind kind)
-        {
+            switch (value) {
+            case string _:
+                valueKind = RegistryValueKind.String;
+                break;
+            case IEnumerable<string> v:
+                valueKind = RegistryValueKind.MultiString;
+                break;
+            case bool v:
+                valueKind = RegistryValueKind.DWord;
+                value = v ? 1 : 0;
+                break;
+            case sbyte v:
+                valueKind = RegistryValueKind.DWord;
+                value = (int)v;
+                break;
+            case byte v:
+                valueKind = RegistryValueKind.DWord;
+                value = (int)v;
+                break;
+            case short v:
+                valueKind = RegistryValueKind.DWord;
+                value = (int)v;
+                break;
+            case ushort v:
+                valueKind = RegistryValueKind.DWord;
+                value = (int)v;
+                break;
+            case int _:
+                valueKind = RegistryValueKind.DWord;
+                break;
+            case uint v:
+                valueKind = RegistryValueKind.DWord;
+                value = (int)v;
+                break;
+            case long _:
+                valueKind = RegistryValueKind.QWord;
+                break;
+            case ulong v:
+                valueKind = RegistryValueKind.QWord;
+                value = (long)v;
+                break;
+            default:
+                return false;
+            }
+
             var keyPath = new KeyPath (key);
             using (var registryKey = GetSubKey (keyPath, writable: true))
-                registryKey.SetValue (keyPath.Name, value, kind);
+                registryKey.SetValue (keyPath.Name, value, valueKind);
 
-            OnPreferenceChanged (key);
+            return true;
         }
 
-        public void Set (string key, bool value)
-            => Set (key, value ? 1 : 0, RegistryValueKind.DWord);
-
-        public void Set (string key, long value)
-            => Set (key, value, RegistryValueKind.QWord);
-
-        public void Set (string key, double value)
-            => Set (key, value.ToString ("R", CultureInfo.InvariantCulture), RegistryValueKind.String);
-
-        public void Set (string key, string value)
-            => Set (key, value, RegistryValueKind.String);
-
-        public void Set (string key, string[] value)
-            => Set (key, value, RegistryValueKind.MultiString);
-
-        public bool GetBoolean (string key, bool defaultValue = false)
+        protected override bool StorageTryGetValue (
+            string key,
+            Type valueType,
+            TypeCode valueTypeCode,
+            out object value)
         {
-            var intVal = (int)Get (key, defaultValue ? 1 : 0);
-            return intVal == 1;
+            var keyPath = new KeyPath (key);
+            using (var registryKey = GetSubKey (keyPath)) {
+                if (registryKey == null) {
+                    value = null;
+                    return false;
+                }
+
+                value = registryKey.GetValue (keyPath.Name);
+
+                switch (value) {
+                case int v:
+                    switch (valueTypeCode) {
+                    case TypeCode.SByte:
+                        value = (sbyte)v;
+                        return true;
+                    case TypeCode.Byte:
+                        value = (byte)v;
+                        return true;
+                    case TypeCode.Int16:
+                        value = (short)v;
+                        return true;
+                    case TypeCode.UInt16:
+                        value = (ushort)v;
+                        return true;
+                    case TypeCode.Int32:
+                        return true;
+                    case TypeCode.UInt32:
+                        value = (uint)v;
+                        return true;
+                    }
+                    break;
+                case long v when valueTypeCode == TypeCode.UInt64:
+                    value = (ulong)v;
+                    return true;
+                }
+
+                return value != null;
+            }
         }
 
-        public long GetInt64 (string key, long defaultValue = 0)
-            => (long)Get (key, defaultValue);
-
-        public double GetDouble (string key, double defaultValue = 0)
-        {
-            var stringValue = Get (key, defaultValue.ToString ()) as string;
-            if (stringValue == null || !double.TryParse (
-                stringValue,
-                NumberStyles.Any,
-                CultureInfo.InvariantCulture,
-                out var value))
-                return defaultValue;
-            return value;
-        }
-
-        public string GetString (string key, string defaultValue = null)
-            => Get (key, defaultValue) as string;
-
-        public string [] GetStrings (string key, string [] defaultValue = null)
-            => Get (key, defaultValue) as string [];
-
-        public void Remove (string key)
+        protected override bool StorageRemove (string key)
         {
             var keyPath = new KeyPath (key);
             using (var registryKey = GetSubKey (keyPath, writable: true)) {
                 try {
-                    registryKey?.DeleteValue (keyPath.Name);
+                    if (registryKey != null) {
+                        registryKey.DeleteValue (keyPath.Name);
+                        return true;
+                    }
                 } catch (ArgumentException) {
                     // Expected if sub key doesn't actually exist yet
                 }
             }
 
-            OnPreferenceChanged (key);
+            return false;
         }
 
-        public void RemoveAll ()
+        public override void RemoveAll ()
         {
-            var deletingPrefs = Keys;
+            var deletingPrefs = GetKeys ();
 
             using (var baseKey = GetPrefsBaseKey ()) {
                 try {
@@ -158,11 +199,10 @@ namespace Xamarin.Preferences
                 OnPreferenceChanged (key);
         }
 
-        public IReadOnlyList<string> Keys {
-            get {
-                using (var prefsKey = GetPrefsKey ())
-                    return GetPrefKeys (prefsKey, null);
-            }
+        protected override IReadOnlyList<string> GetKeys ()
+        {
+            using (var prefsKey = GetPrefsKey ())
+                return GetPrefKeys (prefsKey, null);
         }
 
         IReadOnlyList<string> GetPrefKeys (RegistryKey key, string basePath)
@@ -185,19 +225,6 @@ namespace Xamarin.Preferences
             }
 
             return keys;
-        }
-
-        public void CopyTo (RegistryPreferenceStore otherStore)
-        {
-            foreach (var key in Keys) {
-                var keyPath = new KeyPath (key);
-                using (var registryKey = GetSubKey (keyPath)) {
-                    otherStore.Set (
-                        key,
-                        registryKey.GetValue (keyPath.Name),
-                        registryKey.GetValueKind (keyPath.Name));
-                }
-            }
         }
     }
 }
