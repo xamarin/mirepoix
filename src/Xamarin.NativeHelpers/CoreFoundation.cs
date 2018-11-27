@@ -381,48 +381,6 @@ namespace Xamarin.NativeHelpers
                     return list;
                 }
             }
-
-            [DllImport (CoreFoundationLibrary)]
-            static extern unsafe IntPtr CFArrayCreate (
-                IntPtr allocator,
-                IntPtr values,
-                CFIndex numValues,
-                IntPtr callBacks);
-
-            public unsafe static CFArray Create (CFObject [] values)
-            {
-                if (values == null)
-                    throw new ArgumentNullException (nameof (values));
-
-                var valuePtrs = new IntPtr [values.Length];
-                for (int i = 0; i < values.Length; i++)
-                    valuePtrs [i] = values [i].Handle;
-
-                fixed (IntPtr* valuePtrsPtr = valuePtrs)
-			        return new CFArray (
-                        CFArrayCreate (IntPtr.Zero,
-                            (IntPtr)valuePtrsPtr,
-                            values.Length,
-                            kCFTypeArrayCallBacks));
-            }
-
-            public static CFArray Create (string [] values)
-            {
-                if (values == null)
-                    throw new ArgumentNullException (nameof (values));
-
-                var cfValues = new CFString [values.Length];
-
-                try {
-                    for (int i = 0; i < values.Length; i++)
-                        cfValues [i] = new CFString (values [i]);
-
-                    return Create (cfValues);
-                } finally {
-                    for (int i = 0; i < cfValues.Length; i++)
-                        cfValues [i]?.Dispose ();
-                }
-            }
         }
 
         public sealed class CFMutableArray : CFArrayBase
