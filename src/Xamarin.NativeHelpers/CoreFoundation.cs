@@ -365,6 +365,11 @@ namespace Xamarin.NativeHelpers
             {
             }
 
+            /// <summary>
+            /// Read a <see cref="CFArray" /> from <paramref name="cfArrayHandle" /> containing
+            /// only <see cref="CFString" /> or <c>null</c> items. If an item is not null or
+            /// <see cref="CFString" />, a <see cref="ArrayTypeMismatchException" /> will be raised.
+            /// </summary>
             public static List<string> FromCFStringArray (IntPtr cfArrayHandle, bool ownsHandle = true)
             {
                 if (cfArrayHandle == IntPtr.Zero)
@@ -374,6 +379,11 @@ namespace Xamarin.NativeHelpers
                     var list = new List<string> (cfArray.Count);
 
                     foreach (var itemPtr in cfArray) {
+                        if (itemPtr == IntPtr.Zero)
+                            list.Add (null);
+                        else if (CFGetTypeID (itemPtr) != CFTypeID.CFString)
+                            throw new ArrayTypeMismatchException ();
+
                         using (var cfString = new CFString (itemPtr, ownsHandle: false))
                            list.Add (cfString.ToString ());
                     }
@@ -408,7 +418,7 @@ namespace Xamarin.NativeHelpers
                         ? IntPtr.Zero
                         : value.Handle);
 
-            public void AddRange (string [] values)
+            public void AddRange (IEnumerable<string> values)
             {
                 if (values == null)
                     throw new ArgumentNullException (nameof (values));
