@@ -32,6 +32,23 @@ namespace Xamarin.Linq
                 memcmp = posix_memcmp;
         }
 
+        /// <summary>
+        /// Compares <paramref name="length"/> elements of two byte arrays starting
+        /// at <paramref name="offset"/> for sequence equality using <c>memcmp</c>.
+        /// </summary>
+        /// <remarks>
+        /// <c><paramref name="offset"/> + <paramref name="length"/></c> must produce a legal
+        /// index into both <paramref name="array1"/> and <paramref name="array2"/> to avoid
+        /// an out of bounds read.
+        /// </remarks>
+        /// <param name="array1">Array to compare against <paramref name="array2"/></param>
+        /// <param name="array2">Array to compare against <paramref name="array1"/></param>
+        /// <param name="offset">Starting offset for comparison into the arrays</param>
+        /// <param name="length">Number of bytes to compare</param>
+        /// <returns>
+        /// Returns <c>true</c> if the two byte arrays are equal with respect to
+        /// <paramref name="offset"/> and <paramref name="length"/>.
+        /// </returns>
         public static unsafe bool SequenceEqual (this byte [] array1, byte [] array2, int offset, int length)
         {
             if (array1 == null)

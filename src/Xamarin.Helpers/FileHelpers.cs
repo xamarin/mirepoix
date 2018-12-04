@@ -53,6 +53,11 @@ namespace Xamarin
             }
         }
 
+        /// <summary>
+        /// Compare the contents of files on disk <paramref name="file1"/>
+        /// and <paramref name="file2"/> for byte equality.
+        /// </summary>
+        /// <returns>Returns <c>true</c> if the files have the same byte content.</returns>
         public static bool FileContentsAreEqual (string file1, string file2)
         {
             if (file1 == null)
@@ -78,6 +83,11 @@ namespace Xamarin
                 return StreamContentsAreEqual (stream1, stream2);
         }
 
+        /// <summary>
+        /// Compare the contents of streams <paramref name="stream1"/>
+        /// and <paramref name="stream2"/> for byte equality.
+        /// </summary>
+        /// <returns>Returns <c>true</c> if the streams have the same byte content.</returns>
         public static bool StreamContentsAreEqual (Stream stream1, Stream stream2)
         {
             if (stream1 == null)
