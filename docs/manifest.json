@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.FileHelpers.html",
-          "hash": "JxHqeYBnD5jEGSBZJTo41w=="
+          "hash": "hQj0Aca64Lir9rZvl4g15A=="
         }
       },
       "is_incremental": true,
@@ -118,6 +118,30 @@
         ".html": {
           "relative_path": "api/Xamarin.HashHelpers.html",
           "hash": "0/V0+x06kOTEVIjDnByHKw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.Linq.LinqExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.Linq.LinqExtensions.html",
+          "hash": "HD5b+Gd41S9CNRi8OwGJ7Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.Linq.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.Linq.html",
+          "hash": "FrlcrFW6iVQAA5wN5fZ0hg=="
         }
       },
       "is_incremental": true,
@@ -281,11 +305,119 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.NativeHelpers.CoreFoundation.CFArray.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.NativeHelpers.CoreFoundation.CFArray.html",
+          "hash": "89XCwHecS363nGJTWQhBlg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.html",
+          "hash": "DDfsoRK0/Pzc+bmPlsvc1Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.NativeHelpers.CoreFoundation.CFBoolean.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.NativeHelpers.CoreFoundation.CFBoolean.html",
+          "hash": "2nmEaeAvhS9nW5hYR2u66w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.html",
+          "hash": "1N1BsaHLu/HHldhsuxTHpw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html",
+          "hash": "NDgF8at4+xDiv5VOJPmNSA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.NativeHelpers.CoreFoundation.CFNumberType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.NativeHelpers.CoreFoundation.CFNumberType.html",
+          "hash": "mUo2sI7Cx85FY+7JracpuA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.NativeHelpers.CoreFoundation.CFObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.NativeHelpers.CoreFoundation.CFObject.html",
+          "hash": "TmIuVOIX7YyPNg+w9gfVEw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Xamarin.NativeHelpers.CoreFoundation.CFRange.yml",
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.NativeHelpers.CoreFoundation.CFRange.html",
-          "hash": "Z+hCAAXbrVSJ1roCFfjTfA=="
+          "hash": "jf/Tru8JzhdqFX9VX659vQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.NativeHelpers.CoreFoundation.CFString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.NativeHelpers.CoreFoundation.CFString.html",
+          "hash": "OwJ7fIbyq38qy2024Cs4dQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.NativeHelpers.CoreFoundation.CFTypeID.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.NativeHelpers.CoreFoundation.CFTypeID.html",
+          "hash": "7eKsAalyWaF7cf/0+lR3/Q=="
         }
       },
       "is_incremental": true,
@@ -297,7 +429,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.NativeHelpers.CoreFoundation.html",
-          "hash": "dSizgd+NeGyuuY4EF9nnBQ=="
+          "hash": "OSYa7kEoKgFUdZcypZ+/5g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.NativeHelpers.Dlfcn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.NativeHelpers.Dlfcn.html",
+          "hash": "bzafuzNNHLnbD4PRqN4Wvw=="
         }
       },
       "is_incremental": true,
@@ -309,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.NativeHelpers.html",
-          "hash": "R8qWtdDEOpE8zxR08LEImw=="
+          "hash": "5v/lhZMboBTTm/IXDudbbQ=="
         }
       },
       "is_incremental": true,
@@ -353,11 +497,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Xamarin.Preferences.IPreferenceStore.yml",
+      "source_relative_path": "api/Xamarin.Preferences.MacUserDefaultsPreferenceStore.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Xamarin.Preferences.IPreferenceStore.html",
-          "hash": "RA1E8PUg1POEphXYbS95oQ=="
+          "relative_path": "api/Xamarin.Preferences.MacUserDefaultsPreferenceStore.html",
+          "hash": "Kvuv3AMItKVlJNC/zTCrYQ=="
         }
       },
       "is_incremental": true,
@@ -369,7 +513,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html",
-          "hash": "OyH8sOQqmLkSdFTkbDT4yA=="
+          "hash": "8CUWN8UaOmPIWJkWXaPs9w=="
         }
       },
       "is_incremental": true,
@@ -381,7 +525,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Preferences.Preference-1.html",
-          "hash": "wfcb6N+ew2ryB0kPmuaQJg=="
+          "hash": "9AtQX/XkUpl5R/zcEqII2Q=="
         }
       },
       "is_incremental": true,
@@ -393,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Preferences.PreferenceChangedEventArgs.html",
-          "hash": "Gkn72GoSmUDopHsHRdltQQ=="
+          "hash": "nIUh/GXGIzHYNy21Geeegw=="
         }
       },
       "is_incremental": true,
@@ -405,7 +549,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Preferences.PreferenceStore.html",
-          "hash": "3C6tGnhIZcnq1CnCaBQdqw=="
+          "hash": "cMr+MLh9dw9ycorZwKKrYQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.Preferences.PreferenceStoreConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.Preferences.PreferenceStoreConfiguration.html",
+          "hash": "TbLBhT1f5T8TWQ0zJbXjHQ=="
         }
       },
       "is_incremental": true,
@@ -417,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Preferences.PreferenceTypeConverter-1.html",
-          "hash": "javcmI54El1mxRl6VqLg3A=="
+          "hash": "sNXXD3ho7hFppUgCsFbz6g=="
         }
       },
       "is_incremental": true,
@@ -429,7 +585,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Preferences.RegistryPreferenceStore.html",
-          "hash": "UHN89kTtlFqm/x5L7YLA3A=="
+          "hash": "hNRUb++QA1QjCQ85Eb2qCg=="
         }
       },
       "is_incremental": true,
@@ -441,7 +597,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.Preferences.html",
-          "hash": "BslCXdzEQ2Rg4pl6nTwzIg=="
+          "hash": "CcMCBsKYxzaOggLL5HrVPg=="
         }
       },
       "is_incremental": true,
@@ -969,7 +1125,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "CoVuwqCiCW7Er9priMN+Qg=="
+          "hash": "As631HV/YEb2aiphx+RYFQ=="
         }
       },
       "is_incremental": false,
@@ -1036,11 +1192,11 @@
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         }

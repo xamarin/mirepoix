@@ -426,6 +426,32 @@ references:
   isSpec: "True"
   fullName: Xamarin.FileHelpers.DetectFileLineEnding
   nameWithType: FileHelpers.DetectFileLineEnding
+- uid: Xamarin.FileHelpers.FileContentsAreEqual(System.String,System.String)
+  name: FileContentsAreEqual(String, String)
+  href: api/Xamarin.FileHelpers.html#Xamarin_FileHelpers_FileContentsAreEqual_System_String_System_String_
+  commentId: M:Xamarin.FileHelpers.FileContentsAreEqual(System.String,System.String)
+  fullName: Xamarin.FileHelpers.FileContentsAreEqual(System.String, System.String)
+  nameWithType: FileHelpers.FileContentsAreEqual(String, String)
+- uid: Xamarin.FileHelpers.FileContentsAreEqual*
+  name: FileContentsAreEqual
+  href: api/Xamarin.FileHelpers.html#Xamarin_FileHelpers_FileContentsAreEqual_
+  commentId: Overload:Xamarin.FileHelpers.FileContentsAreEqual
+  isSpec: "True"
+  fullName: Xamarin.FileHelpers.FileContentsAreEqual
+  nameWithType: FileHelpers.FileContentsAreEqual
+- uid: Xamarin.FileHelpers.StreamContentsAreEqual(System.IO.Stream,System.IO.Stream)
+  name: StreamContentsAreEqual(Stream, Stream)
+  href: api/Xamarin.FileHelpers.html#Xamarin_FileHelpers_StreamContentsAreEqual_System_IO_Stream_System_IO_Stream_
+  commentId: M:Xamarin.FileHelpers.StreamContentsAreEqual(System.IO.Stream,System.IO.Stream)
+  fullName: Xamarin.FileHelpers.StreamContentsAreEqual(System.IO.Stream, System.IO.Stream)
+  nameWithType: FileHelpers.StreamContentsAreEqual(Stream, Stream)
+- uid: Xamarin.FileHelpers.StreamContentsAreEqual*
+  name: StreamContentsAreEqual
+  href: api/Xamarin.FileHelpers.html#Xamarin_FileHelpers_StreamContentsAreEqual_
+  commentId: Overload:Xamarin.FileHelpers.StreamContentsAreEqual
+  isSpec: "True"
+  fullName: Xamarin.FileHelpers.StreamContentsAreEqual
+  nameWithType: FileHelpers.StreamContentsAreEqual
 - uid: Xamarin.GuidHelpers
   name: GuidHelpers
   href: api/Xamarin.GuidHelpers.html
@@ -577,6 +603,34 @@ references:
   fullName.vb: Xamarin.HashHelpers.Hash(Of T)(T, System.Int32)
   nameWithType: HashHelpers.Hash<T>(T, Int32)
   nameWithType.vb: HashHelpers.Hash(Of T)(T, Int32)
+- uid: Xamarin.Linq
+  name: Xamarin.Linq
+  href: api/Xamarin.Linq.html
+  commentId: N:Xamarin.Linq
+  fullName: Xamarin.Linq
+  nameWithType: Xamarin.Linq
+- uid: Xamarin.Linq.LinqExtensions
+  name: LinqExtensions
+  href: api/Xamarin.Linq.LinqExtensions.html
+  commentId: T:Xamarin.Linq.LinqExtensions
+  fullName: Xamarin.Linq.LinqExtensions
+  nameWithType: LinqExtensions
+- uid: Xamarin.Linq.LinqExtensions.SequenceEqual(System.Byte[],System.Byte[],System.Int32,System.Int32)
+  name: SequenceEqual(Byte[], Byte[], Int32, Int32)
+  href: api/Xamarin.Linq.LinqExtensions.html#Xamarin_Linq_LinqExtensions_SequenceEqual_System_Byte___System_Byte___System_Int32_System_Int32_
+  commentId: M:Xamarin.Linq.LinqExtensions.SequenceEqual(System.Byte[],System.Byte[],System.Int32,System.Int32)
+  name.vb: SequenceEqual(Byte(), Byte(), Int32, Int32)
+  fullName: Xamarin.Linq.LinqExtensions.SequenceEqual(System.Byte[], System.Byte[], System.Int32, System.Int32)
+  fullName.vb: Xamarin.Linq.LinqExtensions.SequenceEqual(System.Byte(), System.Byte(), System.Int32, System.Int32)
+  nameWithType: LinqExtensions.SequenceEqual(Byte[], Byte[], Int32, Int32)
+  nameWithType.vb: LinqExtensions.SequenceEqual(Byte(), Byte(), Int32, Int32)
+- uid: Xamarin.Linq.LinqExtensions.SequenceEqual*
+  name: SequenceEqual
+  href: api/Xamarin.Linq.LinqExtensions.html#Xamarin_Linq_LinqExtensions_SequenceEqual_
+  commentId: Overload:Xamarin.Linq.LinqExtensions.SequenceEqual
+  isSpec: "True"
+  fullName: Xamarin.Linq.LinqExtensions.SequenceEqual
+  nameWithType: LinqExtensions.SequenceEqual
 - uid: Xamarin.MSBuild.Sdk
   name: Xamarin.MSBuild.Sdk
   href: api/Xamarin.MSBuild.Sdk.html
@@ -1369,6 +1423,595 @@ references:
   commentId: T:Xamarin.NativeHelpers.CoreFoundation
   fullName: Xamarin.NativeHelpers.CoreFoundation
   nameWithType: CoreFoundation
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFArray
+  name: CoreFoundation.CFArray
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFArray.html
+  commentId: T:Xamarin.NativeHelpers.CoreFoundation.CFArray
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFArray
+  nameWithType: CoreFoundation.CFArray
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFArray.#ctor(System.IntPtr,System.Boolean)
+  name: CFArray(IntPtr, Boolean)
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFArray.html#Xamarin_NativeHelpers_CoreFoundation_CFArray__ctor_System_IntPtr_System_Boolean_
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFArray.#ctor(System.IntPtr,System.Boolean)
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFArray.CFArray(System.IntPtr, System.Boolean)
+  nameWithType: CoreFoundation.CFArray.CFArray(IntPtr, Boolean)
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFArray.#ctor*
+  name: CFArray
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFArray.html#Xamarin_NativeHelpers_CoreFoundation_CFArray__ctor_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFArray.#ctor
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFArray.CFArray
+  nameWithType: CoreFoundation.CFArray.CFArray
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFArray.FromCFStringArray(System.IntPtr,System.Boolean)
+  name: FromCFStringArray(IntPtr, Boolean)
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFArray.html#Xamarin_NativeHelpers_CoreFoundation_CFArray_FromCFStringArray_System_IntPtr_System_Boolean_
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFArray.FromCFStringArray(System.IntPtr,System.Boolean)
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFArray.FromCFStringArray(System.IntPtr, System.Boolean)
+  nameWithType: CoreFoundation.CFArray.FromCFStringArray(IntPtr, Boolean)
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFArray.FromCFStringArray*
+  name: FromCFStringArray
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFArray.html#Xamarin_NativeHelpers_CoreFoundation_CFArray_FromCFStringArray_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFArray.FromCFStringArray
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFArray.FromCFStringArray
+  nameWithType: CoreFoundation.CFArray.FromCFStringArray
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFArrayBase
+  name: CoreFoundation.CFArrayBase
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.html
+  commentId: T:Xamarin.NativeHelpers.CoreFoundation.CFArrayBase
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFArrayBase
+  nameWithType: CoreFoundation.CFArrayBase
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.Count
+  name: Count
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.html#Xamarin_NativeHelpers_CoreFoundation_CFArrayBase_Count
+  commentId: P:Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.Count
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.Count
+  nameWithType: CoreFoundation.CFArrayBase.Count
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.Count*
+  name: Count
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.html#Xamarin_NativeHelpers_CoreFoundation_CFArrayBase_Count_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.Count
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.Count
+  nameWithType: CoreFoundation.CFArrayBase.Count
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.GetEnumerator
+  name: GetEnumerator()
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.html#Xamarin_NativeHelpers_CoreFoundation_CFArrayBase_GetEnumerator
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.GetEnumerator
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.GetEnumerator()
+  nameWithType: CoreFoundation.CFArrayBase.GetEnumerator()
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.GetEnumerator*
+  name: GetEnumerator
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.html#Xamarin_NativeHelpers_CoreFoundation_CFArrayBase_GetEnumerator_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.GetEnumerator
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.GetEnumerator
+  nameWithType: CoreFoundation.CFArrayBase.GetEnumerator
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.Item(System.Int32)
+  name: Item[Int32]
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.html#Xamarin_NativeHelpers_CoreFoundation_CFArrayBase_Item_System_Int32_
+  commentId: P:Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.Item(System.Int32)
+  name.vb: Item(Int32)
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.Item[System.Int32]
+  fullName.vb: Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.Item(System.Int32)
+  nameWithType: CoreFoundation.CFArrayBase.Item[Int32]
+  nameWithType.vb: CoreFoundation.CFArrayBase.Item(Int32)
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.Item*
+  name: Item
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.html#Xamarin_NativeHelpers_CoreFoundation_CFArrayBase_Item_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.Item
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.Item
+  nameWithType: CoreFoundation.CFArrayBase.Item
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.html#Xamarin_NativeHelpers_CoreFoundation_CFArrayBase_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: CoreFoundation.CFArrayBase.IEnumerable.GetEnumerator()
+  nameWithType.vb: CoreFoundation.CFArrayBase.System.Collections.IEnumerable.GetEnumerator()
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.System#Collections#IEnumerable#GetEnumerator*
+  name: IEnumerable.GetEnumerator
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.html#Xamarin_NativeHelpers_CoreFoundation_CFArrayBase_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.System#Collections#IEnumerable#GetEnumerator
+  isSpec: "True"
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFArrayBase.System.Collections.IEnumerable.GetEnumerator
+  nameWithType: CoreFoundation.CFArrayBase.IEnumerable.GetEnumerator
+  nameWithType.vb: CoreFoundation.CFArrayBase.System.Collections.IEnumerable.GetEnumerator
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFBoolean
+  name: CoreFoundation.CFBoolean
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFBoolean.html
+  commentId: T:Xamarin.NativeHelpers.CoreFoundation.CFBoolean
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFBoolean
+  nameWithType: CoreFoundation.CFBoolean
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFBoolean.False
+  name: "False"
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFBoolean.html#Xamarin_NativeHelpers_CoreFoundation_CFBoolean_False
+  commentId: F:Xamarin.NativeHelpers.CoreFoundation.CFBoolean.False
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFBoolean.False
+  nameWithType: CoreFoundation.CFBoolean.False
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFBoolean.ToBoolean(System.IntPtr)
+  name: ToBoolean(IntPtr)
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFBoolean.html#Xamarin_NativeHelpers_CoreFoundation_CFBoolean_ToBoolean_System_IntPtr_
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFBoolean.ToBoolean(System.IntPtr)
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFBoolean.ToBoolean(System.IntPtr)
+  nameWithType: CoreFoundation.CFBoolean.ToBoolean(IntPtr)
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFBoolean.ToBoolean*
+  name: ToBoolean
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFBoolean.html#Xamarin_NativeHelpers_CoreFoundation_CFBoolean_ToBoolean_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFBoolean.ToBoolean
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFBoolean.ToBoolean
+  nameWithType: CoreFoundation.CFBoolean.ToBoolean
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFBoolean.ToCFBoolean(System.Boolean)
+  name: ToCFBoolean(Boolean)
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFBoolean.html#Xamarin_NativeHelpers_CoreFoundation_CFBoolean_ToCFBoolean_System_Boolean_
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFBoolean.ToCFBoolean(System.Boolean)
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFBoolean.ToCFBoolean(System.Boolean)
+  nameWithType: CoreFoundation.CFBoolean.ToCFBoolean(Boolean)
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFBoolean.ToCFBoolean*
+  name: ToCFBoolean
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFBoolean.html#Xamarin_NativeHelpers_CoreFoundation_CFBoolean_ToCFBoolean_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFBoolean.ToCFBoolean
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFBoolean.ToCFBoolean
+  nameWithType: CoreFoundation.CFBoolean.ToCFBoolean
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFBoolean.True
+  name: "True"
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFBoolean.html#Xamarin_NativeHelpers_CoreFoundation_CFBoolean_True
+  commentId: F:Xamarin.NativeHelpers.CoreFoundation.CFBoolean.True
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFBoolean.True
+  nameWithType: CoreFoundation.CFBoolean.True
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFGetTypeID(System.IntPtr)
+  name: CFGetTypeID(IntPtr)
+  href: api/Xamarin.NativeHelpers.CoreFoundation.html#Xamarin_NativeHelpers_CoreFoundation_CFGetTypeID_System_IntPtr_
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFGetTypeID(System.IntPtr)
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFGetTypeID(System.IntPtr)
+  nameWithType: CoreFoundation.CFGetTypeID(IntPtr)
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFGetTypeID*
+  name: CFGetTypeID
+  href: api/Xamarin.NativeHelpers.CoreFoundation.html#Xamarin_NativeHelpers_CoreFoundation_CFGetTypeID_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFGetTypeID
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFGetTypeID
+  nameWithType: CoreFoundation.CFGetTypeID
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFMutableArray
+  name: CoreFoundation.CFMutableArray
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.html
+  commentId: T:Xamarin.NativeHelpers.CoreFoundation.CFMutableArray
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFMutableArray
+  nameWithType: CoreFoundation.CFMutableArray
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.#ctor
+  name: CFMutableArray()
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.html#Xamarin_NativeHelpers_CoreFoundation_CFMutableArray__ctor
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.#ctor
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.CFMutableArray()
+  nameWithType: CoreFoundation.CFMutableArray.CFMutableArray()
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.#ctor*
+  name: CFMutableArray
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.html#Xamarin_NativeHelpers_CoreFoundation_CFMutableArray__ctor_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.#ctor
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.CFMutableArray
+  nameWithType: CoreFoundation.CFMutableArray.CFMutableArray
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.Add(Xamarin.NativeHelpers.CoreFoundation.CFObject)
+  name: Add(CoreFoundation.CFObject)
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.html#Xamarin_NativeHelpers_CoreFoundation_CFMutableArray_Add_Xamarin_NativeHelpers_CoreFoundation_CFObject_
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.Add(Xamarin.NativeHelpers.CoreFoundation.CFObject)
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.Add(Xamarin.NativeHelpers.CoreFoundation.CFObject)
+  nameWithType: CoreFoundation.CFMutableArray.Add(CoreFoundation.CFObject)
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.Add*
+  name: Add
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.html#Xamarin_NativeHelpers_CoreFoundation_CFMutableArray_Add_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.Add
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.Add
+  nameWithType: CoreFoundation.CFMutableArray.Add
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.AddRange(System.Collections.Generic.IEnumerable{System.String})
+  name: AddRange(IEnumerable<String>)
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.html#Xamarin_NativeHelpers_CoreFoundation_CFMutableArray_AddRange_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.AddRange(System.Collections.Generic.IEnumerable{System.String})
+  name.vb: AddRange(IEnumerable(Of String))
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.AddRange(System.Collections.Generic.IEnumerable<System.String>)
+  fullName.vb: Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.AddRange(System.Collections.Generic.IEnumerable(Of System.String))
+  nameWithType: CoreFoundation.CFMutableArray.AddRange(IEnumerable<String>)
+  nameWithType.vb: CoreFoundation.CFMutableArray.AddRange(IEnumerable(Of String))
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.AddRange*
+  name: AddRange
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.html#Xamarin_NativeHelpers_CoreFoundation_CFMutableArray_AddRange_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.AddRange
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFMutableArray.AddRange
+  nameWithType: CoreFoundation.CFMutableArray.AddRange
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber
+  name: CoreFoundation.CFNumber
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html
+  commentId: T:Xamarin.NativeHelpers.CoreFoundation.CFNumber
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber
+  nameWithType: CoreFoundation.CFNumber
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.#ctor(System.Byte)
+  name: CFNumber(Byte)
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber__ctor_System_Byte_
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFNumber.#ctor(System.Byte)
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.CFNumber(System.Byte)
+  nameWithType: CoreFoundation.CFNumber.CFNumber(Byte)
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.#ctor(System.Double)
+  name: CFNumber(Double)
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber__ctor_System_Double_
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFNumber.#ctor(System.Double)
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.CFNumber(System.Double)
+  nameWithType: CoreFoundation.CFNumber.CFNumber(Double)
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.#ctor(System.Int16)
+  name: CFNumber(Int16)
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber__ctor_System_Int16_
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFNumber.#ctor(System.Int16)
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.CFNumber(System.Int16)
+  nameWithType: CoreFoundation.CFNumber.CFNumber(Int16)
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.#ctor(System.Int32)
+  name: CFNumber(Int32)
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber__ctor_System_Int32_
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFNumber.#ctor(System.Int32)
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.CFNumber(System.Int32)
+  nameWithType: CoreFoundation.CFNumber.CFNumber(Int32)
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.#ctor(System.Int64)
+  name: CFNumber(Int64)
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber__ctor_System_Int64_
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFNumber.#ctor(System.Int64)
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.CFNumber(System.Int64)
+  nameWithType: CoreFoundation.CFNumber.CFNumber(Int64)
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.#ctor(System.IntPtr,System.Boolean)
+  name: CFNumber(IntPtr, Boolean)
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber__ctor_System_IntPtr_System_Boolean_
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFNumber.#ctor(System.IntPtr,System.Boolean)
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.CFNumber(System.IntPtr, System.Boolean)
+  nameWithType: CoreFoundation.CFNumber.CFNumber(IntPtr, Boolean)
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.#ctor(System.SByte)
+  name: CFNumber(SByte)
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber__ctor_System_SByte_
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFNumber.#ctor(System.SByte)
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.CFNumber(System.SByte)
+  nameWithType: CoreFoundation.CFNumber.CFNumber(SByte)
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.#ctor(System.Single)
+  name: CFNumber(Single)
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber__ctor_System_Single_
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFNumber.#ctor(System.Single)
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.CFNumber(System.Single)
+  nameWithType: CoreFoundation.CFNumber.CFNumber(Single)
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.#ctor(System.UInt16)
+  name: CFNumber(UInt16)
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber__ctor_System_UInt16_
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFNumber.#ctor(System.UInt16)
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.CFNumber(System.UInt16)
+  nameWithType: CoreFoundation.CFNumber.CFNumber(UInt16)
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.#ctor(System.UInt32)
+  name: CFNumber(UInt32)
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber__ctor_System_UInt32_
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFNumber.#ctor(System.UInt32)
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.CFNumber(System.UInt32)
+  nameWithType: CoreFoundation.CFNumber.CFNumber(UInt32)
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.#ctor(System.UInt64)
+  name: CFNumber(UInt64)
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber__ctor_System_UInt64_
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFNumber.#ctor(System.UInt64)
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.CFNumber(System.UInt64)
+  nameWithType: CoreFoundation.CFNumber.CFNumber(UInt64)
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.#ctor*
+  name: CFNumber
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber__ctor_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFNumber.#ctor
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.CFNumber
+  nameWithType: CoreFoundation.CFNumber.CFNumber
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToByte
+  name: ToByte()
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber_ToByte
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToByte
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToByte()
+  nameWithType: CoreFoundation.CFNumber.ToByte()
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToByte*
+  name: ToByte
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber_ToByte_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToByte
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToByte
+  nameWithType: CoreFoundation.CFNumber.ToByte
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToDouble
+  name: ToDouble()
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber_ToDouble
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToDouble
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToDouble()
+  nameWithType: CoreFoundation.CFNumber.ToDouble()
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToDouble*
+  name: ToDouble
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber_ToDouble_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToDouble
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToDouble
+  nameWithType: CoreFoundation.CFNumber.ToDouble
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToInt16
+  name: ToInt16()
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber_ToInt16
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToInt16
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToInt16()
+  nameWithType: CoreFoundation.CFNumber.ToInt16()
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToInt16*
+  name: ToInt16
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber_ToInt16_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToInt16
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToInt16
+  nameWithType: CoreFoundation.CFNumber.ToInt16
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToInt32
+  name: ToInt32()
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber_ToInt32
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToInt32
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToInt32()
+  nameWithType: CoreFoundation.CFNumber.ToInt32()
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToInt32*
+  name: ToInt32
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber_ToInt32_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToInt32
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToInt32
+  nameWithType: CoreFoundation.CFNumber.ToInt32
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToInt64
+  name: ToInt64()
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber_ToInt64
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToInt64
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToInt64()
+  nameWithType: CoreFoundation.CFNumber.ToInt64()
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToInt64*
+  name: ToInt64
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber_ToInt64_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToInt64
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToInt64
+  nameWithType: CoreFoundation.CFNumber.ToInt64
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToSByte
+  name: ToSByte()
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber_ToSByte
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToSByte
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToSByte()
+  nameWithType: CoreFoundation.CFNumber.ToSByte()
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToSByte*
+  name: ToSByte
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber_ToSByte_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToSByte
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToSByte
+  nameWithType: CoreFoundation.CFNumber.ToSByte
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToSingle
+  name: ToSingle()
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber_ToSingle
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToSingle
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToSingle()
+  nameWithType: CoreFoundation.CFNumber.ToSingle()
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToSingle*
+  name: ToSingle
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber_ToSingle_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToSingle
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToSingle
+  nameWithType: CoreFoundation.CFNumber.ToSingle
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToUInt16
+  name: ToUInt16()
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber_ToUInt16
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToUInt16
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToUInt16()
+  nameWithType: CoreFoundation.CFNumber.ToUInt16()
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToUInt16*
+  name: ToUInt16
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber_ToUInt16_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToUInt16
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToUInt16
+  nameWithType: CoreFoundation.CFNumber.ToUInt16
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToUInt32
+  name: ToUInt32()
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber_ToUInt32
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToUInt32
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToUInt32()
+  nameWithType: CoreFoundation.CFNumber.ToUInt32()
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToUInt32*
+  name: ToUInt32
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber_ToUInt32_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToUInt32
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToUInt32
+  nameWithType: CoreFoundation.CFNumber.ToUInt32
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToUInt64
+  name: ToUInt64()
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber_ToUInt64
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToUInt64
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToUInt64()
+  nameWithType: CoreFoundation.CFNumber.ToUInt64()
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToUInt64*
+  name: ToUInt64
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber_ToUInt64_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToUInt64
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.ToUInt64
+  nameWithType: CoreFoundation.CFNumber.ToUInt64
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.Type
+  name: Type
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber_Type
+  commentId: P:Xamarin.NativeHelpers.CoreFoundation.CFNumber.Type
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.Type
+  nameWithType: CoreFoundation.CFNumber.Type
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumber.Type*
+  name: Type
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumber.html#Xamarin_NativeHelpers_CoreFoundation_CFNumber_Type_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFNumber.Type
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumber.Type
+  nameWithType: CoreFoundation.CFNumber.Type
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumberType
+  name: CoreFoundation.CFNumberType
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumberType.html
+  commentId: T:Xamarin.NativeHelpers.CoreFoundation.CFNumberType
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumberType
+  nameWithType: CoreFoundation.CFNumberType
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.CFIndex
+  name: CFIndex
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumberType.html#Xamarin_NativeHelpers_CoreFoundation_CFNumberType_CFIndex
+  commentId: F:Xamarin.NativeHelpers.CoreFoundation.CFNumberType.CFIndex
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.CFIndex
+  nameWithType: CoreFoundation.CFNumberType.CFIndex
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.CGFloat
+  name: CGFloat
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumberType.html#Xamarin_NativeHelpers_CoreFoundation_CFNumberType_CGFloat
+  commentId: F:Xamarin.NativeHelpers.CoreFoundation.CFNumberType.CGFloat
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.CGFloat
+  nameWithType: CoreFoundation.CFNumberType.CGFloat
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.Char
+  name: Char
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumberType.html#Xamarin_NativeHelpers_CoreFoundation_CFNumberType_Char
+  commentId: F:Xamarin.NativeHelpers.CoreFoundation.CFNumberType.Char
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.Char
+  nameWithType: CoreFoundation.CFNumberType.Char
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.Double
+  name: Double
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumberType.html#Xamarin_NativeHelpers_CoreFoundation_CFNumberType_Double
+  commentId: F:Xamarin.NativeHelpers.CoreFoundation.CFNumberType.Double
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.Double
+  nameWithType: CoreFoundation.CFNumberType.Double
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.Float
+  name: Float
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumberType.html#Xamarin_NativeHelpers_CoreFoundation_CFNumberType_Float
+  commentId: F:Xamarin.NativeHelpers.CoreFoundation.CFNumberType.Float
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.Float
+  nameWithType: CoreFoundation.CFNumberType.Float
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.Float32
+  name: Float32
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumberType.html#Xamarin_NativeHelpers_CoreFoundation_CFNumberType_Float32
+  commentId: F:Xamarin.NativeHelpers.CoreFoundation.CFNumberType.Float32
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.Float32
+  nameWithType: CoreFoundation.CFNumberType.Float32
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.Float64
+  name: Float64
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumberType.html#Xamarin_NativeHelpers_CoreFoundation_CFNumberType_Float64
+  commentId: F:Xamarin.NativeHelpers.CoreFoundation.CFNumberType.Float64
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.Float64
+  nameWithType: CoreFoundation.CFNumberType.Float64
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.Int
+  name: Int
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumberType.html#Xamarin_NativeHelpers_CoreFoundation_CFNumberType_Int
+  commentId: F:Xamarin.NativeHelpers.CoreFoundation.CFNumberType.Int
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.Int
+  nameWithType: CoreFoundation.CFNumberType.Int
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.Long
+  name: Long
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumberType.html#Xamarin_NativeHelpers_CoreFoundation_CFNumberType_Long
+  commentId: F:Xamarin.NativeHelpers.CoreFoundation.CFNumberType.Long
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.Long
+  nameWithType: CoreFoundation.CFNumberType.Long
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.LongLong
+  name: LongLong
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumberType.html#Xamarin_NativeHelpers_CoreFoundation_CFNumberType_LongLong
+  commentId: F:Xamarin.NativeHelpers.CoreFoundation.CFNumberType.LongLong
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.LongLong
+  nameWithType: CoreFoundation.CFNumberType.LongLong
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.NSInteger
+  name: NSInteger
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumberType.html#Xamarin_NativeHelpers_CoreFoundation_CFNumberType_NSInteger
+  commentId: F:Xamarin.NativeHelpers.CoreFoundation.CFNumberType.NSInteger
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.NSInteger
+  nameWithType: CoreFoundation.CFNumberType.NSInteger
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.Short
+  name: Short
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumberType.html#Xamarin_NativeHelpers_CoreFoundation_CFNumberType_Short
+  commentId: F:Xamarin.NativeHelpers.CoreFoundation.CFNumberType.Short
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.Short
+  nameWithType: CoreFoundation.CFNumberType.Short
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.SInt16
+  name: SInt16
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumberType.html#Xamarin_NativeHelpers_CoreFoundation_CFNumberType_SInt16
+  commentId: F:Xamarin.NativeHelpers.CoreFoundation.CFNumberType.SInt16
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.SInt16
+  nameWithType: CoreFoundation.CFNumberType.SInt16
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.SInt32
+  name: SInt32
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumberType.html#Xamarin_NativeHelpers_CoreFoundation_CFNumberType_SInt32
+  commentId: F:Xamarin.NativeHelpers.CoreFoundation.CFNumberType.SInt32
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.SInt32
+  nameWithType: CoreFoundation.CFNumberType.SInt32
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.SInt64
+  name: SInt64
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumberType.html#Xamarin_NativeHelpers_CoreFoundation_CFNumberType_SInt64
+  commentId: F:Xamarin.NativeHelpers.CoreFoundation.CFNumberType.SInt64
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.SInt64
+  nameWithType: CoreFoundation.CFNumberType.SInt64
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.SInt8
+  name: SInt8
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFNumberType.html#Xamarin_NativeHelpers_CoreFoundation_CFNumberType_SInt8
+  commentId: F:Xamarin.NativeHelpers.CoreFoundation.CFNumberType.SInt8
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFNumberType.SInt8
+  nameWithType: CoreFoundation.CFNumberType.SInt8
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFObject
+  name: CoreFoundation.CFObject
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFObject.html
+  commentId: T:Xamarin.NativeHelpers.CoreFoundation.CFObject
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFObject
+  nameWithType: CoreFoundation.CFObject
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFObject.#ctor(System.IntPtr,System.Boolean)
+  name: CFObject(IntPtr, Boolean)
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFObject.html#Xamarin_NativeHelpers_CoreFoundation_CFObject__ctor_System_IntPtr_System_Boolean_
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFObject.#ctor(System.IntPtr,System.Boolean)
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFObject.CFObject(System.IntPtr, System.Boolean)
+  nameWithType: CoreFoundation.CFObject.CFObject(IntPtr, Boolean)
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFObject.#ctor*
+  name: CFObject
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFObject.html#Xamarin_NativeHelpers_CoreFoundation_CFObject__ctor_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFObject.#ctor
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFObject.CFObject
+  nameWithType: CoreFoundation.CFObject.CFObject
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFObject.Dispose
+  name: Dispose()
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFObject.html#Xamarin_NativeHelpers_CoreFoundation_CFObject_Dispose
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFObject.Dispose
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFObject.Dispose()
+  nameWithType: CoreFoundation.CFObject.Dispose()
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFObject.Dispose(System.Boolean)
+  name: Dispose(Boolean)
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFObject.html#Xamarin_NativeHelpers_CoreFoundation_CFObject_Dispose_System_Boolean_
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFObject.Dispose(System.Boolean)
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFObject.Dispose(System.Boolean)
+  nameWithType: CoreFoundation.CFObject.Dispose(Boolean)
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFObject.Dispose*
+  name: Dispose
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFObject.html#Xamarin_NativeHelpers_CoreFoundation_CFObject_Dispose_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFObject.Dispose
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFObject.Dispose
+  nameWithType: CoreFoundation.CFObject.Dispose
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFObject.Finalize
+  name: Finalize()
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFObject.html#Xamarin_NativeHelpers_CoreFoundation_CFObject_Finalize
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFObject.Finalize
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFObject.Finalize()
+  nameWithType: CoreFoundation.CFObject.Finalize()
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFObject.Finalize*
+  name: Finalize
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFObject.html#Xamarin_NativeHelpers_CoreFoundation_CFObject_Finalize_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFObject.Finalize
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFObject.Finalize
+  nameWithType: CoreFoundation.CFObject.Finalize
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFObject.Handle
+  name: Handle
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFObject.html#Xamarin_NativeHelpers_CoreFoundation_CFObject_Handle
+  commentId: P:Xamarin.NativeHelpers.CoreFoundation.CFObject.Handle
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFObject.Handle
+  nameWithType: CoreFoundation.CFObject.Handle
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFObject.Handle*
+  name: Handle
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFObject.html#Xamarin_NativeHelpers_CoreFoundation_CFObject_Handle_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFObject.Handle
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFObject.Handle
+  nameWithType: CoreFoundation.CFObject.Handle
 - uid: Xamarin.NativeHelpers.CoreFoundation.CFRange
   name: CoreFoundation.CFRange
   href: api/Xamarin.NativeHelpers.CoreFoundation.CFRange.html
@@ -1430,32 +2073,170 @@ references:
   commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFRetain
   fullName: Xamarin.NativeHelpers.CoreFoundation.CFRetain
   nameWithType: CoreFoundation.CFRetain
-- uid: Xamarin.NativeHelpers.CoreFoundation.CFStringCreate(System.String)
-  name: CFStringCreate(String)
-  href: api/Xamarin.NativeHelpers.CoreFoundation.html#Xamarin_NativeHelpers_CoreFoundation_CFStringCreate_System_String_
-  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFStringCreate(System.String)
-  fullName: Xamarin.NativeHelpers.CoreFoundation.CFStringCreate(System.String)
-  nameWithType: CoreFoundation.CFStringCreate(String)
-- uid: Xamarin.NativeHelpers.CoreFoundation.CFStringCreate*
-  name: CFStringCreate
-  href: api/Xamarin.NativeHelpers.CoreFoundation.html#Xamarin_NativeHelpers_CoreFoundation_CFStringCreate_
-  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFStringCreate
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFString
+  name: CoreFoundation.CFString
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFString.html
+  commentId: T:Xamarin.NativeHelpers.CoreFoundation.CFString
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFString
+  nameWithType: CoreFoundation.CFString
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFString.#ctor(System.IntPtr,System.Boolean)
+  name: CFString(IntPtr, Boolean)
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFString.html#Xamarin_NativeHelpers_CoreFoundation_CFString__ctor_System_IntPtr_System_Boolean_
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFString.#ctor(System.IntPtr,System.Boolean)
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFString.CFString(System.IntPtr, System.Boolean)
+  nameWithType: CoreFoundation.CFString.CFString(IntPtr, Boolean)
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFString.#ctor(System.String)
+  name: CFString(String)
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFString.html#Xamarin_NativeHelpers_CoreFoundation_CFString__ctor_System_String_
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFString.#ctor(System.String)
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFString.CFString(System.String)
+  nameWithType: CoreFoundation.CFString.CFString(String)
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFString.#ctor*
+  name: CFString
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFString.html#Xamarin_NativeHelpers_CoreFoundation_CFString__ctor_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFString.#ctor
   isSpec: "True"
-  fullName: Xamarin.NativeHelpers.CoreFoundation.CFStringCreate
-  nameWithType: CoreFoundation.CFStringCreate
-- uid: Xamarin.NativeHelpers.CoreFoundation.CFStringGetString(System.IntPtr)
-  name: CFStringGetString(IntPtr)
-  href: api/Xamarin.NativeHelpers.CoreFoundation.html#Xamarin_NativeHelpers_CoreFoundation_CFStringGetString_System_IntPtr_
-  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFStringGetString(System.IntPtr)
-  fullName: Xamarin.NativeHelpers.CoreFoundation.CFStringGetString(System.IntPtr)
-  nameWithType: CoreFoundation.CFStringGetString(IntPtr)
-- uid: Xamarin.NativeHelpers.CoreFoundation.CFStringGetString*
-  name: CFStringGetString
-  href: api/Xamarin.NativeHelpers.CoreFoundation.html#Xamarin_NativeHelpers_CoreFoundation_CFStringGetString_
-  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFStringGetString
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFString.CFString
+  nameWithType: CoreFoundation.CFString.CFString
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFString.Item(System.Int32)
+  name: Item[Int32]
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFString.html#Xamarin_NativeHelpers_CoreFoundation_CFString_Item_System_Int32_
+  commentId: P:Xamarin.NativeHelpers.CoreFoundation.CFString.Item(System.Int32)
+  name.vb: Item(Int32)
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFString.Item[System.Int32]
+  fullName.vb: Xamarin.NativeHelpers.CoreFoundation.CFString.Item(System.Int32)
+  nameWithType: CoreFoundation.CFString.Item[Int32]
+  nameWithType.vb: CoreFoundation.CFString.Item(Int32)
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFString.Item*
+  name: Item
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFString.html#Xamarin_NativeHelpers_CoreFoundation_CFString_Item_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFString.Item
   isSpec: "True"
-  fullName: Xamarin.NativeHelpers.CoreFoundation.CFStringGetString
-  nameWithType: CoreFoundation.CFStringGetString
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFString.Item
+  nameWithType: CoreFoundation.CFString.Item
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFString.Length
+  name: Length
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFString.html#Xamarin_NativeHelpers_CoreFoundation_CFString_Length
+  commentId: P:Xamarin.NativeHelpers.CoreFoundation.CFString.Length
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFString.Length
+  nameWithType: CoreFoundation.CFString.Length
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFString.Length*
+  name: Length
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFString.html#Xamarin_NativeHelpers_CoreFoundation_CFString_Length_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFString.Length
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFString.Length
+  nameWithType: CoreFoundation.CFString.Length
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFString.ToString
+  name: ToString()
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFString.html#Xamarin_NativeHelpers_CoreFoundation_CFString_ToString
+  commentId: M:Xamarin.NativeHelpers.CoreFoundation.CFString.ToString
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFString.ToString()
+  nameWithType: CoreFoundation.CFString.ToString()
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFString.ToString*
+  name: ToString
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFString.html#Xamarin_NativeHelpers_CoreFoundation_CFString_ToString_
+  commentId: Overload:Xamarin.NativeHelpers.CoreFoundation.CFString.ToString
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFString.ToString
+  nameWithType: CoreFoundation.CFString.ToString
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFTypeID
+  name: CoreFoundation.CFTypeID
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFTypeID.html
+  commentId: T:Xamarin.NativeHelpers.CoreFoundation.CFTypeID
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFTypeID
+  nameWithType: CoreFoundation.CFTypeID
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFTypeID.CFArray
+  name: CFArray
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFTypeID.html#Xamarin_NativeHelpers_CoreFoundation_CFTypeID_CFArray
+  commentId: F:Xamarin.NativeHelpers.CoreFoundation.CFTypeID.CFArray
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFTypeID.CFArray
+  nameWithType: CoreFoundation.CFTypeID.CFArray
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFTypeID.CFBoolean
+  name: CFBoolean
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFTypeID.html#Xamarin_NativeHelpers_CoreFoundation_CFTypeID_CFBoolean
+  commentId: F:Xamarin.NativeHelpers.CoreFoundation.CFTypeID.CFBoolean
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFTypeID.CFBoolean
+  nameWithType: CoreFoundation.CFTypeID.CFBoolean
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFTypeID.CFNumber
+  name: CFNumber
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFTypeID.html#Xamarin_NativeHelpers_CoreFoundation_CFTypeID_CFNumber
+  commentId: F:Xamarin.NativeHelpers.CoreFoundation.CFTypeID.CFNumber
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFTypeID.CFNumber
+  nameWithType: CoreFoundation.CFTypeID.CFNumber
+- uid: Xamarin.NativeHelpers.CoreFoundation.CFTypeID.CFString
+  name: CFString
+  href: api/Xamarin.NativeHelpers.CoreFoundation.CFTypeID.html#Xamarin_NativeHelpers_CoreFoundation_CFTypeID_CFString
+  commentId: F:Xamarin.NativeHelpers.CoreFoundation.CFTypeID.CFString
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CFTypeID.CFString
+  nameWithType: CoreFoundation.CFTypeID.CFString
+- uid: Xamarin.NativeHelpers.CoreFoundation.CoreFoundationLibrary
+  name: CoreFoundationLibrary
+  href: api/Xamarin.NativeHelpers.CoreFoundation.html#Xamarin_NativeHelpers_CoreFoundation_CoreFoundationLibrary
+  commentId: F:Xamarin.NativeHelpers.CoreFoundation.CoreFoundationLibrary
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CoreFoundationLibrary
+  nameWithType: CoreFoundation.CoreFoundationLibrary
+- uid: Xamarin.NativeHelpers.CoreFoundation.CoreFoundationLibraryHandle
+  name: CoreFoundationLibraryHandle
+  href: api/Xamarin.NativeHelpers.CoreFoundation.html#Xamarin_NativeHelpers_CoreFoundation_CoreFoundationLibraryHandle
+  commentId: F:Xamarin.NativeHelpers.CoreFoundation.CoreFoundationLibraryHandle
+  fullName: Xamarin.NativeHelpers.CoreFoundation.CoreFoundationLibraryHandle
+  nameWithType: CoreFoundation.CoreFoundationLibraryHandle
+- uid: Xamarin.NativeHelpers.Dlfcn
+  name: Dlfcn
+  href: api/Xamarin.NativeHelpers.Dlfcn.html
+  commentId: T:Xamarin.NativeHelpers.Dlfcn
+  fullName: Xamarin.NativeHelpers.Dlfcn
+  nameWithType: Dlfcn
+- uid: Xamarin.NativeHelpers.Dlfcn.dlclose(System.IntPtr)
+  name: dlclose(IntPtr)
+  href: api/Xamarin.NativeHelpers.Dlfcn.html#Xamarin_NativeHelpers_Dlfcn_dlclose_System_IntPtr_
+  commentId: M:Xamarin.NativeHelpers.Dlfcn.dlclose(System.IntPtr)
+  fullName: Xamarin.NativeHelpers.Dlfcn.dlclose(System.IntPtr)
+  nameWithType: Dlfcn.dlclose(IntPtr)
+- uid: Xamarin.NativeHelpers.Dlfcn.dlclose*
+  name: dlclose
+  href: api/Xamarin.NativeHelpers.Dlfcn.html#Xamarin_NativeHelpers_Dlfcn_dlclose_
+  commentId: Overload:Xamarin.NativeHelpers.Dlfcn.dlclose
+  fullName: Xamarin.NativeHelpers.Dlfcn.dlclose
+  nameWithType: Dlfcn.dlclose
+- uid: Xamarin.NativeHelpers.Dlfcn.dlopen(System.String,System.Int32)
+  name: dlopen(String, Int32)
+  href: api/Xamarin.NativeHelpers.Dlfcn.html#Xamarin_NativeHelpers_Dlfcn_dlopen_System_String_System_Int32_
+  commentId: M:Xamarin.NativeHelpers.Dlfcn.dlopen(System.String,System.Int32)
+  fullName: Xamarin.NativeHelpers.Dlfcn.dlopen(System.String, System.Int32)
+  nameWithType: Dlfcn.dlopen(String, Int32)
+- uid: Xamarin.NativeHelpers.Dlfcn.dlopen*
+  name: dlopen
+  href: api/Xamarin.NativeHelpers.Dlfcn.html#Xamarin_NativeHelpers_Dlfcn_dlopen_
+  commentId: Overload:Xamarin.NativeHelpers.Dlfcn.dlopen
+  fullName: Xamarin.NativeHelpers.Dlfcn.dlopen
+  nameWithType: Dlfcn.dlopen
+- uid: Xamarin.NativeHelpers.Dlfcn.dlsym(System.IntPtr,System.String)
+  name: dlsym(IntPtr, String)
+  href: api/Xamarin.NativeHelpers.Dlfcn.html#Xamarin_NativeHelpers_Dlfcn_dlsym_System_IntPtr_System_String_
+  commentId: M:Xamarin.NativeHelpers.Dlfcn.dlsym(System.IntPtr,System.String)
+  fullName: Xamarin.NativeHelpers.Dlfcn.dlsym(System.IntPtr, System.String)
+  nameWithType: Dlfcn.dlsym(IntPtr, String)
+- uid: Xamarin.NativeHelpers.Dlfcn.dlsym*
+  name: dlsym
+  href: api/Xamarin.NativeHelpers.Dlfcn.html#Xamarin_NativeHelpers_Dlfcn_dlsym_
+  commentId: Overload:Xamarin.NativeHelpers.Dlfcn.dlsym
+  fullName: Xamarin.NativeHelpers.Dlfcn.dlsym
+  nameWithType: Dlfcn.dlsym
+- uid: Xamarin.NativeHelpers.Dlfcn.ReadIntPtr(System.IntPtr,System.String)
+  name: ReadIntPtr(IntPtr, String)
+  href: api/Xamarin.NativeHelpers.Dlfcn.html#Xamarin_NativeHelpers_Dlfcn_ReadIntPtr_System_IntPtr_System_String_
+  commentId: M:Xamarin.NativeHelpers.Dlfcn.ReadIntPtr(System.IntPtr,System.String)
+  fullName: Xamarin.NativeHelpers.Dlfcn.ReadIntPtr(System.IntPtr, System.String)
+  nameWithType: Dlfcn.ReadIntPtr(IntPtr, String)
+- uid: Xamarin.NativeHelpers.Dlfcn.ReadIntPtr*
+  name: ReadIntPtr
+  href: api/Xamarin.NativeHelpers.Dlfcn.html#Xamarin_NativeHelpers_Dlfcn_ReadIntPtr_
+  commentId: Overload:Xamarin.NativeHelpers.Dlfcn.ReadIntPtr
+  isSpec: "True"
+  fullName: Xamarin.NativeHelpers.Dlfcn.ReadIntPtr
+  nameWithType: Dlfcn.ReadIntPtr
 - uid: Xamarin.PathHelpers
   name: PathHelpers
   href: api/Xamarin.PathHelpers.html
@@ -1596,324 +2377,154 @@ references:
   commentId: N:Xamarin.Preferences
   fullName: Xamarin.Preferences
   nameWithType: Xamarin.Preferences
-- uid: Xamarin.Preferences.IPreferenceStore
-  name: IPreferenceStore
-  href: api/Xamarin.Preferences.IPreferenceStore.html
-  commentId: T:Xamarin.Preferences.IPreferenceStore
-  fullName: Xamarin.Preferences.IPreferenceStore
-  nameWithType: IPreferenceStore
-- uid: Xamarin.Preferences.IPreferenceStore.GetBoolean(System.String,System.Boolean)
-  name: GetBoolean(String, Boolean)
-  href: api/Xamarin.Preferences.IPreferenceStore.html#Xamarin_Preferences_IPreferenceStore_GetBoolean_System_String_System_Boolean_
-  commentId: M:Xamarin.Preferences.IPreferenceStore.GetBoolean(System.String,System.Boolean)
-  fullName: Xamarin.Preferences.IPreferenceStore.GetBoolean(System.String, System.Boolean)
-  nameWithType: IPreferenceStore.GetBoolean(String, Boolean)
-- uid: Xamarin.Preferences.IPreferenceStore.GetBoolean*
-  name: GetBoolean
-  href: api/Xamarin.Preferences.IPreferenceStore.html#Xamarin_Preferences_IPreferenceStore_GetBoolean_
-  commentId: Overload:Xamarin.Preferences.IPreferenceStore.GetBoolean
+- uid: Xamarin.Preferences.MacUserDefaultsPreferenceStore
+  name: MacUserDefaultsPreferenceStore
+  href: api/Xamarin.Preferences.MacUserDefaultsPreferenceStore.html
+  commentId: T:Xamarin.Preferences.MacUserDefaultsPreferenceStore
+  fullName: Xamarin.Preferences.MacUserDefaultsPreferenceStore
+  nameWithType: MacUserDefaultsPreferenceStore
+- uid: Xamarin.Preferences.MacUserDefaultsPreferenceStore.#ctor(System.String)
+  name: MacUserDefaultsPreferenceStore(String)
+  href: api/Xamarin.Preferences.MacUserDefaultsPreferenceStore.html#Xamarin_Preferences_MacUserDefaultsPreferenceStore__ctor_System_String_
+  commentId: M:Xamarin.Preferences.MacUserDefaultsPreferenceStore.#ctor(System.String)
+  fullName: Xamarin.Preferences.MacUserDefaultsPreferenceStore.MacUserDefaultsPreferenceStore(System.String)
+  nameWithType: MacUserDefaultsPreferenceStore.MacUserDefaultsPreferenceStore(String)
+- uid: Xamarin.Preferences.MacUserDefaultsPreferenceStore.#ctor*
+  name: MacUserDefaultsPreferenceStore
+  href: api/Xamarin.Preferences.MacUserDefaultsPreferenceStore.html#Xamarin_Preferences_MacUserDefaultsPreferenceStore__ctor_
+  commentId: Overload:Xamarin.Preferences.MacUserDefaultsPreferenceStore.#ctor
   isSpec: "True"
-  fullName: Xamarin.Preferences.IPreferenceStore.GetBoolean
-  nameWithType: IPreferenceStore.GetBoolean
-- uid: Xamarin.Preferences.IPreferenceStore.GetDouble(System.String,System.Double)
-  name: GetDouble(String, Double)
-  href: api/Xamarin.Preferences.IPreferenceStore.html#Xamarin_Preferences_IPreferenceStore_GetDouble_System_String_System_Double_
-  commentId: M:Xamarin.Preferences.IPreferenceStore.GetDouble(System.String,System.Double)
-  fullName: Xamarin.Preferences.IPreferenceStore.GetDouble(System.String, System.Double)
-  nameWithType: IPreferenceStore.GetDouble(String, Double)
-- uid: Xamarin.Preferences.IPreferenceStore.GetDouble*
-  name: GetDouble
-  href: api/Xamarin.Preferences.IPreferenceStore.html#Xamarin_Preferences_IPreferenceStore_GetDouble_
-  commentId: Overload:Xamarin.Preferences.IPreferenceStore.GetDouble
+  fullName: Xamarin.Preferences.MacUserDefaultsPreferenceStore.MacUserDefaultsPreferenceStore
+  nameWithType: MacUserDefaultsPreferenceStore.MacUserDefaultsPreferenceStore
+- uid: Xamarin.Preferences.MacUserDefaultsPreferenceStore.Dispose
+  name: Dispose()
+  href: api/Xamarin.Preferences.MacUserDefaultsPreferenceStore.html#Xamarin_Preferences_MacUserDefaultsPreferenceStore_Dispose
+  commentId: M:Xamarin.Preferences.MacUserDefaultsPreferenceStore.Dispose
+  fullName: Xamarin.Preferences.MacUserDefaultsPreferenceStore.Dispose()
+  nameWithType: MacUserDefaultsPreferenceStore.Dispose()
+- uid: Xamarin.Preferences.MacUserDefaultsPreferenceStore.Dispose*
+  name: Dispose
+  href: api/Xamarin.Preferences.MacUserDefaultsPreferenceStore.html#Xamarin_Preferences_MacUserDefaultsPreferenceStore_Dispose_
+  commentId: Overload:Xamarin.Preferences.MacUserDefaultsPreferenceStore.Dispose
   isSpec: "True"
-  fullName: Xamarin.Preferences.IPreferenceStore.GetDouble
-  nameWithType: IPreferenceStore.GetDouble
-- uid: Xamarin.Preferences.IPreferenceStore.GetInt64(System.String,System.Int64)
-  name: GetInt64(String, Int64)
-  href: api/Xamarin.Preferences.IPreferenceStore.html#Xamarin_Preferences_IPreferenceStore_GetInt64_System_String_System_Int64_
-  commentId: M:Xamarin.Preferences.IPreferenceStore.GetInt64(System.String,System.Int64)
-  fullName: Xamarin.Preferences.IPreferenceStore.GetInt64(System.String, System.Int64)
-  nameWithType: IPreferenceStore.GetInt64(String, Int64)
-- uid: Xamarin.Preferences.IPreferenceStore.GetInt64*
-  name: GetInt64
-  href: api/Xamarin.Preferences.IPreferenceStore.html#Xamarin_Preferences_IPreferenceStore_GetInt64_
-  commentId: Overload:Xamarin.Preferences.IPreferenceStore.GetInt64
+  fullName: Xamarin.Preferences.MacUserDefaultsPreferenceStore.Dispose
+  nameWithType: MacUserDefaultsPreferenceStore.Dispose
+- uid: Xamarin.Preferences.MacUserDefaultsPreferenceStore.GetKeys
+  name: GetKeys()
+  href: api/Xamarin.Preferences.MacUserDefaultsPreferenceStore.html#Xamarin_Preferences_MacUserDefaultsPreferenceStore_GetKeys
+  commentId: M:Xamarin.Preferences.MacUserDefaultsPreferenceStore.GetKeys
+  fullName: Xamarin.Preferences.MacUserDefaultsPreferenceStore.GetKeys()
+  nameWithType: MacUserDefaultsPreferenceStore.GetKeys()
+- uid: Xamarin.Preferences.MacUserDefaultsPreferenceStore.GetKeys*
+  name: GetKeys
+  href: api/Xamarin.Preferences.MacUserDefaultsPreferenceStore.html#Xamarin_Preferences_MacUserDefaultsPreferenceStore_GetKeys_
+  commentId: Overload:Xamarin.Preferences.MacUserDefaultsPreferenceStore.GetKeys
   isSpec: "True"
-  fullName: Xamarin.Preferences.IPreferenceStore.GetInt64
-  nameWithType: IPreferenceStore.GetInt64
-- uid: Xamarin.Preferences.IPreferenceStore.GetString(System.String,System.String)
-  name: GetString(String, String)
-  href: api/Xamarin.Preferences.IPreferenceStore.html#Xamarin_Preferences_IPreferenceStore_GetString_System_String_System_String_
-  commentId: M:Xamarin.Preferences.IPreferenceStore.GetString(System.String,System.String)
-  fullName: Xamarin.Preferences.IPreferenceStore.GetString(System.String, System.String)
-  nameWithType: IPreferenceStore.GetString(String, String)
-- uid: Xamarin.Preferences.IPreferenceStore.GetString*
-  name: GetString
-  href: api/Xamarin.Preferences.IPreferenceStore.html#Xamarin_Preferences_IPreferenceStore_GetString_
-  commentId: Overload:Xamarin.Preferences.IPreferenceStore.GetString
+  fullName: Xamarin.Preferences.MacUserDefaultsPreferenceStore.GetKeys
+  nameWithType: MacUserDefaultsPreferenceStore.GetKeys
+- uid: Xamarin.Preferences.MacUserDefaultsPreferenceStore.StorageRemove(System.String)
+  name: StorageRemove(String)
+  href: api/Xamarin.Preferences.MacUserDefaultsPreferenceStore.html#Xamarin_Preferences_MacUserDefaultsPreferenceStore_StorageRemove_System_String_
+  commentId: M:Xamarin.Preferences.MacUserDefaultsPreferenceStore.StorageRemove(System.String)
+  fullName: Xamarin.Preferences.MacUserDefaultsPreferenceStore.StorageRemove(System.String)
+  nameWithType: MacUserDefaultsPreferenceStore.StorageRemove(String)
+- uid: Xamarin.Preferences.MacUserDefaultsPreferenceStore.StorageRemove*
+  name: StorageRemove
+  href: api/Xamarin.Preferences.MacUserDefaultsPreferenceStore.html#Xamarin_Preferences_MacUserDefaultsPreferenceStore_StorageRemove_
+  commentId: Overload:Xamarin.Preferences.MacUserDefaultsPreferenceStore.StorageRemove
   isSpec: "True"
-  fullName: Xamarin.Preferences.IPreferenceStore.GetString
-  nameWithType: IPreferenceStore.GetString
-- uid: Xamarin.Preferences.IPreferenceStore.GetStrings(System.String,System.String[])
-  name: GetStrings(String, String[])
-  href: api/Xamarin.Preferences.IPreferenceStore.html#Xamarin_Preferences_IPreferenceStore_GetStrings_System_String_System_String___
-  commentId: M:Xamarin.Preferences.IPreferenceStore.GetStrings(System.String,System.String[])
-  name.vb: GetStrings(String, String())
-  fullName: Xamarin.Preferences.IPreferenceStore.GetStrings(System.String, System.String[])
-  fullName.vb: Xamarin.Preferences.IPreferenceStore.GetStrings(System.String, System.String())
-  nameWithType: IPreferenceStore.GetStrings(String, String[])
-  nameWithType.vb: IPreferenceStore.GetStrings(String, String())
-- uid: Xamarin.Preferences.IPreferenceStore.GetStrings*
-  name: GetStrings
-  href: api/Xamarin.Preferences.IPreferenceStore.html#Xamarin_Preferences_IPreferenceStore_GetStrings_
-  commentId: Overload:Xamarin.Preferences.IPreferenceStore.GetStrings
+  fullName: Xamarin.Preferences.MacUserDefaultsPreferenceStore.StorageRemove
+  nameWithType: MacUserDefaultsPreferenceStore.StorageRemove
+- uid: Xamarin.Preferences.MacUserDefaultsPreferenceStore.StorageSetValue(System.String,System.Object)
+  name: StorageSetValue(String, Object)
+  href: api/Xamarin.Preferences.MacUserDefaultsPreferenceStore.html#Xamarin_Preferences_MacUserDefaultsPreferenceStore_StorageSetValue_System_String_System_Object_
+  commentId: M:Xamarin.Preferences.MacUserDefaultsPreferenceStore.StorageSetValue(System.String,System.Object)
+  fullName: Xamarin.Preferences.MacUserDefaultsPreferenceStore.StorageSetValue(System.String, System.Object)
+  nameWithType: MacUserDefaultsPreferenceStore.StorageSetValue(String, Object)
+- uid: Xamarin.Preferences.MacUserDefaultsPreferenceStore.StorageSetValue*
+  name: StorageSetValue
+  href: api/Xamarin.Preferences.MacUserDefaultsPreferenceStore.html#Xamarin_Preferences_MacUserDefaultsPreferenceStore_StorageSetValue_
+  commentId: Overload:Xamarin.Preferences.MacUserDefaultsPreferenceStore.StorageSetValue
   isSpec: "True"
-  fullName: Xamarin.Preferences.IPreferenceStore.GetStrings
-  nameWithType: IPreferenceStore.GetStrings
-- uid: Xamarin.Preferences.IPreferenceStore.Keys
-  name: Keys
-  href: api/Xamarin.Preferences.IPreferenceStore.html#Xamarin_Preferences_IPreferenceStore_Keys
-  commentId: P:Xamarin.Preferences.IPreferenceStore.Keys
-  fullName: Xamarin.Preferences.IPreferenceStore.Keys
-  nameWithType: IPreferenceStore.Keys
-- uid: Xamarin.Preferences.IPreferenceStore.Keys*
-  name: Keys
-  href: api/Xamarin.Preferences.IPreferenceStore.html#Xamarin_Preferences_IPreferenceStore_Keys_
-  commentId: Overload:Xamarin.Preferences.IPreferenceStore.Keys
+  fullName: Xamarin.Preferences.MacUserDefaultsPreferenceStore.StorageSetValue
+  nameWithType: MacUserDefaultsPreferenceStore.StorageSetValue
+- uid: Xamarin.Preferences.MacUserDefaultsPreferenceStore.StorageTryGetValue(System.String,Type,TypeCode,System.Object@)
+  name: StorageTryGetValue(String, Type, TypeCode, out Object)
+  href: api/Xamarin.Preferences.MacUserDefaultsPreferenceStore.html#Xamarin_Preferences_MacUserDefaultsPreferenceStore_StorageTryGetValue_System_String_Type_TypeCode_System_Object__
+  commentId: M:Xamarin.Preferences.MacUserDefaultsPreferenceStore.StorageTryGetValue(System.String,Type,TypeCode,System.Object@)
+  name.vb: StorageTryGetValue(String, Type, TypeCode, ByRef Object)
+  fullName: Xamarin.Preferences.MacUserDefaultsPreferenceStore.StorageTryGetValue(System.String, Type, TypeCode, out System.Object)
+  fullName.vb: Xamarin.Preferences.MacUserDefaultsPreferenceStore.StorageTryGetValue(System.String, Type, TypeCode, ByRef System.Object)
+  nameWithType: MacUserDefaultsPreferenceStore.StorageTryGetValue(String, Type, TypeCode, out Object)
+  nameWithType.vb: MacUserDefaultsPreferenceStore.StorageTryGetValue(String, Type, TypeCode, ByRef Object)
+- uid: Xamarin.Preferences.MacUserDefaultsPreferenceStore.StorageTryGetValue*
+  name: StorageTryGetValue
+  href: api/Xamarin.Preferences.MacUserDefaultsPreferenceStore.html#Xamarin_Preferences_MacUserDefaultsPreferenceStore_StorageTryGetValue_
+  commentId: Overload:Xamarin.Preferences.MacUserDefaultsPreferenceStore.StorageTryGetValue
   isSpec: "True"
-  fullName: Xamarin.Preferences.IPreferenceStore.Keys
-  nameWithType: IPreferenceStore.Keys
-- uid: Xamarin.Preferences.IPreferenceStore.PreferenceChanged
-  name: PreferenceChanged
-  href: api/Xamarin.Preferences.IPreferenceStore.html#Xamarin_Preferences_IPreferenceStore_PreferenceChanged
-  commentId: E:Xamarin.Preferences.IPreferenceStore.PreferenceChanged
-  fullName: Xamarin.Preferences.IPreferenceStore.PreferenceChanged
-  nameWithType: IPreferenceStore.PreferenceChanged
-- uid: Xamarin.Preferences.IPreferenceStore.Remove(System.String)
-  name: Remove(String)
-  href: api/Xamarin.Preferences.IPreferenceStore.html#Xamarin_Preferences_IPreferenceStore_Remove_System_String_
-  commentId: M:Xamarin.Preferences.IPreferenceStore.Remove(System.String)
-  fullName: Xamarin.Preferences.IPreferenceStore.Remove(System.String)
-  nameWithType: IPreferenceStore.Remove(String)
-- uid: Xamarin.Preferences.IPreferenceStore.Remove*
-  name: Remove
-  href: api/Xamarin.Preferences.IPreferenceStore.html#Xamarin_Preferences_IPreferenceStore_Remove_
-  commentId: Overload:Xamarin.Preferences.IPreferenceStore.Remove
-  isSpec: "True"
-  fullName: Xamarin.Preferences.IPreferenceStore.Remove
-  nameWithType: IPreferenceStore.Remove
-- uid: Xamarin.Preferences.IPreferenceStore.RemoveAll
-  name: RemoveAll()
-  href: api/Xamarin.Preferences.IPreferenceStore.html#Xamarin_Preferences_IPreferenceStore_RemoveAll
-  commentId: M:Xamarin.Preferences.IPreferenceStore.RemoveAll
-  fullName: Xamarin.Preferences.IPreferenceStore.RemoveAll()
-  nameWithType: IPreferenceStore.RemoveAll()
-- uid: Xamarin.Preferences.IPreferenceStore.RemoveAll*
-  name: RemoveAll
-  href: api/Xamarin.Preferences.IPreferenceStore.html#Xamarin_Preferences_IPreferenceStore_RemoveAll_
-  commentId: Overload:Xamarin.Preferences.IPreferenceStore.RemoveAll
-  isSpec: "True"
-  fullName: Xamarin.Preferences.IPreferenceStore.RemoveAll
-  nameWithType: IPreferenceStore.RemoveAll
-- uid: Xamarin.Preferences.IPreferenceStore.Set(System.String,System.Boolean)
-  name: Set(String, Boolean)
-  href: api/Xamarin.Preferences.IPreferenceStore.html#Xamarin_Preferences_IPreferenceStore_Set_System_String_System_Boolean_
-  commentId: M:Xamarin.Preferences.IPreferenceStore.Set(System.String,System.Boolean)
-  fullName: Xamarin.Preferences.IPreferenceStore.Set(System.String, System.Boolean)
-  nameWithType: IPreferenceStore.Set(String, Boolean)
-- uid: Xamarin.Preferences.IPreferenceStore.Set(System.String,System.Double)
-  name: Set(String, Double)
-  href: api/Xamarin.Preferences.IPreferenceStore.html#Xamarin_Preferences_IPreferenceStore_Set_System_String_System_Double_
-  commentId: M:Xamarin.Preferences.IPreferenceStore.Set(System.String,System.Double)
-  fullName: Xamarin.Preferences.IPreferenceStore.Set(System.String, System.Double)
-  nameWithType: IPreferenceStore.Set(String, Double)
-- uid: Xamarin.Preferences.IPreferenceStore.Set(System.String,System.Int64)
-  name: Set(String, Int64)
-  href: api/Xamarin.Preferences.IPreferenceStore.html#Xamarin_Preferences_IPreferenceStore_Set_System_String_System_Int64_
-  commentId: M:Xamarin.Preferences.IPreferenceStore.Set(System.String,System.Int64)
-  fullName: Xamarin.Preferences.IPreferenceStore.Set(System.String, System.Int64)
-  nameWithType: IPreferenceStore.Set(String, Int64)
-- uid: Xamarin.Preferences.IPreferenceStore.Set(System.String,System.String)
-  name: Set(String, String)
-  href: api/Xamarin.Preferences.IPreferenceStore.html#Xamarin_Preferences_IPreferenceStore_Set_System_String_System_String_
-  commentId: M:Xamarin.Preferences.IPreferenceStore.Set(System.String,System.String)
-  fullName: Xamarin.Preferences.IPreferenceStore.Set(System.String, System.String)
-  nameWithType: IPreferenceStore.Set(String, String)
-- uid: Xamarin.Preferences.IPreferenceStore.Set(System.String,System.String[])
-  name: Set(String, String[])
-  href: api/Xamarin.Preferences.IPreferenceStore.html#Xamarin_Preferences_IPreferenceStore_Set_System_String_System_String___
-  commentId: M:Xamarin.Preferences.IPreferenceStore.Set(System.String,System.String[])
-  name.vb: Set(String, String())
-  fullName: Xamarin.Preferences.IPreferenceStore.Set(System.String, System.String[])
-  fullName.vb: Xamarin.Preferences.IPreferenceStore.Set(System.String, System.String())
-  nameWithType: IPreferenceStore.Set(String, String[])
-  nameWithType.vb: IPreferenceStore.Set(String, String())
-- uid: Xamarin.Preferences.IPreferenceStore.Set*
-  name: Set
-  href: api/Xamarin.Preferences.IPreferenceStore.html#Xamarin_Preferences_IPreferenceStore_Set_
-  commentId: Overload:Xamarin.Preferences.IPreferenceStore.Set
-  isSpec: "True"
-  fullName: Xamarin.Preferences.IPreferenceStore.Set
-  nameWithType: IPreferenceStore.Set
+  fullName: Xamarin.Preferences.MacUserDefaultsPreferenceStore.StorageTryGetValue
+  nameWithType: MacUserDefaultsPreferenceStore.StorageTryGetValue
 - uid: Xamarin.Preferences.MemoryOnlyPreferenceStore
   name: MemoryOnlyPreferenceStore
   href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html
   commentId: T:Xamarin.Preferences.MemoryOnlyPreferenceStore
   fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore
   nameWithType: MemoryOnlyPreferenceStore
-- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.GetBoolean(System.String,System.Boolean)
-  name: GetBoolean(String, Boolean)
-  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_GetBoolean_System_String_System_Boolean_
-  commentId: M:Xamarin.Preferences.MemoryOnlyPreferenceStore.GetBoolean(System.String,System.Boolean)
-  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.GetBoolean(System.String, System.Boolean)
-  nameWithType: MemoryOnlyPreferenceStore.GetBoolean(String, Boolean)
-- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.GetBoolean*
-  name: GetBoolean
-  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_GetBoolean_
-  commentId: Overload:Xamarin.Preferences.MemoryOnlyPreferenceStore.GetBoolean
+- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.GetKeys
+  name: GetKeys()
+  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_GetKeys
+  commentId: M:Xamarin.Preferences.MemoryOnlyPreferenceStore.GetKeys
+  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.GetKeys()
+  nameWithType: MemoryOnlyPreferenceStore.GetKeys()
+- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.GetKeys*
+  name: GetKeys
+  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_GetKeys_
+  commentId: Overload:Xamarin.Preferences.MemoryOnlyPreferenceStore.GetKeys
   isSpec: "True"
-  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.GetBoolean
-  nameWithType: MemoryOnlyPreferenceStore.GetBoolean
-- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.GetDouble(System.String,System.Double)
-  name: GetDouble(String, Double)
-  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_GetDouble_System_String_System_Double_
-  commentId: M:Xamarin.Preferences.MemoryOnlyPreferenceStore.GetDouble(System.String,System.Double)
-  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.GetDouble(System.String, System.Double)
-  nameWithType: MemoryOnlyPreferenceStore.GetDouble(String, Double)
-- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.GetDouble*
-  name: GetDouble
-  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_GetDouble_
-  commentId: Overload:Xamarin.Preferences.MemoryOnlyPreferenceStore.GetDouble
+  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.GetKeys
+  nameWithType: MemoryOnlyPreferenceStore.GetKeys
+- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageRemove(System.String)
+  name: StorageRemove(String)
+  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_StorageRemove_System_String_
+  commentId: M:Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageRemove(System.String)
+  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageRemove(System.String)
+  nameWithType: MemoryOnlyPreferenceStore.StorageRemove(String)
+- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageRemove*
+  name: StorageRemove
+  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_StorageRemove_
+  commentId: Overload:Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageRemove
   isSpec: "True"
-  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.GetDouble
-  nameWithType: MemoryOnlyPreferenceStore.GetDouble
-- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.GetInt64(System.String,System.Int64)
-  name: GetInt64(String, Int64)
-  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_GetInt64_System_String_System_Int64_
-  commentId: M:Xamarin.Preferences.MemoryOnlyPreferenceStore.GetInt64(System.String,System.Int64)
-  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.GetInt64(System.String, System.Int64)
-  nameWithType: MemoryOnlyPreferenceStore.GetInt64(String, Int64)
-- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.GetInt64*
-  name: GetInt64
-  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_GetInt64_
-  commentId: Overload:Xamarin.Preferences.MemoryOnlyPreferenceStore.GetInt64
+  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageRemove
+  nameWithType: MemoryOnlyPreferenceStore.StorageRemove
+- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageSetValue(System.String,System.Object)
+  name: StorageSetValue(String, Object)
+  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_StorageSetValue_System_String_System_Object_
+  commentId: M:Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageSetValue(System.String,System.Object)
+  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageSetValue(System.String, System.Object)
+  nameWithType: MemoryOnlyPreferenceStore.StorageSetValue(String, Object)
+- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageSetValue*
+  name: StorageSetValue
+  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_StorageSetValue_
+  commentId: Overload:Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageSetValue
   isSpec: "True"
-  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.GetInt64
-  nameWithType: MemoryOnlyPreferenceStore.GetInt64
-- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.GetString(System.String,System.String)
-  name: GetString(String, String)
-  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_GetString_System_String_System_String_
-  commentId: M:Xamarin.Preferences.MemoryOnlyPreferenceStore.GetString(System.String,System.String)
-  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.GetString(System.String, System.String)
-  nameWithType: MemoryOnlyPreferenceStore.GetString(String, String)
-- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.GetString*
-  name: GetString
-  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_GetString_
-  commentId: Overload:Xamarin.Preferences.MemoryOnlyPreferenceStore.GetString
+  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageSetValue
+  nameWithType: MemoryOnlyPreferenceStore.StorageSetValue
+- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageTryGetValue(System.String,Type,TypeCode,System.Object@)
+  name: StorageTryGetValue(String, Type, TypeCode, out Object)
+  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_StorageTryGetValue_System_String_Type_TypeCode_System_Object__
+  commentId: M:Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageTryGetValue(System.String,Type,TypeCode,System.Object@)
+  name.vb: StorageTryGetValue(String, Type, TypeCode, ByRef Object)
+  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageTryGetValue(System.String, Type, TypeCode, out System.Object)
+  fullName.vb: Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageTryGetValue(System.String, Type, TypeCode, ByRef System.Object)
+  nameWithType: MemoryOnlyPreferenceStore.StorageTryGetValue(String, Type, TypeCode, out Object)
+  nameWithType.vb: MemoryOnlyPreferenceStore.StorageTryGetValue(String, Type, TypeCode, ByRef Object)
+- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageTryGetValue*
+  name: StorageTryGetValue
+  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_StorageTryGetValue_
+  commentId: Overload:Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageTryGetValue
   isSpec: "True"
-  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.GetString
-  nameWithType: MemoryOnlyPreferenceStore.GetString
-- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.GetStrings(System.String,System.String[])
-  name: GetStrings(String, String[])
-  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_GetStrings_System_String_System_String___
-  commentId: M:Xamarin.Preferences.MemoryOnlyPreferenceStore.GetStrings(System.String,System.String[])
-  name.vb: GetStrings(String, String())
-  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.GetStrings(System.String, System.String[])
-  fullName.vb: Xamarin.Preferences.MemoryOnlyPreferenceStore.GetStrings(System.String, System.String())
-  nameWithType: MemoryOnlyPreferenceStore.GetStrings(String, String[])
-  nameWithType.vb: MemoryOnlyPreferenceStore.GetStrings(String, String())
-- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.GetStrings*
-  name: GetStrings
-  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_GetStrings_
-  commentId: Overload:Xamarin.Preferences.MemoryOnlyPreferenceStore.GetStrings
-  isSpec: "True"
-  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.GetStrings
-  nameWithType: MemoryOnlyPreferenceStore.GetStrings
-- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.Keys
-  name: Keys
-  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_Keys
-  commentId: P:Xamarin.Preferences.MemoryOnlyPreferenceStore.Keys
-  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.Keys
-  nameWithType: MemoryOnlyPreferenceStore.Keys
-- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.Keys*
-  name: Keys
-  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_Keys_
-  commentId: Overload:Xamarin.Preferences.MemoryOnlyPreferenceStore.Keys
-  isSpec: "True"
-  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.Keys
-  nameWithType: MemoryOnlyPreferenceStore.Keys
-- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.PreferenceChanged
-  name: PreferenceChanged
-  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_PreferenceChanged
-  commentId: E:Xamarin.Preferences.MemoryOnlyPreferenceStore.PreferenceChanged
-  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.PreferenceChanged
-  nameWithType: MemoryOnlyPreferenceStore.PreferenceChanged
-- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.Remove(System.String)
-  name: Remove(String)
-  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_Remove_System_String_
-  commentId: M:Xamarin.Preferences.MemoryOnlyPreferenceStore.Remove(System.String)
-  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.Remove(System.String)
-  nameWithType: MemoryOnlyPreferenceStore.Remove(String)
-- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.Remove*
-  name: Remove
-  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_Remove_
-  commentId: Overload:Xamarin.Preferences.MemoryOnlyPreferenceStore.Remove
-  isSpec: "True"
-  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.Remove
-  nameWithType: MemoryOnlyPreferenceStore.Remove
-- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.RemoveAll
-  name: RemoveAll()
-  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_RemoveAll
-  commentId: M:Xamarin.Preferences.MemoryOnlyPreferenceStore.RemoveAll
-  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.RemoveAll()
-  nameWithType: MemoryOnlyPreferenceStore.RemoveAll()
-- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.RemoveAll*
-  name: RemoveAll
-  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_RemoveAll_
-  commentId: Overload:Xamarin.Preferences.MemoryOnlyPreferenceStore.RemoveAll
-  isSpec: "True"
-  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.RemoveAll
-  nameWithType: MemoryOnlyPreferenceStore.RemoveAll
-- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.Set(System.String,System.Boolean)
-  name: Set(String, Boolean)
-  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_Set_System_String_System_Boolean_
-  commentId: M:Xamarin.Preferences.MemoryOnlyPreferenceStore.Set(System.String,System.Boolean)
-  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.Set(System.String, System.Boolean)
-  nameWithType: MemoryOnlyPreferenceStore.Set(String, Boolean)
-- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.Set(System.String,System.Double)
-  name: Set(String, Double)
-  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_Set_System_String_System_Double_
-  commentId: M:Xamarin.Preferences.MemoryOnlyPreferenceStore.Set(System.String,System.Double)
-  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.Set(System.String, System.Double)
-  nameWithType: MemoryOnlyPreferenceStore.Set(String, Double)
-- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.Set(System.String,System.Int64)
-  name: Set(String, Int64)
-  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_Set_System_String_System_Int64_
-  commentId: M:Xamarin.Preferences.MemoryOnlyPreferenceStore.Set(System.String,System.Int64)
-  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.Set(System.String, System.Int64)
-  nameWithType: MemoryOnlyPreferenceStore.Set(String, Int64)
-- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.Set(System.String,System.String)
-  name: Set(String, String)
-  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_Set_System_String_System_String_
-  commentId: M:Xamarin.Preferences.MemoryOnlyPreferenceStore.Set(System.String,System.String)
-  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.Set(System.String, System.String)
-  nameWithType: MemoryOnlyPreferenceStore.Set(String, String)
-- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.Set(System.String,System.String[])
-  name: Set(String, String[])
-  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_Set_System_String_System_String___
-  commentId: M:Xamarin.Preferences.MemoryOnlyPreferenceStore.Set(System.String,System.String[])
-  name.vb: Set(String, String())
-  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.Set(System.String, System.String[])
-  fullName.vb: Xamarin.Preferences.MemoryOnlyPreferenceStore.Set(System.String, System.String())
-  nameWithType: MemoryOnlyPreferenceStore.Set(String, String[])
-  nameWithType.vb: MemoryOnlyPreferenceStore.Set(String, String())
-- uid: Xamarin.Preferences.MemoryOnlyPreferenceStore.Set*
-  name: Set
-  href: api/Xamarin.Preferences.MemoryOnlyPreferenceStore.html#Xamarin_Preferences_MemoryOnlyPreferenceStore_Set_
-  commentId: Overload:Xamarin.Preferences.MemoryOnlyPreferenceStore.Set
-  isSpec: "True"
-  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.Set
-  nameWithType: MemoryOnlyPreferenceStore.Set
+  fullName: Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageTryGetValue
+  nameWithType: MemoryOnlyPreferenceStore.StorageTryGetValue
 - uid: Xamarin.Preferences.Preference`1
   name: Preference<T>
   href: api/Xamarin.Preferences.Preference-1.html
@@ -1923,12 +2534,12 @@ references:
   fullName.vb: Xamarin.Preferences.Preference(Of T)
   nameWithType: Preference<T>
   nameWithType.vb: Preference(Of T)
-- uid: Xamarin.Preferences.Preference`1.#ctor(System.String,`0,System.ComponentModel.TypeConverter)
+- uid: Xamarin.Preferences.Preference`1.#ctor(System.String,`0,TypeConverter)
   name: Preference(String, T, TypeConverter)
-  href: api/Xamarin.Preferences.Preference-1.html#Xamarin_Preferences_Preference_1__ctor_System_String__0_System_ComponentModel_TypeConverter_
-  commentId: M:Xamarin.Preferences.Preference`1.#ctor(System.String,`0,System.ComponentModel.TypeConverter)
-  fullName: Xamarin.Preferences.Preference<T>.Preference(System.String, T, System.ComponentModel.TypeConverter)
-  fullName.vb: Xamarin.Preferences.Preference(Of T).Preference(System.String, T, System.ComponentModel.TypeConverter)
+  href: api/Xamarin.Preferences.Preference-1.html#Xamarin_Preferences_Preference_1__ctor_System_String__0_TypeConverter_
+  commentId: M:Xamarin.Preferences.Preference`1.#ctor(System.String,`0,TypeConverter)
+  fullName: Xamarin.Preferences.Preference<T>.Preference(System.String, T, TypeConverter)
+  fullName.vb: Xamarin.Preferences.Preference(Of T).Preference(System.String, T, TypeConverter)
   nameWithType: Preference<T>.Preference(String, T, TypeConverter)
   nameWithType.vb: Preference(Of T).Preference(String, T, TypeConverter)
 - uid: Xamarin.Preferences.Preference`1.#ctor*
@@ -2050,12 +2661,25 @@ references:
   commentId: T:Xamarin.Preferences.PreferenceStore
   fullName: Xamarin.Preferences.PreferenceStore
   nameWithType: PreferenceStore
-- uid: Xamarin.Preferences.PreferenceStore.Initialize(Xamarin.Preferences.IPreferenceStore)
-  name: Initialize(IPreferenceStore)
-  href: api/Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_Initialize_Xamarin_Preferences_IPreferenceStore_
-  commentId: M:Xamarin.Preferences.PreferenceStore.Initialize(Xamarin.Preferences.IPreferenceStore)
-  fullName: Xamarin.Preferences.PreferenceStore.Initialize(Xamarin.Preferences.IPreferenceStore)
-  nameWithType: PreferenceStore.Initialize(IPreferenceStore)
+- uid: Xamarin.Preferences.PreferenceStore.GetKeys
+  name: GetKeys()
+  href: api/Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_GetKeys
+  commentId: M:Xamarin.Preferences.PreferenceStore.GetKeys
+  fullName: Xamarin.Preferences.PreferenceStore.GetKeys()
+  nameWithType: PreferenceStore.GetKeys()
+- uid: Xamarin.Preferences.PreferenceStore.GetKeys*
+  name: GetKeys
+  href: api/Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_GetKeys_
+  commentId: Overload:Xamarin.Preferences.PreferenceStore.GetKeys
+  isSpec: "True"
+  fullName: Xamarin.Preferences.PreferenceStore.GetKeys
+  nameWithType: PreferenceStore.GetKeys
+- uid: Xamarin.Preferences.PreferenceStore.Initialize(Xamarin.Preferences.PreferenceStore)
+  name: Initialize(PreferenceStore)
+  href: api/Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_Initialize_Xamarin_Preferences_PreferenceStore_
+  commentId: M:Xamarin.Preferences.PreferenceStore.Initialize(Xamarin.Preferences.PreferenceStore)
+  fullName: Xamarin.Preferences.PreferenceStore.Initialize(Xamarin.Preferences.PreferenceStore)
+  nameWithType: PreferenceStore.Initialize(PreferenceStore)
 - uid: Xamarin.Preferences.PreferenceStore.Initialize*
   name: Initialize
   href: api/Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_Initialize_
@@ -2063,6 +2687,70 @@ references:
   isSpec: "True"
   fullName: Xamarin.Preferences.PreferenceStore.Initialize
   nameWithType: PreferenceStore.Initialize
+- uid: Xamarin.Preferences.PreferenceStore.OnPreferenceChanged(System.String)
+  name: OnPreferenceChanged(String)
+  href: api/Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_OnPreferenceChanged_System_String_
+  commentId: M:Xamarin.Preferences.PreferenceStore.OnPreferenceChanged(System.String)
+  fullName: Xamarin.Preferences.PreferenceStore.OnPreferenceChanged(System.String)
+  nameWithType: PreferenceStore.OnPreferenceChanged(String)
+- uid: Xamarin.Preferences.PreferenceStore.OnPreferenceChanged*
+  name: OnPreferenceChanged
+  href: api/Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_OnPreferenceChanged_
+  commentId: Overload:Xamarin.Preferences.PreferenceStore.OnPreferenceChanged
+  isSpec: "True"
+  fullName: Xamarin.Preferences.PreferenceStore.OnPreferenceChanged
+  nameWithType: PreferenceStore.OnPreferenceChanged
+- uid: Xamarin.Preferences.PreferenceStore.PreferenceChanged
+  name: PreferenceChanged
+  href: api/Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_PreferenceChanged
+  commentId: E:Xamarin.Preferences.PreferenceStore.PreferenceChanged
+  fullName: Xamarin.Preferences.PreferenceStore.PreferenceChanged
+  nameWithType: PreferenceStore.PreferenceChanged
+- uid: Xamarin.Preferences.PreferenceStore.Remove(System.String)
+  name: Remove(String)
+  href: api/Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_Remove_System_String_
+  commentId: M:Xamarin.Preferences.PreferenceStore.Remove(System.String)
+  fullName: Xamarin.Preferences.PreferenceStore.Remove(System.String)
+  nameWithType: PreferenceStore.Remove(String)
+- uid: Xamarin.Preferences.PreferenceStore.Remove*
+  name: Remove
+  href: api/Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_Remove_
+  commentId: Overload:Xamarin.Preferences.PreferenceStore.Remove
+  isSpec: "True"
+  fullName: Xamarin.Preferences.PreferenceStore.Remove
+  nameWithType: PreferenceStore.Remove
+- uid: Xamarin.Preferences.PreferenceStore.RemoveAll
+  name: RemoveAll()
+  href: api/Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_RemoveAll
+  commentId: M:Xamarin.Preferences.PreferenceStore.RemoveAll
+  fullName: Xamarin.Preferences.PreferenceStore.RemoveAll()
+  nameWithType: PreferenceStore.RemoveAll()
+- uid: Xamarin.Preferences.PreferenceStore.RemoveAll*
+  name: RemoveAll
+  href: api/Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_RemoveAll_
+  commentId: Overload:Xamarin.Preferences.PreferenceStore.RemoveAll
+  isSpec: "True"
+  fullName: Xamarin.Preferences.PreferenceStore.RemoveAll
+  nameWithType: PreferenceStore.RemoveAll
+- uid: Xamarin.Preferences.PreferenceStore.ReturnDefaultValueOnException
+  name: ReturnDefaultValueOnException
+  href: api/Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_ReturnDefaultValueOnException
+  commentId: F:Xamarin.Preferences.PreferenceStore.ReturnDefaultValueOnException
+  fullName: Xamarin.Preferences.PreferenceStore.ReturnDefaultValueOnException
+  nameWithType: PreferenceStore.ReturnDefaultValueOnException
+- uid: Xamarin.Preferences.PreferenceStore.SetValue(System.String,System.Object,TypeConverter)
+  name: SetValue(String, Object, TypeConverter)
+  href: api/Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_SetValue_System_String_System_Object_TypeConverter_
+  commentId: M:Xamarin.Preferences.PreferenceStore.SetValue(System.String,System.Object,TypeConverter)
+  fullName: Xamarin.Preferences.PreferenceStore.SetValue(System.String, System.Object, TypeConverter)
+  nameWithType: PreferenceStore.SetValue(String, Object, TypeConverter)
+- uid: Xamarin.Preferences.PreferenceStore.SetValue*
+  name: SetValue
+  href: api/Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_SetValue_
+  commentId: Overload:Xamarin.Preferences.PreferenceStore.SetValue
+  isSpec: "True"
+  fullName: Xamarin.Preferences.PreferenceStore.SetValue
+  nameWithType: PreferenceStore.SetValue
 - uid: Xamarin.Preferences.PreferenceStore.SharedInstance
   name: SharedInstance
   href: api/Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_SharedInstance
@@ -2076,6 +2764,148 @@ references:
   isSpec: "True"
   fullName: Xamarin.Preferences.PreferenceStore.SharedInstance
   nameWithType: PreferenceStore.SharedInstance
+- uid: Xamarin.Preferences.PreferenceStore.StorageRemove(System.String)
+  name: StorageRemove(String)
+  href: api/Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_StorageRemove_System_String_
+  commentId: M:Xamarin.Preferences.PreferenceStore.StorageRemove(System.String)
+  fullName: Xamarin.Preferences.PreferenceStore.StorageRemove(System.String)
+  nameWithType: PreferenceStore.StorageRemove(String)
+- uid: Xamarin.Preferences.PreferenceStore.StorageRemove*
+  name: StorageRemove
+  href: api/Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_StorageRemove_
+  commentId: Overload:Xamarin.Preferences.PreferenceStore.StorageRemove
+  isSpec: "True"
+  fullName: Xamarin.Preferences.PreferenceStore.StorageRemove
+  nameWithType: PreferenceStore.StorageRemove
+- uid: Xamarin.Preferences.PreferenceStore.StorageSetValue(System.String,System.Object)
+  name: StorageSetValue(String, Object)
+  href: api/Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_StorageSetValue_System_String_System_Object_
+  commentId: M:Xamarin.Preferences.PreferenceStore.StorageSetValue(System.String,System.Object)
+  fullName: Xamarin.Preferences.PreferenceStore.StorageSetValue(System.String, System.Object)
+  nameWithType: PreferenceStore.StorageSetValue(String, Object)
+- uid: Xamarin.Preferences.PreferenceStore.StorageSetValue*
+  name: StorageSetValue
+  href: api/Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_StorageSetValue_
+  commentId: Overload:Xamarin.Preferences.PreferenceStore.StorageSetValue
+  isSpec: "True"
+  fullName: Xamarin.Preferences.PreferenceStore.StorageSetValue
+  nameWithType: PreferenceStore.StorageSetValue
+- uid: Xamarin.Preferences.PreferenceStore.StorageTryGetValue(System.String,Type,TypeCode,System.Object@)
+  name: StorageTryGetValue(String, Type, TypeCode, out Object)
+  href: api/Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_StorageTryGetValue_System_String_Type_TypeCode_System_Object__
+  commentId: M:Xamarin.Preferences.PreferenceStore.StorageTryGetValue(System.String,Type,TypeCode,System.Object@)
+  name.vb: StorageTryGetValue(String, Type, TypeCode, ByRef Object)
+  fullName: Xamarin.Preferences.PreferenceStore.StorageTryGetValue(System.String, Type, TypeCode, out System.Object)
+  fullName.vb: Xamarin.Preferences.PreferenceStore.StorageTryGetValue(System.String, Type, TypeCode, ByRef System.Object)
+  nameWithType: PreferenceStore.StorageTryGetValue(String, Type, TypeCode, out Object)
+  nameWithType.vb: PreferenceStore.StorageTryGetValue(String, Type, TypeCode, ByRef Object)
+- uid: Xamarin.Preferences.PreferenceStore.StorageTryGetValue*
+  name: StorageTryGetValue
+  href: api/Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_StorageTryGetValue_
+  commentId: Overload:Xamarin.Preferences.PreferenceStore.StorageTryGetValue
+  isSpec: "True"
+  fullName: Xamarin.Preferences.PreferenceStore.StorageTryGetValue
+  nameWithType: PreferenceStore.StorageTryGetValue
+- uid: Xamarin.Preferences.PreferenceStore.TryGetValue(System.String,Type,TypeCode,System.Object@)
+  name: TryGetValue(String, Type, TypeCode, out Object)
+  href: api/Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_TryGetValue_System_String_Type_TypeCode_System_Object__
+  commentId: M:Xamarin.Preferences.PreferenceStore.TryGetValue(System.String,Type,TypeCode,System.Object@)
+  name.vb: TryGetValue(String, Type, TypeCode, ByRef Object)
+  fullName: Xamarin.Preferences.PreferenceStore.TryGetValue(System.String, Type, TypeCode, out System.Object)
+  fullName.vb: Xamarin.Preferences.PreferenceStore.TryGetValue(System.String, Type, TypeCode, ByRef System.Object)
+  nameWithType: PreferenceStore.TryGetValue(String, Type, TypeCode, out Object)
+  nameWithType.vb: PreferenceStore.TryGetValue(String, Type, TypeCode, ByRef Object)
+- uid: Xamarin.Preferences.PreferenceStore.TryGetValue*
+  name: TryGetValue
+  href: api/Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_TryGetValue_
+  commentId: Overload:Xamarin.Preferences.PreferenceStore.TryGetValue
+  isSpec: "True"
+  fullName: Xamarin.Preferences.PreferenceStore.TryGetValue
+  nameWithType: PreferenceStore.TryGetValue
+- uid: Xamarin.Preferences.PreferenceStoreConfiguration
+  name: PreferenceStoreConfiguration
+  href: api/Xamarin.Preferences.PreferenceStoreConfiguration.html
+  commentId: T:Xamarin.Preferences.PreferenceStoreConfiguration
+  fullName: Xamarin.Preferences.PreferenceStoreConfiguration
+  nameWithType: PreferenceStoreConfiguration
+- uid: Xamarin.Preferences.PreferenceStoreConfiguration.#ctor
+  name: PreferenceStoreConfiguration()
+  href: api/Xamarin.Preferences.PreferenceStoreConfiguration.html#Xamarin_Preferences_PreferenceStoreConfiguration__ctor
+  commentId: M:Xamarin.Preferences.PreferenceStoreConfiguration.#ctor
+  fullName: Xamarin.Preferences.PreferenceStoreConfiguration.PreferenceStoreConfiguration()
+  nameWithType: PreferenceStoreConfiguration.PreferenceStoreConfiguration()
+- uid: Xamarin.Preferences.PreferenceStoreConfiguration.#ctor*
+  name: PreferenceStoreConfiguration
+  href: api/Xamarin.Preferences.PreferenceStoreConfiguration.html#Xamarin_Preferences_PreferenceStoreConfiguration__ctor_
+  commentId: Overload:Xamarin.Preferences.PreferenceStoreConfiguration.#ctor
+  isSpec: "True"
+  fullName: Xamarin.Preferences.PreferenceStoreConfiguration.PreferenceStoreConfiguration
+  nameWithType: PreferenceStoreConfiguration.PreferenceStoreConfiguration
+- uid: Xamarin.Preferences.PreferenceStoreConfiguration.Create
+  name: Create()
+  href: api/Xamarin.Preferences.PreferenceStoreConfiguration.html#Xamarin_Preferences_PreferenceStoreConfiguration_Create
+  commentId: M:Xamarin.Preferences.PreferenceStoreConfiguration.Create
+  fullName: Xamarin.Preferences.PreferenceStoreConfiguration.Create()
+  nameWithType: PreferenceStoreConfiguration.Create()
+- uid: Xamarin.Preferences.PreferenceStoreConfiguration.Create*
+  name: Create
+  href: api/Xamarin.Preferences.PreferenceStoreConfiguration.html#Xamarin_Preferences_PreferenceStoreConfiguration_Create_
+  commentId: Overload:Xamarin.Preferences.PreferenceStoreConfiguration.Create
+  isSpec: "True"
+  fullName: Xamarin.Preferences.PreferenceStoreConfiguration.Create
+  nameWithType: PreferenceStoreConfiguration.Create
+- uid: Xamarin.Preferences.PreferenceStoreConfiguration.CreateAndInitialize
+  name: CreateAndInitialize()
+  href: api/Xamarin.Preferences.PreferenceStoreConfiguration.html#Xamarin_Preferences_PreferenceStoreConfiguration_CreateAndInitialize
+  commentId: M:Xamarin.Preferences.PreferenceStoreConfiguration.CreateAndInitialize
+  fullName: Xamarin.Preferences.PreferenceStoreConfiguration.CreateAndInitialize()
+  nameWithType: PreferenceStoreConfiguration.CreateAndInitialize()
+- uid: Xamarin.Preferences.PreferenceStoreConfiguration.CreateAndInitialize*
+  name: CreateAndInitialize
+  href: api/Xamarin.Preferences.PreferenceStoreConfiguration.html#Xamarin_Preferences_PreferenceStoreConfiguration_CreateAndInitialize_
+  commentId: Overload:Xamarin.Preferences.PreferenceStoreConfiguration.CreateAndInitialize
+  isSpec: "True"
+  fullName: Xamarin.Preferences.PreferenceStoreConfiguration.CreateAndInitialize
+  nameWithType: PreferenceStoreConfiguration.CreateAndInitialize
+- uid: Xamarin.Preferences.PreferenceStoreConfiguration.WithMac(System.String)
+  name: WithMac(String)
+  href: api/Xamarin.Preferences.PreferenceStoreConfiguration.html#Xamarin_Preferences_PreferenceStoreConfiguration_WithMac_System_String_
+  commentId: M:Xamarin.Preferences.PreferenceStoreConfiguration.WithMac(System.String)
+  fullName: Xamarin.Preferences.PreferenceStoreConfiguration.WithMac(System.String)
+  nameWithType: PreferenceStoreConfiguration.WithMac(String)
+- uid: Xamarin.Preferences.PreferenceStoreConfiguration.WithMac*
+  name: WithMac
+  href: api/Xamarin.Preferences.PreferenceStoreConfiguration.html#Xamarin_Preferences_PreferenceStoreConfiguration_WithMac_
+  commentId: Overload:Xamarin.Preferences.PreferenceStoreConfiguration.WithMac
+  isSpec: "True"
+  fullName: Xamarin.Preferences.PreferenceStoreConfiguration.WithMac
+  nameWithType: PreferenceStoreConfiguration.WithMac
+- uid: Xamarin.Preferences.PreferenceStoreConfiguration.WithMemoryFallback(System.Boolean)
+  name: WithMemoryFallback(Boolean)
+  href: api/Xamarin.Preferences.PreferenceStoreConfiguration.html#Xamarin_Preferences_PreferenceStoreConfiguration_WithMemoryFallback_System_Boolean_
+  commentId: M:Xamarin.Preferences.PreferenceStoreConfiguration.WithMemoryFallback(System.Boolean)
+  fullName: Xamarin.Preferences.PreferenceStoreConfiguration.WithMemoryFallback(System.Boolean)
+  nameWithType: PreferenceStoreConfiguration.WithMemoryFallback(Boolean)
+- uid: Xamarin.Preferences.PreferenceStoreConfiguration.WithMemoryFallback*
+  name: WithMemoryFallback
+  href: api/Xamarin.Preferences.PreferenceStoreConfiguration.html#Xamarin_Preferences_PreferenceStoreConfiguration_WithMemoryFallback_
+  commentId: Overload:Xamarin.Preferences.PreferenceStoreConfiguration.WithMemoryFallback
+  isSpec: "True"
+  fullName: Xamarin.Preferences.PreferenceStoreConfiguration.WithMemoryFallback
+  nameWithType: PreferenceStoreConfiguration.WithMemoryFallback
+- uid: Xamarin.Preferences.PreferenceStoreConfiguration.WithWindows(System.String,RegistryHive,RegistryView)
+  name: WithWindows(String, RegistryHive, RegistryView)
+  href: api/Xamarin.Preferences.PreferenceStoreConfiguration.html#Xamarin_Preferences_PreferenceStoreConfiguration_WithWindows_System_String_RegistryHive_RegistryView_
+  commentId: M:Xamarin.Preferences.PreferenceStoreConfiguration.WithWindows(System.String,RegistryHive,RegistryView)
+  fullName: Xamarin.Preferences.PreferenceStoreConfiguration.WithWindows(System.String, RegistryHive, RegistryView)
+  nameWithType: PreferenceStoreConfiguration.WithWindows(String, RegistryHive, RegistryView)
+- uid: Xamarin.Preferences.PreferenceStoreConfiguration.WithWindows*
+  name: WithWindows
+  href: api/Xamarin.Preferences.PreferenceStoreConfiguration.html#Xamarin_Preferences_PreferenceStoreConfiguration_WithWindows_
+  commentId: Overload:Xamarin.Preferences.PreferenceStoreConfiguration.WithWindows
+  isSpec: "True"
+  fullName: Xamarin.Preferences.PreferenceStoreConfiguration.WithWindows
+  nameWithType: PreferenceStoreConfiguration.WithWindows
 - uid: Xamarin.Preferences.PreferenceTypeConverter`1
   name: PreferenceTypeConverter<T>
   href: api/Xamarin.Preferences.PreferenceTypeConverter-1.html
@@ -2085,12 +2915,12 @@ references:
   fullName.vb: Xamarin.Preferences.PreferenceTypeConverter(Of T)
   nameWithType: PreferenceTypeConverter<T>
   nameWithType.vb: PreferenceTypeConverter(Of T)
-- uid: Xamarin.Preferences.PreferenceTypeConverter`1.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)
+- uid: Xamarin.Preferences.PreferenceTypeConverter`1.CanConvertFrom(ITypeDescriptorContext,Type)
   name: CanConvertFrom(ITypeDescriptorContext, Type)
-  href: api/Xamarin.Preferences.PreferenceTypeConverter-1.html#Xamarin_Preferences_PreferenceTypeConverter_1_CanConvertFrom_System_ComponentModel_ITypeDescriptorContext_System_Type_
-  commentId: M:Xamarin.Preferences.PreferenceTypeConverter`1.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)
-  fullName: Xamarin.Preferences.PreferenceTypeConverter<T>.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext, System.Type)
-  fullName.vb: Xamarin.Preferences.PreferenceTypeConverter(Of T).CanConvertFrom(System.ComponentModel.ITypeDescriptorContext, System.Type)
+  href: api/Xamarin.Preferences.PreferenceTypeConverter-1.html#Xamarin_Preferences_PreferenceTypeConverter_1_CanConvertFrom_ITypeDescriptorContext_Type_
+  commentId: M:Xamarin.Preferences.PreferenceTypeConverter`1.CanConvertFrom(ITypeDescriptorContext,Type)
+  fullName: Xamarin.Preferences.PreferenceTypeConverter<T>.CanConvertFrom(ITypeDescriptorContext, Type)
+  fullName.vb: Xamarin.Preferences.PreferenceTypeConverter(Of T).CanConvertFrom(ITypeDescriptorContext, Type)
   nameWithType: PreferenceTypeConverter<T>.CanConvertFrom(ITypeDescriptorContext, Type)
   nameWithType.vb: PreferenceTypeConverter(Of T).CanConvertFrom(ITypeDescriptorContext, Type)
 - uid: Xamarin.Preferences.PreferenceTypeConverter`1.CanConvertFrom*
@@ -2102,12 +2932,12 @@ references:
   fullName.vb: Xamarin.Preferences.PreferenceTypeConverter(Of T).CanConvertFrom
   nameWithType: PreferenceTypeConverter<T>.CanConvertFrom
   nameWithType.vb: PreferenceTypeConverter(Of T).CanConvertFrom
-- uid: Xamarin.Preferences.PreferenceTypeConverter`1.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)
+- uid: Xamarin.Preferences.PreferenceTypeConverter`1.CanConvertTo(ITypeDescriptorContext,Type)
   name: CanConvertTo(ITypeDescriptorContext, Type)
-  href: api/Xamarin.Preferences.PreferenceTypeConverter-1.html#Xamarin_Preferences_PreferenceTypeConverter_1_CanConvertTo_System_ComponentModel_ITypeDescriptorContext_System_Type_
-  commentId: M:Xamarin.Preferences.PreferenceTypeConverter`1.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)
-  fullName: Xamarin.Preferences.PreferenceTypeConverter<T>.CanConvertTo(System.ComponentModel.ITypeDescriptorContext, System.Type)
-  fullName.vb: Xamarin.Preferences.PreferenceTypeConverter(Of T).CanConvertTo(System.ComponentModel.ITypeDescriptorContext, System.Type)
+  href: api/Xamarin.Preferences.PreferenceTypeConverter-1.html#Xamarin_Preferences_PreferenceTypeConverter_1_CanConvertTo_ITypeDescriptorContext_Type_
+  commentId: M:Xamarin.Preferences.PreferenceTypeConverter`1.CanConvertTo(ITypeDescriptorContext,Type)
+  fullName: Xamarin.Preferences.PreferenceTypeConverter<T>.CanConvertTo(ITypeDescriptorContext, Type)
+  fullName.vb: Xamarin.Preferences.PreferenceTypeConverter(Of T).CanConvertTo(ITypeDescriptorContext, Type)
   nameWithType: PreferenceTypeConverter<T>.CanConvertTo(ITypeDescriptorContext, Type)
   nameWithType.vb: PreferenceTypeConverter(Of T).CanConvertTo(ITypeDescriptorContext, Type)
 - uid: Xamarin.Preferences.PreferenceTypeConverter`1.CanConvertTo*
@@ -2119,12 +2949,12 @@ references:
   fullName.vb: Xamarin.Preferences.PreferenceTypeConverter(Of T).CanConvertTo
   nameWithType: PreferenceTypeConverter<T>.CanConvertTo
   nameWithType.vb: PreferenceTypeConverter(Of T).CanConvertTo
-- uid: Xamarin.Preferences.PreferenceTypeConverter`1.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)
+- uid: Xamarin.Preferences.PreferenceTypeConverter`1.ConvertFrom(ITypeDescriptorContext,CultureInfo,System.Object)
   name: ConvertFrom(ITypeDescriptorContext, CultureInfo, Object)
-  href: api/Xamarin.Preferences.PreferenceTypeConverter-1.html#Xamarin_Preferences_PreferenceTypeConverter_1_ConvertFrom_System_ComponentModel_ITypeDescriptorContext_System_Globalization_CultureInfo_System_Object_
-  commentId: M:Xamarin.Preferences.PreferenceTypeConverter`1.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)
-  fullName: Xamarin.Preferences.PreferenceTypeConverter<T>.ConvertFrom(System.ComponentModel.ITypeDescriptorContext, System.Globalization.CultureInfo, System.Object)
-  fullName.vb: Xamarin.Preferences.PreferenceTypeConverter(Of T).ConvertFrom(System.ComponentModel.ITypeDescriptorContext, System.Globalization.CultureInfo, System.Object)
+  href: api/Xamarin.Preferences.PreferenceTypeConverter-1.html#Xamarin_Preferences_PreferenceTypeConverter_1_ConvertFrom_ITypeDescriptorContext_CultureInfo_System_Object_
+  commentId: M:Xamarin.Preferences.PreferenceTypeConverter`1.ConvertFrom(ITypeDescriptorContext,CultureInfo,System.Object)
+  fullName: Xamarin.Preferences.PreferenceTypeConverter<T>.ConvertFrom(ITypeDescriptorContext, CultureInfo, System.Object)
+  fullName.vb: Xamarin.Preferences.PreferenceTypeConverter(Of T).ConvertFrom(ITypeDescriptorContext, CultureInfo, System.Object)
   nameWithType: PreferenceTypeConverter<T>.ConvertFrom(ITypeDescriptorContext, CultureInfo, Object)
   nameWithType.vb: PreferenceTypeConverter(Of T).ConvertFrom(ITypeDescriptorContext, CultureInfo, Object)
 - uid: Xamarin.Preferences.PreferenceTypeConverter`1.ConvertFrom(System.String)
@@ -2152,12 +2982,12 @@ references:
   fullName.vb: Xamarin.Preferences.PreferenceTypeConverter(Of T).ConvertTo(T)
   nameWithType: PreferenceTypeConverter<T>.ConvertTo(T)
   nameWithType.vb: PreferenceTypeConverter(Of T).ConvertTo(T)
-- uid: Xamarin.Preferences.PreferenceTypeConverter`1.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)
+- uid: Xamarin.Preferences.PreferenceTypeConverter`1.ConvertTo(ITypeDescriptorContext,CultureInfo,System.Object,Type)
   name: ConvertTo(ITypeDescriptorContext, CultureInfo, Object, Type)
-  href: api/Xamarin.Preferences.PreferenceTypeConverter-1.html#Xamarin_Preferences_PreferenceTypeConverter_1_ConvertTo_System_ComponentModel_ITypeDescriptorContext_System_Globalization_CultureInfo_System_Object_System_Type_
-  commentId: M:Xamarin.Preferences.PreferenceTypeConverter`1.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)
-  fullName: Xamarin.Preferences.PreferenceTypeConverter<T>.ConvertTo(System.ComponentModel.ITypeDescriptorContext, System.Globalization.CultureInfo, System.Object, System.Type)
-  fullName.vb: Xamarin.Preferences.PreferenceTypeConverter(Of T).ConvertTo(System.ComponentModel.ITypeDescriptorContext, System.Globalization.CultureInfo, System.Object, System.Type)
+  href: api/Xamarin.Preferences.PreferenceTypeConverter-1.html#Xamarin_Preferences_PreferenceTypeConverter_1_ConvertTo_ITypeDescriptorContext_CultureInfo_System_Object_Type_
+  commentId: M:Xamarin.Preferences.PreferenceTypeConverter`1.ConvertTo(ITypeDescriptorContext,CultureInfo,System.Object,Type)
+  fullName: Xamarin.Preferences.PreferenceTypeConverter<T>.ConvertTo(ITypeDescriptorContext, CultureInfo, System.Object, Type)
+  fullName.vb: Xamarin.Preferences.PreferenceTypeConverter(Of T).ConvertTo(ITypeDescriptorContext, CultureInfo, System.Object, Type)
   nameWithType: PreferenceTypeConverter<T>.ConvertTo(ITypeDescriptorContext, CultureInfo, Object, Type)
   nameWithType.vb: PreferenceTypeConverter(Of T).ConvertTo(ITypeDescriptorContext, CultureInfo, Object, Type)
 - uid: Xamarin.Preferences.PreferenceTypeConverter`1.ConvertTo*
@@ -2175,11 +3005,11 @@ references:
   commentId: T:Xamarin.Preferences.RegistryPreferenceStore
   fullName: Xamarin.Preferences.RegistryPreferenceStore
   nameWithType: RegistryPreferenceStore
-- uid: Xamarin.Preferences.RegistryPreferenceStore.#ctor(Microsoft.Win32.RegistryHive,Microsoft.Win32.RegistryView,System.String)
+- uid: Xamarin.Preferences.RegistryPreferenceStore.#ctor(RegistryHive,RegistryView,System.String)
   name: RegistryPreferenceStore(RegistryHive, RegistryView, String)
-  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore__ctor_Microsoft_Win32_RegistryHive_Microsoft_Win32_RegistryView_System_String_
-  commentId: M:Xamarin.Preferences.RegistryPreferenceStore.#ctor(Microsoft.Win32.RegistryHive,Microsoft.Win32.RegistryView,System.String)
-  fullName: Xamarin.Preferences.RegistryPreferenceStore.RegistryPreferenceStore(Microsoft.Win32.RegistryHive, Microsoft.Win32.RegistryView, System.String)
+  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore__ctor_RegistryHive_RegistryView_System_String_
+  commentId: M:Xamarin.Preferences.RegistryPreferenceStore.#ctor(RegistryHive,RegistryView,System.String)
+  fullName: Xamarin.Preferences.RegistryPreferenceStore.RegistryPreferenceStore(RegistryHive, RegistryView, System.String)
   nameWithType: RegistryPreferenceStore.RegistryPreferenceStore(RegistryHive, RegistryView, String)
 - uid: Xamarin.Preferences.RegistryPreferenceStore.#ctor*
   name: RegistryPreferenceStore
@@ -2188,119 +3018,19 @@ references:
   isSpec: "True"
   fullName: Xamarin.Preferences.RegistryPreferenceStore.RegistryPreferenceStore
   nameWithType: RegistryPreferenceStore.RegistryPreferenceStore
-- uid: Xamarin.Preferences.RegistryPreferenceStore.CopyTo(Xamarin.Preferences.RegistryPreferenceStore)
-  name: CopyTo(RegistryPreferenceStore)
-  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_CopyTo_Xamarin_Preferences_RegistryPreferenceStore_
-  commentId: M:Xamarin.Preferences.RegistryPreferenceStore.CopyTo(Xamarin.Preferences.RegistryPreferenceStore)
-  fullName: Xamarin.Preferences.RegistryPreferenceStore.CopyTo(Xamarin.Preferences.RegistryPreferenceStore)
-  nameWithType: RegistryPreferenceStore.CopyTo(RegistryPreferenceStore)
-- uid: Xamarin.Preferences.RegistryPreferenceStore.CopyTo*
-  name: CopyTo
-  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_CopyTo_
-  commentId: Overload:Xamarin.Preferences.RegistryPreferenceStore.CopyTo
+- uid: Xamarin.Preferences.RegistryPreferenceStore.GetKeys
+  name: GetKeys()
+  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_GetKeys
+  commentId: M:Xamarin.Preferences.RegistryPreferenceStore.GetKeys
+  fullName: Xamarin.Preferences.RegistryPreferenceStore.GetKeys()
+  nameWithType: RegistryPreferenceStore.GetKeys()
+- uid: Xamarin.Preferences.RegistryPreferenceStore.GetKeys*
+  name: GetKeys
+  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_GetKeys_
+  commentId: Overload:Xamarin.Preferences.RegistryPreferenceStore.GetKeys
   isSpec: "True"
-  fullName: Xamarin.Preferences.RegistryPreferenceStore.CopyTo
-  nameWithType: RegistryPreferenceStore.CopyTo
-- uid: Xamarin.Preferences.RegistryPreferenceStore.GetBoolean(System.String,System.Boolean)
-  name: GetBoolean(String, Boolean)
-  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_GetBoolean_System_String_System_Boolean_
-  commentId: M:Xamarin.Preferences.RegistryPreferenceStore.GetBoolean(System.String,System.Boolean)
-  fullName: Xamarin.Preferences.RegistryPreferenceStore.GetBoolean(System.String, System.Boolean)
-  nameWithType: RegistryPreferenceStore.GetBoolean(String, Boolean)
-- uid: Xamarin.Preferences.RegistryPreferenceStore.GetBoolean*
-  name: GetBoolean
-  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_GetBoolean_
-  commentId: Overload:Xamarin.Preferences.RegistryPreferenceStore.GetBoolean
-  isSpec: "True"
-  fullName: Xamarin.Preferences.RegistryPreferenceStore.GetBoolean
-  nameWithType: RegistryPreferenceStore.GetBoolean
-- uid: Xamarin.Preferences.RegistryPreferenceStore.GetDouble(System.String,System.Double)
-  name: GetDouble(String, Double)
-  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_GetDouble_System_String_System_Double_
-  commentId: M:Xamarin.Preferences.RegistryPreferenceStore.GetDouble(System.String,System.Double)
-  fullName: Xamarin.Preferences.RegistryPreferenceStore.GetDouble(System.String, System.Double)
-  nameWithType: RegistryPreferenceStore.GetDouble(String, Double)
-- uid: Xamarin.Preferences.RegistryPreferenceStore.GetDouble*
-  name: GetDouble
-  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_GetDouble_
-  commentId: Overload:Xamarin.Preferences.RegistryPreferenceStore.GetDouble
-  isSpec: "True"
-  fullName: Xamarin.Preferences.RegistryPreferenceStore.GetDouble
-  nameWithType: RegistryPreferenceStore.GetDouble
-- uid: Xamarin.Preferences.RegistryPreferenceStore.GetInt64(System.String,System.Int64)
-  name: GetInt64(String, Int64)
-  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_GetInt64_System_String_System_Int64_
-  commentId: M:Xamarin.Preferences.RegistryPreferenceStore.GetInt64(System.String,System.Int64)
-  fullName: Xamarin.Preferences.RegistryPreferenceStore.GetInt64(System.String, System.Int64)
-  nameWithType: RegistryPreferenceStore.GetInt64(String, Int64)
-- uid: Xamarin.Preferences.RegistryPreferenceStore.GetInt64*
-  name: GetInt64
-  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_GetInt64_
-  commentId: Overload:Xamarin.Preferences.RegistryPreferenceStore.GetInt64
-  isSpec: "True"
-  fullName: Xamarin.Preferences.RegistryPreferenceStore.GetInt64
-  nameWithType: RegistryPreferenceStore.GetInt64
-- uid: Xamarin.Preferences.RegistryPreferenceStore.GetString(System.String,System.String)
-  name: GetString(String, String)
-  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_GetString_System_String_System_String_
-  commentId: M:Xamarin.Preferences.RegistryPreferenceStore.GetString(System.String,System.String)
-  fullName: Xamarin.Preferences.RegistryPreferenceStore.GetString(System.String, System.String)
-  nameWithType: RegistryPreferenceStore.GetString(String, String)
-- uid: Xamarin.Preferences.RegistryPreferenceStore.GetString*
-  name: GetString
-  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_GetString_
-  commentId: Overload:Xamarin.Preferences.RegistryPreferenceStore.GetString
-  isSpec: "True"
-  fullName: Xamarin.Preferences.RegistryPreferenceStore.GetString
-  nameWithType: RegistryPreferenceStore.GetString
-- uid: Xamarin.Preferences.RegistryPreferenceStore.GetStrings(System.String,System.String[])
-  name: GetStrings(String, String[])
-  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_GetStrings_System_String_System_String___
-  commentId: M:Xamarin.Preferences.RegistryPreferenceStore.GetStrings(System.String,System.String[])
-  name.vb: GetStrings(String, String())
-  fullName: Xamarin.Preferences.RegistryPreferenceStore.GetStrings(System.String, System.String[])
-  fullName.vb: Xamarin.Preferences.RegistryPreferenceStore.GetStrings(System.String, System.String())
-  nameWithType: RegistryPreferenceStore.GetStrings(String, String[])
-  nameWithType.vb: RegistryPreferenceStore.GetStrings(String, String())
-- uid: Xamarin.Preferences.RegistryPreferenceStore.GetStrings*
-  name: GetStrings
-  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_GetStrings_
-  commentId: Overload:Xamarin.Preferences.RegistryPreferenceStore.GetStrings
-  isSpec: "True"
-  fullName: Xamarin.Preferences.RegistryPreferenceStore.GetStrings
-  nameWithType: RegistryPreferenceStore.GetStrings
-- uid: Xamarin.Preferences.RegistryPreferenceStore.Keys
-  name: Keys
-  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_Keys
-  commentId: P:Xamarin.Preferences.RegistryPreferenceStore.Keys
-  fullName: Xamarin.Preferences.RegistryPreferenceStore.Keys
-  nameWithType: RegistryPreferenceStore.Keys
-- uid: Xamarin.Preferences.RegistryPreferenceStore.Keys*
-  name: Keys
-  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_Keys_
-  commentId: Overload:Xamarin.Preferences.RegistryPreferenceStore.Keys
-  isSpec: "True"
-  fullName: Xamarin.Preferences.RegistryPreferenceStore.Keys
-  nameWithType: RegistryPreferenceStore.Keys
-- uid: Xamarin.Preferences.RegistryPreferenceStore.PreferenceChanged
-  name: PreferenceChanged
-  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_PreferenceChanged
-  commentId: E:Xamarin.Preferences.RegistryPreferenceStore.PreferenceChanged
-  fullName: Xamarin.Preferences.RegistryPreferenceStore.PreferenceChanged
-  nameWithType: RegistryPreferenceStore.PreferenceChanged
-- uid: Xamarin.Preferences.RegistryPreferenceStore.Remove(System.String)
-  name: Remove(String)
-  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_Remove_System_String_
-  commentId: M:Xamarin.Preferences.RegistryPreferenceStore.Remove(System.String)
-  fullName: Xamarin.Preferences.RegistryPreferenceStore.Remove(System.String)
-  nameWithType: RegistryPreferenceStore.Remove(String)
-- uid: Xamarin.Preferences.RegistryPreferenceStore.Remove*
-  name: Remove
-  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_Remove_
-  commentId: Overload:Xamarin.Preferences.RegistryPreferenceStore.Remove
-  isSpec: "True"
-  fullName: Xamarin.Preferences.RegistryPreferenceStore.Remove
-  nameWithType: RegistryPreferenceStore.Remove
+  fullName: Xamarin.Preferences.RegistryPreferenceStore.GetKeys
+  nameWithType: RegistryPreferenceStore.GetKeys
 - uid: Xamarin.Preferences.RegistryPreferenceStore.RemoveAll
   name: RemoveAll()
   href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_RemoveAll
@@ -2314,46 +3044,48 @@ references:
   isSpec: "True"
   fullName: Xamarin.Preferences.RegistryPreferenceStore.RemoveAll
   nameWithType: RegistryPreferenceStore.RemoveAll
-- uid: Xamarin.Preferences.RegistryPreferenceStore.Set(System.String,System.Boolean)
-  name: Set(String, Boolean)
-  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_Set_System_String_System_Boolean_
-  commentId: M:Xamarin.Preferences.RegistryPreferenceStore.Set(System.String,System.Boolean)
-  fullName: Xamarin.Preferences.RegistryPreferenceStore.Set(System.String, System.Boolean)
-  nameWithType: RegistryPreferenceStore.Set(String, Boolean)
-- uid: Xamarin.Preferences.RegistryPreferenceStore.Set(System.String,System.Double)
-  name: Set(String, Double)
-  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_Set_System_String_System_Double_
-  commentId: M:Xamarin.Preferences.RegistryPreferenceStore.Set(System.String,System.Double)
-  fullName: Xamarin.Preferences.RegistryPreferenceStore.Set(System.String, System.Double)
-  nameWithType: RegistryPreferenceStore.Set(String, Double)
-- uid: Xamarin.Preferences.RegistryPreferenceStore.Set(System.String,System.Int64)
-  name: Set(String, Int64)
-  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_Set_System_String_System_Int64_
-  commentId: M:Xamarin.Preferences.RegistryPreferenceStore.Set(System.String,System.Int64)
-  fullName: Xamarin.Preferences.RegistryPreferenceStore.Set(System.String, System.Int64)
-  nameWithType: RegistryPreferenceStore.Set(String, Int64)
-- uid: Xamarin.Preferences.RegistryPreferenceStore.Set(System.String,System.String)
-  name: Set(String, String)
-  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_Set_System_String_System_String_
-  commentId: M:Xamarin.Preferences.RegistryPreferenceStore.Set(System.String,System.String)
-  fullName: Xamarin.Preferences.RegistryPreferenceStore.Set(System.String, System.String)
-  nameWithType: RegistryPreferenceStore.Set(String, String)
-- uid: Xamarin.Preferences.RegistryPreferenceStore.Set(System.String,System.String[])
-  name: Set(String, String[])
-  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_Set_System_String_System_String___
-  commentId: M:Xamarin.Preferences.RegistryPreferenceStore.Set(System.String,System.String[])
-  name.vb: Set(String, String())
-  fullName: Xamarin.Preferences.RegistryPreferenceStore.Set(System.String, System.String[])
-  fullName.vb: Xamarin.Preferences.RegistryPreferenceStore.Set(System.String, System.String())
-  nameWithType: RegistryPreferenceStore.Set(String, String[])
-  nameWithType.vb: RegistryPreferenceStore.Set(String, String())
-- uid: Xamarin.Preferences.RegistryPreferenceStore.Set*
-  name: Set
-  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_Set_
-  commentId: Overload:Xamarin.Preferences.RegistryPreferenceStore.Set
+- uid: Xamarin.Preferences.RegistryPreferenceStore.StorageRemove(System.String)
+  name: StorageRemove(String)
+  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_StorageRemove_System_String_
+  commentId: M:Xamarin.Preferences.RegistryPreferenceStore.StorageRemove(System.String)
+  fullName: Xamarin.Preferences.RegistryPreferenceStore.StorageRemove(System.String)
+  nameWithType: RegistryPreferenceStore.StorageRemove(String)
+- uid: Xamarin.Preferences.RegistryPreferenceStore.StorageRemove*
+  name: StorageRemove
+  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_StorageRemove_
+  commentId: Overload:Xamarin.Preferences.RegistryPreferenceStore.StorageRemove
   isSpec: "True"
-  fullName: Xamarin.Preferences.RegistryPreferenceStore.Set
-  nameWithType: RegistryPreferenceStore.Set
+  fullName: Xamarin.Preferences.RegistryPreferenceStore.StorageRemove
+  nameWithType: RegistryPreferenceStore.StorageRemove
+- uid: Xamarin.Preferences.RegistryPreferenceStore.StorageSetValue(System.String,System.Object)
+  name: StorageSetValue(String, Object)
+  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_StorageSetValue_System_String_System_Object_
+  commentId: M:Xamarin.Preferences.RegistryPreferenceStore.StorageSetValue(System.String,System.Object)
+  fullName: Xamarin.Preferences.RegistryPreferenceStore.StorageSetValue(System.String, System.Object)
+  nameWithType: RegistryPreferenceStore.StorageSetValue(String, Object)
+- uid: Xamarin.Preferences.RegistryPreferenceStore.StorageSetValue*
+  name: StorageSetValue
+  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_StorageSetValue_
+  commentId: Overload:Xamarin.Preferences.RegistryPreferenceStore.StorageSetValue
+  isSpec: "True"
+  fullName: Xamarin.Preferences.RegistryPreferenceStore.StorageSetValue
+  nameWithType: RegistryPreferenceStore.StorageSetValue
+- uid: Xamarin.Preferences.RegistryPreferenceStore.StorageTryGetValue(System.String,Type,TypeCode,System.Object@)
+  name: StorageTryGetValue(String, Type, TypeCode, out Object)
+  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_StorageTryGetValue_System_String_Type_TypeCode_System_Object__
+  commentId: M:Xamarin.Preferences.RegistryPreferenceStore.StorageTryGetValue(System.String,Type,TypeCode,System.Object@)
+  name.vb: StorageTryGetValue(String, Type, TypeCode, ByRef Object)
+  fullName: Xamarin.Preferences.RegistryPreferenceStore.StorageTryGetValue(System.String, Type, TypeCode, out System.Object)
+  fullName.vb: Xamarin.Preferences.RegistryPreferenceStore.StorageTryGetValue(System.String, Type, TypeCode, ByRef System.Object)
+  nameWithType: RegistryPreferenceStore.StorageTryGetValue(String, Type, TypeCode, out Object)
+  nameWithType.vb: RegistryPreferenceStore.StorageTryGetValue(String, Type, TypeCode, ByRef Object)
+- uid: Xamarin.Preferences.RegistryPreferenceStore.StorageTryGetValue*
+  name: StorageTryGetValue
+  href: api/Xamarin.Preferences.RegistryPreferenceStore.html#Xamarin_Preferences_RegistryPreferenceStore_StorageTryGetValue_
+  commentId: Overload:Xamarin.Preferences.RegistryPreferenceStore.StorageTryGetValue
+  isSpec: "True"
+  fullName: Xamarin.Preferences.RegistryPreferenceStore.StorageTryGetValue
+  nameWithType: RegistryPreferenceStore.StorageTryGetValue
 - uid: Xamarin.ProcessControl
   name: Xamarin.ProcessControl
   href: api/Xamarin.ProcessControl.html

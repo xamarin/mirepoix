@@ -79,13 +79,47 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">PreferenceStore</span></div>
+      <div class="level2"><a class="xref" href="Xamarin.Preferences.MacUserDefaultsPreferenceStore.html">MacUserDefaultsPreferenceStore</a></div>
+      <div class="level2"><a class="xref" href="Xamarin.Preferences.MemoryOnlyPreferenceStore.html">MemoryOnlyPreferenceStore</a></div>
+      <div class="level2"><a class="xref" href="Xamarin.Preferences.RegistryPreferenceStore.html">RegistryPreferenceStore</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Xamarin.Preferences.html">Xamarin.Preferences</a></h6>
   <h6><strong>Assembly</strong>: Xamarin.Preferences.dll</h6>
   <h5 id="Xamarin_Preferences_PreferenceStore_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class PreferenceStore</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class PreferenceStore : object</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_PreferenceStore_ReturnDefaultValueOnException.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.PreferenceStore.ReturnDefaultValueOnException%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/PreferenceStore.cs/#L20">View Source</a>
+  </span>
+  <h4 id="Xamarin_Preferences_PreferenceStore_ReturnDefaultValueOnException" data-uid="Xamarin.Preferences.PreferenceStore.ReturnDefaultValueOnException">ReturnDefaultValueOnException</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ReturnDefaultValueOnException</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
@@ -93,7 +127,7 @@
     <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_PreferenceStore_SharedInstance.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.PreferenceStore.SharedInstance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/PreferenceStore.cs/#L17">View Source</a>
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/PreferenceStore.cs/#L22">View Source</a>
   </span>
   <a id="Xamarin_Preferences_PreferenceStore_SharedInstance_" data-uid="Xamarin.Preferences.PreferenceStore.SharedInstance*"></a>
   <h4 id="Xamarin_Preferences_PreferenceStore_SharedInstance" data-uid="Xamarin.Preferences.PreferenceStore.SharedInstance">SharedInstance</h4>
@@ -101,7 +135,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IPreferenceStore SharedInstance { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static PreferenceStore SharedInstance { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -113,7 +147,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Xamarin.Preferences.IPreferenceStore.html">IPreferenceStore</a></td>
+        <td><a class="xref" href="Xamarin.Preferences.PreferenceStore.html">PreferenceStore</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -122,18 +156,48 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_PreferenceStore_Initialize_Xamarin_Preferences_IPreferenceStore_.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.PreferenceStore.Initialize(Xamarin.Preferences.IPreferenceStore)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_PreferenceStore_GetKeys.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.PreferenceStore.GetKeys%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/PreferenceStore.cs/#L29">View Source</a>
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/PreferenceStore.cs/#L126">View Source</a>
   </span>
-  <a id="Xamarin_Preferences_PreferenceStore_Initialize_" data-uid="Xamarin.Preferences.PreferenceStore.Initialize*"></a>
-  <h4 id="Xamarin_Preferences_PreferenceStore_Initialize_Xamarin_Preferences_IPreferenceStore_" data-uid="Xamarin.Preferences.PreferenceStore.Initialize(Xamarin.Preferences.IPreferenceStore)">Initialize(IPreferenceStore)</h4>
+  <a id="Xamarin_Preferences_PreferenceStore_GetKeys_" data-uid="Xamarin.Preferences.PreferenceStore.GetKeys*"></a>
+  <h4 id="Xamarin_Preferences_PreferenceStore_GetKeys" data-uid="Xamarin.Preferences.PreferenceStore.GetKeys">GetKeys()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Initialize(IPreferenceStore preferenceStore)</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract IReadOnlyList&lt;string&gt; GetKeys()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_PreferenceStore_Initialize_Xamarin_Preferences_PreferenceStore_.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.PreferenceStore.Initialize(Xamarin.Preferences.PreferenceStore)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/PreferenceStore.cs/#L34">View Source</a>
+  </span>
+  <a id="Xamarin_Preferences_PreferenceStore_Initialize_" data-uid="Xamarin.Preferences.PreferenceStore.Initialize*"></a>
+  <h4 id="Xamarin_Preferences_PreferenceStore_Initialize_Xamarin_Preferences_PreferenceStore_" data-uid="Xamarin.Preferences.PreferenceStore.Initialize(Xamarin.Preferences.PreferenceStore)">Initialize(PreferenceStore)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Initialize(PreferenceStore preferenceStore)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -146,8 +210,383 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Xamarin.Preferences.IPreferenceStore.html">IPreferenceStore</a></td>
+        <td><a class="xref" href="Xamarin.Preferences.PreferenceStore.html">PreferenceStore</a></td>
         <td><span class="parametername">preferenceStore</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_PreferenceStore_OnPreferenceChanged_System_String_.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.PreferenceStore.OnPreferenceChanged(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/PreferenceStore.cs/#L52">View Source</a>
+  </span>
+  <a id="Xamarin_Preferences_PreferenceStore_OnPreferenceChanged_" data-uid="Xamarin.Preferences.PreferenceStore.OnPreferenceChanged*"></a>
+  <h4 id="Xamarin_Preferences_PreferenceStore_OnPreferenceChanged_System_String_" data-uid="Xamarin.Preferences.PreferenceStore.OnPreferenceChanged(System.String)">OnPreferenceChanged(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnPreferenceChanged(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_PreferenceStore_Remove_System_String_.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.PreferenceStore.Remove(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/PreferenceStore.cs/#L109">View Source</a>
+  </span>
+  <a id="Xamarin_Preferences_PreferenceStore_Remove_" data-uid="Xamarin.Preferences.PreferenceStore.Remove*"></a>
+  <h4 id="Xamarin_Preferences_PreferenceStore_Remove_System_String_" data-uid="Xamarin.Preferences.PreferenceStore.Remove(System.String)">Remove(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Remove(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_PreferenceStore_RemoveAll.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.PreferenceStore.RemoveAll%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/PreferenceStore.cs/#L117">View Source</a>
+  </span>
+  <a id="Xamarin_Preferences_PreferenceStore_RemoveAll_" data-uid="Xamarin.Preferences.PreferenceStore.RemoveAll*"></a>
+  <h4 id="Xamarin_Preferences_PreferenceStore_RemoveAll" data-uid="Xamarin.Preferences.PreferenceStore.RemoveAll">RemoveAll()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void RemoveAll()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_PreferenceStore_SetValue_System_String_System_Object_TypeConverter_.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.PreferenceStore.SetValue(System.String%2CSystem.Object%2CTypeConverter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/PreferenceStore.cs/#L55">View Source</a>
+  </span>
+  <a id="Xamarin_Preferences_PreferenceStore_SetValue_" data-uid="Xamarin.Preferences.PreferenceStore.SetValue*"></a>
+  <h4 id="Xamarin_Preferences_PreferenceStore_SetValue_System_String_System_Object_TypeConverter_" data-uid="Xamarin.Preferences.PreferenceStore.SetValue(System.String,System.Object,TypeConverter)">SetValue(String, Object, TypeConverter)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetValue(string key, object value, TypeConverter converter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TypeConverter</span></td>
+        <td><span class="parametername">converter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_PreferenceStore_StorageRemove_System_String_.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.PreferenceStore.StorageRemove(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/PreferenceStore.cs/#L115">View Source</a>
+  </span>
+  <a id="Xamarin_Preferences_PreferenceStore_StorageRemove_" data-uid="Xamarin.Preferences.PreferenceStore.StorageRemove*"></a>
+  <h4 id="Xamarin_Preferences_PreferenceStore_StorageRemove_System_String_" data-uid="Xamarin.Preferences.PreferenceStore.StorageRemove(System.String)">StorageRemove(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract bool StorageRemove(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_PreferenceStore_StorageSetValue_System_String_System_Object_.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.PreferenceStore.StorageSetValue(System.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/PreferenceStore.cs/#L90">View Source</a>
+  </span>
+  <a id="Xamarin_Preferences_PreferenceStore_StorageSetValue_" data-uid="Xamarin.Preferences.PreferenceStore.StorageSetValue*"></a>
+  <h4 id="Xamarin_Preferences_PreferenceStore_StorageSetValue_System_String_System_Object_" data-uid="Xamarin.Preferences.PreferenceStore.StorageSetValue(System.String,System.Object)">StorageSetValue(String, Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract bool StorageSetValue(string key, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_PreferenceStore_StorageTryGetValue_System_String_Type_TypeCode_System_Object__.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.PreferenceStore.StorageTryGetValue(System.String%2CType%2CTypeCode%2CSystem.Object%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/PreferenceStore.cs/#L103">View Source</a>
+  </span>
+  <a id="Xamarin_Preferences_PreferenceStore_StorageTryGetValue_" data-uid="Xamarin.Preferences.PreferenceStore.StorageTryGetValue*"></a>
+  <h4 id="Xamarin_Preferences_PreferenceStore_StorageTryGetValue_System_String_Type_TypeCode_System_Object__" data-uid="Xamarin.Preferences.PreferenceStore.StorageTryGetValue(System.String,Type,TypeCode,System.Object@)">StorageTryGetValue(String, Type, TypeCode, out Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract bool StorageTryGetValue(string key, Type valueType, TypeCode valueTypeCode, out object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Type</span></td>
+        <td><span class="parametername">valueType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TypeCode</span></td>
+        <td><span class="parametername">valueTypeCode</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_PreferenceStore_TryGetValue_System_String_Type_TypeCode_System_Object__.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.PreferenceStore.TryGetValue(System.String%2CType%2CTypeCode%2CSystem.Object%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/PreferenceStore.cs/#L92">View Source</a>
+  </span>
+  <a id="Xamarin_Preferences_PreferenceStore_TryGetValue_" data-uid="Xamarin.Preferences.PreferenceStore.TryGetValue*"></a>
+  <h4 id="Xamarin_Preferences_PreferenceStore_TryGetValue_System_String_Type_TypeCode_System_Object__" data-uid="Xamarin.Preferences.PreferenceStore.TryGetValue(System.String,Type,TypeCode,System.Object@)">TryGetValue(String, Type, TypeCode, out Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetValue(string key, Type valueType, TypeCode valueTypeCode, out object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Type</span></td>
+        <td><span class="parametername">valueType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TypeCode</span></td>
+        <td><span class="parametername">valueTypeCode</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_PreferenceStore_PreferenceChanged.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.PreferenceStore.PreferenceChanged%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/PreferenceStore.cs/#L50">View Source</a>
+  </span>
+  <h4 id="Xamarin_Preferences_PreferenceStore_PreferenceChanged" data-uid="Xamarin.Preferences.PreferenceStore.PreferenceChanged">PreferenceChanged</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;PreferenceChangedEventArgs&gt; PreferenceChanged</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EventHandler</span>&lt;<a class="xref" href="Xamarin.Preferences.PreferenceChangedEventArgs.html">PreferenceChangedEventArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -163,7 +602,7 @@
                     <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_PreferenceStore.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.PreferenceStore%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/PreferenceStore.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/PreferenceStore.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

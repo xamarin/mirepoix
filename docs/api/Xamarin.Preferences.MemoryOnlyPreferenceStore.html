@@ -78,561 +78,63 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">MemoryOnlyPreferenceStore</span></div>
+    <div class="level1"><a class="xref" href="Xamarin.Preferences.PreferenceStore.html">PreferenceStore</a></div>
+    <div class="level2"><span class="xref">MemoryOnlyPreferenceStore</span></div>
   </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Xamarin.Preferences.IPreferenceStore.html">IPreferenceStore</a></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_ReturnDefaultValueOnException">PreferenceStore.ReturnDefaultValueOnException</a>
+    </div>
+    <div>
+      <a class="xref" href="Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_SharedInstance">PreferenceStore.SharedInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_Initialize_Xamarin_Preferences_PreferenceStore_">PreferenceStore.Initialize(PreferenceStore)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_PreferenceChanged">PreferenceStore.PreferenceChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_OnPreferenceChanged_System_String_">PreferenceStore.OnPreferenceChanged(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_SetValue_System_String_System_Object_TypeConverter_">PreferenceStore.SetValue(String, Object, TypeConverter)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_TryGetValue_System_String_Type_TypeCode_System_Object__">PreferenceStore.TryGetValue(String, Type, TypeCode, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_Remove_System_String_">PreferenceStore.Remove(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_RemoveAll">PreferenceStore.RemoveAll()</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Xamarin.Preferences.html">Xamarin.Preferences</a></h6>
   <h6><strong>Assembly</strong>: Xamarin.Preferences.dll</h6>
   <h5 id="Xamarin_Preferences_MemoryOnlyPreferenceStore_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class MemoryOnlyPreferenceStore : IPreferenceStore</code></pre>
+    <pre><code class="lang-csharp hljs">public class MemoryOnlyPreferenceStore : PreferenceStore</code></pre>
   </div>
-  <h3 id="properties">Properties
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_MemoryOnlyPreferenceStore_Keys.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.MemoryOnlyPreferenceStore.Keys%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/MemoryOnlyPreferenceStore.cs/#L61">View Source</a>
-  </span>
-  <a id="Xamarin_Preferences_MemoryOnlyPreferenceStore_Keys_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.Keys*"></a>
-  <h4 id="Xamarin_Preferences_MemoryOnlyPreferenceStore_Keys" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.Keys">Keys</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;string&gt; Keys { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<span class="xref">System.String</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_MemoryOnlyPreferenceStore_GetBoolean_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.MemoryOnlyPreferenceStore.GetBoolean(System.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/MemoryOnlyPreferenceStore.cs/#L34">View Source</a>
-  </span>
-  <a id="Xamarin_Preferences_MemoryOnlyPreferenceStore_GetBoolean_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.GetBoolean*"></a>
-  <h4 id="Xamarin_Preferences_MemoryOnlyPreferenceStore_GetBoolean_System_String_System_Boolean_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.GetBoolean(System.String,System.Boolean)">GetBoolean(String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool GetBoolean(string key, bool defaultValue = false)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">defaultValue</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_MemoryOnlyPreferenceStore_GetDouble_System_String_System_Double_.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.MemoryOnlyPreferenceStore.GetDouble(System.String%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/MemoryOnlyPreferenceStore.cs/#L37">View Source</a>
-  </span>
-  <a id="Xamarin_Preferences_MemoryOnlyPreferenceStore_GetDouble_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.GetDouble*"></a>
-  <h4 id="Xamarin_Preferences_MemoryOnlyPreferenceStore_GetDouble_System_String_System_Double_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.GetDouble(System.String,System.Double)">GetDouble(String, Double)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public double GetDouble(string key, double defaultValue = 0)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Double</span></td>
-        <td><span class="parametername">defaultValue</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Double</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_MemoryOnlyPreferenceStore_GetInt64_System_String_System_Int64_.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.MemoryOnlyPreferenceStore.GetInt64(System.String%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/MemoryOnlyPreferenceStore.cs/#L40">View Source</a>
-  </span>
-  <a id="Xamarin_Preferences_MemoryOnlyPreferenceStore_GetInt64_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.GetInt64*"></a>
-  <h4 id="Xamarin_Preferences_MemoryOnlyPreferenceStore_GetInt64_System_String_System_Int64_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.GetInt64(System.String,System.Int64)">GetInt64(String, Int64)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long GetInt64(string key, long defaultValue = 0L)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td><span class="parametername">defaultValue</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_MemoryOnlyPreferenceStore_GetString_System_String_System_String_.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.MemoryOnlyPreferenceStore.GetString(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/MemoryOnlyPreferenceStore.cs/#L43">View Source</a>
-  </span>
-  <a id="Xamarin_Preferences_MemoryOnlyPreferenceStore_GetString_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.GetString*"></a>
-  <h4 id="Xamarin_Preferences_MemoryOnlyPreferenceStore_GetString_System_String_System_String_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.GetString(System.String,System.String)">GetString(String, String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string GetString(string key, string defaultValue = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">defaultValue</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_MemoryOnlyPreferenceStore_GetStrings_System_String_System_String___.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.MemoryOnlyPreferenceStore.GetStrings(System.String%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/MemoryOnlyPreferenceStore.cs/#L46">View Source</a>
-  </span>
-  <a id="Xamarin_Preferences_MemoryOnlyPreferenceStore_GetStrings_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.GetStrings*"></a>
-  <h4 id="Xamarin_Preferences_MemoryOnlyPreferenceStore_GetStrings_System_String_System_String___" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.GetStrings(System.String,System.String[])">GetStrings(String, String[])</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string[] GetStrings(string key, string[] defaultValue = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span>[]</td>
-        <td><span class="parametername">defaultValue</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_MemoryOnlyPreferenceStore_Remove_System_String_.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.MemoryOnlyPreferenceStore.Remove(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/MemoryOnlyPreferenceStore.cs/#L49">View Source</a>
-  </span>
-  <a id="Xamarin_Preferences_MemoryOnlyPreferenceStore_Remove_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.Remove*"></a>
-  <h4 id="Xamarin_Preferences_MemoryOnlyPreferenceStore_Remove_System_String_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.Remove(System.String)">Remove(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Remove(string key)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_MemoryOnlyPreferenceStore_RemoveAll.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.MemoryOnlyPreferenceStore.RemoveAll%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/MemoryOnlyPreferenceStore.cs/#L55">View Source</a>
-  </span>
-  <a id="Xamarin_Preferences_MemoryOnlyPreferenceStore_RemoveAll_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.RemoveAll*"></a>
-  <h4 id="Xamarin_Preferences_MemoryOnlyPreferenceStore_RemoveAll" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.RemoveAll">RemoveAll()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RemoveAll()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_MemoryOnlyPreferenceStore_Set_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.MemoryOnlyPreferenceStore.Set(System.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/MemoryOnlyPreferenceStore.cs/#L28">View Source</a>
-  </span>
-  <a id="Xamarin_Preferences_MemoryOnlyPreferenceStore_Set_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.Set*"></a>
-  <h4 id="Xamarin_Preferences_MemoryOnlyPreferenceStore_Set_System_String_System_Boolean_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.Set(System.String,System.Boolean)">Set(String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Set(string key, bool value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_MemoryOnlyPreferenceStore_Set_System_String_System_Double_.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.MemoryOnlyPreferenceStore.Set(System.String%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/MemoryOnlyPreferenceStore.cs/#L30">View Source</a>
-  </span>
-  <a id="Xamarin_Preferences_MemoryOnlyPreferenceStore_Set_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.Set*"></a>
-  <h4 id="Xamarin_Preferences_MemoryOnlyPreferenceStore_Set_System_String_System_Double_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.Set(System.String,System.Double)">Set(String, Double)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Set(string key, double value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Double</span></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_MemoryOnlyPreferenceStore_Set_System_String_System_Int64_.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.MemoryOnlyPreferenceStore.Set(System.String%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/MemoryOnlyPreferenceStore.cs/#L29">View Source</a>
-  </span>
-  <a id="Xamarin_Preferences_MemoryOnlyPreferenceStore_Set_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.Set*"></a>
-  <h4 id="Xamarin_Preferences_MemoryOnlyPreferenceStore_Set_System_String_System_Int64_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.Set(System.String,System.Int64)">Set(String, Int64)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Set(string key, long value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_MemoryOnlyPreferenceStore_Set_System_String_System_String_.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.MemoryOnlyPreferenceStore.Set(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/MemoryOnlyPreferenceStore.cs/#L31">View Source</a>
-  </span>
-  <a id="Xamarin_Preferences_MemoryOnlyPreferenceStore_Set_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.Set*"></a>
-  <h4 id="Xamarin_Preferences_MemoryOnlyPreferenceStore_Set_System_String_System_String_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.Set(System.String,System.String)">Set(String, String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Set(string key, string value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_MemoryOnlyPreferenceStore_Set_System_String_System_String___.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.MemoryOnlyPreferenceStore.Set(System.String%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/MemoryOnlyPreferenceStore.cs/#L32">View Source</a>
-  </span>
-  <a id="Xamarin_Preferences_MemoryOnlyPreferenceStore_Set_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.Set*"></a>
-  <h4 id="Xamarin_Preferences_MemoryOnlyPreferenceStore_Set_System_String_System_String___" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.Set(System.String,System.String[])">Set(String, String[])</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Set(string key, string[] value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span>[]</td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="events">Events
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_MemoryOnlyPreferenceStore_PreferenceChanged.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.MemoryOnlyPreferenceStore.PreferenceChanged%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_MemoryOnlyPreferenceStore_GetKeys.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.MemoryOnlyPreferenceStore.GetKeys%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/MemoryOnlyPreferenceStore.cs/#L17">View Source</a>
   </span>
-  <h4 id="Xamarin_Preferences_MemoryOnlyPreferenceStore_PreferenceChanged" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.PreferenceChanged">PreferenceChanged</h4>
+  <a id="Xamarin_Preferences_MemoryOnlyPreferenceStore_GetKeys_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.GetKeys*"></a>
+  <h4 id="Xamarin_Preferences_MemoryOnlyPreferenceStore_GetKeys" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.GetKeys">GetKeys()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler&lt;PreferenceChangedEventArgs&gt; PreferenceChanged</code></pre>
+    <pre><code class="lang-csharp hljs">protected override IReadOnlyList&lt;string&gt; GetKeys()</code></pre>
   </div>
-  <h5 class="eventType">Event Type</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -642,15 +144,180 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Xamarin.Preferences.PreferenceChangedEventArgs.html">PreferenceChangedEventArgs</a>&gt;</td>
+        <td><span class="xref">IReadOnlyList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Xamarin.Preferences.IPreferenceStore.html">IPreferenceStore</a>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_GetKeys">PreferenceStore.GetKeys()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_MemoryOnlyPreferenceStore_StorageRemove_System_String_.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageRemove(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/MemoryOnlyPreferenceStore.cs/#L42">View Source</a>
+  </span>
+  <a id="Xamarin_Preferences_MemoryOnlyPreferenceStore_StorageRemove_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageRemove*"></a>
+  <h4 id="Xamarin_Preferences_MemoryOnlyPreferenceStore_StorageRemove_System_String_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageRemove(System.String)">StorageRemove(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool StorageRemove(string key)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_StorageRemove_System_String_">PreferenceStore.StorageRemove(String)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_MemoryOnlyPreferenceStore_StorageSetValue_System_String_System_Object_.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageSetValue(System.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/MemoryOnlyPreferenceStore.cs/#L25">View Source</a>
+  </span>
+  <a id="Xamarin_Preferences_MemoryOnlyPreferenceStore_StorageSetValue_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageSetValue*"></a>
+  <h4 id="Xamarin_Preferences_MemoryOnlyPreferenceStore_StorageSetValue_System_String_System_Object_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageSetValue(System.String,System.Object)">StorageSetValue(String, Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool StorageSetValue(string key, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_StorageSetValue_System_String_System_Object_">PreferenceStore.StorageSetValue(String, Object)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_MemoryOnlyPreferenceStore_StorageTryGetValue_System_String_Type_TypeCode_System_Object__.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageTryGetValue(System.String%2CType%2CTypeCode%2CSystem.Object%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/MemoryOnlyPreferenceStore.cs/#L35">View Source</a>
+  </span>
+  <a id="Xamarin_Preferences_MemoryOnlyPreferenceStore_StorageTryGetValue_" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageTryGetValue*"></a>
+  <h4 id="Xamarin_Preferences_MemoryOnlyPreferenceStore_StorageTryGetValue_System_String_Type_TypeCode_System_Object__" data-uid="Xamarin.Preferences.MemoryOnlyPreferenceStore.StorageTryGetValue(System.String,Type,TypeCode,System.Object@)">StorageTryGetValue(String, Type, TypeCode, out Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool StorageTryGetValue(string key, Type valueType, TypeCode valueTypeCode, out object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Type</span></td>
+        <td><span class="parametername">valueType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TypeCode</span></td>
+        <td><span class="parametername">valueTypeCode</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Xamarin.Preferences.PreferenceStore.html#Xamarin_Preferences_PreferenceStore_StorageTryGetValue_System_String_Type_TypeCode_System_Object__">PreferenceStore.StorageTryGetValue(String, Type, TypeCode, out Object)</a></div>
 </article>
           </div>
           

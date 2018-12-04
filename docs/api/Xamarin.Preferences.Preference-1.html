@@ -84,7 +84,7 @@
   <h6><strong>Assembly</strong>: Xamarin.Preferences.dll</h6>
   <h5 id="Xamarin_Preferences_Preference_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class Preference&lt;T&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class Preference&lt;T&gt; : object</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -105,13 +105,13 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_Preference_1__ctor_System_String__0_System_ComponentModel_TypeConverter_.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.Preference%601.%23ctor(System.String%2C%600%2CSystem.ComponentModel.TypeConverter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_Preference_1__ctor_System_String__0_TypeConverter_.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.Preference%601.%23ctor(System.String%2C%600%2CTypeConverter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/Preference.cs/#L25">View Source</a>
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/Preference.cs/#L36">View Source</a>
   </span>
   <a id="Xamarin_Preferences_Preference_1__ctor_" data-uid="Xamarin.Preferences.Preference`1.#ctor*"></a>
-  <h4 id="Xamarin_Preferences_Preference_1__ctor_System_String__0_System_ComponentModel_TypeConverter_" data-uid="Xamarin.Preferences.Preference`1.#ctor(System.String,`0,System.ComponentModel.TypeConverter)">Preference(String, T, TypeConverter)</h4>
+  <h4 id="Xamarin_Preferences_Preference_1__ctor_System_String__0_TypeConverter_" data-uid="Xamarin.Preferences.Preference`1.#ctor(System.String,`0,TypeConverter)">Preference(String, T, TypeConverter)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -139,7 +139,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.ComponentModel.TypeConverter</span></td>
+        <td><span class="xref">TypeConverter</span></td>
         <td><span class="parametername">converter</span></td>
         <td></td>
       </tr>
@@ -152,7 +152,7 @@
     <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_Preference_1_DefaultValue.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.Preference%601.DefaultValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/Preference.cs/#L23">View Source</a>
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/Preference.cs/#L34">View Source</a>
   </span>
   <a id="Xamarin_Preferences_Preference_1_DefaultValue_" data-uid="Xamarin.Preferences.Preference`1.DefaultValue*"></a>
   <h4 id="Xamarin_Preferences_Preference_1_DefaultValue" data-uid="Xamarin.Preferences.Preference`1.DefaultValue">DefaultValue</h4>
@@ -182,7 +182,7 @@
     <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_Preference_1_Key.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.Preference%601.Key%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/Preference.cs/#L22">View Source</a>
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/Preference.cs/#L33">View Source</a>
   </span>
   <a id="Xamarin_Preferences_Preference_1_Key_" data-uid="Xamarin.Preferences.Preference`1.Key*"></a>
   <h4 id="Xamarin_Preferences_Preference_1_Key" data-uid="Xamarin.Preferences.Preference`1.Key">Key</h4>
@@ -214,7 +214,7 @@
     <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_Preference_1_GetValue.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.Preference%601.GetValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/Preference.cs/#L129">View Source</a>
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/Preference.cs/#L50">View Source</a>
   </span>
   <a id="Xamarin_Preferences_Preference_1_GetValue_" data-uid="Xamarin.Preferences.Preference`1.GetValue*"></a>
   <h4 id="Xamarin_Preferences_Preference_1_GetValue" data-uid="Xamarin.Preferences.Preference`1.GetValue">GetValue()</h4>
@@ -244,7 +244,7 @@
     <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_Preference_1_Reset.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.Preference%601.Reset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/Preference.cs/#L135">View Source</a>
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/Preference.cs/#L92">View Source</a>
   </span>
   <a id="Xamarin_Preferences_Preference_1_Reset_" data-uid="Xamarin.Preferences.Preference`1.Reset*"></a>
   <h4 id="Xamarin_Preferences_Preference_1_Reset" data-uid="Xamarin.Preferences.Preference`1.Reset">Reset()</h4>
@@ -259,7 +259,7 @@
     <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_Preference_1_SetValue__0_.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.Preference%601.SetValue(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/Preference.cs/#L132">View Source</a>
+    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/Preference.cs/#L89">View Source</a>
   </span>
   <a id="Xamarin_Preferences_Preference_1_SetValue_" data-uid="Xamarin.Preferences.Preference`1.SetValue*"></a>
   <h4 id="Xamarin_Preferences_Preference_1_SetValue__0_" data-uid="Xamarin.Preferences.Preference`1.SetValue(`0)">SetValue(T)</h4>
@@ -297,7 +297,7 @@
                     <a href="https://github.com/xamarin/mirepoix/new/master/apiSpec/new?filename=Xamarin_Preferences_Preference_1.md&amp;value=---%0Auid%3A%20Xamarin.Preferences.Preference%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/Preference.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/xamarin/mirepoix/blob/master/src/Xamarin.Preferences/Preference.cs/#L16" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
