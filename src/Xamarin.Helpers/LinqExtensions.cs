@@ -8,7 +8,31 @@ namespace Xamarin.Linq
 {
     public static class LinqExtensions
     {
-        public static unsafe bool SequenceEqual (this byte[] array1, byte[] array2, int length = -1)
+        [DllImport (
+            "msvcrt.dll",
+            EntryPoint = "memcmp",
+            CallingConvention = CallingConvention.Cdecl)]
+        static extern unsafe int windows_memcmp (byte *s1, byte *s2, IntPtr n);
+
+        [DllImport (
+            "libc",
+            EntryPoint = "memcmp",
+            CallingConvention = CallingConvention.Cdecl)]
+        static extern unsafe int posix_memcmp (byte *s1, byte *s2, IntPtr n);
+
+        unsafe delegate int memcmp_handler (byte *s1, byte *s2, IntPtr n);
+
+        static memcmp_handler memcmp;
+
+        static unsafe LinqExtensions ()
+        {
+            if (RuntimeInformation.IsOSPlatform (OSPlatform.Windows))
+                memcmp = windows_memcmp;
+            else
+                memcmp = posix_memcmp;
+        }
+
+        public static unsafe bool SequenceEqual (this byte [] array1, byte [] array2, int offset, int length)
         {
             if (array1 == null)
                 throw new ArgumentNullException (nameof (array1));
@@ -19,44 +43,27 @@ namespace Xamarin.Linq
             if (array1 == array2)
                 return true;
 
-            if (array1.Length != array2.Length)
-                return false;
+            if (offset < 0)
+                throw new ArgumentOutOfRangeException (
+                    nameof (offset),
+                    "must be >= 0");
 
-            if (length < 0)
-                length = array1.Length;
+            if (offset + length > array1.Length)
+                throw new ArgumentOutOfRangeException (
+                    nameof (array1),
+                    "offset + length produces an index larger than the size of the array");
 
-            fixed (byte* array1StartPtr = array1)
-            fixed (byte* array2StartPtr = array2) {
-                var array1Ptr = array1StartPtr;
-                var array2Ptr = array2StartPtr;
+            if (offset + length > array2.Length)
+                throw new ArgumentOutOfRangeException (
+                    nameof (array2),
+                    "offset + length produces an index larger than the size of the array");
 
-                for (int i = 0, n = length / 8; i < n; i++) {
-                    if (*((long*)array1Ptr) != *((long*)array2Ptr))
-                        return false;
-
-                    array1Ptr += 8;
-                    array2Ptr += 8;
-                }
-
-                if ((length & 4) != 0) {
-                    if (*((int*)array1Ptr) != *((int*)array2Ptr))
-                        return false;
-                    array1Ptr += 4;
-                    array2Ptr += 4;
-                }
-
-                if ((length & 2) != 0) {
-                    if (*((short*)array1Ptr) != *((short*)array2Ptr))
-                        return false;
-                    array1Ptr += 2;
-                    array2Ptr += 2;
-                }
-
-                if ((length & 1) != 0 && *((byte*)array1Ptr) != *((byte*)array2Ptr))
-                    return false;
-
-                return true;
-            }
+            fixed (byte *array1Ptr = array1)
+            fixed (byte *array2Ptr = array2)
+                return memcmp (
+                    array1Ptr + offset,
+                    array2Ptr + offset,
+                    (IntPtr)length) == 0;
         }
     }
 }

@@ -99,7 +99,7 @@ namespace Xamarin
                 if (read1 <= 0)
                     return true;
 
-                if (!buffer1.SequenceEqual (buffer2, read1))
+                if (!buffer1.SequenceEqual (buffer2, 0, read1))
                     return false;
             }
         }

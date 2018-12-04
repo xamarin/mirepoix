@@ -3,7 +3,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 using Xunit;
 
@@ -32,7 +31,7 @@ namespace Xamarin.Linq
                 var dataCopy = new byte [data.Length];
                 Array.Copy (data, dataCopy, data.Length);
 
-                Assert.True (data.SequenceEqual (dataCopy));
+                Assert.True (data.SequenceEqual (dataCopy, 0, data.Length));
             }
         }
 
@@ -46,7 +45,7 @@ namespace Xamarin.Linq
                 var dataCopy = new byte [data.Length];
                 dataCopy [random.Next (0, dataCopy.Length)]++;
 
-                Assert.False (data.SequenceEqual (dataCopy));
+                Assert.False (data.SequenceEqual (dataCopy, 0, data.Length));
             }
         }
     }
