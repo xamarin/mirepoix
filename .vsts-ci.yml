@@ -5,7 +5,7 @@ phases:
   - template: .vsts-ci-steps.yml
 
 - phase: Linux
-  queue: Hosted Linux Preview
+  queue: Hosted Ubuntu 1604
   steps:
   - template: .vsts-ci-steps.yml
 
