@@ -22,8 +22,8 @@ namespace Xamarin.ProcessControl.Tests
                 ProcessArguments.Create ("mono", "test.exe", "a", "b"));
         }
 
-        [MacFact]
-        public void ElevateOnMac ()
+        [UnixFact]
+        public void ElevateOnUnix ()
         {
             var exec = new Exec (
                 ProcessArguments.Create ("installer"),
@@ -34,6 +34,11 @@ namespace Xamarin.ProcessControl.Tests
                 ProcessArguments.Create ("/usr/bin/sudo", "installer"));
         }
 
+        #if false
+        // As of 2018-12-04 the VSTS hosted pool vmImage 'ubuntu-16.04'
+        // is [thankfully] no longer running as root (user is 'vsts'), so
+        // this test is now disabled. The ElevateOnUnix test above was
+        // previously a [MacFact] ElevateOnMac.
         [LinuxFact]
         public void IgnoreElevateOnUnix ()
         {
@@ -50,6 +55,7 @@ namespace Xamarin.ProcessControl.Tests
                     ProcessArguments.Create ("installer"));
             }
         }
+        #endif
 
         [MacFact]
         public void ElevateOnMacAndImplicitlyExecAssemblyWithMonoOnUnix ()
