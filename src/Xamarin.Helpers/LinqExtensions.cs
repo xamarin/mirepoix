@@ -62,6 +62,11 @@ namespace Xamarin.Linq
                     nameof (offset),
                     "must be >= 0");
 
+            if (length < 0)
+                throw new ArgumentOutOfRangeException (
+                    nameof (length),
+                    "must be >= 0");
+
             if (offset + length > array1.Length)
                 throw new ArgumentOutOfRangeException (
                     nameof (array1),
