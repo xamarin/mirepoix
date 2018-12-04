@@ -14,17 +14,20 @@ pr:
 
 jobs:
 - job: macOS
-  queue: Hosted macOS Preview
+  pool:
+    vmImage: 'macOS-10.13'
   steps:
   - template: .vsts-ci-steps.yml
 
 - job: Linux
-  queue: Hosted Ubuntu 1604
+  pool:
+    vmImage: 'ubuntu-16.04'
   steps:
   - template: .vsts-ci-steps.yml
 
 - job: Windows
-  queue: Hosted VS2017
+  pool:
+    vmImage: 'vs2017-win2016'
   steps:
   - template: .vsts-ci-steps.yml
 
