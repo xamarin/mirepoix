@@ -1,15 +1,29 @@
-phases:
-- phase: macOS
+resources:
+  repositories:
+  - repository: mirepoix
+    type: github
+    name: xamarin/mirepoix
+    ref: refs/heads/master
+    endpoint: GitHub-XamarinInteractive
+
+trigger:
+- master
+
+pr:
+- master
+
+jobs:
+- job: macOS
   queue: Hosted macOS Preview
   steps:
   - template: .vsts-ci-steps.yml
 
-- phase: Linux
+- job: Linux
   queue: Hosted Ubuntu 1604
   steps:
   - template: .vsts-ci-steps.yml
 
-- phase: Windows
+- job: Windows
   queue: Hosted VS2017
   steps:
   - template: .vsts-ci-steps.yml
