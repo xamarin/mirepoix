@@ -40,9 +40,6 @@ namespace Xamarin.Linq
             if (array2 == null)
                 throw new ArgumentNullException (nameof (array1));
 
-            if (array1 == array2)
-                return true;
-
             if (offset < 0)
                 throw new ArgumentOutOfRangeException (
                     nameof (offset),
@@ -57,6 +54,9 @@ namespace Xamarin.Linq
                 throw new ArgumentOutOfRangeException (
                     nameof (array2),
                     "offset + length produces an index larger than the size of the array");
+
+            if (array1 == array2)
+                return true;
 
             fixed (byte *array1Ptr = array1)
             fixed (byte *array2Ptr = array2)
