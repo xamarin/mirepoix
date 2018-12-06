@@ -5,6 +5,7 @@
   <PropertyGroup Condition="$(_CanOutputAppBundle)">
     <AppBundleManifest Condition="'$(AppBundleManifest)' == ''">$(MSBuildProjectDirectory)\Info.plist</AppBundleManifest>
     <_AppManifest>$(AppBundleManifest)</_AppManifest>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <!--
