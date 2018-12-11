@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+    <PackDependsOn>$(PackDependsOn);PackConsolidated</PackDependsOn>
+  </PropertyGroup>
+</Project>

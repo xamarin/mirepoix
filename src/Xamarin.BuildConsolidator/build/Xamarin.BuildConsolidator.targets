@@ -1,0 +1,36 @@
+<Project>
+  <PropertyGroup>
+    <XamarinBuildConsolidatorTaskAssembly Condition="'$(XamarinBuildConsolidatorTaskAssembly)' == ''">$(MSBuildThisFileDirectory)Xamarin.BuildConsolidator.dll</XamarinBuildConsolidatorTaskAssembly>
+  </PropertyGroup>
+
+  <UsingTask
+    AssemblyFile="$(XamarinBuildConsolidatorTaskAssembly)"
+    TaskName="Xamarin.BuildConsolidator.ILRepack"/>
+
+  <UsingTask
+    AssemblyFile="$(XamarinBuildConsolidatorTaskAssembly)"
+    TaskName="Xamarin.BuildConsolidator.PackageConsolidatorTask"/>
+
+  <Target Name="PackConsolidated" Condition="'@(PackagesToMerge)' != ''">
+    <PackageConsolidatorTask
+      PackagesToMerge="@(PackagesToMerge)"
+      PackageOutputPath="$(PackageOutputPath)"
+      PackageId="$(PackageId)"
+      PackageVersion="$(PackageVersion)"
+      Title="$(Title)"
+      Authors="$(Authors)"
+      Description="$(Description)"
+      PackageDescription="$(PackageDescription)"
+      Copyright="$(Copyright)"
+      PackageRequireLicenseAcceptance="$(PackageRequireLicenseAcceptance)"
+      PackageLicenseUrl="$(PackageLicenseUrl)"
+      PackageLicenseExpression="$(PackageLicenseExpression)"
+      PackageProjectUrl="$(PackageProjectUrl)"
+      PackageIconUrl="$(PackageIconUrl)"
+      PackageReleaseNotes="$(PackageReleaseNotes)"
+      PackageTags="$(PackageTags)"
+      RepositoryUrl="$(RepositoryUrl)"
+      RepositoryType="$(RepositoryType)"
+      AssemblySearchPaths="$(AssemblySearchPaths)"/>
+  </Target>
+</Project>

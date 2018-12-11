@@ -1,0 +1,57 @@
+<Project>
+  <Target Name="ILRepackGetInputs">
+    <ItemGroup>
+      <ReferencePathWithoutILRepack
+        Include="@(ReferencePathWithRefAssemblies)"
+        Condition="'%(Filename)' != 'ILRepack'"/>
+    </ItemGroup>
+    <ItemGroup>
+      <ILRepackInputAssemblies Include="$(OutputPath)$(AssemblyName).dll"/>
+      <ILRepackInputAssemblies Include="$(OutputPath)ILRepack.exe"/>
+      <ILRepackInputAssemblies
+        Include="@(ReferencePathWithoutILRepack)"
+        Condition="!$([System.String]::Copy('%(Filename)').Contains('Microsoft.Build'))"/>
+    </ItemGroup>
+    <ItemGroup>
+      <ILRepackSearchDirectories Include="$(OutputPath)"/>
+      <ILRepackSearchDirectories
+        Include="@(ReferencePathWithoutILRepack)"
+        Condition="$([System.String]::Copy('%(Filename)').Contains('Microsoft.Build'))"/>
+    </ItemGroup>
+  </Target>
+
+  <UsingTask
+    AssemblyFile="$(OutputPath)$(AssemblyName).dll"
+    TaskName="Xamarin.BuildConsolidator.ILRepack"/>
+
+  <Target
+    Name="ILRepack"
+    AfterTargets="Build"
+    DependsOnTargets="ILRepackGetInputs"
+    Inputs="@(ILRepackInputAssemblies)"
+    Outputs="$(OutputPath)$(PackageId).dll">
+    <Message Text="$(MSBuildProjectName) -> IL patching ILRepack.exe" Importance="high"/>
+    <Exec
+      WorkingDirectory="$(MSBuildThisFileDirectory)..\..\tools\ILRepackPatcher"
+      StandardErrorImportance="high"
+      StandardOutputImportance="low"
+      Command="dotnet run -- &quot;$(MSBuildThisFileDirectory)$(OutputPath)ILRepack.exe&quot;"/>
+    <Message Text="$(MSBuildProjectName) -> IL repacking $(MSBuildThisFileDirectory)$(OutputPath)$(PackageId).dll" Importance="high"/>
+    <ILRepack
+      OutputFile="$(OutputPath)$(PackageId).dll"
+      InputAssemblies="@(ILRepackInputAssemblies)"
+      SearchDirectories="@(ILRepackSearchDirectories)"
+      Internalize="true"/>
+  </Target>
+
+  <Target Name="GetPackageBuildFiles">
+    <ItemGroup>
+      <TfmSpecificPackageFile Include="$(OutputPath)$(PackageId).dll">
+        <PackagePath>build</PackagePath>
+      </TfmSpecificPackageFile>
+      <TfmSpecificPackageFile Include="build\*">
+        <PackagePath>build</PackagePath>
+      </TfmSpecificPackageFile>
+    </ItemGroup>
+  </Target>
+</Project>
