@@ -32,7 +32,7 @@ jobs:
   - template: .vsts-ci-steps.yml
 
   - script: |
-      dotnet pack
+      dotnet msbuild /noautoresponse /t:Pack /p:BuildProjectReferences=false /p:NoBuild=true /v:m /bl:_artifacts/pack.binlog mirepoix.proj
     displayName: Pack Libraries
 
   - task: PublishBuildArtifacts@1
