@@ -24,7 +24,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Xamarin.Helpers\Xamarin.Helpers.csproj" />
+    <ProjectReference Include="..\Xamarin.Helpers\Xamarin.Helpers.csproj">
+      <PrivateAssets>all</PrivateAssets>
+    </ProjectReference>
   </ItemGroup>
 
   <Import Project="Xamarin.BuildConsolidator.targets" />

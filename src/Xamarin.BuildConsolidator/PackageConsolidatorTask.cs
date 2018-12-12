@@ -8,6 +8,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 using Microsoft.Build.Framework;
 using Microsoft.Build.Utilities;
@@ -22,7 +23,7 @@ namespace Xamarin.BuildConsolidator
     public sealed class PackageConsolidatorTask : Task
     {
         [Required]
-        public string [] PackagesToMerge { get; set; }
+        public string [] PackagesToConsolidate { get; set; }
 
         [Required]
         public string PackageOutputPath { get; set; }
@@ -104,18 +105,20 @@ namespace Xamarin.BuildConsolidator
                 (nameof (RepositoryUrl), packageBuilder.Repository?.Url),
                 (nameof (PackageReleaseNotes), packageBuilder.ReleaseNotes));
 
-            var packageFileName = Path.Combine (
+            var consolidatedPackagePath = PathHelpers.ResolveFullPath (
                 PackageOutputPath,
                 $"{packageBuilder.Id}.{packageBuilder.Version}.nupkg");
 
-            foreach (var package in PackagesToMerge)
-                packageConsolidator.ConsolidatePackage (package);
+            foreach (var packagePath in PackagesToConsolidate
+                .Select (p => PathHelpers.ResolveFullPath (p))
+                .Where (p => p != consolidatedPackagePath))
+                packageConsolidator.ConsolidatePackage (packagePath);
 
-            packageConsolidator.CreateMergedPackage (packageFileName);
+            packageConsolidator.CreateMergedPackage (consolidatedPackagePath);
 
             Log.LogMessage (
                 MessageImportance.High,
-                $"Successfully created package '{packageFileName}'.");
+                $"Successfully created package '{consolidatedPackagePath}'.");
 
             return true;
         }

@@ -11,9 +11,11 @@
     AssemblyFile="$(XamarinBuildConsolidatorTaskAssembly)"
     TaskName="Xamarin.BuildConsolidator.PackageConsolidatorTask"/>
 
-  <Target Name="PackConsolidated" Condition="'@(PackagesToMerge)' != ''">
+  <Target
+    Name="PackConsolidated"
+    DependsOnTargets="$(PackConsolidatedDependsOn)">
     <PackageConsolidatorTask
-      PackagesToMerge="@(PackagesToMerge)"
+      PackagesToConsolidate="@(PackagesToConsolidate)"
       PackageOutputPath="$(PackageOutputPath)"
       PackageId="$(PackageId)"
       PackageVersion="$(PackageVersion)"
