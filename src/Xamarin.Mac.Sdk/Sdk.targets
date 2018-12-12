@@ -4,7 +4,7 @@
     Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.Common.targets"
     Condition="Exists('$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.Common.targets')"/>
 
-  <PropertyGroup Condition="$(_CanOutputAppBundle)">
+  <PropertyGroup Condition="'$(_CanOutputAppBundle)' == 'true'">
     <AppBundleManifest Condition="'$(AppBundleManifest)' == ''">$(MSBuildProjectDirectory)\Info.plist</AppBundleManifest>
     <_AppManifest>$(AppBundleManifest)</_AppManifest>
     <IsPackable>false</IsPackable>
