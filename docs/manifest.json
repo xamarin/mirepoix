@@ -5,6 +5,42 @@
   "files": [
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.BuildConsolidator.ILRepack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.BuildConsolidator.ILRepack.html",
+          "hash": "x6NotCU5/CYfQt7QJrHwpQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.BuildConsolidator.PackageConsolidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.BuildConsolidator.PackageConsolidator.html",
+          "hash": "FZIMCz/32+qRHSmf+m1n3Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xamarin.BuildConsolidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xamarin.BuildConsolidator.html",
+          "hash": "3JiK9JdGNtCK0KY/hzzUzw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Xamarin.Downloader.Download.yml",
       "output": {
         ".html": {
@@ -165,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.MSBuild.Sdk.DependencyGraph.html",
-          "hash": "irqdF4+gtd/V/8VNSOqjNw=="
+          "hash": "CqtmsH355A4X1dhzDKneFQ=="
         }
       },
       "is_incremental": true,
@@ -237,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Xamarin.MSBuild.Sdk.Solution.SolutionBuilder.html",
-          "hash": "zOAAq2nBbNFEg7IPqFcXHg=="
+          "hash": "qUW++guo4IQkB7lqMhedSw=="
         }
       },
       "is_incremental": true,
@@ -1125,7 +1161,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "As631HV/YEb2aiphx+RYFQ=="
+          "hash": "5ef1AlOP6gcD4gD+bwnnfQ=="
         }
       },
       "is_incremental": false,

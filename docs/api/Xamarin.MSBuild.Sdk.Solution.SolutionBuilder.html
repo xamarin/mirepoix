@@ -282,7 +282,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static SolutionBuilder FromTraversalProject(string projectPath, string solutionOutputPath = null, bool addTransientProjectReferences = true, TaskLoggingHelper log = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static SolutionBuilder FromTraversalProject(string projectPath, string solutionOutputPath = null, bool addTransitiveProjectReferences = true, TaskLoggingHelper log = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -309,8 +309,9 @@ represent. This path is used to compute the relative path to projects.</p>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">addTransientProjectReferences</span></td>
-        <td></td>
+        <td><span class="parametername">addTransitiveProjectReferences</span></td>
+        <td><p>Whether or not to add transitive <code>&amp;lt;ProjectReference&gt;</code> projects to the solution.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">TaskLoggingHelper</span></td>

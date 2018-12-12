@@ -12,7 +12,8 @@
             "Xamarin.Downloader/Xamarin.Downloader.csproj",
             "Xamarin.MSBuild.Sdk/Xamarin.MSBuild.Sdk.csproj",
             "Xamarin.XunitHelpers/Xamarin.XunitHelpers.csproj",
-            "Xamarin.Security.Keychain/Xamarin.Security.Keychain.csproj"
+            "Xamarin.Security.Keychain/Xamarin.Security.Keychain.csproj",
+            "Xamarin.BuildConsolidator/Xamarin.BuildConsolidator.csproj"
           ],
           "exclude": []
         }
