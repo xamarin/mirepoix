@@ -1,0 +1,8 @@
+<Project>
+  <ItemGroup>
+    <SolutionConfiguration Include="Debug"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="SharedProject\LibraryProject\LibraryProject.csproj"/>
+  </ItemGroup>
+</Project>

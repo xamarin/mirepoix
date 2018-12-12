@@ -205,6 +205,27 @@ namespace Xamarin.MSBuild.Sdk
                 loadedProjects.Add (path, node);
 
                 if (project != null) {
+                    foreach (var import in project.Imports) {
+                        var importPath = import.ImportedProject?.FullPath;
+                        if (importPath == null || !string.Equals (
+                            Path.GetExtension (importPath),
+                            ".projitems",
+                            StringComparison.OrdinalIgnoreCase))
+                            continue;
+
+                        var shprojPath = ResolveFullPath (
+                            Path.GetDirectoryName (importPath),
+                            Path.ChangeExtension (importPath, ".shproj"));
+
+                        if (!File.Exists (shprojPath))
+                            throw new FileNotFoundException (
+                                $"Project '{path}' has an <Import> element of shared " +
+                                $"project items '{importPath}' that maps to a shared " +
+                                $"project that does not exist: '{shprojPath}'");
+
+                        AddDependency (shprojPath);
+                    }
+
                     foreach (var projectReference in project.GetItems ("ProjectReference")) {
                         cancellationToken.ThrowIfCancellationRequested ();
 
@@ -216,12 +237,18 @@ namespace Xamarin.MSBuild.Sdk
                             throw new FileNotFoundException (
                                 $"Project '{path}' has a <ProjectReference> that does not exist: '{referencePath}'");
 
-                        var dependencyNode = LoadProject (relativeDirectory, referencePath);
-                        dependencyNode.AddParent (node);
-                        dependencyNode.AddProjectReferenceItem (projectReference);
-
-                        relationships.Add ((node, dependencyNode));
+                        AddDependency (referencePath).AddProjectReferenceItem (projectReference);
                     }
+                }
+
+                ProjectDependencyNode AddDependency (string dependencyPath)
+                {
+                    var dependencyNode = LoadProject (relativeDirectory, dependencyPath);
+                    dependencyNode.AddParent (node);
+
+                    relationships.Add ((node, dependencyNode));
+
+                    return dependencyNode;
                 }
 
                 sortedProjects.Add (node);

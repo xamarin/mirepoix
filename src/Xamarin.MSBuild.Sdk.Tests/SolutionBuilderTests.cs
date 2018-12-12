@@ -31,6 +31,10 @@ namespace Xamarin.MSBuild.Sdk.Tests
         [InlineData ("UnsupportedProjectDependency.proj", false)]
         [InlineData ("FallbackToXmlForProjectGuid.proj", true)]
         [InlineData ("FallbackToXmlForProjectGuid.proj", false)]
+        [InlineData ("SharedProjectViaExplicitShprojReference.proj", true)]
+        [InlineData ("SharedProjectViaExplicitShprojReference.proj", false)]
+        [InlineData ("SharedProjectViaTransitiveProjitemsReference.proj", true)]
+        [InlineData ("SharedProjectViaTransitiveProjitemsReference.proj", false)]
         public void GenerateSolution (string projectFile, bool updateExistingSolution)
         {
             var projectPath = Path.Combine (solutionsDirectory, projectFile);
