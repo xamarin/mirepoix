@@ -14,11 +14,11 @@ steps:
   displayName: Dump Environment
 
 - script: |
-    dotnet msbuild /restore
+    dotnet msbuild /noautoresponse /t:Restore  /v:n /bl:_artifacts/restore.binlog mirepoix.proj
   displayName: Restore
 
 - script: |
-    dotnet msbuild /noautoresponse /v:detailed /bl:_artifacts/build.binlog mirepoix.proj
+    dotnet msbuild /noautoresponse /t:Build  /v:n /bl:_artifacts/build.binlog mirepoix.proj
   displayName: Build
 
 - task: DotNetCoreCLI@2

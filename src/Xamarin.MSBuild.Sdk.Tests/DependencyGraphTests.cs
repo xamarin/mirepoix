@@ -49,7 +49,10 @@ namespace Xamarin.MSBuild.Sdk.Tests
                 p => Assert.Equal ("Xamarin.NativeHelpers.Tests", p),
                 p => Assert.Equal ("Xamarin.MSBuild.Sdk", p),
                 p => Assert.Equal ("Xamarin.MSBuild.Sdk.Tests", p),
-                p => Assert.Equal ("Xamarin.Mac.Sdk", p));
+                p => Assert.Equal ("Xamarin.Mac.Sdk", p),
+                p => Assert.Equal ("ILRepackPatcher", p),
+                p => Assert.Equal ("Xamarin.BuildConsolidator", p),
+                p => Assert.Equal ("Xamarin.BuildConsolidator.Tests", p));
         }
     }
 }

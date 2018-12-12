@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>Xamarin.Mirepoix</PackageId>
+    <XamarinBuildConsolidatorProjectPath>$(MSBuildThisFileDirectory)..\Xamarin.BuildConsolidator\</XamarinBuildConsolidatorProjectPath>
+    <XamarinBuildConsolidatorTaskAssembly>$(XamarinBuildConsolidatorProjectPath)\bin\Debug\netstandard2.0\Xamarin.BuildConsolidator.dll</XamarinBuildConsolidatorTaskAssembly>
+  </PropertyGroup>
+
+  <Import Project="$(XamarinBuildConsolidatorProjectPath)build\Xamarin.BuildConsolidator.props" />
+
+  <ItemGroup>
+    <PackagesToMerge Include="$(MSBuildThisFileDirectory)..\..\_artifacts\Xamarin.Helpers.*.nupkg" />
+    <PackagesToMerge Include="$(MSBuildThisFileDirectory)..\..\_artifacts\Xamarin.NativeHelpers.*.nupkg" />
+    <PackagesToMerge Include="$(MSBuildThisFileDirectory)..\..\_artifacts\Xamarin.Downloader.*.nupkg" />
+    <PackagesToMerge Include="$(MSBuildThisFileDirectory)..\..\_artifacts\Xamarin.ProcessControl.*.nupkg" />
+    <PackagesToMerge Include="$(MSBuildThisFileDirectory)..\..\_artifacts\Xamarin.Security.Keychain.*.nupkg" />
+  </ItemGroup>
+
+  <Import Project="$(XamarinBuildConsolidatorProjectPath)build\Xamarin.BuildConsolidator.targets" />
+</Project>
