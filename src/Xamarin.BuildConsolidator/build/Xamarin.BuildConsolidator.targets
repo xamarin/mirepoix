@@ -9,12 +9,12 @@
 
   <UsingTask
     AssemblyFile="$(XamarinBuildConsolidatorTaskAssembly)"
-    TaskName="Xamarin.BuildConsolidator.PackageConsolidatorTask"/>
+    TaskName="Xamarin.BuildConsolidator.PackageConsolidator"/>
 
   <Target
     Name="PackConsolidated"
     DependsOnTargets="$(PackConsolidatedDependsOn)">
-    <PackageConsolidatorTask
+    <PackageConsolidator
       PackagesToConsolidate="@(PackagesToConsolidate)"
       PackageOutputPath="$(PackageOutputPath)"
       PackageId="$(PackageId)"

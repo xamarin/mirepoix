@@ -17,7 +17,7 @@ using NuGet.Packaging;
 
 namespace Xamarin.BuildConsolidator
 {
-    public sealed class PackageConsolidator
+    sealed class PackageConsolidatorEngine
     {
         sealed class Consolidation
         {
@@ -45,7 +45,7 @@ namespace Xamarin.BuildConsolidator
 
         bool consolidationStarted;
 
-        public PackageConsolidator (
+        public PackageConsolidatorEngine (
             PackageBuilder packageBuilder,
             IEnumerable<string> assemblySearchPaths = null,
             string workPath = null,

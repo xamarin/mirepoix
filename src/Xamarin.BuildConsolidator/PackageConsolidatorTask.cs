@@ -20,7 +20,7 @@ using NuGet.Versioning;
 
 namespace Xamarin.BuildConsolidator
 {
-    public sealed class PackageConsolidatorTask : Task
+    public sealed class PackageConsolidator : Task
     {
         [Required]
         public string [] PackagesToConsolidate { get; set; }
@@ -83,7 +83,7 @@ namespace Xamarin.BuildConsolidator
                     LicenseMetadata.CurrentVersion);
             }
 
-            var packageConsolidator = new PackageConsolidator (
+            var packageConsolidator = new PackageConsolidatorEngine (
                 packageBuilder,
                 GetAssemblySearchPaths (AssemblySearchPaths),
                 GetString (TempWorkPath),
