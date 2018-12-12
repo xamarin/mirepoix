@@ -200,8 +200,17 @@ namespace Xamarin.MSBuild.Sdk.Solution
                         Guid.TryParse (explicitProjectGuid, out projectGuid);
 
                     string solutionFolder = null;
+                    var includeInSolution = true;
 
                     foreach (var projectReference in node.ProjectReferenceItems) {
+                        if (string.Equals (
+                            projectReference.GetMetadataValue ("IncludeInSolution"),
+                            "false",
+                            StringComparison.OrdinalIgnoreCase)) {
+                            includeInSolution = false;
+                            break;
+                        }
+
                         projectConfigurationPlatform = projectConfigurationPlatform
                             .WithConfiguration (projectReference.GetMetadataValue ("Configuration"))
                             .WithPlatform (projectReference.GetMetadataValue ("Platform"));
@@ -210,6 +219,9 @@ namespace Xamarin.MSBuild.Sdk.Solution
                         if (!string.IsNullOrEmpty (_solutionFolder))
                             solutionFolder = _solutionFolder;
                     }
+
+                    if (!includeInSolution)
+                        continue;
 
                     var solutionNode = solution.AddProject (
                         node.ProjectPath,

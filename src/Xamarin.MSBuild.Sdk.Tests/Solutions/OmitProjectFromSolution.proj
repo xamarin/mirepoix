@@ -1,0 +1,11 @@
+<Project>
+  <ItemGroup>
+    <SolutionConfiguration Include="Debug"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Projects\A.csproj"/>
+    <ProjectReference Include="Projects\B.csproj">
+      <IncludeInSolution>false</IncludeInSolution>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
