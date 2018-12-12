@@ -112,8 +112,8 @@ namespace Xamarin.MSBuild.Sdk.Solution
         /// The path to the solution that the returned <see cref="SolutionBuilder"/> should
         /// represent. This path is used to compute the relative path to projects.
         /// </param>
-        /// <param name="addAllProjectReferences">
-        /// Whether or not to add transient `&lt;ProjectReference&gt;` projects to the solution.
+        /// <param name="addTransitiveProjectReferences">
+        /// Whether or not to add transitive `&lt;ProjectReference&gt;` projects to the solution.
         /// </param>
         /// <param name="log">
         /// An optional logger.
@@ -121,7 +121,7 @@ namespace Xamarin.MSBuild.Sdk.Solution
         public static SolutionBuilder FromTraversalProject (
             string projectPath,
             string solutionOutputPath = null,
-            bool addTransientProjectReferences = true,
+            bool addTransitiveProjectReferences = true,
             TaskLoggingHelper log = null)
         {
             if (projectPath == null)
@@ -138,7 +138,7 @@ namespace Xamarin.MSBuild.Sdk.Solution
             log?.LogMessage (MessageImportance.High, "Generating solution from traversal project");
             log?.LogMessage (MessageImportance.Normal, $"  projectPath: {projectPath}");
             log?.LogMessage (MessageImportance.Normal, $"  solutionOutputPath: {solutionOutputPath}");
-            log?.LogMessage (MessageImportance.Normal, $"  addTransientProjectReferences: {addTransientProjectReferences}");
+            log?.LogMessage (MessageImportance.Normal, $"  addTransitiveProjectReferences: {addTransitiveProjectReferences}");
 
             var solution = new SolutionBuilder (solutionOutputPath, log);
             var traversalProject = new ProjectCollection ().LoadProject (projectPath);
