@@ -7,13 +7,15 @@
 
   <Import Project="$(XamarinBuildConsolidatorProjectPath)build\Xamarin.BuildConsolidator.props" />
 
-  <ItemGroup>
-    <PackagesToMerge Include="$(MSBuildThisFileDirectory)..\..\_artifacts\Xamarin.Helpers.*.nupkg" />
-    <PackagesToMerge Include="$(MSBuildThisFileDirectory)..\..\_artifacts\Xamarin.NativeHelpers.*.nupkg" />
-    <PackagesToMerge Include="$(MSBuildThisFileDirectory)..\..\_artifacts\Xamarin.Downloader.*.nupkg" />
-    <PackagesToMerge Include="$(MSBuildThisFileDirectory)..\..\_artifacts\Xamarin.ProcessControl.*.nupkg" />
-    <PackagesToMerge Include="$(MSBuildThisFileDirectory)..\..\_artifacts\Xamarin.Security.Keychain.*.nupkg" />
-  </ItemGroup>
+  <Target Name="GetPackagesToConsolidate">
+    <ItemGroup>
+      <PackagesToConsolidate Include="$(MSBuildThisFileDirectory)..\..\_artifacts\Xamarin.Helpers.*.nupkg" />
+      <PackagesToConsolidate Include="$(MSBuildThisFileDirectory)..\..\_artifacts\Xamarin.NativeHelpers.*.nupkg" />
+      <PackagesToConsolidate Include="$(MSBuildThisFileDirectory)..\..\_artifacts\Xamarin.Downloader.*.nupkg" />
+      <PackagesToConsolidate Include="$(MSBuildThisFileDirectory)..\..\_artifacts\Xamarin.ProcessControl.*.nupkg" />
+      <PackagesToConsolidate Include="$(MSBuildThisFileDirectory)..\..\_artifacts\Xamarin.Security.Keychain.*.nupkg" />
+    </ItemGroup>
+  </Target>
 
   <Import Project="$(XamarinBuildConsolidatorProjectPath)build\Xamarin.BuildConsolidator.targets" />
 </Project>
