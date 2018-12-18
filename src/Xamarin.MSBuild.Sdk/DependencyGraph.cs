@@ -206,11 +206,8 @@ namespace Xamarin.MSBuild.Sdk
 
                 if (project != null) {
                     foreach (var import in project.Imports) {
-                        var importPath = import.ImportedProject?.FullPath;
-                        if (importPath == null || !string.Equals (
-                            Path.GetExtension (importPath),
-                            ".projitems",
-                            StringComparison.OrdinalIgnoreCase))
+                        var importPath = GetSharedProjectImportPath (import);
+                        if (importPath == null)
                             continue;
 
                         var shprojPath = ResolveFullPath (
@@ -284,6 +281,27 @@ namespace Xamarin.MSBuild.Sdk
                 projects,
                 sortedProjects.ToImmutableList (),
                 relationships.ToImmutableList ());
+
+            string GetSharedProjectImportPath (ResolvedImport import)
+            {
+                var importPath = import.ImportedProject?.FullPath;
+                if (importPath == null)
+                    return null;
+
+                if (!string.Equals (
+                    import.ImportingElement.Label,
+                    "Shared",
+                    StringComparison.OrdinalIgnoreCase))
+                    return null;
+
+                if (!string.Equals (
+                    Path.GetExtension (importPath),
+                    ".projitems",
+                    StringComparison.OrdinalIgnoreCase))
+                    return null;
+
+                return importPath;
+            }
         }
 
         public string GenerateVisualization (DependencyGraphVisualizationKind visualizationKind)

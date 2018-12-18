@@ -37,6 +37,8 @@ namespace Xamarin.MSBuild.Sdk.Tests
         [InlineData ("SharedProjectViaTransitiveProjitemsReference.proj", false)]
         [InlineData ("OmitProjectFromSolution.proj", true)]
         [InlineData ("OmitProjectFromSolution.proj", false)]
+        [InlineData ("NotReallyASharedProjectImportsProjitems.proj", true)]
+        [InlineData ("NotReallyASharedProjectImportsProjitems.proj", false)]
         public void GenerateSolution (string projectFile, bool updateExistingSolution)
         {
             var projectPath = Path.Combine (solutionsDirectory, projectFile);
