@@ -1,6 +1,8 @@
 <Project>
   <Import Sdk="Microsoft.Net.Sdk" Project="Sdk.props"/>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.Common.props"/>
+  <Import
+    Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.Common.props"
+    Condition="Exists('$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.Common.props')"/>
 
   <!--
     This causes VS Mac to treat the SDK project as a proper Xamarin.Mac project,
