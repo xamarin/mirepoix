@@ -69,6 +69,7 @@ namespace Xamarin.ProcessControl.Tests
         [InlineData ("hello", "hello")]
         [InlineData ("hello world", "\"hello world\"")]
         [InlineData ("\"", "\"\\\"\"")]
+        [InlineData ("", "\"\"")]
         public void Quote (string unquoted, string quoted)
             => Assert.Equal (quoted, ProcessArguments.Quote (unquoted));
 

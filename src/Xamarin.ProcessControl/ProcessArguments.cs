@@ -129,10 +129,16 @@ namespace Xamarin.ProcessControl
             return args;
         }
 
+        /// <summary>
+        /// Quote a single argument if necessary.
+        /// </summary>
         public static string Quote (string argument)
         {
             if (argument == null)
                 throw new ArgumentNullException (nameof (argument));
+
+            if (argument.Length == 0)
+                return "\"\"";
 
             StringBuilder builder = null;
 
