@@ -39,4 +39,14 @@
       WorkingDirectory="$(_AppBundleOutputDir)"
       Command="zip -q -1 -r &quot;$(_AppBundleArchiveFileName)&quot; &quot;$(_AppBundleDirName)&quot;"/>
   </Target>
+
+  <Target
+    Name="_ComputeTargetPathForRun"
+    BeforeTargets="Run"
+    DependsOnTargets="_GenerateBundleName"
+    Condition="'$(_CanOutputAppBundle)' == 'true'">
+    <PropertyGroup>
+      <TargetPath>$(MSBuildProjectDirectory)\$(AppBundleDir)\Contents\MacOS\$([System.IO.Path]::GetFileNameWithoutExtension('$(AppBundleDir)'))</TargetPath>
+    </PropertyGroup>
+  </Target>
 </Project>
