@@ -41,6 +41,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.BuildConsolidator",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.BuildConsolidator.Tests", "src\Xamarin.BuildConsolidator.Tests\Xamarin.BuildConsolidator.Tests.csproj", "{CFC355DB-EB92-56D7-A0EE-4CF585D2A341}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Cecil.Rocks", "src\Xamarin.Cecil.Rocks\Xamarin.Cecil.Rocks.csproj", "{02CC9070-D5F4-571C-90F9-75B7E8F8D341}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Cecil.Rocks.Tests", "src\Xamarin.Cecil.Rocks.Tests\Xamarin.Cecil.Rocks.Tests.csproj", "{1D45883F-3DA7-5EA7-AE55-0F2634BE1C1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -126,5 +130,13 @@ Global
 		{CFC355DB-EB92-56D7-A0EE-4CF585D2A341}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFC355DB-EB92-56D7-A0EE-4CF585D2A341}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{CFC355DB-EB92-56D7-A0EE-4CF585D2A341}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{02CC9070-D5F4-571C-90F9-75B7E8F8D341}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02CC9070-D5F4-571C-90F9-75B7E8F8D341}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02CC9070-D5F4-571C-90F9-75B7E8F8D341}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{02CC9070-D5F4-571C-90F9-75B7E8F8D341}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{1D45883F-3DA7-5EA7-AE55-0F2634BE1C1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D45883F-3DA7-5EA7-AE55-0F2634BE1C1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D45883F-3DA7-5EA7-AE55-0F2634BE1C1A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D45883F-3DA7-5EA7-AE55-0F2634BE1C1A}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal

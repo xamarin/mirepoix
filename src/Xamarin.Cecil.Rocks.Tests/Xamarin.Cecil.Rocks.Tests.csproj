@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\Xamarin.Cecil.Rocks\Xamarin.Cecil.Rocks.csproj" />
+    <ProjectReference Include="..\Xamarin.XunitHelpers\Xamarin.XunitHelpers.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Mono.Cecil" Version="0.10.3" />
+  </ItemGroup>
+</Project>

@@ -36,6 +36,9 @@
     <ProjectReference Include="tools\ILRepackPatcher\ILRepackPatcher.csproj"/>
     <ProjectReference Include="src\Xamarin.BuildConsolidator\Xamarin.BuildConsolidator.csproj"/>
     <ProjectReference Include="src\Xamarin.BuildConsolidator.Tests\Xamarin.BuildConsolidator.Tests.csproj"/>
+
+    <ProjectReference Include="src\Xamarin.Cecil.Rocks\Xamarin.Cecil.Rocks.csproj"/>
+    <ProjectReference Include="src\Xamarin.Cecil.Rocks.Tests\Xamarin.Cecil.Rocks.Tests.csproj"/>
   </ItemGroup>
 
   <Target
