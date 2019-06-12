@@ -21,23 +21,23 @@
   </Target>
 
   <!--
-    Zips the .app bundle if 'ArchiveOnBuild' is 'true' and AppBundleDir exists and is a
-    directory. Sets the 'AppBundleArchivePath' to the full path of the resulting zip file.
+    Zips the .app bundle if 'ZipArchiveOnBuild' is 'true' and AppBundleDir exists and is a
+    directory. Sets the 'AppBundleZipArchivePath' to the full path of the resulting zip file.
   -->
   <Target
-    Name="ArchiveAppBundle"
+    Name="ZipArchiveAppBundle"
     AfterTargets="Build"
-    Condition="'$(ArchiveOnBuild)' == 'true' And Exists('$(AppBundleDir)') And !$([System.IO.File]::Exists('$(AppBundleDir)'))">
+    Condition="'$(ZipArchiveOnBuild)' == 'true' And Exists('$(AppBundleDir)') And !$([System.IO.File]::Exists('$(AppBundleDir)'))">
     <PropertyGroup>
       <_AppBundleOutputDir>$([System.IO.Path]::GetDirectoryName('$(AppBundleDir)'))\</_AppBundleOutputDir>
       <_AppBundleDirName>$([System.IO.Path]::GetFileName('$(AppBundleDir)'))</_AppBundleDirName>
-      <_AppBundleArchiveFileName>$([System.IO.Path]::ChangeExtension('$(_AppBundleDirName)', '.zip'))</_AppBundleArchiveFileName>
-      <AppBundleArchivePath>$(OutputPath)$(_AppBundleArchiveFileName)</AppBundleArchivePath>
+      <_AppBundleZipArchiveFileName>$([System.IO.Path]::ChangeExtension('$(_AppBundleDirName)', '.zip'))</_AppBundleZipArchiveFileName>
+      <AppBundleZipArchivePath>$(OutputPath)$(_AppBundleZipArchiveFileName)</AppBundleZipArchivePath>
     </PropertyGroup>
-    <Delete Files="$(_AppBundleOutputDir)$(_AppBundleArchiveFileName)"/>
+    <Delete Files="$(_AppBundleOutputDir)$(_AppBundleZipArchiveFileName)"/>
     <Exec
       WorkingDirectory="$(_AppBundleOutputDir)"
-      Command="zip -q -1 -r &quot;$(_AppBundleArchiveFileName)&quot; &quot;$(_AppBundleDirName)&quot;"/>
+      Command="zip -q -1 -r &quot;$(_AppBundleZipArchiveFileName)&quot; &quot;$(_AppBundleDirName)&quot;"/>
   </Target>
 
   <Target
