@@ -2,6 +2,6 @@
   <PropertyGroup>
     <IsPackable>false</IsPackable>
     <PackDependsOn>$(PackDependsOn);PackConsolidated</PackDependsOn>
-    <PackConsolidatedDependsOn>GetPackagesToConsolidate</PackConsolidatedDependsOn>
+    <PackConsolidatedDependsOn>$(GetPackageVersionDependsOn);GetPackagesToConsolidate</PackConsolidatedDependsOn>
   </PropertyGroup>
 </Project>
