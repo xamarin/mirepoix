@@ -9,12 +9,24 @@
 
   <Target Name="GetPackagesToConsolidate">
     <ItemGroup>
-      <PackagesToConsolidate Include="$(MSBuildThisFileDirectory)..\..\_artifacts\Xamarin.Helpers.*.nupkg" />
-      <PackagesToConsolidate Include="$(MSBuildThisFileDirectory)..\..\_artifacts\Xamarin.NativeHelpers.*.nupkg" />
-      <PackagesToConsolidate Include="$(MSBuildThisFileDirectory)..\..\_artifacts\Xamarin.Downloader.*.nupkg" />
-      <PackagesToConsolidate Include="$(MSBuildThisFileDirectory)..\..\_artifacts\Xamarin.ProcessControl.*.nupkg" />
-      <PackagesToConsolidate Include="$(MSBuildThisFileDirectory)..\..\_artifacts\Xamarin.Security.Keychain.*.nupkg" />
+      <PackageIdsToConsolidate Include="Xamarin.Helpers" />
+      <PackageIdsToConsolidate Include="Xamarin.NativeHelpers" />
+      <PackageIdsToConsolidate Include="Xamarin.Downloader" />
+      <PackageIdsToConsolidate Include="Xamarin.ProcessControl" />
+      <PackageIdsToConsolidate Include="Xamarin.Security.Keychain" />
     </ItemGroup>
+
+    <ItemGroup>
+      <PackagesToConsolidate Include="@(PackageIdsToConsolidate -> '$(MSBuildThisFileDirectory)..\..\_artifacts\%(Identity).$(PackageVersion).nupkg')" />
+    </ItemGroup>
+
+    <PropertyGroup>
+      <PackageDescription>
+        A consolidated package containing @(PackageIdsToConsolidate -> '%(Identity)', ', ') in a single $(PackageId).dll assembly.
+      </PackageDescription>
+    </PropertyGroup>
+
+    <Message Text="$(PackageDescription)" Importance="high"/>
   </Target>
 
   <Import Project="$(XamarinBuildConsolidatorProjectPath)build\Xamarin.BuildConsolidator.targets" />
