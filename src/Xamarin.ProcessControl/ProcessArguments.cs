@@ -144,7 +144,7 @@ namespace Xamarin.ProcessControl
 
             for (int i = 0; i < argument.Length; i++) {
                 var c = argument [i];
-                if (Char.IsWhiteSpace (c) || c == '\b' || c == '"' || c == '\\') {
+                if (Char.IsWhiteSpace (c) || c == '\b' || c == '"') {
                     if (builder == null) {
                         builder = new StringBuilder (argument.Length + 8);
                         builder.Append ('"');
