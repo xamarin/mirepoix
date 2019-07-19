@@ -1,8 +1,8 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <UsingTask
-      TaskName="Xamarin.MSBuild.Sdk.Tasks.GenerateSolution"
-      AssemblyFile="$(SolutionGeneratorAssembly)"
-      Condition="'$(SolutionGeneratorAssembly)' != ''"/>
+    TaskName="Xamarin.MSBuild.Sdk.Tasks.GenerateSolution"
+    AssemblyFile="$(XamarinMSBuildSdkAssembly)"
+    Condition="'$(XamarinMSBuildSdkAssembly)' != ''"/>
 
   <Target Name="GenerateSolution">
     <GenerateSolution
@@ -15,4 +15,36 @@
     Condition="'$(GenerateSolutionAfterBuild)' == 'true'"
     AfterTargets="Build"
     DependsOnTargets="GenerateSolution"/>
+
+  <UsingTask
+    TaskName="Xamarin.MSBuild.Sdk.Tasks.PrepareConsolidationProject"
+    AssemblyFile="$(XamarinMSBuildSdkAssembly)"
+    Condition="'$(XamarinMSBuildSdkAssembly)' != ''"/>
+
+  <Target
+    Name="PrepareConsolidationProject"
+    Condition="'$(IsConsolidationProject)' == 'true'"
+    BeforeTargets="PrepareForBuild">
+
+    <ItemGroup>
+      <Compile Remove="@(Compile)"/>
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Remove="@(ProjectReference)"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Remove="@(Reference)"/>
+    </ItemGroup>
+    
+    <PrepareConsolidationProject
+      MSBuildProjectFullPath="$(MSBuildProjectFullPath)"
+      ConsolidationConditionMetadataName="$(ConsolidationConditionMetadataName)"
+      ConsolidateRemoveItemsRegex="@(ConsolidateRemoveItemsRegex)">
+      <Output TaskParameter="CompileItems" ItemName="Compile"/>
+      <Output TaskParameter="ProjectReferenceItems" ItemName="ProjectReference"/>
+      <Output TaskParameter="ReferenceItems" ItemName="Reference"/>
+    </PrepareConsolidationProject>
+  </Target>
 </Project>
