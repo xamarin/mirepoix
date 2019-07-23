@@ -33,6 +33,14 @@ namespace Xamarin.MSBuild.Sdk.Tasks
         [Output]
         public TaskItem[] ReferenceItems { get; set; }
 
+        [Output]
+        public TaskItem[] EmbeddedResourceItems { get; set; }
+
+        static readonly string [] embeddedResourceMetadataPathNames = {
+            "DependentUpon",
+            "LastGenOutput"
+        };
+
         public override bool Execute ()
         {
             var dependencyGraph = DependencyGraph
@@ -45,6 +53,7 @@ namespace Xamarin.MSBuild.Sdk.Tasks
             var compileItems = new List<TaskItem> ();
             var projectReferenceItems = new List<TaskItem> ();
             var referenceItems = new List<TaskItem> ();
+            var embeddedResourceItems = new List<TaskItem> ();
 
             var projectsToConsolidate = dependencyGraph
                 .TopologicallySortedProjects
@@ -63,6 +72,8 @@ namespace Xamarin.MSBuild.Sdk.Tasks
                 .ToList ();
 
             foreach (var project in projectsToConsolidate) {
+                var projectDirectory = Path.GetDirectoryName (project.ProjectPath);
+
                 foreach (var item in project.Project.AllEvaluatedItems) {
                     if (ShouldExcludeItem (item))
                         continue;
@@ -72,8 +83,13 @@ namespace Xamarin.MSBuild.Sdk.Tasks
                     var itemSpec = item.EvaluatedInclude;
                     var useItemSpecFullPath = false;
                     var itemSpecFullPath = ResolveFullPath (
-                        Path.GetDirectoryName (project.ProjectPath),
+                        projectDirectory,
                         itemSpec);
+
+                    var itemMetadata = new Dictionary<string, string> (StringComparer.OrdinalIgnoreCase);
+
+                    foreach (var metadata in item.Metadata)
+                        itemMetadata.Add (metadata.Name, metadata.EvaluatedValue);
 
                     switch (item.ItemType.ToLowerInvariant()) {
                     case "compile":
@@ -92,6 +108,27 @@ namespace Xamarin.MSBuild.Sdk.Tasks
                     case "reference":
                         collection = referenceItems;
                         break;
+                    case "embeddedresource":
+                        collection = embeddedResourceItems;
+                        useItemSpecFullPath = true;
+
+                        foreach (var name in embeddedResourceMetadataPathNames) {
+                            if (itemMetadata.TryGetValue (name, out var value))
+                                itemMetadata [name] = ResolveFullPath (
+                                    projectDirectory,
+                                    value);
+                        }
+
+                        itemMetadata.TryGetValue ("LogicalResource", out var logicalResource);
+                        itemMetadata ["LogicalResource"] = logicalResource = ComputeLogicalResourceName (
+                            project.Project,
+                            item,
+                            logicalResource);
+
+                        if (logicalResource.EndsWith (".resx", StringComparison.OrdinalIgnoreCase))
+                            itemMetadata ["ManifestResourceName"] = Path.GetFileNameWithoutExtension (logicalResource);
+
+                        break;
                     default:
                         continue;
                     }
@@ -104,19 +141,16 @@ namespace Xamarin.MSBuild.Sdk.Tasks
 
                     allItemSpecs.Add (itemSpec);
 
-                    var taskItem = new TaskItem (
+                    collection.Add (new TaskItem (
                         itemSpec,
-                        item.Metadata.ToDictionary (
-                            m => m.Name,
-                            m => m.EvaluatedValue));
-
-                    collection.Add (taskItem);
+                        itemMetadata));
                 }
             }
 
             CompileItems = compileItems.ToArray ();
             ProjectReferenceItems = projectReferenceItems.ToArray ();
             ReferenceItems = referenceItems.ToArray ();
+            EmbeddedResourceItems = embeddedResourceItems.ToArray ();
 
             return true;
 
@@ -130,6 +164,33 @@ namespace Xamarin.MSBuild.Sdk.Tasks
                         item.EvaluatedInclude,
                         regexItem.ItemSpec))
                     ?? false;
+
+            string ComputeLogicalResourceName (
+                Project project,
+                ProjectItem projectItem,
+                string logicalResource)
+            {
+                if (!string.IsNullOrEmpty (logicalResource))
+                    return logicalResource;
+
+                var projectDirectory = Path.GetDirectoryName (project.FullPath);
+                var resourceName = Regex.Replace (
+                    MakeRelativePath (
+                        projectDirectory,
+                        Path.Combine (projectDirectory, projectItem.EvaluatedInclude)),
+                    @"[\\\/]+",
+                    ".");
+
+                var prefix = project.GetPropertyValue ("RootNamespace");
+
+                if (string.IsNullOrEmpty (prefix) && project.FullPath != null)
+                    prefix = Path.GetFileNameWithoutExtension (project.FullPath);
+
+                if (string.IsNullOrEmpty (prefix))
+                    return resourceName;
+
+                return $"{prefix}.{resourceName}";
+            }
         }
     }
 }

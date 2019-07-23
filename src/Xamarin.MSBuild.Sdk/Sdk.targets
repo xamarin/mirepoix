@@ -38,6 +38,10 @@
       <Reference Remove="@(Reference)"/>
     </ItemGroup>
     
+    <ItemGroup>
+      <EmbeddedResource Remove="@(EmbeddedResource)"/>
+    </ItemGroup>
+
     <PrepareConsolidationProject
       MSBuildProjectFullPath="$(MSBuildProjectFullPath)"
       ConsolidationConditionMetadataName="$(ConsolidationConditionMetadataName)"
@@ -45,6 +49,7 @@
       <Output TaskParameter="CompileItems" ItemName="Compile"/>
       <Output TaskParameter="ProjectReferenceItems" ItemName="ProjectReference"/>
       <Output TaskParameter="ReferenceItems" ItemName="Reference"/>
+      <Output TaskParameter="EmbeddedResourceItems" ItemName="EmbeddedResource"/>
     </PrepareConsolidationProject>
   </Target>
 </Project>
