@@ -19,10 +19,20 @@
 
   <ItemGroup>
     <ImageAsset Include="**\*.xcassets\**\*.*"/>
+    <!--
+      Should not be necessary but VS Mac (as of 8.3) shows <None> items
+      and Microsoft.NET.SDK includes all files as <None> first.
+    -->
+    <None Remove="**\*.xcassets\**\*.*"/>
   </ItemGroup>
 
   <ItemGroup>
     <InterfaceDefinition Include="**\*.storyboard"/>
+    <!--
+      Should not be necessary but VS Mac (as of 8.3) shows <None> items
+      and Microsoft.NET.SDK includes all files as <None> first.
+    -->
+    <None Remove="**\*.storyboard"/>
   </ItemGroup>
 
   <ItemGroup>
