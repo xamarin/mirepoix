@@ -4,6 +4,23 @@
     Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.Common.targets"
     Condition="Exists('$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.Common.targets')"/>
 
+  <ItemGroup>
+    <!--
+      Should not be necessary but VS Mac (as of 8.3) shows <None> items
+      even if the same item is in another item group that will be displayed
+      in the solution pad. Microsoft.NET.SDK explicitly includes all files as
+      <None> first, so we should remove items from the item groups we build
+      up in Sdk.props.
+    -->
+    <None Remove="@(ImageAsset);@(InterfaceDefinition);@(BundleResource)"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <BundleResource Update="@(BundleResource)">
+      <Link Condition="'$(Link)' == ''">Resources\%(RecursiveDir)%(Filename)%(Extension)</Link>
+    </BundleResource>
+  </ItemGroup>
+
   <PropertyGroup Condition="'$(_CanOutputAppBundle)' == 'true'">
     <AppBundleManifest Condition="'$(AppBundleManifest)' == ''">$(MSBuildProjectDirectory)\Info.plist</AppBundleManifest>
     <_AppManifest>$(AppBundleManifest)</_AppManifest>
