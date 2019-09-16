@@ -18,14 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ImageAsset Include="**\*.xcassets\**\*.*"/>
-  </ItemGroup>
-
-  <ItemGroup>
+    <!-- Keep in sync with related section in Sdk.targets -->
+    <ImageAsset Include="**\*.xcassets\**\*"/>
     <BundleResource Include="Resources\**\*" Exclude="@(ImageAsset)"/>
-  </ItemGroup>
-
-  <ItemGroup>
     <InterfaceDefinition Include="**\*.storyboard"/>
   </ItemGroup>
 

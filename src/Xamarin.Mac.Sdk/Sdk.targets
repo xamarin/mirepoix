@@ -11,8 +11,18 @@
       in the solution pad. Microsoft.NET.SDK explicitly includes all files as
       <None> first, so we should remove items from the item groups we build
       up in Sdk.props.
+
+      Even more annoying: while this is completely legimate MSBuild, VS Mac
+      will not actually reflect this in the solution pad (it does not seem
+      to be expanding the item group references).
+      
+      <None Remove="@(ImageAsset);@(InterfaceDefinition);@(BundleResource)" />
+
+      Therefore, we have to keep the patterns in sync from Sdk.proj:
     -->
-    <None Remove="@(ImageAsset);@(InterfaceDefinition);@(BundleResource)"/>
+    <None Remove="**\*.xcassets\**\*"/>
+    <None Remove="Resources\**\*"/>
+    <None Remove="**\*.storyboard"/>
   </ItemGroup>
 
   <ItemGroup>
