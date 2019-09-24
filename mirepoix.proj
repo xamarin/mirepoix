@@ -39,6 +39,8 @@
 
     <ProjectReference Include="src\Xamarin.Cecil.Rocks\Xamarin.Cecil.Rocks.csproj"/>
     <ProjectReference Include="src\Xamarin.Cecil.Rocks.Tests\Xamarin.Cecil.Rocks.Tests.csproj"/>
+
+    <ProjectReference Include="src\Xamarin.PropertyListDeserializer\Xamarin.PropertyListDeserializer.csproj"/>
   </ItemGroup>
 
   <Target

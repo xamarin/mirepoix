@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>Apple Property List (plist) deserializer supporting XML and Binary formats.</Description>
+  </PropertyGroup>
+</Project>
