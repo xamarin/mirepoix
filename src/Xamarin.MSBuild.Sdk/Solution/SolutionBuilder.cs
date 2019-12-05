@@ -228,9 +228,10 @@ namespace Xamarin.MSBuild.Sdk.Solution
                         solutionFolder,
                         projectGuid);
 
-                    solutionNode.AddConfigurationMap (new SolutionConfigurationPlatformMap (
-                        solutionConfigurationPlatform,
-                        projectConfigurationPlatform));
+                    if (solutionNode.ShouldIncludeInProjectConfigurations)
+                        solutionNode.AddConfigurationMap (new SolutionConfigurationPlatformMap (
+                            solutionConfigurationPlatform,
+                            projectConfigurationPlatform));
                 }
             }
 

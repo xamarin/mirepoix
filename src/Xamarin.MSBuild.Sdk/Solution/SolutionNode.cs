@@ -25,6 +25,8 @@ namespace Xamarin.MSBuild.Sdk.Solution
         public string Name { get; }
         public string RelativePath { get; }
 
+        public bool ShouldIncludeInProjectConfigurations => TypeGuid != shprojTypeGuid;
+
         readonly List<SolutionConfigurationPlatformMap> configurations = new List<SolutionConfigurationPlatformMap> ();
         public IReadOnlyList<SolutionConfigurationPlatformMap> Configurations => configurations;
 
