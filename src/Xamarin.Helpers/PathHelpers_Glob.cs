@@ -44,10 +44,18 @@ namespace Xamarin
             /// pattern cannot be expanded, the pattern itself will be yielded.
             /// </summary>
             public static IEnumerable<string> ShellExpand (string pattern)
+                => ShellExpand (".", pattern);
+
+            /// <summary>
+            /// Perform a glob expansion on <paramref name="pattern"/> with shell style
+            /// behavior, using <paramref name="basePath"/> as a base path. If the
+            /// pattern cannot be expanded, the pattern itself will be yielded.
+            /// </summary>
+            public static IEnumerable<string> ShellExpand (string basePath, string pattern)
             {
                 var any = false;
 
-                foreach (var expansion in Expand (pattern)) {
+                foreach (var expansion in Expand (basePath, pattern)) {
                     any = true;
                     yield return expansion;
                 }
