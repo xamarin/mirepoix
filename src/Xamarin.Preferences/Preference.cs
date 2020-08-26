@@ -26,6 +26,7 @@ namespace Xamarin.Preferences
                 new TypeConverterAttribute (typeof (PreferenceDateTimeOffsetConverter)));
         }
 
+        readonly PreferenceStore preferenceStore;
         readonly Type type;
         readonly TypeCode typeCode;
         readonly TypeConverter converter;
@@ -37,7 +38,21 @@ namespace Xamarin.Preferences
             string key,
             T defaultValue = default,
             TypeConverter converter = null)
+            : this (
+                null,
+                key,
+                defaultValue,
+                converter)
         {
+        }
+
+        public Preference (
+            PreferenceStore preferenceStore,
+            string key,
+            T defaultValue = default,
+            TypeConverter converter = null)
+        {
+            this.preferenceStore = preferenceStore;
             Key = key
                 ?? throw new ArgumentNullException (nameof (key));
             DefaultValue = defaultValue;
@@ -46,6 +61,9 @@ namespace Xamarin.Preferences
             this.converter = converter
                 ?? TypeDescriptor.GetConverter (type);
         }
+
+        PreferenceStore Store => preferenceStore
+            ?? PreferenceStore.SharedInstance;
 
         public T GetValue ()
         {
@@ -61,7 +79,7 @@ namespace Xamarin.Preferences
 
         T GetValueUnchecked ()
         {
-            if (!PreferenceStore.SharedInstance.TryGetValue (
+            if (!Store.TryGetValue (
                 Key,
                 type,
                 typeCode,
@@ -87,9 +105,9 @@ namespace Xamarin.Preferences
         }
 
         public void SetValue (T value)
-            => PreferenceStore.SharedInstance.SetValue (Key, value, converter);
+            => Store.SetValue (Key, value, converter);
 
         public void Reset ()
-            => PreferenceStore.SharedInstance.Remove (Key);
+            => Store.Remove (Key);
     }
 }
