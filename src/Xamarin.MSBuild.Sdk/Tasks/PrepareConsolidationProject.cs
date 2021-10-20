@@ -34,6 +34,9 @@ namespace Xamarin.MSBuild.Sdk.Tasks
         public TaskItem[] ReferenceItems { get; set; }
 
         [Output]
+        public TaskItem[] PackageReferenceItems { get; set; }
+
+        [Output]
         public TaskItem[] EmbeddedResourceItems { get; set; }
 
         static readonly string [] embeddedResourceMetadataPathNames = {
@@ -53,6 +56,7 @@ namespace Xamarin.MSBuild.Sdk.Tasks
             var compileItems = new List<TaskItem> ();
             var projectReferenceItems = new List<TaskItem> ();
             var referenceItems = new List<TaskItem> ();
+            var packageReferenceItems = new List<TaskItem> ();
             var embeddedResourceItems = new List<TaskItem> ();
 
             var projectsToConsolidate = dependencyGraph
@@ -108,6 +112,9 @@ namespace Xamarin.MSBuild.Sdk.Tasks
                     case "reference":
                         collection = referenceItems;
                         break;
+                    case "packagereference":
+                        collection = packageReferenceItems;
+                        break;
                     case "embeddedresource":
                         collection = embeddedResourceItems;
                         useItemSpecFullPath = true;
@@ -150,6 +157,7 @@ namespace Xamarin.MSBuild.Sdk.Tasks
             CompileItems = compileItems.ToArray ();
             ProjectReferenceItems = projectReferenceItems.ToArray ();
             ReferenceItems = referenceItems.ToArray ();
+            PackageReferenceItems = packageReferenceItems.ToArray ();
             EmbeddedResourceItems = embeddedResourceItems.ToArray ();
 
             return true;
