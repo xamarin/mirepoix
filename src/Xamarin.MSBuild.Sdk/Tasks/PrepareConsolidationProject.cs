@@ -131,6 +131,10 @@ namespace Xamarin.MSBuild.Sdk.Tasks
 
                         break;
                     case "reference":
+                        // Skip netstandard facades
+                        if (itemMetadata.TryGetValue ("NuGetPackageId", out var packageId)
+                            && packageId == "NETStandard.Library")
+                            continue;
                         collection = referenceItems;
                         break;
                     case "packagereference":
