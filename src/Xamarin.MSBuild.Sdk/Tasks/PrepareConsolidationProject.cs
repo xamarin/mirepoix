@@ -59,21 +59,46 @@ namespace Xamarin.MSBuild.Sdk.Tasks
             var packageReferenceItems = new List<TaskItem> ();
             var embeddedResourceItems = new List<TaskItem> ();
 
-            var projectsToConsolidate = dependencyGraph
-                .TopologicallySortedProjects
-                .Where (project => {
-                    if (ResolveFullPath (project.ProjectPath) == projectPath)
-                        return false;
+            var projectsToConsolidate = new List<ProjectDependencyNode> ();
+            foreach (var project in dependencyGraph.TopologicallySortedProjects) {
+                if (ResolveFullPath (project.ProjectPath) == projectPath)
+                    continue;
 
-                    if (string.IsNullOrEmpty (ConsolidationConditionMetadataName))
-                        return true;
+                if (string.IsNullOrEmpty (ConsolidationConditionMetadataName)
+                    || project.ProjectReferenceItems.Any (
+                    pr => bool.TryParse (
+                        pr.GetMetadataValue (ConsolidationConditionMetadataName),
+                        out var consolidate) && consolidate))
+                    projectsToConsolidate.Add (project);
+                else {
+                    // Keep top-level ProjectReferences that are not marked for
+                    // consolidation. Otherwise they get lost due to the removal
+                    // step in the PrepareConsolidationProject target.
+                    var projectDirectory = Path.GetDirectoryName (project.ProjectPath);
+                    foreach (var item in project.ProjectReferenceItems) {
+                        var itemSpec = item.EvaluatedInclude;
+                        var itemSpecFullPath = ResolveFullPath (
+                            projectDirectory,
+                            itemSpec);
+                        var itemMetadata = GetItemMetadata (item);
 
-                    return project.ProjectReferenceItems.Any (
-                        pr => bool.TryParse (
-                            pr.GetMetadataValue (ConsolidationConditionMetadataName),
-                            out var consolidate) && consolidate);
-                })
-                .ToList ();
+                        if (itemMetadata.Count == 0)
+                            continue;
+
+                        if (!File.Exists (itemSpecFullPath))
+                            continue;
+
+                        if (allItemSpecs.Contains (itemSpecFullPath))
+                            continue;
+
+                        allItemSpecs.Add (itemSpecFullPath);
+
+                        projectReferenceItems.Add (new TaskItem (
+                            itemSpecFullPath,
+                            itemMetadata));
+                    }
+                }
+            }
 
             foreach (var project in projectsToConsolidate) {
                 var projectDirectory = Path.GetDirectoryName (project.ProjectPath);
@@ -89,11 +114,7 @@ namespace Xamarin.MSBuild.Sdk.Tasks
                     var itemSpecFullPath = ResolveFullPath (
                         projectDirectory,
                         itemSpec);
-
-                    var itemMetadata = new Dictionary<string, string> (StringComparer.OrdinalIgnoreCase);
-
-                    foreach (var metadata in item.Metadata)
-                        itemMetadata.Add (metadata.Name, metadata.EvaluatedValue);
+                    var itemMetadata = GetItemMetadata (item);
 
                     switch (item.ItemType.ToLowerInvariant()) {
                     case "compile":
@@ -161,6 +182,14 @@ namespace Xamarin.MSBuild.Sdk.Tasks
             EmbeddedResourceItems = embeddedResourceItems.ToArray ();
 
             return true;
+
+            Dictionary<string, string> GetItemMetadata (ProjectItem item)
+            {
+                var itemMetadata = new Dictionary<string, string> (StringComparer.OrdinalIgnoreCase);
+                foreach (var metadata in item.Metadata)
+                    itemMetadata.Add (metadata.Name, metadata.EvaluatedValue);
+                return itemMetadata;
+            }
 
             bool ShouldExcludeItem (ProjectItem item)
                 => ConsolidateRemoveItemsRegex
