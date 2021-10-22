@@ -68,9 +68,9 @@ namespace Xamarin.MSBuild.Sdk.Tasks
                     || project.ProjectReferenceItems.Any (
                     pr => bool.TryParse (
                         pr.GetMetadataValue (ConsolidationConditionMetadataName),
-                        out var consolidate) && consolidate))
+                        out var consolidate) && consolidate)) {
                     projectsToConsolidate.Add (project);
-                else {
+                } else {
                     // Keep top-level ProjectReferences that are not marked for
                     // consolidation. Otherwise they get lost due to the removal
                     // step in the PrepareConsolidationProject target.
@@ -188,12 +188,9 @@ namespace Xamarin.MSBuild.Sdk.Tasks
             return true;
 
             Dictionary<string, string> GetItemMetadata (ProjectItem item)
-            {
-                var itemMetadata = new Dictionary<string, string> (StringComparer.OrdinalIgnoreCase);
-                foreach (var metadata in item.Metadata)
-                    itemMetadata.Add (metadata.Name, metadata.EvaluatedValue);
-                return itemMetadata;
-            }
+                => item.Metadata.ToDictionary (
+                    i => i.Name,
+                    i => i.EvaluatedValue);
 
             bool ShouldExcludeItem (ProjectItem item)
                 => ConsolidateRemoveItemsRegex
