@@ -22,6 +22,6 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Test
-      run: dotnet test --no-restore --no-build --verbosity normal **/*.Tests.csproj
+      run: dotnet test --no-restore --no-build --verbosity normal
     - name: Pack
       run: dotnet pack --no-restore --no-build
