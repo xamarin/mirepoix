@@ -22,6 +22,6 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Test
-      run: dotnet test --no-restore --no-build --verbosity normal
+      run: for proj in `find . -name *.Tests.csproj`; do dotnet test $proj --no-restore --no-build; done
     - name: Pack
       run: dotnet pack --no-restore --no-build
