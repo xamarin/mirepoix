@@ -16,13 +16,13 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore /bl:_artifacts/restore.binlog
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore /bl:_artifacts/build.binlog
     - name: Test
       run: for proj in `find . -name *.Tests.csproj`; do dotnet test $proj --no-restore --no-build; done
     - name: Pack
-      run: dotnet pack --no-restore --no-build
+      run: dotnet pack --no-restore --no-build /bl:_artifacts/pack.binlog
     - name: Upload Artifacts
       uses: actions/upload-artifact@v2.2.4
       with:
