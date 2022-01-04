@@ -89,6 +89,8 @@ namespace Xamarin.MSBuild.Sdk.Solution
                 }
             }
 
+            log?.LogMessage (MessageImportance.Normal, $"Adding project: {relativePath}");
+
             var (projectNode, addedProject) = parentNode.AddProject (
                 projectGuid,
                 relativePath);
@@ -203,13 +205,31 @@ namespace Xamarin.MSBuild.Sdk.Solution
                     var includeInSolution = true;
 
                     foreach (var projectReference in node.ProjectReferenceItems) {
+                        includeInSolution = false;
+
                         if (string.Equals (
                             projectReference.GetMetadataValue ("IncludeInSolution"),
                             "false",
                             StringComparison.OrdinalIgnoreCase)) {
-                            includeInSolution = false;
                             break;
                         }
+
+                        // If these are all explicitly false, skip this project
+                        // See NBGV's injected PrivateP2PCaching.proj for an example:
+                        //   https://github.com/dotnet/Nerdbank.GitVersioning/pull/667/files#diff-20f91e8eb9bdc2547cd71a18e7982071609406369561da1d3e2dd950b8078ed9R37
+                        var otherExcludeIndicators = new [] { "BuildReference", "Visible", "ReferenceOutputAssembly" };
+                        foreach (var metadata in otherExcludeIndicators) {
+                            if (!string.Equals (
+                                projectReference.GetMetadataValue (metadata),
+                                "false",
+                                StringComparison.OrdinalIgnoreCase)) {
+                                includeInSolution = true;
+                                break;
+                            }
+                        }
+
+                        if (!includeInSolution)
+                            break;
 
                         projectConfigurationPlatform = projectConfigurationPlatform
                             .WithConfiguration (projectReference.GetMetadataValue ("Configuration"))
