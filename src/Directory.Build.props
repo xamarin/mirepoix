@@ -6,6 +6,7 @@
     <LangVersion>latest</LangVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NoWarn>$(NoWarn);CA1416</NoWarn>
     <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
   </PropertyGroup>
 
@@ -15,7 +16,9 @@
     <RepositoryUrl>https://github.com/xamarin/mirepoix</RepositoryUrl>
     <PackageProjectUrl>https://xamarin.github.io/mirepoix</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageIconUrl>https://www.xamarin.com/content/images/nuget/xamarin.png</PackageIconUrl>
+    <!-- This URL 404s, and PackageIconUrl is deprecated.
+         TODO: Embed an icon in the nupkg with PackageIcon -->
+    <!-- <PackageIconUrl>https://www.xamarin.com/content/images/nuget/xamarin.png</PackageIconUrl> -->
     <PackageOutputPath>$([MSBuild]::NormalizePath($(MSBuildThisFileDirectory)..\_artifacts\))</PackageOutputPath>
     <IncludeSymbols>true</IncludeSymbols>
   </PropertyGroup>
@@ -26,9 +29,9 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="$(IsTestProject)">
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <IsPackable>false</IsPackable>
-    <NoWarn>xUnit1026</NoWarn>
+    <NoWarn>$(NoWarn);xUnit1026</NoWarn>
   </PropertyGroup>
 
   <ItemGroup Condition="$(IsTestProject)">
