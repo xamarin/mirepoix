@@ -35,8 +35,6 @@ using System.Globalization;
 using System.Reflection;
 using System.Text;
 
-using static Xamarin.FileHelpers;
-
 namespace Xamarin.MSBuild.Sdk.Solution
 {
     internal static class LocalizableStrings
@@ -225,9 +223,27 @@ namespace Xamarin.MSBuild.Sdk.Solution
             {
                 FullPath = Path.GetFullPath(file);
             }
+
+            string existingSolutionContents = null;
+            if (File.Exists(FullPath))
+            {
+                try
+                {
+                    existingSolutionContents = File.ReadAllText(FullPath, Encoding.UTF8);
+                }
+                catch
+                {
+                }
+            }
+
             var sw = new StringWriter();
             Write(sw);
-            File.WriteAllText(FullPath, sw.ToString(), Encoding.UTF8);
+            var solutionContents = sw.ToString();
+
+            if (existingSolutionContents != solutionContents)
+            {
+                File.WriteAllText(FullPath, solutionContents, Encoding.UTF8);
+            }
         }
 
         private void Write(TextWriter writer)
