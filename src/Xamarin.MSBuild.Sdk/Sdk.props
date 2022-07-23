@@ -1,9 +1,12 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <XamarinMSBuildSdkNuGetTaskAssembly>$(MSBuildThisFileDirectory)..\lib\netstandard2.0\Xamarin.MSBuild.Sdk.dll</XamarinMSBuildSdkNuGetTaskAssembly>
+    <_FrameworkFolderName>net472</_FrameworkFolderName>
+    <_FrameworkFolderName Condition="'$(MSBuildRuntimeType)' == 'Core'">net6.0</_FrameworkFolderName>
+
+    <XamarinMSBuildSdkNuGetTaskAssembly>$(MSBuildThisFileDirectory)..\lib\$(_FrameworkFolderName)\Xamarin.MSBuild.Sdk.dll</XamarinMSBuildSdkNuGetTaskAssembly>
     <XamarinMSBuildSdkAssembly Condition="Exists('$(XamarinMSBuildSdkNuGetTaskAssembly)')">$(XamarinMSBuildSdkNuGetTaskAssembly)</XamarinMSBuildSdkAssembly>
 
-    <XamarinMSBuildSdkLocalBuildTaskAssembly>$(MSBuildThisFileDirectory)\bin\Debug\netstandard2.0\Xamarin.MSBuild.Sdk.dll</XamarinMSBuildSdkLocalBuildTaskAssembly>
+    <XamarinMSBuildSdkLocalBuildTaskAssembly>$(MSBuildThisFileDirectory)bin\Debug\$(_FrameworkFolderName)\Xamarin.MSBuild.Sdk.dll</XamarinMSBuildSdkLocalBuildTaskAssembly>
     <XamarinMSBuildSdkAssembly Condition="Exists('$(XamarinMSBuildSdkLocalBuildTaskAssembly)')">$(XamarinMSBuildSdkLocalBuildTaskAssembly)</XamarinMSBuildSdkAssembly>
   </PropertyGroup>
 </Project>

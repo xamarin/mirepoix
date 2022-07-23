@@ -35,12 +35,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.MSBuild.Sdk.Tests",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Mac.Sdk", "src\Xamarin.Mac.Sdk\Xamarin.Mac.Sdk.csproj", "{0A774290-7199-5364-BC2E-82526B386C7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILRepackPatcher", "tools\ILRepackPatcher\ILRepackPatcher.csproj", "{F95EC498-1C9C-5C97-BE3B-0F6702E57314}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.BuildConsolidator", "src\Xamarin.BuildConsolidator\Xamarin.BuildConsolidator.csproj", "{00109FC2-4F86-583E-93A8-167E47928E84}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.BuildConsolidator.Tests", "src\Xamarin.BuildConsolidator.Tests\Xamarin.BuildConsolidator.Tests.csproj", "{CFC355DB-EB92-56D7-A0EE-4CF585D2A341}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Cecil.Rocks", "src\Xamarin.Cecil.Rocks\Xamarin.Cecil.Rocks.csproj", "{02CC9070-D5F4-571C-90F9-75B7E8F8D341}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Cecil.Rocks.Tests", "src\Xamarin.Cecil.Rocks.Tests\Xamarin.Cecil.Rocks.Tests.csproj", "{1D45883F-3DA7-5EA7-AE55-0F2634BE1C1A}"
@@ -120,18 +114,6 @@ Global
 		{0A774290-7199-5364-BC2E-82526B386C7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A774290-7199-5364-BC2E-82526B386C7A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{0A774290-7199-5364-BC2E-82526B386C7A}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{F95EC498-1C9C-5C97-BE3B-0F6702E57314}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F95EC498-1C9C-5C97-BE3B-0F6702E57314}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F95EC498-1C9C-5C97-BE3B-0F6702E57314}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{F95EC498-1C9C-5C97-BE3B-0F6702E57314}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{00109FC2-4F86-583E-93A8-167E47928E84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{00109FC2-4F86-583E-93A8-167E47928E84}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{00109FC2-4F86-583E-93A8-167E47928E84}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{00109FC2-4F86-583E-93A8-167E47928E84}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{CFC355DB-EB92-56D7-A0EE-4CF585D2A341}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CFC355DB-EB92-56D7-A0EE-4CF585D2A341}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CFC355DB-EB92-56D7-A0EE-4CF585D2A341}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{CFC355DB-EB92-56D7-A0EE-4CF585D2A341}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{02CC9070-D5F4-571C-90F9-75B7E8F8D341}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{02CC9070-D5F4-571C-90F9-75B7E8F8D341}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02CC9070-D5F4-571C-90F9-75B7E8F8D341}.Release|Any CPU.ActiveCfg = Debug|Any CPU
